@@ -1,7 +1,7 @@
 # ITLand
 Equipo 1 - DH
 Integrantes del Grupo: Breve descripción
-•	Pedro Aznarez: 
+•	Pedro Aznarez: 23 años, Montevideo, Uruguay.
 •	Micaela Bustos: 28 años, Diseñadora UX, Buenos Aires, Argentina
 •	Antonella Cappellari: Ingeniera Industrial, 30 años, Capital federal, Buenos Aires, Argentina.
 •	Romina Jaime: 42 años, Administrativa y Profesora de Yoga, Buenos Aires, Argentina
