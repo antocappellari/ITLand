@@ -4,31 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="../public/css/index.css">
     <script src="https://kit.fontawesome.com/d4dc869e85.js" crossorigin="anonymous"></script>
-    <link rel="stylescheet" href="./css/style.css">
-    <title>Document</title>
 </head>
 <body>
     <header>
-    <div class="burger-menu">
-    <i class="fa fa-bars burger"></i>
-    </div>
-    <div class="ITLand">
-    <img src="../public/images/Logo.png" alt="LogoItLand">
-    </div>
-    <div class="Userlogo">
-    <i class="fa-solid fa-user"></i>
-    </div>
-
+        <div class="container-header">
+            <div class="header__burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <h1> ITLand</h1>
+            <main class="main__input">
+                <input type="text" placeholder="Search">
+                <span class="main__input__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </main>
+            <div class="header__account">
+                <a class="account__icon" href="#"><i class="fa-solid fa-user"></i></a>
+                <a class="account" href="#"><p>My account</p></a>
+            </div>
+            <div class="container-header__cart">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <nav class="navegation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Abount us</a></li>
+                <li><a href="#"> Contact us</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-    <div class="PromocionInicio">
-        
+    <div class="InitialPromotion">
+    <img src="../public/images/promocionInicio.png" alt="InitialPhoto">
     </div>
+    <h2 class="producTittle">
+    Offers and discounts
+    </h2>
+    <div class="CarrusselSection">
+    <div class="FirstOffer">
+        <div class="imagecarrussel">
+            <img src="../public/images/PhotoProm1.png">
+        </div>
+        <div class="Imagetext">
+            <h3 class="Photo">
+                Notebook Acer
+                </h3>
+                <h3 class="Price">
+                $ 1.000
+                </h3>
+                <h3 class="Delivery">
+                Envío gratis
+                </h3>
+        </div>
 
+    </div>
+    <div class="FirstOffer">
+        <div class="imagecarrussel">
+            <img src="../public/images/PhotoLaptopIndex.png">
+        </div>
+        <div class="ImageText">
+            <h3 class="Photo">
+                Tablet Samsung
+                </h3>
+                <h3 class="Price">
+                $ 1.200
+                </h3>
+                <h3 class="Delivery">
+                Envío gratis
+                </h3>
+        </div>
+        </div>
+        <div class="FirstOffer">
+            <div class="imagecarrussel">
+                <img src="../public/images/AirpodsOK.png">
+            </div>
+            <div class="ImageText">
+                <h3 class="Photo">
+                    Airpods
+                    </h3>
+                    <h3 class="Price">
+                    $ 900
+                    </h3>
+                    <h3 class="Delivery">
+                    Envío gratis
+                    </h3>
+            </div>
+            
+            </div>
+                <div class="FirstOffer">
+                    <div class="imagecarrussel">
+                        <img src="../public/images/iphone14pro.png">
+                    </div>
+                    <div class="TextImage">
+                        <h3 class="Photo">
+                            Iphone 14 pro
+                            </h3>
+                            <h3 class="Price">
+                            $ 1000
+                            </h3>
+                            <h3 class="Delivery">
+                            Envío gratis
+                            </h3>
+                    </div>
+                    
+                    </div>    
+    </div>
     </main>
-    <footer>
+    <section class="section__nav__mobile">
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-house-chimney"></i>Home</a></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>Search</a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
+            <li><a href="#"><i class="fa-solid fa-heart"></i>Favorites</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>Profile</a></li>
+        </ul>
 
+    </section>
+    <footer>
+        <p>
+            Copyright© 2021-2022 Itland All rights reserved <br>
+            Made with <i class="fa-solid fa-heart"></i> by ITland
+        </p>
     </footer>
 </body>
 </html>
