@@ -1,28 +1,70 @@
+.InitialPromotion{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .InitialPromotion img{
 width: 100vw;
+height: 40vh;
 }
 .CarrusselSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
-    gap: 5px
+    width: 96vw;
+    gap: 5px;
+    margin-top: 20px;
+    margin-left:2vw;
+    margin-right:2vw;
 }
 .FirstOffer h3{
 font-size: small;
+text-align: center;
 }
-
+.producTittle{
+    text-align: center;
+    width: 100vw;
+    font-size:medium ;
+    margin-top: 10px;
+}
+.line{
+    color: #e4dede;
+    width: 80%;
+    height: 1px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: 0px 5px 5px - 5px #9b9696;
+    border:none;
+    border-bottom: 1px solid rgb(131, 126, 125);
+    border-radius: 1px;
+}
 .FirstOffer{
     background-color: #fff;
-    box-shadow: 1px 1   px #c4bebe;
+    box-shadow: 0.5px 0.5px 1px 1px #dbd9d9;
     width: 23vw;
     height: 30vh;
+    border-radius: 20px;
+    border:#9b9696;
 }
 
-.FirstOffer img{
+.imagecarrussel {
     width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
-
+.imagecarrussel img{
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+.Imagetext{
+    width: 100%;
+    height: 40%;
+    justify-content: center;
+    align-content: space-around;
+}
 *{
     margin: 0;
     padding: 0;
@@ -38,9 +80,6 @@ font-size: small;
     display: none;
 }
 .navegation{
-    display: none;
-}
-main h2{
     display: none;
 }
 .description__freeshipping{
