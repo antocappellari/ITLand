@@ -6,6 +6,7 @@ const PORT = 3000
 
 app.use(express.static(publicPath));
 app.get('/', (req, res)=> res.sendFile(path.resolve(__dirname, './views/index.html')))
+app.get('/productDetail', (req, res) => res.sendFile(path.resolve('./views/productDetail.html')))
 
 
 
