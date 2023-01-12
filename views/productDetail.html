@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
     <link rel="stylesheet" href="./css/productDetail.css">
+    <link rel="stylesheet" href="./css/bottomNav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="./css/headerNav.css">
+>>>>>>> b78d6132aa5ff860692b7fc4c229203b8f978ab5
     <script src="https://kit.fontawesome.com/d4dc869e85.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -20,11 +26,16 @@
                 <span class="main__input__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
             </main>
             <div class="header__account">
-                <a class="account__icon" href="#"><i class="fa-solid fa-user"></i></a>
-                <a class="account" href="#"><p>My account</p></a>
+                <a class="account__icon" href="#">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Your account</span>
+                </a>
             </div>
             <div class="container-header__cart">
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping">
+                    <span>Carrito</span>
+                    </i></a>
             </div>
         </div>
         <nav class="navegation">
@@ -37,64 +48,85 @@
         </nav>
     </header>
     <main>
-        <h2>Cellphone > Apple > Iphone 14 Pro</h2>
-        <section class="main__section__img">
-            <div class="section__img__principal">
-                <img src="img/iphone14pro.png" alt="">
-            </div>
-            <section class="section__img__others">
-                <img src="img/segundafoto.png" alt="">
-                <img src="img/tercerfoto.png" alt="">
-                <img src="img/quintafoto.png" alt="">
+        <h2>Cellphone > Apple > Samsung S22 Ultra</h2>
+        <section class="main__container"> 
+            <section class="main__section__img section__article">
+                <div class="section__img__principal">
+                    <img src="images/S22ultra.png" alt="">
+                </div>
+                <section class="section__img__others">
+                    <img src="images/S22ultra2.jpeg"  alt="">
+                    <img src="images/S22ultra3.jpeg " alt="">
+                    <img src="images/S22ultra4.jpeg " alt="">
+                </section>
             </section>
-        </section>
-        <section class="main__section__characteristics">
-            <div class="name-price">
-                <h4>Iphone 14 Pro</h4>
-                <p class=" price">$ 1200</p></div>
-            <div class="section__characteristics__memory">
-                <button>128 GB</button>
-                <button>256 GB</button>
-                <button>512 GB</button>
-            </div>
-            <div class="section__characteristics__color">
-                <!-- <button>Space Black</button>
-                <button>Silver</button> -->
-                <form  class="characteristics__color" action="#">
-                    <!-- <label for="color">Choose a color</label> -->
-                    <select name="Color" id="color">
-                    <option value="color">--Choose a color--</option>
-                    <option value="Black">Silver Black</option>
-                    <option value="Silver">Silver</option>
-                    </select>
-                </form>
-            </div>
-            <div class="section__addCart">
-                <button> Add to Cart</button>
-                <i class="fa-regular fa-heart"></i>
-            </div>
-        </section>
-        <section class="section__description">
-            <h4>Description</h4>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Sunt quaerat minima nam vero tenetur est cupiditate quas quibusdam 
-                veritatis, soluta, mollitia cum! 
-                Laborum maiores quam veritatis reiciendis odio repellendus. Animi.
-            </p>
-            <p><span class="description__freeshipping">Free Shipping!!</span></p>
+            <section class="main__section__characteristics section__article">
+                <div class="name-price">
+                    <h4>Samsung S22 Ultra</h4>
+                    <p class=" price">$ 1200</p></div>
+                <div class="section__characteristics__memory">
+                    <button type="button">128 GB</button>
+                    <button type="button">256 GB</button>
+                    <button type="button">512 GB</button>
+                </div>
+                <div class="section__characteristics__color">
+                    <form  class="characteristics__color">
+                        <label for="label">Colors
+                            <select name="color">
+                                <option value="color">--Choose a color--</option>
+                                <option value="Black">Silver Black</option>
+                                <option value="Silver">Silver</option>
+                            </select>
+                        </label>
+                    </form>
+                </div>
+                <div class="section__addCart">
+                    <button> Add to Cart</button>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </section>
+            <section class="section__description section__article">
+                <h4>Description</h4>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Sunt quaerat minima nam vero tenetur est cupiditate quas quibusdam 
+                    veritatis, soluta, mollitia cum! 
+                    Laborum maiores quam veritatis reiciendis odio repellendus. Animi.
+                </p>
+                <p><span class="description__freeshipping">Free Shipping!!</span></p>
+            </section>
         </section>
     </main>
     <section class="section__nav__mobile">
         <ul>
-            <li><a href="#"><i class="fa-solid fa-house-chimney"></i>Home</a></li>
-            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>Search</a></li>
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
-            <li><a href="#"><i class="fa-solid fa-heart"></i>Favorites</a></li>
-            <li><a href="#"><i class="fa-solid fa-user"></i>Profile</a></li>
+          <li class="nav__mobile__caja1">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+            </svg>Home</a>
+          </li>
+          <li class="nav__mobile__caja2">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>Search</a>
+          </li>
+          <li class="nav__mobile__caja3">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>Cart</a>
+          </li>
+          <li class="nav__mobile__caja4">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+            </svg>
+            Favorites</a>
+          </li>
+          <li class="nav__mobile__caja5">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+            </svg>Profile</a>
+          </li>
         </ul>
-
-    </section>
+      </section>
     <footer>
         <p>
             Copyright© 2021-2022 Itland All rights reserved <br>
