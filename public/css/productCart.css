@@ -1,0 +1,95 @@
+.body{
+    background-color: #ebebeb;
+}
+.main__input{
+    display: none;
+}
+.header__account .account{
+    display: none;
+}
+.container-header__cart{
+    display: none;
+}
+.navegation{
+    display: none;
+}
+main h2{
+    display: none;
+}
+.description__freeshipping{
+    display: none;
+}
+
+.container-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    background-color: #01518a;
+}
+.header__burger{
+    font-size: 1.3em;
+
+}
+.header__account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    display: none;
+}
+.account__icon{
+    color: rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.account__icon{
+    color: rgb(255, 255, 255);
+}
+
+
+
+.section__container {
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.section__product {
+    background-color: #fff;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid rgba(121, 119, 119, 0.747);
+
+}
+
+.free__shop {
+    color: green;
+}
+.section__product img{
+    width: 30%;
+}
+
+
+.quantity .plus{
+    background-color: blue;
+    width: 20px;
+    border-radius: 3px;
+    border:none;
+    font-size: 1.5em;
+
+}
+
+.quantity .less{
+    background-color: red;
+    width: 20px;
+    border-radius: 10px;
+    border:none;
+    font-size: 1.5em;
+}
