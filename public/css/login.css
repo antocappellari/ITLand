@@ -2,12 +2,15 @@ main{
     width:90%;
     margin:5% 5% 5% 5%;  
     box-sizing: border-box;
-}
+    }
 body {
-    background-color: rgba(237, 236, 236, 0.426);
     font-family: 'Hind Madurai', sans-serif;
     text-align: center;
-  }
+    background-image:url("../images/Itland3.png");
+    background-repeat: no-repeat;
+    background-color: rgb(47, 46, 46);
+    width: 100%;
+                  }
 
   h2{
     font-size: 25px;
@@ -30,6 +33,7 @@ body {
     border: 1px solid #ccc;
     background-color: white;
     border-radius: 6px;
+    opacity: 1;
   }
   button {
     background-color: #01518a;
@@ -43,21 +47,23 @@ body {
     cursor: pointer;
     font-size:15px;
     border-radius:6px;
+    opacity: 1;
   }
   
   button:hover {
     opacity: 0.8;
   }
 .form_login{
-    margin-left:10%;
-    margin-right:10%;
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
     width:80%;
-    background-color: rgba(230, 231, 233, 0.842);
+    background-color: rgba(230, 231, 233, 0.7);
     padding:10px;
     text-align:center;
     border-radius:10px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-
+    
   }
 div .form_extras{
     text-align:right;
@@ -68,6 +74,7 @@ input [type=checkbox]{
 }
   footer{
     font-size:10px;
+    color: white;
   }
   .main__input {
     display: none;
@@ -78,23 +85,27 @@ input [type=checkbox]{
   }
   .container-header {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       padding: 5px;
       color: black;
       margin-bottom: 20px;
       border-bottom: 1px solid black;
-      background-color: #fdfefe;
+      background-color: white;
     }
-  .header__start {
+  .header__help {
+      justify-self: end;
+    }
+  .header__start h1 {
       display: inline;
       }
-  .help__icon {
+  .help__icon i{
       color: black;
+      font-size: 25px;
 
   }
-  .start__icon {
+  .start__icon i{
       color: black;
-      
+      font-size: 25px;
   }
   
