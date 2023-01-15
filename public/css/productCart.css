@@ -1,7 +1,11 @@
 .body{
     background-color: #ebebeb;
+    font-family: "Roboto";
 }
 .main__input{
+    display: none;
+}
+.navegation {
     display: none;
 }
 .header__account .account{
@@ -20,14 +24,34 @@ main h2{
     display: none;
 }
 
+.product__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 5px;
+    font-family: "Roboto";
+}
+
+.price__detail {
+    font-weight: bold;
+}
+
+.back a{
+    display:flex;
+    margin: 10px 0 10px 5px;
+    text-decoration: none;
+    color: #000;
+    font-family: "Roboto"
+
+}
 .container-header{
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 5px;
     color: rgb(255, 255, 255);
-    margin-bottom: 20px;
     background-color: #01518a;
+    font-family: "Roboto"
 }
 .header__burger{
     font-size: 1.3em;
@@ -38,7 +62,7 @@ main h2{
     justify-content: center;
     align-items: center;
 }
-span{
+.header__account span {
     display: none;
 }
 .account__icon{
@@ -51,12 +75,11 @@ span{
     color: rgb(255, 255, 255);
 }
 
-
-
 .section__container {
     display:flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 
 }
 
@@ -64,11 +87,45 @@ span{
     background-color: #fff;
     display: flex;
     padding: 10px;
-    width: 100%;
+    /* width: 100%;  */
     border-bottom: 1px solid rgba(121, 119, 119, 0.747);
+    position: relative;
+
+}
+.finish__shop {
+    margin-bottom: 5px;
+    font-weight: 800;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    padding: 5px;
+    font-family: "Roboto";
+}
+
+
+.finish__shop button {
+    border-radius: 40px;
+    background-color: #000;
+    color:#fff;
+    font-size: medium;
+    margin-top: 5px;
+    width: 50%;
+    height: 6vh;
+    border: none;
+    font-family: "Roboto"
 
 }
 
+.section__product svg {
+    position:absolute;
+    top: -10px;
+    right: 20px;
+    cursor: pointer;
+
+}
 .free__shop {
     color: green;
 }
@@ -78,7 +135,6 @@ span{
 
 
 .quantity .plus{
-    background-color: blue;
     width: 20px;
     border-radius: 3px;
     border:none;
@@ -87,9 +143,117 @@ span{
 }
 
 .quantity .less{
-    background-color: red;
     width: 20px;
     border-radius: 10px;
     border:none;
     font-size: 1.5em;
+}
+
+/* web version */
+@media (min-width:768px){
+    .container-header {
+        height: 8vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .section__nav__mobile{
+        display: none;
+    }
+    header h1{
+        padding-left: 50px;
+    }
+    .header__burger{
+        display: none;
+    }
+    .header__account{
+        display: flex;
+        align-items: center;
+        width: 20%;
+    }
+    .header__account a{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        text-decoration: none;
+
+    }
+    .header__account span{
+        display: block;
+    }
+    .main__input{
+        display: block;
+        width: 40%;
+        position: relative;
+        border-radius: 30px;
+    }
+    .main__input__icon{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color:#000;
+    }
+    .main__input input{
+        border: none;
+        height: 40px;
+        width: 100%;
+        border-radius: 20px
+    }
+
+    .main__input input::placeholder{
+        padding-left: 10px;
+    }
+    .header__account .account{
+        display: block;
+    }
+    .container-header__cart{
+        display: block;
+        margin-right: 20px;
+    }
+    .container-header__cart i{
+        color:#fff
+    }
+    .navegation{
+        display: block;
+        background-color: rgb(43, 40, 87);
+        font-family: "Roboto";
+    }
+    .navegation ul{
+        display: flex;
+        gap:20px;
+        align-items: center;
+        list-style: none;
+        height: 6vh;
+        padding-right: 10px;
+        justify-content: end;
+    
+    }
+    .navegation ul li{
+        list-style: none;
+    }
+
+    .navegation ul li a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    main h2{
+        display: block;
+    }
+    .description__freeshipping{
+        display: block;
+    }
+    .container{
+        display: flex;
+        background-color: aqua;
+    }
+    .section__product{
+        width: 90%;
+    }
+    .finish__shop{
+        width: 10%;
+    }
 }
