@@ -1,27 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-body{
+main {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #7997ea;
 }
-.register{
+.register {
   position: relative;
   max-width: 430px;
   width: 100%;
   background: rgb(255, 255, 255);
   padding: 34px;
   border-radius: 25px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 105px;
 }
-.register h2{
+.register h2 {
   position: relative;
   text-align: center;
   font-size: 27px;
@@ -29,14 +29,14 @@ body{
   color: #000000;
 }
 
-.register form{
+.register form {
   margin-top: 30px;
 }
-.register form .userinput{
+.register form .userinput {
   height: 52px;
   margin: 18px 0;
 }
-form .userinput input{
+form .userinput input {
   height: 100%;
   width: 100%;
   outline: none;
@@ -44,49 +44,49 @@ form .userinput input{
   font-size: 17px;
   font-weight: 400;
   color: #333;
-  border: 1.5px solid #C7BEBE;
+  border: 1.5px solid #c7bebe;
   border-bottom-width: 2.5px;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 .userinput input:focus,
-.userinput input:valid{
+.userinput input:valid {
   border-color: #4070f4;
 }
-form .conditions{
+form .conditions {
   display: flex;
   align-items: center;
 }
-form h3{
+form h3 {
   color: #707070;
   font-size: 14px;
   font-weight: 500;
   margin-left: 10px;
 }
-.userinput.button input{
+.userinput.button input {
   color: #fff;
   letter-spacing: 1px;
   border: none;
   background: #7997ea;
   cursor: pointer;
 }
-.userinput.button input:hover{
+.userinput.button input:hover {
   background: #0e4bf1;
 }
-form .text h3{
- color: #333;
- width: 100%;
- text-align: center;
+form .text h3 {
+  color: #333;
+  width: 100%;
+  text-align: center;
 }
-form .text h3 a{
+form .text h3 a {
   color: #4070f4;
   text-decoration: none;
 }
-form .text h3 a:hover{
+form .text h3 a:hover {
   text-decoration: underline;
 }
 
-.userinput i{
+.userinput i {
   position: absolute;
   transform: translateY(-50%);
   color: rgb(0, 0, 0);
@@ -94,35 +94,34 @@ form .text h3 a:hover{
   transition: all 0.2s ease;
 }
 
-#icon1{
-  top: 21.9%;
+#icon1 {
+  top: 21.4%;
   left: 10%;
 }
 
-#icon2{
-  top: 34.05%;
+#icon2 {
+  top: 33.9%;
   left: 10%;
 }
 
-#icon3{
-  top: 45.7%;
+#icon3 {
+  top: 46.1%;
   left: 10%;
 }
 
-#icon4{
-  top: 57.8%;
+#icon4 {
+  top: 58.5%;
   left: 10%;
 }
 
-#icon5{
-  top: 57.8%;
+#icon5 {
+  top: 58.5%;
   left: 84%;
 }
 
-p{
+p {
   font-size: 10px;
   text-align: center;
   padding: 1%;
   color: rgb(104, 102, 102);
-
 }

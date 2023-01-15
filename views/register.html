@@ -1,86 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href='./css/register.css' />
-    <link rel="stylesheet" href="./css/bottomNav.css">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration or Sign Up form in HTML CSS | CodingLab</title>
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="./css/bottomNav.css" />
+    <link rel="stylesheet" href="./css/headerNav.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/d4dc869e85.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container-header">
-          <div class="header__start">
-            <a class="start__icon" href="#"><i class="fas fa-solid fa-circle-arrow-left"></i></a>
-            <h1>ITLand</h1>
-          </div>
-            <div class="header__help">
-            <a class="help__icon" href="#"><i class="fas fa-regular fa-circle-question"></i></a>
-          </div>
+      <div class="container-header">
+        <div class="header__burger">
+          <i class="fa-solid fa-bars"></i>
         </div>
-        </header>
-    <div class="signup-box">
-        <h1>Regístrate</h1>
-        <h4>Es gratis y solo lleva un minuto</h4>
-        <form>
-            <!-- <label>Nombre</label> -->
-            <input type="text" placeholder="Nombre" class="label"> 
-            <!-- <label>Apellido</label> -->
-            <input type="text" placeholder="Apellido" class="label"> 
-            <!-- <label>Email</label> -->
-            <input type="email" placeholder="Email" class="label"> 
-            <!-- <label>Contraseña</label> -->
-            <input type="password" placeholder="Contraseña" class="label"> 
-            <!-- <label>Repetir Contraseña</label> -->
-            <input type="password" placeholder="Repetir Contraseña" class="label"> 
-            <button>Regístrate</button>
+        <h1>ITLand</h1>
+        <form class="main__input">
+          <input type="text" placeholder="Search" />
+          <span class="main__input__icon"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
         </form>
-        <p>Al clickear el boton de registro, aceptas nuestros 
-            <br>
-        <a href="#">Terminos y Condiciones</a> y <a href="#">Politicas de Privacidad</a>
-        </p>
-    </div>
-    <p class="para-2">Ya tienes una cuenta? <a href="#">Accede aqui</a></p>
-    <p class="para-3">
-        Copyright© 2021-2022 IT Land All rights reserved <br />
-        Made with <i class="fa-solid fa-heart"></i> by ITland
-    </p>
-    <section class="section__nav__mobile">
+        <div class="header__account">
+          <a class="account__icon" href="login.html">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </div>
+        <div class="container-header__cart">
+          <a href="#"
+            ><i class="fa-solid fa-cart-shopping"></i><span>Carrito</span></a
+          >
+        </div>
+      </div>
+      <nav class="navegation">
         <ul>
-          <li class="nav__mobile__caja1">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
-            </svg>Home</a>
-          </li>
-          <li class="nav__mobile__caja2">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-            </svg>Search</a>
-          </li>
-          <li class="nav__mobile__caja3">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </svg>Cart</a>
-          </li>
-          <li class="nav__mobile__caja4">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-            </svg>
-            Favorites</a>
-          </li>
-          <li class="nav__mobile__caja5">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-            </svg>Profile</a>
-          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Abount us</a></li>
+          <li><a href="#"> Contact us</a></li>
         </ul>
-      </section>
-    
-</body>
+      </nav>
+    </header>
+    <main>
+      <div class="register">
+        <h2>Register</h2>
+        <form action="#">
+          <div class="userinput">
+            <input type="text" placeholder="Enter your name" required />
+            <i class="uil uil-user" id="icon1"></i>
+          </div>
+          <div class="userinput">
+            <input type="text" placeholder="Enter your email" required />
+            <i class="uil uil-envelope icon" id="icon2"></i>
+          </div>
+          <div class="userinput">
+            <input type="password" placeholder="Create password" required />
+            <i class="uil uil-lock icon" id="icon3"></i>
+          </div>
+          <div class="userinput">
+            <input type="password" placeholder="Confirm password" required />
+            <i class="uil uil-lock icon" id="icon4"></i>
+            <i class="uil uil-eye-slash showHidePw" id="icon5"></i>
+          </div>
+          <div class="conditions">
+            <input type="checkbox" />
+            <h3>I accept all terms and conditions</h3>
+          </div>
+          <div class="userinput button">
+            <input type="Submit" value="Register Now" />
+          </div>
+          <div class="text">
+            <h3>Already have an account? <a href="#">Login</a></h3>
+          </div>
+        </form>
+        <p>
+          Copyright© 2021-2022 IT Land All rights reserved <br />
+          Made with love by ITland
+        </p>
+      </div>
+    </main>
+
+    <section class="section__nav__mobile">
+      <ul>
+        <li class="nav__mobile__caja1">
+            <i class="uil uil-home"></i>
+
+        </li>
+        <li class="nav__mobile__caja2">
+            <i class="uil uil-search"></i>
+        </li>
+        <li class="nav__mobile__caja3">
+            <i class="uil uil-shopping-cart"></i>
+        </li>
+        <li class="nav__mobile__caja4">
+            <i class="uil uil-heart-alt"></i>
+        </li>
+        <li class="nav__mobile__caja5">
+            <i class="uil uil-user"></i>
+        </li>
+      </ul>
+    </section>
+  </body>
 </html>

@@ -2,7 +2,7 @@
   background-color: #fff;
   width: 100%;
   position: fixed;
-  top: calc(90% + 10px);
+  top: calc(92% + 10px);
   padding: 7px;
   border-radius: 10px 10px 0 0;
   box-shadow: 2px 5px 7px 3px black;
@@ -29,4 +29,13 @@
     text-align: center;
     padding: 10px 10px 0 10px;
     margin-bottom: 20px;
+}
+
+i{
+  font-size: 1.8rem;
+  color: rgb(69, 68, 68);
+}
+
+i:hover{
+  color: black;
 }
