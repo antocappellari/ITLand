@@ -19,14 +19,14 @@ main {
   padding: 34px;
   border-radius: 25px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 105px;
+  margin-bottom: 93px;
 }
 .register h2 {
   position: relative;
   text-align: center;
   font-size: 27px;
-  font-weight: 600;
-  color: #000000;
+  font-weight: 400;
+  color: black;
 }
 
 .register form {
@@ -46,7 +46,7 @@ form .userinput input {
   color: #333;
   border: 1.5px solid #c7bebe;
   border-bottom-width: 2.5px;
-  border-radius: 6px;
+  border-radius: 17px;
   transition: all 0.3s ease;
 }
 .userinput input:focus,
@@ -110,12 +110,12 @@ form .text h3 a:hover {
 }
 
 #icon4 {
-  top: 58.5%;
+  top: 58.7%;
   left: 10%;
 }
 
 #icon5 {
-  top: 58.5%;
+  top: 58.7%;
   left: 84%;
 }
 
