@@ -17,7 +17,7 @@ main {
   width: 100%;
   background: rgb(255, 255, 255);
   padding: 34px;
-  border-radius: 25px;
+  border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 93px;
 }
@@ -124,4 +124,64 @@ p {
   text-align: center;
   padding: 1%;
   color: rgb(104, 102, 102);
+}
+
+
+/* Small Devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .register{
+        max-width: 350px;
+        max-height: 500px;
+    }
+    p{
+        opacity: 0;
+    }
+    #icon1{
+        top: 23.8%;
+        left: 12.5%;
+    }
+    #icon2{
+        top: 38.2%;
+        left: 12.5%;
+    }
+    #icon3{
+        top: 51.8%;
+        left: 12.5%;
+    }
+    #icon4{
+        top: 65.9%;
+        left: 12.5%;
+    }
+    #icon5{
+        top: 65.9%;
+        left: 80.5%;
+    }
+}
+@media only screen and (max-width: 769px) and (min-width: 601px){
+    .register{
+        max-height: 500px;
+    }
+    p{
+        opacity: 0;
+    }
+    #icon1{
+        top: 23.8%;
+        left: 10%;
+    }
+    #icon2{
+        top: 38.2%;
+        left: 10%;
+    }
+    #icon3{
+        top: 51.8%;
+        left: 10%;
+    }
+    #icon4{
+        top: 65.9%;
+        left: 10%;
+    }
+    #icon5{
+        top: 65.9%;
+        left: 84%;
+    }
 }
