@@ -7,7 +7,7 @@
   position: fixed;
   top:94% ;
   border-radius: 10px 10px 0 0;
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 0.5px 0.5px 5px black;
   height: 45px;
 }
 .section__nav__mobile ul{
@@ -35,6 +35,7 @@
 }
 .section__nav__mobile .nav__mobile__caja:hover{
   border-top: 3px solid #1f41eb;
+  transition: all 300ms;
 }
 .section__nav__mobile a:hover{
   color: #1f41eb;

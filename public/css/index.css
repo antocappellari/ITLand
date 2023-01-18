@@ -12,11 +12,12 @@ body {
 }
 .section-title{
   margin-top: 20px;
+  font-weight: bold;
 
   text-align: center;
 }
 .InitialPromotion img {
-  width: 100vw;
+  width: 100%;
 }
 .main_paymentmethods{
   margin-top: 10px;
@@ -136,8 +137,8 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  
 }
+
 .section-categories svg{
   width: 24px;
   height: 24px;
@@ -153,5 +154,36 @@ body {
   height: 30px;
 }
 
+@media(min-width:361px){
+  .section-categories{
+    gap: 0;
+  }
+  .section-categories .categories{
+    width: 50%;
+    
+  }
+  .section-categories .categories-seemore{
+    width: 100%;
+  }
+  .FirstOffer{
+    width: 30%;
+  }
 
+  .InitialPromotion{
+
+  }
+  
+}
+
+@media(min-width:769px){
+
+  .FirstOffer{
+    width: 20%;
+  }
+  .section-categories .categories{
+    width: 25%;
+    
+  }
+
+}
 
