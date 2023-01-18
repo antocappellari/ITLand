@@ -3,23 +3,63 @@
   padding: 0;
   box-sizing: border-box;
 }
-span{
+.header__account span{
   display: none;
 }
 body {
   background-color: rgba(237, 236, 236, 0.426);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.InitialPromotion img {
-  width: 100vw;
-  height: 40vh;
+.section-title{
+  margin-top: 20px;
+  font-weight: bold;
+
+  text-align: center;
 }
-.CarrusselSection {
+.InitialPromotion img {
+  width: 100%;
+}
+.main_paymentmethods{
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  gap: 15px;
+}
+.paymentmethods{
+  width: 90%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #315ed1;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px rgba(162, 162, 162, 0.384);
+}
+.paymentmethods .color{
+  color: #315ed1;
+}
+.paymentmethods .pay__icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:1px solid #315ed1;
+  border-radius: 25px;
+  width: 45px;
+  height: 45px;
+}
+.CarrusselSection {
+  height: 50vh;
+  padding: 20px 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+.CarrusselSection::-webkit-scrollbar{
+  display: none;
 }
 .FirstOffer h3 {
   font-size: small;
@@ -28,17 +68,21 @@ body {
 .producTittle {
   text-align: center;
   font-size: medium;
-  margin: 10px 0 10px 0;
+  margin-top: 10px;
 }
 .line {
   width: 80%;
   margin: 10px 10% 0 10%;
 }
 .FirstOffer {
+  flex: 1 0 auto;
   background-color: #fff;
   width: 40%;
+  outline: none;
+  margin: 0 20px;
+  padding: 2px;
   height: 40vh;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.384);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.384);
 }
 
 .imagecarrussel {
@@ -58,9 +102,88 @@ body {
   text-align: center;
 }
 .Imagetext .Price {
-  color: #12b759;
+  color: #315ed1;
   font-weight: 900;
   padding-bottom: 5px;
 }
+.section-categories{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  background-color: #fff;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.384);
+  border-radius:5px ;
+}
+.section-categories .categories{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  border-radius: 5px;
+  text-align: center;
+  flex-direction: column;
+  color: #000000;
+}
+.categories-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color :#ebebeb;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
 
+.section-categories svg{
+  width: 24px;
+  height: 24px;
+
+}
+.categories-seemore button{
+  border: none;
+  margin-top: 10px;
+  background-color: #315ed1;
+  border-radius: 5px;
+  color: #fff;
+  width: 120px;
+  height: 30px;
+}
+
+@media(min-width:361px){
+  .section-categories{
+    gap: 0;
+  }
+  .section-categories .categories{
+    width: 50%;
+    
+  }
+  .section-categories .categories-seemore{
+    width: 100%;
+  }
+  .FirstOffer{
+    width: 30%;
+  }
+
+  .InitialPromotion{
+
+  }
+  
+}
+
+@media(min-width:769px){
+
+  .FirstOffer{
+    width: 20%;
+  }
+  .section-categories .categories{
+    width: 25%;
+    
+  }
+
+}
 

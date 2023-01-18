@@ -7,6 +7,10 @@
 .header__account .account{
     display: none;
 }
+
+.price__detail{
+    font-weight: bold;
+}
 .container-header__cart{
     display: none;
 }
@@ -77,19 +81,3 @@ span{
 }
 
 
-.quantity .plus{
-    background-color: blue;
-    width: 20px;
-    border-radius: 3px;
-    border:none;
-    font-size: 1.5em;
-
-}
-
-.quantity .less{
-    background-color: red;
-    width: 20px;
-    border-radius: 10px;
-    border:none;
-    font-size: 1.5em;
-}

@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="./css/bottomNav.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/headerNav.css">
-    <script
-      src="https://kit.fontawesome.com/d4dc869e85.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> 
+    <script src="https://kit.fontawesome.com/d4dc869e85.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./images/kl.png" >
+
   </head>
   <body>
     <header>
@@ -46,82 +46,126 @@
     </header>
     <main>
       <div class="InitialPromotion">
-        <img src="/images/5.jpg" alt="InitialPhoto" />
+        <img src="/images/5.webp" alt="InitialPhoto" />
       </div>
-      <hr class="line"></hr>
+      <section class="main_paymentmethods">
+        <a class="paymentmethods">
+          <div class="pay__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-credit-card color" viewBox="0 0 16 16">
+              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+              <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+            </svg>
+          </div>
+          <div class="article-text">
+            <p>Pay in installments</p>
+            <span class="color">See banks promotions</span>
+          </div>
+        </a>
+      </section>
+      <!-- <hr class="line"></hr> -->
       <h2 class="producTittle">Offers and discounts</h2>
-      <section class="CarrusselSection">
-        <div class="button-left"><i class="fa-solid fa-angle-left"></i></div>
-        <article class="FirstOffer">
-          <div class="imagecarrussel">
-            <img src="/images/tvsamsung.jpg" alt="notebook">
+      <div class="container-carrusel">
+        <section class="CarrusselSection">
+          <!-- <div class="button-left"><i class="fa-solid fa-angle-left"></i></div> -->
+          <article class="FirstOffer">
+            <div class="imagecarrussel">
+              <img src="/images/tvsamsung.jpg" alt="notebook">
+            </div>
+            <div class="Imagetext">
+              <h3 class="Photo">Tv Samsung</h3>
+              <p class="Price">$ 1.000</p>
+              <p class="Delivery">Free shipping</p>
+            </div>
+          </article>
+          <article class="FirstOffer">
+            <div class="imagecarrussel">
+              <img src="/images/samsungs21.jpg" alt="laptop">
+            </div>
+            <div class="Imagetext">
+              <h3 class="Photo">Samsung S21FE</h3>
+              <p class="Price">$ 1.200</p>
+              <p class="Delivery">Free shipping</p>
+            </div>
+          </article>
+          <!-- <div class="button-right"><i class="fa-solid fa-angle-right"></i></div> -->
+          <article class="FirstOffer">
+            <div class="imagecarrussel">
+              <img src="/images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
+            </div>
+            <div class="Imagetext">
+              <h3 class="Photo">Samsung Galaxy S10</h3>
+              <p class="Price">$ 900</p>
+              <p class="Delivery">Free shipping</p>
+            </div>
+          </article>
+          <article class="FirstOffer">
+            <div class="imagecarrussel">
+              <img src="/images/img-macbook-pro-2019.jpg" alt="Macbook Pro2019">
+            </div>
+            <div class="Imagetext">
+              <h3 class="Photo">Macbook Pro 2019</h3>
+              <p class="Price">$ 2000</p>
+              <p class="Delivery">Free shipping</p>
+            </div>
+          </article>
+        </section>
+      </div>
+      <section class="section-title">Categories</section>
+      <section class="section-categories">
+        <div class="categories">
+          <div class="categories-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+            <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
           </div>
-          <div class="Imagetext">
-            <h3 class="Photo">Tv Samsung</h3>
-            <p class="Price">$ 1.000</p>
-            <p class="Delivery">Envío gratis</p>
-          </div>
-        </article>
-        <article class="FirstOffer">
-          <div class="imagecarrussel">
-            <img src="/images/samsungs21.jpg" alt="laptop">
-          </div>
-          <div class="Imagetext">
-            <h3 class="Photo">Samsung S21FE</h3>
-            <p class="Price">$ 1.200</p>
-            <p class="Delivery">Envío gratis</p>
-          </div>
-        </article>
-        <div class="button-right"><i class="fa-solid fa-angle-right"></i></div>
-        <!-- <div class="FirstOffer">
-          <div class="imagecarrussel">
-            <img src="/images/AirpodsOK.png" alt="Airpods">
-          </div>
-          <div class="ImageText">
-            <h3 class="Photo">Airpods</h3>
-            <h3 class="Price">$ 900</h3>
-            <h3 class="Delivery">Envío gratis</h3>
-          </div>
+          <p>Smartphone</p>
         </div>
-        <div class="FirstOffer">
-          <div class="imagecarrussel">
-            <img src="/images/iphone14pro" alt="iphone14pro">
+        <div class="categories">
+          <div class="categories-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16">
+            <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/>
+            </svg>
           </div>
-          <div class="TextImage">
-            <h3 class="Photo">Iphone 14 pro</h3>
-            <h3 class="Price">$ 1000</h3>
-            <h3 class="Delivery">Envío gratis</h3>
+          <p>Smart Tv</p>
+        </div>  
+        <div class="categories">
+          <div class="categories-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+            <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+            </svg>
           </div>
-        </div> -->
+          <p>Laptops</p>
+        </div>
+        <div class="categories">
+          <div class="categories-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+            <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+            </svg>
+          </div>
+          <p>Accessories</p>
+        </div>
+        <div class="categories-seemore">
+          <button type="button">See more</button>
+        </div>
       </section>
     </main>
     <section class="section__nav__mobile">
       <ul>
-        <li class="nav__mobile__caja1">
-          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
-          </svg>Home</a>
+        <li class="nav__mobile__caja">
+            <a href="#"><i class="uil uil-home"></i></a>
         </li>
-        <li class="nav__mobile__caja2">
-          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-          </svg>Search</a>
+        <li class="nav__mobile__caja">
+            <a href="#"><i class="uil uil-search"></i></a>
         </li>
-        <li class="nav__mobile__caja3">
-          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-          </svg>Cart</a>
+        <li class="nav__mobile__caja">
+            <a href="#"><i class="uil uil-shopping-cart"></i></a>
         </li>
-        <li class="nav__mobile__caja4">
-          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-          </svg>
-          Favorites</a>
+        <li class="nav__mobile__caja">
+            <a href="#"><i class="uil uil-heart-alt"></i></a>
         </li>
-        <li class="nav__mobile__caja5">
-          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-          </svg>Profile</a>
+        <li class="nav__mobile__caja">
+            <a href="#"><i class="uil uil-user"></i></a>
         </li>
       </ul>
     </section>
