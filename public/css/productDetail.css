@@ -277,21 +277,25 @@ main h2{
 @media(min-width:769px){
     .main-container{
         display:grid;
-        grid-template-columns: 35% 30% 30%;
-        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: 32% 32% 32%;
+        grid-template-rows: 1fr;
     }
     main h2{
         display: block;
     }
     .name-product{
         position: relative;
+        display:flex;
+        justify-content: center;
+        align-items:center;
     }
     .name-product i{
-        position: absolute;
-        font-size: 1.5em;
-        top: -10px;
+        display:block;
+        margin-left:10px;
+        font-size:1.25rem;
+    }
+    .name-product i:hover{
         color: #01518a;
-        left: 180px;
     }
     .article-button{
         margin-top: 20px;
@@ -339,5 +343,17 @@ main h2{
     .section__characteristics{
         margin: 10px;
     }
-
+    .section__description{
+        width: 100%;
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end:2;
+        margin: auto;
+    }
 }
+
+footer {
+    margin-top:20px;
+    
+  }

@@ -26,22 +26,26 @@
           <span class="main__input__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
         </form>
         <div class="header__account">
-          <a class="account__icon" href="login.html">
+          <a class="account__icon" href="/login">
           <i class="fa-solid fa-user"></i>
           <span>Your account</span>
           </a>
         </div>
         <div class="container-header__cart">
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i><span>Carrito</span></a>
+          <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i><span>Carrito</span></a>
         </div>
       </div>
       <nav class="navegation">
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="/index">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Abount us</a></li>
           <li><a href="#"> Contact us</a></li>
         </ul>
+        <div class="socialmedia">
+          <a href="#"><i class="fas fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fas fa-brands fa-twitter"></i></a>
+        </div>
       </nav>
     </header>
     <main>
@@ -67,7 +71,7 @@
       <div class="container-carrusel">
         <section class="CarrusselSection">
           <!-- <div class="button-left"><i class="fa-solid fa-angle-left"></i></div> -->
-          <article class="FirstOffer">
+          <a href="/productDetail" class="FirstOffer">
             <div class="imagecarrussel">
               <img src="/images/tvsamsung.jpg" alt="notebook">
             </div>
@@ -76,19 +80,19 @@
               <p class="Price">$ 1.000</p>
               <p class="Delivery">Free shipping</p>
             </div>
-          </article>
-          <article class="FirstOffer">
-            <div class="imagecarrussel">
-              <img src="/images/samsungs21.jpg" alt="laptop">
-            </div>
-            <div class="Imagetext">
-              <h3 class="Photo">Samsung S21FE</h3>
-              <p class="Price">$ 1.200</p>
-              <p class="Delivery">Free shipping</p>
-            </div>
-          </article>
+          </a>
+            <a href="/productDetail" class="FirstOffer">
+              <div class="imagecarrussel">
+                <img src="/images/samsungs21.jpg" alt="laptop">
+              </div>
+              <div class="Imagetext">
+                <h3 class="Photo">Samsung S21FE</h3>
+                <p class="Price">$ 1.200</p>
+                <p class="Delivery">Free shipping</p>
+              </div>
+            </a>
           <!-- <div class="button-right"><i class="fa-solid fa-angle-right"></i></div> -->
-          <article class="FirstOffer">
+          <a href="/productDetail" class="FirstOffer">
             <div class="imagecarrussel">
               <img src="/images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
             </div>
@@ -97,8 +101,8 @@
               <p class="Price">$ 900</p>
               <p class="Delivery">Free shipping</p>
             </div>
-          </article>
-          <article class="FirstOffer">
+          </a>
+          <a href="/productDetail" class="FirstOffer">
             <div class="imagecarrussel">
               <img src="/images/img-macbook-pro-2019.jpg" alt="Macbook Pro2019">
             </div>
@@ -107,7 +111,7 @@
               <p class="Price">$ 2000</p>
               <p class="Delivery">Free shipping</p>
             </div>
-          </article>
+          </a>
         </section>
       </div>
       <section class="section-title">Categories</section>
@@ -153,13 +157,13 @@
     <section class="section__nav__mobile">
       <ul>
         <li class="nav__mobile__caja">
-            <a href="#"><i class="uil uil-home"></i></a>
+            <a href="/index"><i class="uil uil-home"></i></a>
         </li>
         <li class="nav__mobile__caja">
             <a href="#"><i class="uil uil-search"></i></a>
         </li>
         <li class="nav__mobile__caja">
-            <a href="#"><i class="uil uil-shopping-cart"></i></a>
+            <a href="/productCart"><i class="uil uil-shopping-cart"></i></a>
         </li>
         <li class="nav__mobile__caja">
             <a href="#"><i class="uil uil-heart-alt"></i></a>
@@ -170,6 +174,12 @@
       </ul>
     </section>
     <footer>
+      <div class="footer_section1">
+        <a href="#"><h6 class="footer_title">TERMS & CONDITIONS</h6></a>
+        <a href="#"><h6 class="footer_title">SUPPORT</h6></a>
+        <a href="#"><h6 class="footer_title">CONTACT US</h6></a>
+        <a href="#"><h6 class="footer_title">CATEGORIES</h6></a>
+      </div>
       <p>
         Copyright© 2021-2022 ITLand All rights reserved <br />
         Made with <i class="fa-solid fa-heart"></i> by ITland
