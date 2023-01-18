@@ -94,9 +94,11 @@
     color:#fff
 }
 .navegation{
-    display: block;
+    display:flex;
     background-color: rgb(83, 72, 240);
     font-family: "Roboto";
+    justify-content:space-between;
+    align-items: center;
 }
 .navegation ul{
     display: flex;
@@ -108,6 +110,15 @@
     justify-content: start;
 
 }
+.socialmedia{
+  justify-self:flex-end;
+  margin-right:10px;
+}
+.socialmedia i{
+  color:white;
+  margin-right:5px;
+}
+
 .navegation ul li{
     list-style: none;
 }

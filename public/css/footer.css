@@ -8,4 +8,16 @@
 footer {
     padding: 10px;
     margin-bottom: 60px;
+    
   }
+.footer_section1{
+  display:flex;
+  justify-content:center;
+}
+.footer_title{
+  margin:15px;
+}
+footer p{
+  font-size:12px;
+  text-align:center;
+}
