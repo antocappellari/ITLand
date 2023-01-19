@@ -5,6 +5,9 @@
 .header__account .account {
   display: none;
 }
+.header__account span {
+  display: none;
+}
 .container-header__cart {
   display: none;
 }

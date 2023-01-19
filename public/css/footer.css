@@ -17,8 +17,13 @@ footer {
 }
 .footer_title{
   margin:15px;
+  font-size:9px;
 }
 footer p{
   font-size:12px;
   text-align:center;
+}
+@media (min-width:461px){
+  .footer_title{
+    font-size:12px;}
 }
