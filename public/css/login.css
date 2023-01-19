@@ -23,11 +23,19 @@ main {
   margin-top:20px;
 }
 .register h2 {
-  position: relative;
+  position:relative;
   text-align: center;
   font-size: 27px;
   font-weight: 400;
   color: black;
+}
+
+.register h4{
+  position:relative;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 400;
+  color: rgb(77, 76, 76);
 }
 
 .register form {
@@ -58,16 +66,12 @@ form .conditions {
   display: flex;
   align-items: center;
 }
+
 form h3 {
   color: #707070;
   font-size: 14px;
   font-weight: 500;
   margin-left: 10px;
-}
-.login_subtitle{
-  text-align:center;
-  color:rgb(168, 167, 167);
-
 }
 .userinput.button input {
   color: #fff;
@@ -180,5 +184,8 @@ p {
     #icon5{
         top: 65.9%;
         left: 84%;
+    }
+    .header_account span{
+      display:none;
     }
 }
