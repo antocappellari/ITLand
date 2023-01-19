@@ -166,7 +166,7 @@ margin-bottom:10px;
     }
     .section__container{
         width:60%;
-        gap:10px;
+        gap:0;
         margin-top:10px;
     }
     .section__product img{
@@ -192,6 +192,9 @@ margin-bottom:10px;
         display:flex;
         justify-content: center;
         align-items:center;
+    }
+    .checkout{
+    margin-top:10px;
     }
 
 }
