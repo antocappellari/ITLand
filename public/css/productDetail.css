@@ -15,6 +15,10 @@ body{
 .container-header__cart{
     display: none;
 }
+.container-header__cart a{
+    text-decoration: none;
+    padding: 10px;
+}
 .navegation{
     display: none;
 }
@@ -122,14 +126,12 @@ main h2{
 }
 .section__characteristics .price{
     color: #01518a;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 2em;
 }
 .section__characteristics .discount{
     color: #fff;
     background-color:#01518a ;
-    width: 60px;
-    height: 25px;
     padding: 3px 3px 3px 5px;
     border-radius: 5px;
 }

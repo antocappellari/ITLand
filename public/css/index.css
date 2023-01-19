@@ -51,7 +51,6 @@ body {
 }
 .CarrusselSection {
   height: 50vh;
-  padding: 20px 0 20px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,12 +76,14 @@ body {
 .FirstOffer {
   flex: 1 0 auto;
   background-color: #fff;
-  width: 40%;
+  width: 47%;
   outline: none;
-  margin: 0 20px;
+  gap: 20px;
+  margin: 0 5px 0 5px;
   padding: 2px;
   height: 40vh;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.384);
+  text-decoration: none;
 }
 
 .imagecarrussel {
@@ -101,10 +102,17 @@ body {
 .Imagetext {
   text-align: center;
 }
-.Imagetext .Price {
+.FirstOffer .Imagetext .Price {
   color: #315ed1;
   font-weight: 900;
   padding-bottom: 5px;
+}
+.FirstOffer .Imagetext .Photo{
+  color: #000000;
+}
+.FirstOffer .Imagetext .Delivery{
+  font-size: 15px;
+  color: rgb(101, 97, 235);
 }
 .section-categories{
   position: relative;
@@ -155,6 +163,9 @@ body {
 }
 
 @media(min-width:361px){
+  .FirstOffer{
+    width: 40%;
+  }
   .section-categories{
     gap: 0;
   }
