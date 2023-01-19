@@ -105,17 +105,17 @@ form .text h3 a:hover {
 }
 
 #icon1 {
-  top: 30%;
+  top: 33.5%;
   left: 10%;
 }
 
-#icon4 {
-  top: 57.5%;
+#icon2 {
+  top: 51%;
   left: 10%;
 }
 
 #icon5 {
-  top: 57.5%;
+  top: 51%;
   left: 84%;
 }
 
@@ -137,11 +137,11 @@ p {
         opacity: 0;
     }
     #icon1{
-        top: 23.8%;
+        top: 34%;
         left: 12.5%;
     }
     #icon2{
-        top: 38.2%;
+        top: 51.5%;
         left: 12.5%;
     }
     #icon3{
@@ -153,7 +153,7 @@ p {
         left: 12.5%;
     }
     #icon5{
-        top: 65.9%;
+        top: 51.8%;
         left: 80.5%;
     }
 }
@@ -166,11 +166,11 @@ p {
         opacity: 0;
     }
     #icon1{
-        top: 23.8%;
+        top: 33.9%;
         left: 10%;
     }
     #icon2{
-        top: 38.2%;
+        top: 51.3%;
         left: 10%;
     }
     #icon3{
@@ -182,7 +182,7 @@ p {
         left: 10%;
     }
     #icon5{
-        top: 65.9%;
+        top: 51.3%;
         left: 84%;
     }
     .header_account span{
