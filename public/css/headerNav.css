@@ -19,6 +19,16 @@
   color: #ffffff;
   background-color: #315ed1;
 }
+.container-header .title_and_logo{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.container-header .logo{
+  color:white;
+  width:40px;
+  filter: invert(1) sepia(1) hue-rotate(100deg) saturate(10%);
+}
 .header__burger {
   font-size: 1.3em;
 }
@@ -39,8 +49,15 @@
       justify-content: space-between;
       align-items: center;
   }
-  header h1{
-      padding-left: 50px;
+  .container-header .title_and_logo{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+  }
+  .container-header .logo{
+    color:white;
+    width:50px;
+    filter: invert(1) sepia(1) hue-rotate(100deg) saturate(10%);
   }
   .header__burger{
       display: none;
@@ -91,12 +108,15 @@
     margin-right: 20px;
 }
 .container-header__cart i{
-    color:#fff
+    color:#fff;
+}
+.container-header__cart span{
+  color:#fff;
 }
 .navegation{
     display:flex;
     background-color: rgb(83, 72, 240);
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     justify-content:space-between;
     align-items: center;
 }

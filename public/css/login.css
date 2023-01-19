@@ -1,111 +1,184 @@
-main{
-    width:90%;
-    margin:5% 5% 5% 5%;  
-    box-sizing: border-box;
-    }
-body {
-    font-family: 'Hind Madurai', sans-serif;
-    text-align: center;
-    background-image:url("../images/Itland3.png");
-    background-repeat: no-repeat;
-    background-color: rgb(47, 46, 46);
-    width: 100%;
-  }
-
-  h2{
-    font-size: 25px;
-    font-weight:bolder;
-  }
-  h3{
-    font-size: 20px;
-    font-weight: lighter;
-    color:rgb(105, 103, 103);
-    margin-bottom:10px;
-
-
-  }
-  input[type=email], input[type=password]{
-    width: 90%;
-    height:35px;
-    padding: 5px 5px;
-    margin: 5px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    background-color: white;
-    border-radius: 6px;
-    opacity: 1;
-  }
-  button {
-    background-color: #01518a;
-    color: white;
-    width: 90%;
-    height:35px;
-    padding: 5px 5px;
-    margin: 5px 0;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    font-size:15px;
-    border-radius:6px;
-    opacity: 1;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-.form_login{
-    margin-top: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
-    width:80%;
-    background-color: rgba(230, 231, 233, 0.7);
-    padding:10px;
-    text-align:center;
-    border-radius:10px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    
-  }
-div .form_extras{
-    text-align:right;
-    font-size:13px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
-input [type=checkbox]{
-    size:5px;
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #7997ea;
 }
-  footer{
-    font-size:10px;
-    color: white;
-  }
-  .main__input {
-    display: none;
-  }
- 
-  .navegation {
-    display: none;
-  }
-  .container-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5px;
-      color: black;
-      margin-bottom: 20px;
-      border-bottom: 1px solid black;
-      background-color: white;
-    }
-  .header__help {
-      justify-self: end;
-    }
-  .header__start h1 {
-      display: inline;
-      }
-  .help__icon i{
-      color: black;
-      font-size: 25px;
+.register {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  padding: 34px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 93px;
+  margin-top:20px;
+}
+.register h2 {
+  position: relative;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 400;
+  color: black;
+}
 
-  }
-  .start__icon i{
-      color: black;
-      font-size: 25px;
-  }
-  
+.register form {
+  margin-top: 10px;
+}
+.register form .userinput {
+  height: 52px;
+  margin: 18px 0;
+}
+form .userinput input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 37px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #c7bebe;
+  border-bottom-width: 2.5px;
+  border-radius: 17px;
+  transition: all 0.3s ease;
+}
+.userinput input:focus,
+.userinput input:valid {
+  border-color: #4070f4;
+}
+form .conditions {
+  display: flex;
+  align-items: center;
+}
+form h3 {
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.login_subtitle{
+  text-align:center;
+  color:rgb(168, 167, 167);
+
+}
+.userinput.button input {
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #7997ea;
+  cursor: pointer;
+}
+.userinput.button input:hover {
+  background: #0e4bf1;
+}
+form .text h3 {
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+form .text h3 a {
+  color: #4070f4;
+  text-decoration: none;
+}
+form .text h3 a:hover {
+  text-decoration: underline;
+}
+
+.userinput i {
+  position: absolute;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+
+#icon1 {
+  top: 30%;
+  left: 10%;
+}
+
+#icon4 {
+  top: 57.5%;
+  left: 10%;
+}
+
+#icon5 {
+  top: 57.5%;
+  left: 84%;
+}
+
+p {
+  font-size: 10px;
+  text-align: center;
+  padding: 1%;
+  color: rgb(104, 102, 102);
+}
+
+
+/* Small Devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .register{
+        max-width: 350px;
+        max-height: 500px;
+    }
+    p{
+        opacity: 0;
+    }
+    #icon1{
+        top: 23.8%;
+        left: 12.5%;
+    }
+    #icon2{
+        top: 38.2%;
+        left: 12.5%;
+    }
+    #icon3{
+        top: 51.8%;
+        left: 12.5%;
+    }
+    #icon4{
+        top: 65.9%;
+        left: 12.5%;
+    }
+    #icon5{
+        top: 65.9%;
+        left: 80.5%;
+    }
+}
+
+@media only screen and (max-width: 769px) and (min-width: 601px){
+    .register{
+        max-height: 500px;
+    }
+    p{
+        opacity: 0;
+    }
+    #icon1{
+        top: 23.8%;
+        left: 10%;
+    }
+    #icon2{
+        top: 38.2%;
+        left: 10%;
+    }
+    #icon3{
+        top: 51.8%;
+        left: 10%;
+    }
+    #icon4{
+        top: 65.9%;
+        left: 10%;
+    }
+    #icon5{
+        top: 65.9%;
+        left: 84%;
+    }
+}

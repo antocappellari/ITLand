@@ -1,0 +1,111 @@
+main{
+    width:90%;
+    margin:5% 5% 5% 5%;  
+    box-sizing: border-box;
+    }
+body {
+    font-family: 'Hind Madurai', sans-serif;
+    text-align: center;
+    background-image:url("../images/Itland3.png");
+    background-repeat: no-repeat;
+    background-color: rgb(47, 46, 46);
+    width: 100%;
+  }
+
+  h2{
+    font-size: 25px;
+    font-weight:bolder;
+  }
+  h3{
+    font-size: 20px;
+    font-weight: lighter;
+    color:rgb(105, 103, 103);
+    margin-bottom:10px;
+
+
+  }
+  input[type=email], input[type=password]{
+    width: 90%;
+    height:35px;
+    padding: 5px 5px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 6px;
+    opacity: 1;
+  }
+  button {
+    background-color: #01518a;
+    color: white;
+    width: 90%;
+    height:35px;
+    padding: 5px 5px;
+    margin: 5px 0;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size:15px;
+    border-radius:6px;
+    opacity: 1;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+.form_login{
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width:80%;
+    background-color: rgba(230, 231, 233, 0.7);
+    padding:10px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    
+  }
+div .form_extras{
+    text-align:right;
+    font-size:13px;
+}
+input [type=checkbox]{
+    size:5px;
+}
+  footer{
+    font-size:10px;
+    color: white;
+  }
+  .main__input {
+    display: none;
+  }
+ 
+  .navegation {
+    display: none;
+  }
+  .container-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      color: black;
+      margin-bottom: 20px;
+      border-bottom: 1px solid black;
+      background-color: white;
+    }
+  .header__help {
+      justify-self: end;
+    }
+  .header__start h1 {
+      display: inline;
+      }
+  .help__icon i{
+      color: black;
+      font-size: 25px;
+
+  }
+  .start__icon i{
+      color: black;
+      font-size: 25px;
+  }
+  

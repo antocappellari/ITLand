@@ -1,58 +1,19 @@
 .body{
     background-color: #ebebeb;
+    font-family: "Roboto", sans-serif;
 }
 .main__input{
-    display: none;
-}
-.header__account .account{
     display: none;
 }
 
 .price__detail{
     font-weight: bold;
 }
-.container-header__cart{
-    display: none;
-}
-.navegation{
-    display: none;
-}
 main h2{
     display: none;
 }
 .description__freeshipping{
     display: none;
-}
-
-.container-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px;
-    color: rgb(255, 255, 255);
-    margin-bottom: 20px;
-    background-color: #01518a;
-}
-.header__burger{
-    font-size: 1.3em;
-
-}
-.header__account {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-span{
-    display: none;
-}
-.account__icon{
-    color: rgb(255, 255, 255);
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-}
-.account__icon{
-    color: rgb(255, 255, 255);
 }
 
 

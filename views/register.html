@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/register.css" />
     <link rel="stylesheet" href="./css/bottomNav.css" />
     <link rel="stylesheet" href="./css/headerNav.css" />
+    <link rel="stylesheet" href="./css/footer.css">
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
@@ -28,37 +29,41 @@
         <div class="header__burger">
           <i class="fa-solid fa-bars"></i>
         </div>
+        <div class="title_and_logo">
+        <img src="/images/itLandlogo.png" alt="logo" class="logo">
         <h1>ITLand</h1>
+        </div>
         <form class="main__input">
           <input type="text" placeholder="Search" />
-          <span class="main__input__icon"
-            ><i class="fa-solid fa-magnifying-glass"></i
-          ></span>
+          <span class="main__input__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
         </form>
         <div class="header__account">
-          <a class="account__icon" href="login.html">
-            <i class="fa-solid fa-user"></i>
+          <a class="account__icon" href="/login">
+          <i class="fa-solid fa-user"></i>
+          <span>Your account</span>
           </a>
         </div>
         <div class="container-header__cart">
-          <a href="#"
-            ><i class="fa-solid fa-cart-shopping"></i><span>Carrito</span></a
-          >
+          <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
         </div>
       </div>
       <nav class="navegation">
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="/index">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Abount us</a></li>
           <li><a href="#"> Contact us</a></li>
         </ul>
+        <div class="socialmedia">
+          <a href="#"><i class="fas fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fas fa-brands fa-twitter"></i></a>
+        </div>
       </nav>
     </header>
     <main>
       <div class="register">
         <h2>Register</h2>
-        <form action="#">
+        <form action="/action_page.php" method="post">
           <div class="userinput">
             <input type="text" placeholder="Enter your name" required />
             <i class="uil uil-user" id="icon1"></i>
@@ -84,7 +89,7 @@
             <input type="Submit" value="Register Now" />
           </div>
           <div class="text">
-            <h3>Already have an account? <a href="#">Login</a></h3>
+            <h3>Already have an account? <a href="/login">Login</a></h3>
           </div>
         </form>
         <p>
@@ -92,22 +97,34 @@
         </p>
       </div>
     </main>
+    <footer>
+      <div class="footer_section1">
+        <a href="#"><h6 class="footer_title">TERMS & CONDITIONS</h6></a>
+        <a href="#"><h6 class="footer_title">SUPPORT</h6></a>
+        <a href="#"><h6 class="footer_title">CONTACT US</h6></a>
+        <a href="#"><h6 class="footer_title">CATEGORIES</h6></a>
+      </div>
+      <p>
+        Copyright© 2021-2022 ITLand All rights reserved <br />
+        Made with <i class="fa-solid fa-heart"></i> by ITland
+      </p>
+    </footer>
     <section class="section__nav__mobile">
       <ul>
-        <li class="nav__mobile__caja1">
-            <i class="uil uil-home"></i>
+        <li class="nav__mobile__caja">
+            <a href="/index"><i class="uil uil-home"></i></a>
         </li>
-        <li class="nav__mobile__caja2">
-            <i class="uil uil-search"></i>
+        <li class="nav__mobile__caja">
+            <a href="#"><i class="uil uil-search"></i></a>
         </li>
-        <li class="nav__mobile__caja3">
-            <i class="uil uil-shopping-cart"></i>
+        <li class="nav__mobile__caja">
+            <a href="/productCart"><i class="uil uil-shopping-cart"></i></a>
         </li>
-        <li class="nav__mobile__caja4">
-            <i class="uil uil-heart-alt"></i>
+        <li class="nav__mobile__caja">
+            <a href="#"><i class="uil uil-heart-alt"></i></a>
         </li>
-        <li class="nav__mobile__caja5">
-            <i class="uil uil-user"></i>
+        <li class="nav__mobile__caja">
+            <a href="#"><i class="uil uil-user"></i></a>
         </li>
       </ul>
     </section>
