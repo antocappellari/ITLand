@@ -33,7 +33,7 @@
   align-items: center;
 }
 
-.container-header .logo {
+.title_and_logo img{
   color: white;
   width: 40px;
   filter: invert(1) sepia(1) hue-rotate(100deg) saturate(10%);
@@ -75,7 +75,7 @@
     font-size: 30px;
   }
 
-  .container-header .logo {
+  .title_and_logo img{
     width: 30px;
   }
 
