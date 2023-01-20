@@ -24,7 +24,7 @@
   align-items: center;
   padding: 5px;
   color: #ffffff;
-  background-color: #315ed1;
+  background-color: #323b55;
 }
 
 .container-header .title_and_logo {
@@ -36,8 +36,8 @@
 .title_and_logo img{
   color: white;
   width: 40px;
-  filter: invert(1) sepia(1) hue-rotate(100deg) saturate(10%);
 }
+filter: invert(1) sepia(1) hue-rotate(100deg) saturate(10%);
 
 .header__burger {
   font-size: 1.3em;
@@ -192,8 +192,8 @@
     font-size: 40px;
   }
 
-  .container-header .logo {
-    width: 50px;
+  .title_and_logo img{
+    width: 60px;
   }
 
   .header__account span {

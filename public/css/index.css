@@ -31,7 +31,7 @@ width: 100%;
   width: 90%;
   height: 10vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 10px;
   align-items: center;
   border-radius: 5px;
@@ -41,6 +41,23 @@ width: 100%;
 }
 .paymentmethods .color{
   color: #315ed1;
+}
+.paymentmethods .paymethod{
+  width:15%;
+  height:10vh;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+}
+.paymethod img{
+  width:50%;
+}
+.paymethod span{
+  font-size:8px;
+}
+
+.paymethod .installment{
+  width:100%;
 }
 .paymentmethods .pay__icon{
   display: flex;
