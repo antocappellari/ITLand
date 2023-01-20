@@ -161,12 +161,19 @@ body {
   width: 120px;
   height: 30px;
 }
-
-@media(min-width:361px){
+/* --------------------MOBILE------------------------------ */
+@media screen and (max-width:767px){
   .FirstOffer{
-    width: 40%;
+    width: 47%;
   }
-  .section-categories{
+
+}
+/* ----------------------TABLETS----------------------------- */
+@media screen and (min-width:767px) and (max-width:1023px) {
+  .FirstOffer{
+    width: 30%;
+  }
+    .section-categories{
     gap: 0;
   }
   .section-categories .categories{
@@ -180,10 +187,10 @@ body {
     width: 30%;
   }
   
+
 }
-
-@media(min-width:769px){
-
+/* -------------------------DESKTOP------------------------------ */
+@media screen and (min-width:1024px) {
   .FirstOffer{
     width: 20%;
   }
@@ -191,6 +198,6 @@ body {
     width: 25%;
     
   }
-
+  
 }
 

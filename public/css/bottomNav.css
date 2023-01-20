@@ -5,10 +5,11 @@
   align-items: center;
   width: 100%;
   position: fixed;
-  top:94% ;
+  bottom: 0;
   border-radius: 10px 10px 0 0;
   box-shadow: 0.5px 0.5px 5px black;
   height: 45px;
+  z-index: 1111111;
 }
 .section__nav__mobile ul{
   display: flex;
@@ -41,7 +42,7 @@
 }
 
 
-@media(min-width:769px){
+@media screen and (min-width:1024px){
   .section__nav__mobile{
     display: none;
   }

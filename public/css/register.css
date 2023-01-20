@@ -120,7 +120,7 @@ form .text h3 a:hover {
   left: 84%;
 }
 
-p {
+.register p {
   font-size: 10px;
   text-align: center;
   padding: 1%;
@@ -129,61 +129,60 @@ p {
 
 
 /* Small Devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
+@media screen and (min-width:767px) and (max-width:1023px) {
     .register{
-        max-width: 350px;
-        max-height: 500px;
+        max-width: 450px;
     }
-    p{
-        opacity: 0;
+    .register p{
+        opacity: 1;
     }
     #icon1{
-        top: 21.4%;
-        left: 12.5%;
+        top: 19%;
+        left: 8.5%;
     }
     #icon2{
-        top: 35.6%;
-        left: 12.5%;
+        top: 32.5%;
+        left: 9.5%;
     }
     #icon3{
-        top: 49.5%;
-        left: 12.5%;
+        top: 45.5%;
+        left: 9.5%;
     }
     #icon4{
-        top: 63.5%;
-        left: 12.5%;
+        top: 58.5%;
+        left: 9.5%;
     }
     #icon5{
-        top: 63.5%;
+        top: 58.5%;
         left: 80.5%;
     }
 }
 
-@media only screen and (max-width: 769px) and (min-width: 601px){
-    .register{
-        max-height: 500px;
-    }
-    p{
-        opacity: 0;
+@media screen and (min-width:1024px){
+  .register{
+    max-width: 550px;
+  }
+    .register p{
+      opacity: 1;
     }
     #icon1{
-        top: 21.4%;
-        left: 10%;
+        top: 19.8%;
+        left: 8%;
     }
     #icon2{
-        top: 35.6%;
-        left: 10%;
+        top: 33.5%;
+        left: 8%;
     }
     #icon3{
-        top: 49.5%;
-        left: 10%;
+        top: 45.5%;
+        left: 8%;
     }
     #icon4{
-        top: 63.5%;
-        left: 10%;
+        top: 58.5%;
+        left: 8%;
     }
     #icon5{
-        top: 63.5%;
+        top: 59.5%;
         left: 84%;
     }
 }

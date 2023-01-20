@@ -4,7 +4,8 @@
   "description": "Equipo 1 - DH\r Integrantes del Grupo: Breve descripción\r •\tPedro Aznarez: 23 años, Montevideo, Uruguay.\r •\tMicaela Bustos: 28 años, Diseñadora UX, Buenos Aires, Argentina\r •\tAntonella Cappellari: Ingeniera Industrial, 30 años, Capital federal, Buenos Aires, Argentina.\r •\tRomina Jaime: 42 años, Administrativa y Profesora de Yoga, Buenos Aires, Argentina\r •\tJhonatan Soto: 20 años, Buenos Aires, Argentina.\r •\tMa. Josefina Cisternas Martinotti: Enfermera, 35 años, Santiago de Chile.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
