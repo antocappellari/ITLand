@@ -23,6 +23,17 @@ footer p{
   font-size:12px;
   text-align:center;
 }
+.socialmedia{
+  display: flex;
+  justify-content:center;
+  margin-bottom: 15px;
+  
+}
+.socialmedia i{
+  color: rgb(81, 81, 80);
+  margin-right:15px;
+  font-size: 25px;
+}
 @media (min-width:461px){
   .footer_title{
     font-size:12px;}
