@@ -211,6 +211,9 @@
   .container-header__cart span {
     font-size: 20px;
   }
+  .container-header__cart a {
+    text-decoration:none;
+  }
 
   .navegation ul li {
     font-size: 15px;

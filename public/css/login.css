@@ -133,9 +133,6 @@ p {
         max-width: 350px;
         max-height: 500px;
     }
-    p{
-        opacity: 0;
-    }
     #icon1{
         top: 34%;
         left: 12.5%;
@@ -162,7 +159,7 @@ p {
     .register{
         max-height: 500px;
     }
-    p{
+    .conditions{
         opacity: 0;
     }
     #icon1{

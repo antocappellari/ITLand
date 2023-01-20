@@ -133,7 +133,7 @@ form .text h3 a:hover {
     .register{
         max-width: 450px;
     }
-    .register p{
+    .register .conditions{
         opacity: 1;
     }
     #icon1{
