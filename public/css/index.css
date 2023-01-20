@@ -31,7 +31,7 @@ width: 100%;
   width: 90%;
   height: 10vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 10px;
   align-items: center;
   border-radius: 5px;
@@ -43,34 +43,7 @@ width: 100%;
   color: #315ed1;
 }
 .paymentmethods .paymethod{
-  width:15%;
-  height:10vh;
-  display:flex;
-  flex-direction: column;
-  justify-content:space-evenly;
-}
-.paymethod__img{
-  width:100%;
-  display:flex;
-  justify-content:center;
-}
-.paymethod__img img{
-  width:50%;
-}
-.paymethod__installment{
-  width:100%;
-  display:flex;
-  justify-content:center;
-}
-.paymethod__installment span{
-  font-size:10px;
-  text-align:center;
-  font-weight:bold;
-  color:rgb(44, 44, 44);
-}
-
-.paymethod .installment{
-  width:100%;
+display:none;
 }
 .paymentmethods .pay__icon{
   display: flex;
@@ -226,6 +199,40 @@ width: 100%;
   .FirstOffer{
     width: 30%;
   }
+  .paymentmethods{
+    justify-content:space-evenly;
+  }
+  .paymentmethods .paymethod{
+    display:block;
+    width:15%;
+    height:10vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+  }
+  .paymethod__img{
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+  .paymethod__img img{
+    width:50%;
+  }
+  .paymethod__installment{
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+  .paymethod__installment span{
+    font-size:10px;
+    text-align:center;
+    font-weight:bold;
+    color:rgb(44, 44, 44);
+  }
+  
+  .paymethod .installment{
+    width:100%;
+  }
   
 
 }
@@ -251,6 +258,39 @@ width: 100%;
     align-items:center;
     
   }
+  .paymentmethods{
+    justify-content:space-evenly;
+  }
+  .paymentmethods .paymethod{
+    display:block;
+    width:15%;
+    height:10vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+  }
+  .paymethod__img{
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+  .paymethod__img img{
+    width:50%;
+  }
+  .paymethod__installment{
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+  .paymethod__installment span{
+    font-size:10px;
+    text-align:center;
+    font-weight:bold;
+    color:rgb(44, 44, 44);
+  }
   
+  .paymethod .installment{
+    width:100%;
+  }
 }
 
