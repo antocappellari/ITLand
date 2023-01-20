@@ -47,124 +47,148 @@
 }
 @media(min-width:769px){
   .container-header {
-      height: 10vh;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  .container-header .title_and_logo{
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-  }
-  .title_and_logo h1{
-    font-size: 60px;
-  }
-  .logo{
-    width: 60px;
-  }
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-header .title_and_logo{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.title_and_logo h1{
+  font-size: 30px;
+}
+.container-header .logo{
+  width:30px;
+}
+.header__burger{
+    display: none;
+}
+.header__account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+.header__account a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-decoration: none;
 
-  .container-header .logo{
-    color:white;
-    width:50px;
-    filter: invert(1) sepia(1) hue-rotate(100deg) saturate(10%);
-  }
-  .header__burger{
-      display: none;
-  }
-  .header__account{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 20%;
-  }
-  .header__account a{
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      width: 100%;
-      text-decoration: none;
-
-  }
-  .header__account span{
-      display: block;
-      font-size: 25px;
-  }
-  .account__icon {
-      font-size: 25px;
-      margin-right: 15px;
-      display: flex;
-      justify-content: center;
-  }
-  .main__input{
+}
+.header__account span{
     display: block;
-    width: 40%;
-    position: relative;
-    border-radius: 30px;
+    font-size: 15px;
+}
+.account__icon {
+    font-size: 15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+}
+.main__input{
+  display: block;
+  width: 40%;
+  position: relative;
+  border-radius: 30px;
 }
 .main__input__icon{
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color:#000;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color:#000;
 }
 .main__input input{
-    border: none;
-    height: 35px;
-    width: 100%;
-    border-radius: 10px
+  border: none;
+  height: 35px;
+  width: 100%;
+  border-radius: 10px
 }
 .main__input input::placeholder{
-    padding-left: 10px;
+  padding-left: 10px;
 }
 .header__account .account{
-    display: block;
+  display: block;
 }
 .container-header__cart{
-    display: block;
-    margin-right: 40px;
+  display: block;
+  margin-right: 40px;
 }
 .container-header__cart i{
-    color:#fff;
-    font-size: 25px;
-    margin-right: 15px;
+  color:#fff;
+  font-size: 15px;
+  margin-right: 15px;
 }
 .container-header__cart span{
-  color:#fff;
-  font-size: 25px;
-  text-decoration: none;
+color:#fff;
+font-size: 15px;
+text-decoration: none;
 }
 .navegation{
-    display:flex;
-    background-color: rgb(81, 81, 80);
-    font-family: "Roboto", sans-serif;
-    justify-content: flex-end ;
-    align-items: center;
-    height: 35px;
-    padding-right: 15px;
+  display:flex;
+  background-color: rgb(81, 81, 80);
+  font-family: "Roboto", sans-serif;
+  justify-content: flex-end ;
+  align-items: center;
+  height: 35px;
+  padding-right:20px;
 }
 .navegation ul{
-    display: flex;
-    gap:20px;
-    align-items: center;
-    list-style: none;
-    height: 6vh;
-    padding-left: 10px;
-    justify-content: flex-end;
-   
+  display: flex;
+  gap:20px;
+  align-items: center;
+  list-style: none;
+  height: 6vh;
+  padding-left: 10px;
+  justify-content: flex-end;
+ 
 
 }
 
 
 .navegation ul li{
-    list-style: none;
-    font-size: 20px;
+  list-style: none;
+  font-size: 10px;
 }
 
 .navegation ul li a{
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
+}
+
+}
+
+@media(min-width:1068px){
+  
+  .title_and_logo h1{
+    font-size: 40px;
+  }
+
+  .container-header .logo{
+    width:50px;
+  }
+  
+  .header__account span{
+      font-size: 20px;
+  }
+  .account__icon {
+      font-size: 20px;
+  }
+
+.container-header__cart i{
+    font-size: 20px;
+}
+.container-header__cart span{
+  font-size: 20px;
+}
+
+.navegation ul li{
+    font-size: 15px;
 }
 
 }
