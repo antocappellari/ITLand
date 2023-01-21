@@ -20,8 +20,9 @@
 
 .container-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
   padding: 5px;
   color: #ffffff;
   background-color: #323b55;
@@ -43,6 +44,9 @@
 
 .header__burger {
   font-size: 1.3em;
+  padding-left: 10px ;
+  color: #fff;
+  text-decoration: none;
 }
 
 .header__account {
@@ -55,6 +59,67 @@
 
 .account__icon {
   color: rgb(255, 255, 255);
+}
+.user{
+  color: #000;
+  text-align: center;
+  position: relative;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.user p{
+  font-size:1.3em ;
+  font-weight: bold;
+}
+.user .user-profile{
+  width: 90px;
+  height: 90px;
+}
+.button-exit{
+  position: absolute;
+  top: 10px;
+  left: 87%;
+}
+.button-exit svg{
+  color: #000;
+  width: 30px;
+  height: 30px;
+}
+
+.menu-mobile{
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  position: absolute;
+  width: 80%;
+  height: 100vh;
+  transform: translateX(-360px);
+  transition: all 1s;
+}
+#open:target{
+  display: block;
+  transform: translateX(0px);
+}
+.navegation-mobile {
+  margin-top: 20px;
+}
+.navegation-mobile ul{
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  gap: 20px;
+}
+.navegation-mobile ul li {
+  list-style: none;
+}
+.navegation-mobile ul li a{
+  font-size: 1.2em;
+  color: #000;
+  text-decoration: none;
 }
 /* --------------------------------------TABLETS------------------------------ */
 @media screen and (min-width:767px) and (max-width:1023px) {}
