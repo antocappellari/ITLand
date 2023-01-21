@@ -1,184 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>ITLand</title>
-      <link rel="stylesheet" href="./css/productCart.css">
-      <link rel="stylesheet" href="./css/bottomNav.css">
-      <link rel="stylesheet" href="./css/footer.css">
-      <link rel="stylesheet" href="./css/headerNav.css">
-      <script src="https://kit.fontawesome.com/d4dc869e85.js" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> 
-      <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap" rel="stylesheet">
-    </head>
-    <body>
-      <header>
-        <div class="container-header">
-          <div class="header__burger">
-            <i class="fa-solid fa-bars"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITLand</title>
+  <link rel="stylesheet" href="./css/productCart.css">
+  <link rel="stylesheet" href="./css/bottomNav.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/headerNav.css">
+  <script src="https://kit.fontawesome.com/d4dc869e85.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="container-header">
+      <div class="header__burger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <a href="/" class="title_and_logo">
+        <img src="/images/Logo2.png">
+        <h1>ITLand</h1>
+      </a>
+      <form class="main__input">
+        <input type="text" placeholder="Search" />
+        <span class="main__input__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+      </form>
+      <div class="header__account">
+        <a class="account__icon" href="/login">
+          <i class="fa-solid fa-user"></i>
+          <span>My account</span>
+        </a>
+      </div>
+      <div class="container-header__cart">
+        <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      </div>
+    </div>
+    <nav class="navegation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/aboutUs">About us</a></li>
+        <li><a href="/contactUs"> Contact us</a></li>
+      </ul>
+
+    </nav>
+  </header>
+  <main>
+    <section class="section__container">
+      <article class="section__product">
+        <img src="./images/img-samsung-galaxy-s10.jpg">
+        <div class="product__detail">
+          <div class="detail1">
+            <p>Samsung Galaxy S10 120GB Blue</p>
+            <p class="price__detail">$90.000</p>
+            <p class="free__shop">Free shipping</p>
           </div>
-          <a href="/" class="title_and_logo">
-            <img src="/images/Logo2.png">
-            <h1>ITLand</h1>
-          </a>
-          <form class="main__input">
-            <input type="text" placeholder="Search" />
-            <span class="main__input__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-          </form>
-          <div class="header__account">
-            <a class="account__icon" href="/login">
-            <i class="fa-solid fa-user"></i>
-            <span>My account</span>
-            </a>
-          </div>
-          <div class="container-header__cart">
-            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+          <div class="quantity">
+            <button type="button" class="btn1"><i class="fas fa-solid fa-plus"></i></button>
+            <p>1</p>
+            <button type="button" class="btn2"><i class="fas fa-solid fa-minus"></i></button>
           </div>
         </div>
-        <nav class="navegation">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/aboutUs">About us</a></li>
-            <li><a href="/contactUs"> Contact us</a></li>
-          </ul>
-       
-        </nav>
-      </header>
-      <main>
-       <section class="section__container">
-        <article class="section__product">
-            <img src="./images/img-samsung-galaxy-s10.jpg">
-            <div class="product__detail">
-              <div class="detail1">
-                <p>Samsung Galaxy S10 120GB Blue</p>
-                <p class="price__detail">$90.000</p>
-                <p class="free__shop">Free shipping</p>
-                </div>
-                <div class="quantity">
-                    <button type="button"><i class="fas fa-solid fa-plus"></i></button>
-                    <p>1</p>
-                    <button type="button"><i class="fas fa-solid fa-minus"></i></button>
-                </div>
-            </div>
-            <div class="trash">
-              <i class="fas fa-solid fa-trash-can"></i>
-            </div>
-        </article>
-        <article class="section__product">
-            <img src="./images/img-tv-samsung-smart.jpg">
-            <div class="product__detail">
-            <div class="detail1">
+        <div class="trash">
+          <i class="fas fa-solid fa-trash-can"></i>
+        </div>
+      </article>
+      <article class="section__product">
+        <img src="./images/img-tv-samsung-smart.jpg">
+        <div class="product__detail">
+          <div class="detail1">
             <p>Samsung TV Smart 32 pulgadas</p>
             <p class="price__detail">$180.000</p>
             <p class="free__shop">Free shipping</p>
-            </div>
-            <div class="quantity">
-                <button type="button"><i class="fas fa-solid fa-plus"></i></button>
-                <p>1</p>
-                <button type="button"><i class="fas fa-solid fa-minus"></i></button>
-            </div>
+          </div>
+          <div class="quantity">
+            <button type="button" class="btn1"><i class="fas fa-solid fa-plus"></i></button>
+            <p>1</p>
+            <button type="button" class="btn2"><i class="fas fa-solid fa-minus"></i></button>
+          </div>
         </div>
         <div class="trash">
-        <i class="fas fa-solid fa-trash-can"></i>
+          <i class="fas fa-solid fa-trash-can"></i>
         </div>
-        </article>
-        <article class="section__product">
-            <img src="./images/PhotoSamsungIndex.jpg">
-            <div class="product__detail">
-            <div class="detail1">
+      </article>
+      <article class="section__product">
+        <img src="./images/PhotoSamsungIndex.jpg">
+        <div class="product__detail">
+          <div class="detail1">
             <p>Samsung Node 10 256GB Grey</p>
             <p class="price__detail">$ 120.000</p>
             <p class="free__shop">Free shipping</p>
-            </div>
-            <div class="quantity">
-                <button type="button"><i class="fas fa-solid fa-plus"></i></button>
-                <p>1</p>
-                <button type="button"><i class="fas fa-solid fa-minus"></i></button>
-            </div>
+          </div>
+          <div class="quantity">
+            <button type="button" class="btn1"><i class="fas fa-solid fa-plus"></i></button>
+            <p>1</p>
+            <button type="button" class="btn2"><i class="fas fa-solid fa-minus"></i></button>
+          </div>
         </div>
         <div class="trash">
           <i class="fas fa-solid fa-trash-can"></i>
-          </div>
-        </article>
-        <article class="section__product">
-            <img src="./images/S22ultra4.jpeg">
-            <div class="product__detail">
-            <div class="detail1">
+        </div>
+      </article>
+      <article class="section__product">
+        <img src="./images/S22ultra4.jpeg">
+        <div class="product__detail">
+          <div class="detail1">
             <p>Samsung S22 Ultra 500GB Grey</p>
             <p class="price__detail">$ 256.000</p>
             <p class="free__shop">Free shipping</p>
-            </div>
-            <div class="quantity">
-                <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
-                <p>1</p>
-                <button type="button" class="less"><i class="fas fa-solid fa-minus"></i></button>
-            </div>
+          </div>
+          <div class="quantity">
+            <button type="button" class="btn1"><i class="fas fa-solid fa-plus"></i></button>
+            <p>1</p>
+            <button type="button" class="btn2"><i class="fas fa-solid fa-minus"></i></button>
+          </div>
         </div>
         <div class="trash">
           <i class="fas fa-solid fa-trash-can"></i>
         </div>
-        </article>
-       </section>
-       <section class="checkout">
-       <div class="checkout_cupon">
+      </article>
+    </section>
+    <section class="checkout">
+      <div class="checkout_cupon">
         <h2 class="cupon_message">Do you have a cupon or a discount code?</h2>
         <div class="cupon_form">
-          <input class="placeholder" type="number" placeholder="Enter the code"/>
-          <input class="apply"type="submit" value="Apply"/>
+          <input class="placeholder" type="number" placeholder="Enter the code" />
+          <input class="apply" type="submit" value="Apply" />
         </div>
-        </div>
-        <div class="checkout_box">
-          <div class="total">
+      </div>
+      <div class="checkout_box">
+        <div class="total">
           <h2 class="total_title">Total:</h2>
           <h2 class="total_price">$646</h2>
-          </div>
-          <input class="checkout_box_co" type="submit" value="Check out"/>
-          <input class="checkout_box_kb"type="submit" value="Keep on buying"/>
-          <input class="checkout_box_ec" type="submit" value="Empty cart"/>
         </div>
-        <div class="checkout_logo">
-          <i class="fas fa-solid fa-user-shield"></i>
-        </div>
-       </section>
-     </main>
-     <section class="section__nav__mobile">
-      <ul>
-        <li class="nav__mobile__caja">
-            <a href="/"><i class="uil uil-home"></i></a>
-        </li>
-        <li class="nav__mobile__caja">
-            <a href="#"><i class="uil uil-search"></i></a>
-        </li>
-        <li class="nav__mobile__caja">
-            <a href="/productCart"><i class="uil uil-shopping-cart"></i></a>
-        </li>
-        <li class="nav__mobile__caja">
-            <a href="/fav"><i class="uil uil-heart-alt"></i></a>
-        </li>
-        <li class="nav__mobile__caja">
-            <a href="/login"><i class="uil uil-user"></i></a>
-        </li>
-      </ul>
+        <input class="checkout_box_co" type="submit" value="Check out" />
+        <input class="checkout_box_kb" type="submit" value="Keep on buying" />
+        <input class="checkout_box_ec" type="submit" value="Empty cart" />
+      </div>
+      <div class="checkout_logo">
+        <i class="fas fa-solid fa-user-shield"></i>
+      </div>
     </section>
-        <footer>
-          <div class="footer_section1">
-            <a href="#"><h6 class="footer_title">TERMS & CONDITIONS</h6></a>
-            <a href="#"><h6 class="footer_title">SUPPORT</h6></a>
-            <a href="contactUs"><h6 class="footer_title">CONTACT US</h6></a>
-            <a href="#"><h6 class="footer_title">CATEGORIES</h6></a>
-          </div>
-          <div class="socialmedia">
-            <a href="#"><i class="fas fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fas fa-brands fa-twitter"></i></a>
-          </div>
-        <p>
-          Copyright© 2021-2022 Itland All rights reserved <br />
-          Made with <i class="fa-solid fa-heart"></i> by ITland
-        </p>
-      </footer>
-    </body>
-  </html>
-  
+  </main>
+  <section class="section__nav__mobile">
+    <ul>
+      <li class="nav__mobile__caja">
+        <a href="/"><i class="uil uil-home"></i></a>
+      </li>
+      <li class="nav__mobile__caja">
+        <a href="#"><i class="uil uil-search"></i></a>
+      </li>
+      <li class="nav__mobile__caja">
+        <a href="/productCart"><i class="uil uil-shopping-cart"></i></a>
+      </li>
+      <li class="nav__mobile__caja">
+        <a href="/fav"><i class="uil uil-heart-alt"></i></a>
+      </li>
+      <li class="nav__mobile__caja">
+        <a href="/login"><i class="uil uil-user"></i></a>
+      </li>
+    </ul>
+  </section>
+  <footer>
+    <div class="footer_section1">
+      <a href="#">
+        <h6 class="footer_title">TERMS & CONDITIONS</h6>
+      </a>
+      <a href="#">
+        <h6 class="footer_title">SUPPORT</h6>
+      </a>
+      <a href="contactUs">
+        <h6 class="footer_title">CONTACT US</h6>
+      </a>
+      <a href="#">
+        <h6 class="footer_title">CATEGORIES</h6>
+      </a>
+    </div>
+    <div class="socialmedia">
+      <a href="#"><i class="fas fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fas fa-brands fa-twitter"></i></a>
+    </div>
+    <p>
+      Copyright© 2021-2022 Itland All rights reserved <br />
+      Made with <i class="fa-solid fa-heart"></i> by ITland
+    </p>
+  </footer>
+</body>
+
+</html>
