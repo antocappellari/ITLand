@@ -172,6 +172,14 @@ display:none;
     width: 47%;
   }
 
+  .paymentmethods .color {
+    color: #315ed1;
+    display: flex;
+    width: 113%;
+}
+
+
+
 .paymentmethods .article-text{
   font-size: 47%;
 }
@@ -183,10 +191,10 @@ display:none;
   .paymentmethods .paymethod{
     display:block;
     width:15%;
-    height:10vh;
+    height:6vh;
     display:flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content:inherit;
   }
   .paymethod__img{
     width:100%;
@@ -194,7 +202,7 @@ display:none;
     justify-content:center;
   }
   .paymethod__img img{
-    width:50%;
+    width:94%;
   }
   .paymethod__installment{
     width:100%;
