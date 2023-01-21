@@ -172,9 +172,8 @@ display:none;
     width: 47%;
   }
 
-.article-text{
-
-  font-size: small;
+.paymentmethods .article-text{
+  font-size: 47%;
 }
   .paymentmethods{
     justify-content:space-evenly;
@@ -203,7 +202,7 @@ display:none;
     justify-content:center;
   }
   .paymethod__installment span{
-    font-size:11px;
+    font-size:8px;
     text-align:center;
     font-weight:bold;
     color:rgb(44, 44, 44);
