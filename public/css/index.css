@@ -172,6 +172,55 @@ display:none;
     width: 47%;
   }
 
+  .paymentmethods .color {
+    color: #315ed1;
+    display: flex;
+    width: 113%;
+}
+
+
+
+.paymentmethods .article-text{
+  font-size: 47%;
+}
+  .paymentmethods{
+    justify-content:space-evenly;
+    width: 95%;
+  }
+
+  .paymentmethods .paymethod{
+    display:block;
+    width:15%;
+    height:6vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:inherit;
+  }
+  .paymethod__img{
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+  .paymethod__img img{
+    width:94%;
+  }
+  .paymethod__installment{
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+  .paymethod__installment span{
+    font-size:8px;
+    text-align:center;
+    font-weight:bold;
+    color:rgb(44, 44, 44);
+  }
+  
+  .paymethod .installment{
+    width:100%;
+  }
+
+
 }
 /* ----------------------TABLETS----------------------------- */
 @media screen and (min-width:767px) and (max-width:1023px) {
