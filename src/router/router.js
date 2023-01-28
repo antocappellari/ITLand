@@ -4,9 +4,9 @@ const controller = require('../controllers/controller')
 
 //--------------- Rutas-----------------//
 router.get('/', controller.index)
-router.get('/abautUs', controller.aboutUs)
+router.get('/aboutUs', controller.aboutUs)
 router.get('/contact', controller.contact)
-router.get('/favorites', controller.favorite)
+router.get('/favorite', controller.favorite)
 router.get('/login', controller.login)
 router.get('/productCart', controller.productCart)
 router.get('/productDetail', controller.productDetail)

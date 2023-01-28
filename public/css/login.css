@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-main {
+.main-login {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -118,13 +118,13 @@ form .text h3 a:hover {
   top: 51%;
   left: 84%;
 }
-
+/* 
 p {
   font-size: 10px;
   text-align: center;
   padding: 1%;
   color: rgb(104, 102, 102);
-}
+} */
 
 
 /* Small Devices (portrait tablets and large phones, 600px and up) */
