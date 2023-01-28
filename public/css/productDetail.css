@@ -36,7 +36,6 @@ main h2{
     align-items: center;
     padding: 5px;
     color: rgb(255, 255, 255);
-    background-color: #01518a;
 }
 .header__burger{
     font-size: 1.3em;
@@ -380,6 +379,9 @@ main h2{
         grid-row-start:1;
         grid-row-end:2;
         margin: auto;
+    }
+    .main__input{
+        display:block;
     }
 }
 

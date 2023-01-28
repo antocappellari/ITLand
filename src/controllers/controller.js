@@ -13,20 +13,23 @@ const controller = {
         res.render('index.ejs')
     },
     login(req,res){
-        res.render('login.ejs')
+        res.render('./users/login.ejs')
     },
     productCart(req,res){
-        res.render('productCart.ejs')
+        res.render('./products/productCart.ejs')
     },
     productDetail(req,res){
-        res.render('productDetail.ejs')
+        res.render('./products/productDetail.ejs')
     },
     products(req,res){
-        res.render('products.ejs')
+        res.render('./products/products.ejs')
     },
     register(req,res){
-        res.render('register.ejs')
-    }
+        res.render('./users/register.ejs')
+    },
+    productCreate(req,res){
+        res.render('./products/productCreate.ejs')
+    },
 }
 // exportacion de controllers
 module.exports = controller;
