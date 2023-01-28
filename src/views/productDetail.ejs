@@ -1,51 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail</title>
-    <link rel="stylesheet" href="./css/productDetail.css">
-    <link rel="stylesheet" href="./css/bottomNav.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/headerNav.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> 
-    <script src="https://kit.fontawesome.com/d4dc869e85.js" crossorigin="anonymous"></script>
-</head>
+<!-- head -->
+<%- include('./partials/head') %> 
 <body>
-    <header>
-        <div class="container-header">
-          <div class="header__burger">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-          <a href="/" class="title_and_logo">
-            <img src="/images/Logo2.png">
-            <h1>ITLand</h1>
-          </a>
-          <form class="main__input">
-            <input type="text" placeholder="Search" />
-            <span class="main__input__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-          </form>
-          <div class="header__account">
-            <a class="account__icon" href="/login">
-            <i class="fa-solid fa-user"></i>
-            <span>My account</span>
-            </a>
-          </div>
-          <div class="container-header__cart">
-            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
-          </div>
-        </div>
-        <nav class="navegation">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/aboutUs">About us</a></li>
-            <li><a href="/contactUs"> Contact us</a></li>
-          </ul>
-       
-        </nav>
-      </header>
+    <!-- header -->
+    <%- include('./partials/header') %> 
     <main>
         <section class="main-container"> 
             <div class="section__images">
@@ -132,40 +89,9 @@
             </section>
         </section>
     </main>
-    <section class="section__nav__mobile">
-        <ul>
-            <li class="nav__mobile__caja">
-                <a href="/"><i class="uil uil-home"></i></a>
-            </li>
-            <li class="nav__mobile__caja">
-                <a href="#"><i class="uil uil-search"></i></a>
-            </li>
-            <li class="nav__mobile__caja">
-                <a href="/productCart"><i class="uil uil-shopping-cart"></i></a>
-            </li>
-            <li class="nav__mobile__caja">
-                <a href="/fav"><i class="uil uil-heart-alt"></i></a>
-            </li>
-            <li class="nav__mobile__caja">
-                <a href="/login"><i class="uil uil-user"></i></a>
-            </li>
-          </ul>
-      </section>
-      <footer>
-        <div class="footer_section1">
-          <a href="#"><h6 class="footer_title">TERMS & CONDITIONS</h6></a>
-          <a href="#"><h6 class="footer_title">SUPPORT</h6></a>
-          <a href="contactUs"><h6 class="footer_title">CONTACT US</h6></a>
-          <a href="#"><h6 class="footer_title">CATEGORIES</h6></a>
-        </div>
-        <div class="socialmedia">
-          <a href="#"><i class="fas fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fas fa-brands fa-twitter"></i></a>
-        </div>
-      <p>
-        Copyright© 2021-2022 Itland All rights reserved <br />
-        Made with <i class="fa-solid fa-heart"></i> by ITland
-      </p>
-    </footer>
+    <!-- Bottom Nav -->
+    <%- include('./partials/bottomNav') %> 
+    <!-- Footer -->
+    <%- include('./partials/footer') %> 
 </body>
 </html>
