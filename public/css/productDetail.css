@@ -6,25 +6,6 @@
 body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-.main__input{
-    display: none;
-}
-.header__account .account{
-    display: none;
-}
-.container-header__cart{
-    display: none;
-}
-.container-header__cart a{
-    text-decoration: none;
-    padding: 10px;
-}
-.navegation{
-    display: none;
-}
-main h2{
-    display: none;
-}
 .name-product i{
     display: none;
 }
@@ -40,9 +21,6 @@ main h2{
 .header__burger{
     font-size: 1.3em;
 
-}
-.header__account span{
-    display: none;
 }
 /* -----------body----------- */
 

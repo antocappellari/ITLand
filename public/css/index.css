@@ -3,11 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.header__account span{
-  display: none;
-}
 body {
-  background-color: rgba(237, 236, 236, 0.426);
   font-family:"Roboto", sans-serif;
 }
 .section-title{
@@ -15,11 +11,47 @@ body {
   text-align: center;
   margin-bottom:15px;
 }
-.InitialPromotion img {
-width: 100%;
+
+.slide,
+.slide2{
+  width: 100%;
+  overflow: hidden;
+
 }
-.InitialPromotion2 img{
-  display:none;
+.slide ul,
+.slide2 ul{
+  width: 500%;
+  display: flex;
+  list-style: none;
+  animation: slide 20s infinite alternate ease-in-out;
+
+}
+nav ul .caja{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  list-style: none;
+}
+.slide img,
+.slide2 img{
+  width: 100%;
+  height: 100%;
+}
+@keyframes slide {
+  0%{ margin-left: 0%;}
+  15%{margin-left: 0%;}
+  
+  20%{margin-left: -100%;}
+  35%{margin-left: -100%;}
+
+  40%{margin-left: -200%;}
+  55%{margin-left: -200%;}
+
+  60%{margin-left: -300%;}
+  75%{margin-left: -300% ;}
+
+  80%{margin-left: -400%;}
+  100%{margin-left: -400%;}
 }
 .main_paymentmethods{
   margin-top: 10px;
@@ -168,18 +200,48 @@ display:none;
 }
 /* --------------------MOBILE------------------------------ */
 @media screen and (max-width:767px){
+  .InitialPromotion2:not(nav){
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .InitialPromotion2:hover .btb-xs{
+    display: flex;
+  }
+  .btb-xs{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    width: 50px;
+    height: 12vh;
+    background-color: #ced8d972;
+  }
+  .btb-xs i{
+    color: rgba(0, 0, 0, 0.281);
+    font-size: 2em;
+  }
+  .button-left{
+    left: 0;
+    border-radius: 0 5px 0 5px;
+  }
+  .button-right{
+    right: 0;
+    border-radius: 5px 0 5px 0;
+  }
   .FirstOffer{
     width: 47%;
   }
-
+  .slide2{
+    display: none;
+  }
   .paymentmethods .color {
     color: #315ed1;
     display: flex;
     width: 113%;
 }
-
-
-
 .paymentmethods .article-text{
   font-size: 47%;
 }
@@ -219,21 +281,45 @@ display:none;
   .paymethod .installment{
     width:100%;
   }
-
-
 }
 /* ----------------------TABLETS----------------------------- */
 @media screen and (min-width:767px) and (max-width:1023px) {
-  .InitialPromotion img {
-    display:none;
-    }
-    .InitialPromotion2 img{
-      display:block;
-      width: 100%;
-    }
-  
   .FirstOffer{
     width: 30%;
+  }
+  .InitialPromotion2:not(nav){
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .InitialPromotion2:hover .btb-xs{
+    display: flex;
+  }
+  .btb-xs{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    width: 50px;
+    height: 15vh;
+    background-color: #ced8d972;
+  }
+  .btb-xs i{
+    color: rgba(0, 0, 0, 0.281);
+    font-size: 2em;
+  }
+  .button-left{
+    left: 0;
+    border-radius: 0 5px 0 5px;
+  }
+  .button-right{
+    right: 0;
+    border-radius: 5px 0 5px 0;
+  }
+  .slide2{
+    display: none;
   }
     .section-categories{
     gap: 0;
@@ -287,13 +373,12 @@ display:none;
 }
 /* -------------------------DESKTOP------------------------------ */
 @media screen and (min-width:1024px) {
-  .InitialPromotion img {
-    display:none;
-    }
-    .InitialPromotion2 img{
-      display:block;
-      width: 100%;
-    }
+  .slide{
+    display: none;
+  }
+  .slide2{
+    display: block;
+  }
   .FirstOffer{
     width: 20%;
   }
@@ -340,6 +425,37 @@ display:none;
   
   .paymethod .installment{
     width:100%;
+  }
+  .InitialPromotion2:not(nav){
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .InitialPromotion2:hover .btb-xs{
+    display: flex;
+  }
+  .btb-xs{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    width: 70px;
+    height: 14vh;
+    background-color: #ced8d972;
+  }
+  .btb-xs i{
+    color: rgba(0, 0, 0, 0.281);
+    font-size: 2em;
+  }
+  .button-left{
+    left: 0;
+    border-radius: 0 5px 0 5px;
+  }
+  .button-right{
+    right: 0;
+    border-radius: 5px 0 5px 0;
   }
 }
 

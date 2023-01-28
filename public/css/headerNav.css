@@ -13,6 +13,10 @@
 .container-header__cart {
   display: none;
 }
+.container-header__cart a{
+  text-decoration: none;
+  padding: 10px;
+}
 
 .navegation {
   display: none;
@@ -97,7 +101,7 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  transform: translateX(-450px);
+  transform: translateX(-1720px);
   transition: all 1s;
   z-index: 10;
 
@@ -125,8 +129,8 @@
   color: #000;
   text-decoration: none;
 }
-/* --------------------------------------TABLETS------------------------------ */
-@media screen and (min-width:767px) and (max-width:1023px) {}
+/* --------------------------------------TABLETS------------------------------
+@media screen and (min-width:767px) and (max-width:1023px) {} */
 /* --------------------------------------DESKTOP----------------------------- */
 @media screen and (min-width:1024px) {
   .menu-mobile{
@@ -214,7 +218,6 @@
   .header__account .account {
     display: block;
   }
-
   .container-header__cart {
     display: block;
     margin-right: 40px;
@@ -274,6 +277,7 @@
 
   .header__account span {
     font-size: 20px;
+    display: block;
   }
 
   .account__icon {
