@@ -1,34 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-.main-login {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #cdcece;
-}
-.register {
-  position: relative;
-  max-width: 430px;
-  width: 100%;
-  background: rgb(255, 255, 255);
-  padding: 34px;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 93px;
-  margin-top:20px;
-}
-.register h2 {
-  position:relative;
-  text-align: center;
-  font-size: 27px;
-  font-weight: 400;
-  color: black;
-}
+
 
 .register h4{
   position:relative;
@@ -61,10 +31,6 @@ form .userinput input {
 .userinput input:focus,
 .userinput input:valid {
   border-color: #4070f4;
-}
-form .conditions {
-  display: flex;
-  align-items: center;
 }
 
 form h3 {

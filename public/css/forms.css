@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles form */
+.main-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-form{
+    width: 85%;
+    position: relative;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin: 6% 0;
+
+}
+.container-form .text-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: black;
+}
+.container-form .text-title h2{
+    font-size: 1.8em;
+    color: #323b55;
+}
+.container-form .text-title p{
+    padding-bottom:10px ;
+    color: #3a3838;
+    font-size: 1.3em;
+
+
+}
+.container-form .form-inputs{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+.container-form .userinput{
+    position: relative;
+    width: 96%;
+    height: 40px;
+}
+.container-form .userinput input:not(.input-button){
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #c7bebe;
+    border-bottom-width: 2.5px;
+    border-radius: 17px;
+    transition: all 0.3s ease;
+    padding-left: 20px;
+}
+.container-form .userinput input::placeholder{
+    padding-left: 20px;
+}
+.container-form .userinput i{
+    position: absolute;
+}
+.container-form .conditions{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    color: #333;
+}
+.button-submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
+}
+.container-form .button-submit .input-button{
+    width: 80%;
+    height: 6vh;
+    color: #fff;
+    background-color:  #323b55;
+    border: none;
+    border-radius: 17px;
+    padding: none;
+    font-size: 16px;
+}
+.container-form .text p:not(a){
+    font-size: 1em;
+    font-weight: 400;
+    color: #333;
+
+}
+.container-form .text a{
+    text-decoration: none;
+    color: #2b57dc;
+    font-weight: 600;
+}
+.conditions-register{
+    text-align: center;
+    font-size: .9em;
+    padding: 20px;
+
+}

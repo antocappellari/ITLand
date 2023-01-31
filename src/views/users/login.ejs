@@ -3,11 +3,13 @@
   <body>
     <!-- header -->
     <%- include('../partials/header') %> 
-    <main class="main-login">
-      <div class="register">
+    <main class="main-form">
+      <div class="container-form">
+       <div class="text-title">
         <h2>Welcome</h2>
-        <h4>Login</h4>
-        <form action="/action_page.php" method="post">
+        <p>Login</p>
+       </div>
+        <form class="form-inputs" action="/action_page.php" method="post">
           <div class="userinput">
             <input type="text" placeholder="Enter your e-mail" required />
             <i class="uil uil-user" id="icon1"></i>
@@ -19,13 +21,13 @@
           </div>
           <div class="conditions">
             <input type="checkbox" checked="checked"/>
-            <h3>Remember me</h3>
+            <p>Remember me</p>
           </div>
-          <div class="userinput button">
-            <input type="Submit" value="Log in" />
+          <div class="button-submit">
+            <input class="input-button" type="Submit" value="Log in" />
           </div>
           <div class="text">
-            <h3>You don't have an account? <a href="/register">Register</a></h3>
+            <p>You don't have an account? <a href="/register">Register</a></p>
           </div>
         </form>
       </div>
