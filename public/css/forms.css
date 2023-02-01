@@ -129,13 +129,13 @@
 }
 
 .userinput i:not(.icon5) {
-    top: 9px;
+    top: 13px;
     left: 10px;
     font-size: 20px;
     color: #3a3a3a;
 }
 .userinput .icon5 {
-    top: 9px;
+    top: 13px;
     right: 10px;
     font-size: 20px;
     color: #3f3e3e;
@@ -146,6 +146,18 @@
         width: 65%;
         margin-top:4%;
         padding: 50px;
+    }
+    .userinput i:not(.icon5) {
+        top: 13px;
+        left: 10px;
+        font-size: 20px;
+        color: #3a3a3a;
+    }
+    .userinput .icon5 {
+        top: 13px;
+        right: 10px;
+        font-size: 20px;
+        color: #3f3e3e;
     }
 }
 
