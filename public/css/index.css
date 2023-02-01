@@ -286,6 +286,7 @@ display:none;
 @media screen and (min-width:767px) and (max-width:1023px) {
   .FirstOffer{
     width: 30%;
+    height: 30vh;
   }
   .InitialPromotion2:not(nav){
     position: relative;

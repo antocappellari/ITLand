@@ -10,18 +10,6 @@ body{
     display: none;
 }
 
-
-.container-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px;
-    color: rgb(255, 255, 255);
-}
-.header__burger{
-    font-size: 1.3em;
-
-}
 /* -----------body----------- */
 
 .name-product{

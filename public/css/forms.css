@@ -1,16 +1,17 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Styles form */
-.main-form{
+.main-form {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.container-form{
+
+.container-form {
     width: 85%;
     position: relative;
     background: rgb(255, 255, 255);
@@ -20,6 +21,13 @@
     margin: 6% 0;
 
 }
+.datauser__register{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
 .container-form .text-title {
     display: flex;
     justify-content: center;
@@ -28,30 +36,35 @@
     gap: 10px;
     color: black;
 }
-.container-form .text-title h2{
+
+.container-form .text-title h2 {
     font-size: 1.8em;
     color: #323b55;
 }
-.container-form .text-title p{
-    padding-bottom:10px ;
+
+.container-form .text-title p {
+    padding-bottom: 10px;
     color: #3a3838;
     font-size: 1.3em;
 
 
 }
-.container-form .form-inputs{
+
+.container-form .form-inputs {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     gap: 15px;
 }
-.container-form .userinput{
+
+.container-form .userinput {
     position: relative;
-    width: 96%;
-    height: 40px;
+    width: 100%;
+    height: 7vh;
 }
-.container-form .userinput input:not(.input-button){
+
+.container-form .userinput input:not(.input-button) {
     width: 100%;
     height: 100%;
     outline: none;
@@ -60,54 +73,108 @@
     color: #333;
     border: 1.5px solid #c7bebe;
     border-bottom-width: 2.5px;
-    border-radius: 17px;
+    border-radius: 15px;
     transition: all 0.3s ease;
-    padding-left: 20px;
+    padding-left: 35px;
 }
-.container-form .userinput input::placeholder{
-    padding-left: 20px;
-}
-.container-form .userinput i{
+.container-form .userinput i {
     position: absolute;
 }
-.container-form .conditions{
+
+.container-form .conditions {
     width: 100%;
     display: flex;
     gap: 10px;
     color: #333;
 }
-.button-submit{
+
+.button-submit {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
-  
+
 }
-.container-form .button-submit .input-button{
+
+.container-form .button-submit .input-button {
     width: 80%;
-    height: 6vh;
+    height: 7vh;
     color: #fff;
-    background-color:  #323b55;
+    background-color: #323b55;
     border: none;
-    border-radius: 17px;
+    border-radius: 15px;
     padding: none;
     font-size: 16px;
 }
-.container-form .text p:not(a){
+
+.container-form .text p:not(a) {
     font-size: 1em;
     font-weight: 400;
     color: #333;
 
 }
-.container-form .text a{
+
+.container-form .text a {
     text-decoration: none;
     color: #2b57dc;
     font-weight: 600;
 }
-.conditions-register{
+
+.conditions-register {
     text-align: center;
     font-size: .9em;
     padding: 20px;
 
+}
+
+.userinput i:not(.icon5) {
+    top: 9px;
+    left: 10px;
+    font-size: 20px;
+    color: #3a3a3a;
+}
+.userinput .icon5 {
+    top: 9px;
+    right: 10px;
+    font-size: 20px;
+    color: #3f3e3e;
+}
+/* -----------TABLET------------- */
+@media screen and (min-width:767px) and (max-width:1023px){
+    .container-form{
+        width: 65%;
+        margin-top:4%;
+        padding: 50px;
+    }
+}
+
+/* ------------DESKTOP---------- */
+@media screen and (min-width:1024px) {
+    .container-form{
+        width: 60%;
+        margin-top:4%;
+        padding: 60px;
+    }
+    .userinput i:not(.icon5) {
+        top: 13px;
+        font-size: 24px;
+    }
+    .userinput .icon5 {
+        top: 16px;
+        font-size: 24px;
+    }
+    .container-form .button-submit .input-button {
+        width: 45%;
+        transition: all .3s;
+    }
+    .container-form .button-submit .input-button:hover{
+        background-color: #1c253f;
+    }
+    .container__form-login{
+        width: 45%;
+    }
+    .container-form .text-title h2{
+        font-size: 2.3em;
+    }
 }

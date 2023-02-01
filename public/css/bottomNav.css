@@ -40,6 +40,9 @@
 .section__nav__mobile a:hover{
   color: #1f41eb;
 }
+#search:target{
+  display: block;
+}
 
 
 @media screen and (min-width:1024px){
