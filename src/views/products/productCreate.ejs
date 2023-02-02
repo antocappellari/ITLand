@@ -1,9 +1,52 @@
-  <!-- head -->
-  <%- include('../partials/head') %> 
+<!-- head -->
+<%- include('../partials/head') %> 
 <body>
   <!-- header -->
   <%- include('../partials/header') %> 
-  <main>
-    <h1>Hola ITLand</h1>
+  <main class="main-form">
+    <div class="container-form">
+    <h2 class="form-title">Admin User</h2>
+    <!-- <--------FORMULARIO--------->
+    <form class="form-inputs"action="/registro" method="POST">
+      <div class="userinput">
+        <input type="name"  name="product" placeholder="Product Name">
+      </div>
+      <div class="userinput">
+        <input type="text" name="description" placeholder="Product Description">
+      </div>
+        <div class="img-input">
+        <input class="file" type="file" name="imagenDeProducto" accept="jpg, png">
+      </div>
+        <div class="userinput">
+        <input type="category" name="category" placeholder="Product Category">
+      </div>
+        <select class="drop-down"name="color">
+            <option value="black">Choose color</option>
+            <option value="white">black</option>
+            <option value="white">white</option>
+            <option value="grey">grey</option>
+            <option value="midnightBlue">midnight blue</option>
+            <option value="gold">gold</option>
+            <option value="silver">silver</option>
+            <option value="pink">pink</option>
+            <option value="green">green</option>
+        </select>
+        <div class="userinput">
+        <input type="Gb" name="Gb" placeholder="Product Space">
+      </div>
+      <div class="userinput">
+        <input type="text" name="price" placeholder="Product Price">
+      </div>
+      <div class="button-create-product">
+      <div class="userinput button-submit">
+        <input class="input-button" type="Submit" value="Submit">
+      </div>
+      <div class="userinput button-submit">
+        <input class="input-button" type="Submit" value="Reset">
+      </div>
+    </div>
+    </form>
+
+  </div>
   </main>
 </body>
