@@ -9,7 +9,7 @@ const usersController = {
         res.render('./users/register.ejs')
     },
     contactUs(req,res){
-        res.render('contactUs.ejs')
+        res.render('./users/contactUs.ejs')
     }
 }
 // exportacion de controllers

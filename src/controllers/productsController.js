@@ -6,17 +6,17 @@ const productsController = {
         res.render('index.ejs')
     },
     productCart(req,res){
-        res.render('./products/productCart.ejs')
+        res.render('products/cart.ejs')
     },
     productDetail(req,res){
-        res.render('./products/productDetail.ejs')
+        res.render('products/detail.ejs')
     },
     products(req,res){
-        res.render('./products/products.ejs')
+        res.render('products/products.ejs')
     },
     
     productCreate(req,res){
-        res.render('./products/productCreate.ejs')
+        res.render('products/create.ejs')
     },
 }
 // exportacion de controllers
