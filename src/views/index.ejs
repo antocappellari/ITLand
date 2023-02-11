@@ -69,47 +69,18 @@
         <h2 class="producTittle">Offers and discounts</h2>
         <div class="container-carrusel">
           <section class="CarrusselSection">
-            <a href="/product/detail" class="FirstOffer">
-              <div class="imagecarrussel">
-                <img src="/images/tvsamsung.jpg" alt="notebook">
-              </div>
-              <div class="Imagetext">
-                <h3 class="Photo">Tv Samsung</h3>
-                <p class="Price">$ 1.000</p>
-                <p class="Delivery">Free shipping</p>
-              </div>
-            </a>
-            <a href="/product/detail" class="FirstOffer">
-              <div class="imagecarrussel">
-                <img src="/images/samsungs21.jpg" alt="laptop">
-              </div>
-              <div class="Imagetext">
-                <h3 class="Photo">Samsung S21FE</h3>
-                <p class="Price">$ 1.200</p>
-                <p class="Delivery">Free shipping</p>
-              </div>
-            </a>
-
-            <a href="/product/detail" class="FirstOffer">
-              <div class="imagecarrussel">
-                <img src="/images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
-              </div>
-              <div class="Imagetext">
-                <h3 class="Photo">Samsung Galaxy S10</h3>
-                <p class="Price">$ 900</p>
-                <p class="Delivery">Free shipping</p>
-              </div>
-            </a>
-            <a href="/product/detail" class="FirstOffer">
-              <div class="imagecarrussel">
-                <img src="/images/img-macbook-pro-2019.jpg" alt="Macbook Pro2019">
-              </div>
-              <div class="Imagetext">
-                <h3 class="Photo">Macbook Pro 2019</h3>
-                <p class="Price">$ 2000</p>
-                <p class="Delivery">Free shipping</p>
-              </div>
-            </a>
+            <% products.forEach(product => { %>
+                <a href="/product/detail<%= product.id %>" class="FirstOffer">
+                  <div class="imagecarrussel">
+                    <img src="/images/products/<%= product.image %>" alt="laptop">
+                  </div>
+                  <div class="Imagetext">
+                    <h3 class="Photo"><%= product.name %></h3>
+                    <p class="Price">$ <%= product.price %></p>
+                    <p class="Delivery">Free shipping</p>
+                  </div>
+                </a>
+            <% }) %>
           </section>
         </div>
         <section class="section-title">Categories</section>

@@ -7,12 +7,11 @@
         "category": "Mobile phone",
         "subcategory": "Mobile phone",
         "price": 7776.51,
-        "image": "prenda4.png",
         "color": "Black",
-        "size": "165.1 x 76.4 x 8.8 mm",
-        "Memory": "128GB"
+        "size": "163,95 x 74,94 x 8,49 mm",
+        "Memory": "128GB",
+        "image": "A13.jpg"
     },
-    
     {
         "id": 2,
         "name": "Motorola G22",
@@ -21,12 +20,11 @@
         "category": "Mobile phone",
         "subcategory": "Mobile phone",
         "price": 1000,
-        "image": "",
         "color": "Black",
         "size": "163,95 x 74,94 x 8,49 mm",
-        "Memory": "128GB"
+        "Memory": "128GB",
+        "image": "mg22-1.jpg"
     },
-
     {
         "id": 3,
         "name": "Samsung Galaxy S23",
@@ -35,12 +33,11 @@
         "category": "Mobile phone",
         "subcategory": "Mobile phone",
         "price": 1499.99,
-        "image": "",
         "color": "Light Blue",
         "size": "163.4 x 78.1 x 8.9 mm",
-        "Memory": "256GB"
+        "Memory": "256GB",
+        "image": "s23-1.jpg"
     },
-
     {
         "id": 4,
         "name": "Samsung Galaxy A03",
@@ -49,10 +46,10 @@
         "category": "Mobile phone",
         "subcategory": "Mobile phone",
         "price": 1200,
-        "image": "",
         "color": "Black",
         "size": "164.2 x 75.9 x 9.1 mm",
-        "Memory": "32GB"
+        "Memory": "32GB",
+        "image": "a03-1.jpg"
     },
     {
         "id": 5,
@@ -62,102 +59,22 @@
         "category": "Mobile phone",
         "subcategory": "Mobile phone",
         "price": 850,
-        "image": "",
         "color": "Grey",
         "size": "164,83 x 75,43 x 8,48 mm",
-        "Memory": "32GB"
+        "Memory": "32GB",
+        "image": "me20-1.jpg"
     },
-
     {
         "id": 6,
-        "name":"Motorola E32" ,
+        "name": "Samsung s21 ",
         "description": "Motorola G22",
         "brand": "Motorola",
         "category": "Mobile phone",
         "subcategory": "Mobile phone",
         "price": 999,
-        "image": "",
+        "image": "samsungs21.jpg",
         "color": "Blue",
         "size": "163,95 x 74,94 x 8,49 mm",
         "Memory": "128GB"
-    },
-
-    {
-        "id": 7,
-        "name":"Dell Vostro I3" ,
-        "description": "Dell Vostro I3",
-        "brand": "Dell",
-        "category": "Notebooks",
-        "subcategory": "Notebooks",
-        "price": 1799,
-        "image": "",
-        "color": "Grey",
-        "size": "14",
-        "Memory": "256GB"
-    },
-
-    {
-        "id": 8,
-        "name": "Lenovo 14 Core I5",
-        "description": "Lenovo 14 Core I5",
-        "brand": "Sony Lenovo",
-        "category": "Notebooks",
-        "subcategory": "Notebooks",
-        "price": 1299,
-        "image": "",
-        "color": "Grey",
-        "size": "14",
-        "Memory": "256GB"
-    },
-
-    {
-        "id": 9,
-        "name": "Noblex 14.1 Intel Celeron",
-        "description": "Noblex 14.1 Intel Celeron",
-        "brand": "Noblex",
-        "category": "Notebooks",
-        "subcategory": "Notebooks",
-        "price": 1550,
-        "image": "",
-        "color": "Grey",
-        "size": "14",
-        "Memory": "128GB"
-    },
-
-    {
-        "id": 10,
-        "name": "Tv Led Samsung",
-        "description": "Samsung",
-        "brand": "Samsung",
-        "category": "TV",
-        "subcategory": "TV",
-        "price": 1799,
-        "image": "",
-        "color": "Black",
-        "size": "55",
-        "Memory": ""
-    },
-    {
-        "id": 11,
-        "name": "TV Led Philips",
-        "description": "TV Led Philips",
-        "brand": "Philips",
-        "category": "Philips",
-        "subcategory": "Philips",
-        "price": "2999",
-        "image": "",
-        "color": "Black",
-        "size": "55",
-        "Memory": ""
     }
 ]
-
-    
-
-    
-    
-    
-    
-    
-    
-    

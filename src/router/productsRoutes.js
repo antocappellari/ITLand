@@ -7,7 +7,7 @@ router.get('/fav', productsController.favorite)
 router.get('/cart', productsController.productCart)
 router.get('/detail', productsController.productDetail)
 router.get('/products', productsController.products)
-router.get('/productCreate', productsController.productCreate)
+router.get('/create', productsController.productCreate)
 
 // exportacion de rutas
 module.exports = router

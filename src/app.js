@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3004
+const PORT = process.env.PORT || 3001
 const publicPath = path.resolve(__dirname, '../public');
 const usersRoutes = require('./router/usersRoutes.js');
 const productsRoutes = require('./router/productsRoutes.js');
