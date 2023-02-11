@@ -102,18 +102,31 @@
         "color": "Black",
         "size": "131.5 mm x 64.2 mm x 7.65 mm",
         "Memory": "128GB"
-    }
+    },
     {
-        "id": 8,
-        "name": "Iphone 13 Mini",
-        "description": "Iphone 13 Mini",
-        "brand": "Apple",
+        "id": 9,
+        "name": "Huawei P40 PRO dual",
+        "description": "Huawei P40 PRO dual",
+        "brand": "Huawei",
         "category": "Mobile phone",
         "subcategory": "Mobile phone",
         "price": 999,
-        "image": "Iphone13mini.jpg",
+        "image": "huaweip40.jpg",
         "color": "Black",
-        "size": "131.5 mm x 64.2 mm x 7.65 mm",
-        "Memory": "128GB"
+        "size": "158.2 mm x 72.6 mm x 8.95 mm",
+        "Memory": "256GB"
+    },
+    {
+        "id": 10,
+        "name": "Huawei Mate 30 PRO",
+        "description": "Huawei Mate 30 PRO",
+        "brand": "Huawei",
+        "category": "Mobile phone",
+        "subcategory": "Mobile phone",
+        "price": 999,
+        "image": "huaweimate30.jpg",
+        "color": "Purple",
+        "size": "158.1 mm x 73.1 mm x 8.8 mm",
+        "Memory": "256GB"
     }
 ]
