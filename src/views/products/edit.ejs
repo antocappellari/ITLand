@@ -5,20 +5,28 @@
   <%- include('../partials/header') %> 
   <main class="main-form">
     <div class="container-form">
-    <h2 class="form-title">Admin User</h2>
+    <h2 class="form-title">Article edit:</h2>
+
     <!-- <--------FORMULARIO--------->
+
     <form class="form-inputs"action="/registro" method="POST">
       <div class="userinput">
         <input type="name"  name="product" placeholder="Product Name">
       </div>
       <div class="userinput">
-        <input type="text" name="description" placeholder="Product Description">
+       <textarea name="description" id="" cols="30" rows="10"></textarea>
       </div>
       <div class="file-select" id="src-file1" >
         <input type="file" name="src-file1" aria-label="Archivo" accept="jpg, png">
       </div>
         <div class="userinput">
-        <input type="category" name="category" placeholder="Product Category">
+        <input type="text" name="category" placeholder="Product Category">
+      </div>
+      <div class="userinput">
+        <input type="text" name="subcategory" placeholder="Product Subcategory">
+      </div>
+      <div class="userinput">
+        <input type="text" name="brand" placeholder="Product Brand">
       </div>
         <select class="drop-down"name="color">
             <option value="black">Choose color</option>
@@ -32,10 +40,16 @@
             <option value="green">green</option>
         </select>
         <div class="userinput">
-        <input type="Gb" name="Gb" placeholder="Product Space">
+        <input type="text" name="memory" placeholder="Product Memory">
       </div>
       <div class="userinput">
-        <input type="text" name="price" placeholder="Product Price">
+        <input type="text" name="size" placeholder="Product Size">
+      </div>
+      <div class="userinput">
+        <input type="number" name="price" placeholder="Product Price">
+      </div>
+      <div class="userinput">
+        <input type="number" name="discount" placeholder="Product Discount">
       </div>
       <div class="button-create-product">
       <div class="userinput button-submit">
@@ -51,3 +65,15 @@
   </main>
 </body>
 </html>
+
+<!-- "id": 10,
+"name": "Huawei Mate 30 PRO",
+"description": "Huawei Mate 30 PRO",
+"brand": "Huawei",
+"category": "Mobile phone",
+"subcategory": "Mobile phone",
+"price": 999,
+"image": "huaweimate30.jpg",
+"color": "Purple",
+"size": "158.1 mm x 73.1 mm x 8.8 mm",
+"Memory": "256GB" -->

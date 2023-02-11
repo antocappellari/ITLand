@@ -25,6 +25,17 @@ const productsController = {
     productCreate(req,res){
         res.render('products/create.ejs')
     },
+
+    /* -------- Sprint 4 11.02.2023 ------- Anto, Jose, Romi */
+
+    productEdit (req, res) {
+        res.send() 
+        /* PENDIENTE FUNCION */
+    },
+    productDelete (req, res) {
+        res.send()
+        /* PENDIENTE FUNCION */
+    }
 }
 // exportacion de controllers
 module.exports = productsController;
