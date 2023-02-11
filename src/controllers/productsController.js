@@ -19,9 +19,19 @@ const productsController = {
         res.render('products/detail.ejs')
     },
     products(req,res){
-        res.render('products/products.ejs')
-    },
+        res.render('products/products.ejs', {products})
+        let brands = [];
+        products.forEach(product=>{
+            if(product.brand=="Samsung"){
+
+            }
+        })
+        console.log(products)
     
+     },
+    search(req,res){
+        let body = req.body;
+    },
     productCreate(req,res){
         res.render('products/create.ejs')
     },
@@ -29,13 +39,12 @@ const productsController = {
     /* -------- Sprint 4 11.02.2023 ------- Anto, Jose, Romi */
 
     productEdit (req, res) {
-        res.send() 
         /* PENDIENTE FUNCION */
     },
     productDelete (req, res) {
-        res.send()
         /* PENDIENTE FUNCION */
     }
+
 }
 // exportacion de controllers
 module.exports = productsController;
