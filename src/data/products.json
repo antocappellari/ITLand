@@ -67,8 +67,8 @@
     {
         "id": 6,
         "name": "Samsung s21 ",
-        "description": "Motorola G22",
-        "brand": "Motorola",
+        "description": "Samsung s21",
+        "brand": "Samsung",
         "category": "Mobile phone",
         "subcategory": "Mobile phone",
         "price": 999,
@@ -76,5 +76,18 @@
         "color": "Blue",
         "size": "163,95 x 74,94 x 8,49 mm",
         "Memory": "128GB"
+    },
+    {
+        "id": 7,
+        "name": "Iphone 14 PRO MAX",
+        "description": "Iphone 14 PRO MAX",
+        "brand": "Apple",
+        "category": "Mobile phone",
+        "subcategory": "Mobile phone",
+        "price": 999,
+        "image": "i14promax.webp",
+        "color": "Space Grey",
+        "size": "(160.7 mm x 77.7 mm x 7.8 mm",
+        "Memory": "256GB"
     }
 ]
