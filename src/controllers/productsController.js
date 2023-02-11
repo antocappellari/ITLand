@@ -29,11 +29,11 @@ const productsController = {
     /* -------- Sprint 4 11.02.2023 ------- Anto, Jose, Romi */
 
     productEdit (req, res) {
-        res.send() 
+        // res.send() 
         /* PENDIENTE FUNCION */
     },
     productDelete (req, res) {
-        res.send()
+        // res.send()
         /* PENDIENTE FUNCION */
     }
 }
