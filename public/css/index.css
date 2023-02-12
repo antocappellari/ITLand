@@ -87,7 +87,7 @@ display:none;
   height: 45px;
 }
 .CarrusselSection {
-  height: 50vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,7 +118,7 @@ display:none;
   gap: 20px;
   margin: 5px 5px 5px 5px;
   padding: 2px;
-  height: 45vh;
+  height: 95%;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.384);
   text-decoration: none;
 }
@@ -138,6 +138,7 @@ display:none;
 
 .Imagetext {
   text-align: center;
+  padding-top: 40px;
 }
 .FirstOffer .Imagetext .Price {
   color: #315ed1;
@@ -286,7 +287,6 @@ display:none;
 @media screen and (min-width:767px) and (max-width:1023px) {
   .FirstOffer{
     width: 30%;
-    height: 30vh;
   }
   .InitialPromotion2:not(nav){
     position: relative;
