@@ -70,16 +70,19 @@
         <div class="container-carrusel">
           <section class="CarrusselSection">
             <% products.forEach(product => { %>
-                <a href="/product/detail<%= product.id %>" class="FirstOffer">
-                  <div class="imagecarrussel">
-                    <img src="/images/products/<%= product.image %>" alt="laptop">
-                  </div>
-                  <div class="Imagetext">
-                    <h3 class="Photo"><%= product.name %></h3>
+              <article class="article-firstOffer">
+              <a href="/products/detail" class="FirstOffer">
+                <div class="imagecarrussel">
+                  <img src="/images/products/<%= product.image %>" alt="laptop">
+                </div>
+                <div class="Imagetext">
+                  <p class="name"><%= product.name %></p>
                     <p class="Price">$ <%= product.price %></p>
+                    <span class="discount"><%= product.discount %>% OFF</span>
                     <p class="Delivery">Free shipping</p>
                   </div>
                 </a>
+              </article>
             <% }) %>
           </section>
         </div>

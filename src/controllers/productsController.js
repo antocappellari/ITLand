@@ -12,27 +12,27 @@ const productsController = {
     index(req,res){
         res.render('index.ejs')
     },
-    productCart(req,res){
+    cart(req,res){
         res.render('products/cart.ejs')
     },
-    productDetail(req,res){
+    detail(req,res){
         res.render('products/detail.ejs')
     },
     products(req,res){
         res.render('products/products.ejs')
     },
     
-    productCreate(req,res){
+    create(req,res){
         res.render('products/create.ejs')
     },
 
     /* -------- Sprint 4 11.02.2023 ------- Anto, Jose, Romi */
 
-    productEdit (req, res) {
+    edit (req, res) {
         // res.send() 
         /* PENDIENTE FUNCION */
     },
-    productDelete (req, res) {
+    delete (req, res) {
         // res.send()
         /* PENDIENTE FUNCION */
     }

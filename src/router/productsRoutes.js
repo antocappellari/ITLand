@@ -1,14 +1,13 @@
 const express = require('express');
-const { productEdit } = require('../controllers/productsController');
 const router = express.Router();
 const productsController = require('../controllers/productsController')
 
 //--------------- Rutas-----------------//
 router.get('/fav', productsController.favorite)
-router.get('/cart', productsController.productCart)
-router.get('/detail', productsController.productDetail)
+router.get('/cart', productsController.cart)
+router.get('/detail', productsController.detail)
 router.get('/', productsController.products)
-router.get('/create', productsController.productCreate)
+router.get('/create', productsController.create)
 router.post('/products', productsController.products)
 /* ------------------SPRINT 4 ------------ 11.02.2023 --- Anto, Jose, Romi */ 
 
