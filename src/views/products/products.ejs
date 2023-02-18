@@ -28,9 +28,9 @@
     </section>
       <article>
       <% products.forEach(product => { %>
-        <a href="/product/detail<%= product.id %>" class="FirstOffer">
+        <a href="/products/detail/<%= product.id %>" class="FirstOffer">
           <div class="imagecarrussel">
-            <img src="/images/products/<%= product.image %>" alt="laptop">
+            <img src="/images/products/<%= product.image[0] %>" alt="laptop">
           </div>
           <div class="Imagetext">
             <h3 class="Photo"><%= product.name %></h3>

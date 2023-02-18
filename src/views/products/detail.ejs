@@ -8,41 +8,41 @@
             <div class="section__images">
                 <!-- <div class="name-product"><p>Samsung S21FE 5G</p></div> -->
                 <section class="image-container">
-                    <img src="/images/samsungs21.jpg" alt="s211">
+                    <img src="/images/products/<%= product.image[0] %>" alt="s211">
                     <p>1/5</p>
                 </section>
                 <section class="image-others">
-                    <img src="/images/s21 2.png" alt="s212">
-                    <img src="/images/s21 3.png" alt="s213">
-                    <img src="/images/s21 4.png" alt="s214">
-                    <img src="/images/s21 5.png" alt="s215">
+                    <img src="/images/products/<%= product.image[1] %>" alt="s212">
+                    <img src="/images/products/<%= product.image[2] %>" alt="s213">
+                    <img src="/images/products/<%= product.image[3] %>" alt="s214">
+                    <img src="/images/products/<%= product.image[4] %>" alt="s215">
                 </section>
             </div>
             <section class="section__characteristics">
                 <div class="container-charac">
                     <div class="name-product">
-                        <p>Samsung S21FE 5G</p>
+                        <p><%= product.name %></p>                         
                         <i class="fa-regular fa-heart"></i>
                     </div>
                     <div class="characterisrics-memory-color">
                         <div>
                             <p class="p1">Internal memory:</p>
-                            <p class="p2">128 GB</p>
+                            <p class="p2"><%= product.Memory %></p>
                         </div>
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
                     <div class="characterisrics-memory-color">
                         <div>
                             <p class="p1">Colors:</p>
-                            <p class="p2">Black</p>
+                            <p class="p2"><%= product.color %></p>
                         </div>
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
                 </div>
-                <p class="previous">$ 1300</p>
+                <p class="previous"><%= product.price %></p>
                 <div class="oferts">
-                    <p class="price">$ 1200</p>
-                    <p class="discount">8% OFF</p>
+                    <p class="price">$<%= (Math.floor(( product.price - (product.price * product.discount ) / 100))) %></p>
+                    <p class="discount"><%= product.discount %> OFF</p>
                 </div>
                 <a class="payment-methods" href= "#">Payment methods</a>
                 <div class="freeshipping">
@@ -67,25 +67,16 @@
                 <div class="description__specifications">
                     <p class="specifications-title">Technical specifications</p>
                     <div class="specification">
-                        <p>Screen size: <span>6.4"</span></p>
-                        <p>Internal memory: <span>128 GB</span></p>
-                        <p>Frontal camera:<span>32 Mpx</span></p>
-                        <p>Rear camera:<span>12 Mpx</span></p>
+                        <p>Screen size: <span><%= product.size %>"</span></p>
+                        <p>Internal memory: <span><%= product.Memory %></span></p>
 
                     </div>
                     <div class="btn"><button type="button">See more features</button></div>
                 </div>
                 <div class="description">
                     <h4>Description</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                        Sunt quaerat minima nam vero tenetur est cupiditate quas quibusdam 
-                        veritatis, soluta, mollitia cum! 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Laborum maiores quam veritatis reiciendis odio repellendus. Animi.
-
-                    </p>
-                    <a href="" type="button" class="btn1">Edit</a>
+                    <p> <%= product.description %> </p>
+                    <a href="/products/<%= product.id %>/edit" type="button" class="btn1">Edit</a>
                     <a href="" type="button" class="btn1">Delete</a>
                 </div>
             </section>
