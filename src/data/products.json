@@ -78,7 +78,7 @@
   "subcategory": "Mobile phone",
   "price": 999,
   "discount": 999,
-  "image": ["samsungs21.jpg","s21 2.png","s21 3.png","s21 4.png","s21 5.png"]
+  "image": ["samsungs21.jpg","s21 2.png","s21 3.png","s21 4.png","s21 5.png"],
   "color": "Blue",
   "size": "163,95 x 74,94 x 8,49 mm",
   "Memory": "128GB"

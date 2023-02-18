@@ -3,6 +3,8 @@ const fs = require('fs'),
     productPath = path.join(__dirname , '../data/products.json');
 
 let products = JSON.parse(fs.readFileSync(productPath, 'utf-8'));
+let productEdited = [];
+console.log(productEdited);
 
 //controllers
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -54,12 +56,13 @@ const productsController = {
     /* -------- Sprint 4 11.02.2023 ------- Anto, Jose, Romi */
 
     productEdit (req, res) {
-        res.render('products/edit.ejs')
+        res.render('products/edit.ejs', {productEdited});
+        console.log(productEdited);
     },
     productEdition (req, res) {
         let body = req.body;
         let id = req.params.id;
-        let product = products.forEach(product => {
+        let product = products.forEach((product, index) => {
             if(product.id==id){
                 product.name =body.name;
                 product.description=body.description;
@@ -75,10 +78,13 @@ const productsController = {
                 product.image[2] = body.image[2];
                 product.image[3] = body.image[3];
                 product.image[4] = body.image[4];
+                product[index]=product;
             }
         })
-        fs.writeFileSync(productPath,JSON.stringify(products,null," "))
-        res.redirect("/products");
+        console.log(product)
+        productEdited.push(product);
+        fs.writeFileSync(productPath,JSON.stringify(product,null," "))
+        res.redirect("/products/detail/");
     },
     productDelete (req, res) {
         /* PENDIENTE FUNCION */
