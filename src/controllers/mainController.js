@@ -1,3 +1,4 @@
+
 const fs = require('fs'),
     path = require('path'),
     productPath = path.join(__dirname , '../data/products.json');

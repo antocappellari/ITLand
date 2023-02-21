@@ -112,7 +112,7 @@ display:none;
 }
 .FirstOffer {
   flex: 1 0 auto;
-  background-color: #fff;
+  background-color: white;
   width: 47%;
   outline: none;
   gap: 20px;
