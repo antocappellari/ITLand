@@ -206,6 +206,16 @@ body{
     padding-bottom: 3px;
 
 }
+.description .btn1{
+    margin-top:10px;
+    background-color: #01518a;
+    width:45%;
+    height: 30px;
+    border-radius:5px;
+    border: none;
+    color: #Fff;
+    cursor: pointer;
+}
 
 /*--------------------Tablet--------------------- */
 @media screen and (min-width:767px) and (max-width:1023px){
