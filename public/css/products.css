@@ -10,7 +10,35 @@
     margin-top:5px;
     margin-bottom:5px;
     align-content:center;
+  }  
+  .titleproducts{
+    padding:5px;
   }
+  .top-products h1{
+    margin-left: 10px;
+    
+  }
+  .top-products .createproduct {
+    display: flex;
+    align-content:center;
+    justify-content:center;
+    margin-right:10px;
+    padding:5px;
+    width:100px;
+  }
+  .createproduct a{
+    width:100%;
+  }
+  .createproduct a .btn1{
+    background-color: #01518a;
+    width:100%;
+    height: 30px;
+    border-radius:5px;
+    border: none;
+    color: #Fff;
+    cursor: pointer;
+}
+
 
   .filter-view{
     display: flex;
@@ -61,6 +89,50 @@
     right: 15px;
     color: #000;
   }
+  .product-list{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-content:center;
+    margin-left:5%;
+    margin-right:5%;
+  }
+  .product-list a{
+    width:100%;
+  }
+  .product {
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    align-content:center;
+    background-color: white;
+    outline: none;
+    margin: 5px 5px 5px 5px;
+    padding: 2px;
+    height: 45vh;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.384);
+    text-decoration: none;
+  }
+  .imageproducts {
+    width:60%;
+    display:flex;
+    justify-content:center;
+    align-content:center;
+  }
+  .imageproducts img{
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .producttext {
+    width:40%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-content:center;
+    text-align: center;
+  }
   @media screen and (min-width:445px) and (max-width:767px){
     .filter-view{
         display: flex;
@@ -90,4 +162,19 @@
     }
     .product-search{
         width:32%;
-      }}
+      }
+    .product-list{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:flex-start;
+        gap:3%;}
+    .product-list a{
+            width:45%;
+          }
+
+    .producttext {
+            font-size:small;
+        }
+    }
+  

@@ -6,7 +6,7 @@
 
     <main>
       <section class="top-products">
-      <h1 style="color: green;">Products</h1>
+      <div class="titleproducts"><h1 style="color: green;">Products</h1></div>
       <div class="createproduct">
       <a href="/products/create"><button type="button" class="btn1"> Create</button></a>
       </div>
@@ -32,20 +32,19 @@
       </select>
     </section>
     <section class="product-list">
-      <article>
       <% products.forEach(product => { %>
-        <a href="/products/detail/<%= product.id %>" class="FirstOffer">
-          <div class="imagecarrussel">
+        <a href="/products/detail/<%= product.id %>"><article class="product">
+          <div class="imageproducts">
             <img src="/images/products/<%= product.image[0] %>" alt="laptop">
           </div>
-          <div class="Imagetext">
+          <div class="producttext">
             <h3 class="Photo"><%= product.name %></h3>
             <p class="Price">$ <%= product.price %></p>
             <p class="Discount">$ <%= product.discount %></p>
           </div>
+          </article>
         </a>
     <% }) %>
-    </article>
   </section>
     </main>
 
