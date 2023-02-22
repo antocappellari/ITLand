@@ -92,7 +92,7 @@
   "subcategory": "Mobile phone",
   "price": 999,
   "discount": 999,
-  "image": "i14promax.jpg",
+  "image": ["i14promax.jpg","Iphone 14 pro max 2.png","Iphone 14 pro max 3.png","Iphone 14 pro max 4.png","Iphone 14 pro max 5.png"],
   "color": "Space Grey",
   "size": "160.7 mm x 77.7 mm x 7.8 mm",
   "Memory": "256GB"
@@ -106,7 +106,7 @@
   "subcategory": "Mobile phone",
   "price": 999,
   "discount": 999,
-  "image": "Iphone13mini.jpg",
+  "image": ["Iphone13mini.jpg","Iphone 13 mini 2.png","Iphone 13 mini 3.png","Iphone 13 mini 4.png","Iphone 13 mini 5.png"],
   "color": "Black",
   "size": "131.5 mm x 64.2 mm x 7.65 mm",
   "Memory": "128GB"
@@ -120,7 +120,7 @@
   "subcategory": "Mobile phone",
   "price": 999,
   "discount": 999,
-  "image": "huaweip40.jpg",
+  "image": ["huaweip40.jpg","huaweip402.jpg","huaweip403.jpg","huaweip404.jpg","huaweip405.jpg"],
   "color": "Black",
   "size": "158.2 mm x 72.6 mm x 8.95 mm",
   "Memory": "256GB"
@@ -134,7 +134,7 @@
   "subcategory": "Mobile phone",
   "price": 999,
   "discount": 999,
-  "image": "huaweimate30.jpg",
+  "image": ["huaweimate30.jpg","huaweimate302.jpg"],
   "color": "Purple",
   "size": "158.1 mm x 73.1 mm x 8.8 mm",
   "Memory": "256GB"
