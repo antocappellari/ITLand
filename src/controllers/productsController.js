@@ -56,6 +56,7 @@ const productsController = {
     /* -------- Sprint 4 11.02.2023 ------- Anto, Jose, Romi */
 
     productEdit (req, res) {
+        let id = req.params.id;
         res.render('products/edit.ejs', {productEdited});
         console.log(productEdited);
     },
