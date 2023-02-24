@@ -1,3 +1,6 @@
+
+<!DOCTYPE html>
+<html lang="en">
 <!-- head -->
 <%- include('../partials/head') %> 
 <body>
@@ -8,14 +11,14 @@
             <div class="section__images">
                 <!-- <div class="name-product"><p>Samsung S21FE 5G</p></div> -->
                 <section class="image-container">
-                    <img src="/images/products/<%= product.image[0] %>" alt="s211">
+                    <img src="/images/products/<%= product.images[0] %>" alt="s211">
                     <p>1/5</p>
                 </section>
                 <section class="image-others">
-                    <img src="/images/products/<%= product.image[1] %>" alt="s212">
-                    <img src="/images/products/<%= product.image[2] %>" alt="s213">
-                    <img src="/images/products/<%= product.image[3] %>" alt="s214">
-                    <img src="/images/products/<%= product.image[4] %>" alt="s215">
+                    <img src="/images/products/<%= product.images[1] %>" alt="s212">
+                    <img src="/images/products/<%= product.images[2] %>" alt="s213">
+                    <img src="/images/products/<%= product.images[3] %>" alt="s214">
+                    <img src="/images/products/<%= product.images[4] %>" alt="s215">
                 </section>
             </div>
             <section class="section__characteristics">
@@ -77,7 +80,11 @@
                     <h4>Description</h4>
                     <p> <%= product.description %> </p>
                     <a href="/products/<%= product.id %>/edit"><button type="button" class="btn1">Edit</button></a>
-                    <a href="/products"><button type="button" class="btn1">Delete</button></a>
+                    <form action="/products/<%= product.id %>/delete?_method=DELETE" method ="post">
+
+                        <input type="submit" value="Delete">
+                    
+                    </form>
                 </div>
             </section>
         </section>

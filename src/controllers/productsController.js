@@ -3,8 +3,6 @@ const fs = require('fs'),
     productPath = path.join(__dirname , '../data/products.json');
 
 let products = JSON.parse(fs.readFileSync(productPath, 'utf-8'));
-let productEdited = [];
-console.log(productEdited);
 
 //controllers
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -12,13 +10,10 @@ const productsController = {
     favorite(req,res){
         res.render('fav.ejs')
     },
-    index(req,res){
-        res.render('index.ejs')
-    },
-    productCart(req,res){
+    cart(req,res){
         res.render('products/cart.ejs')
     },
-    productDetail(req,res){
+    detail(req,res){
         let id =req.params.id;
         let product = products.find(product => product.id == id)     
         res.render('products/detail.ejs',{
@@ -38,32 +33,51 @@ const productsController = {
     search(req,res){
         let body = req.body;
     },
-    productCreate(req,res){
+    create(req,res){
         res.render('products/create.ejs')
     },
-    productCreation(req,res){
+    creation(req,res){
         let body = req.body;
-        console.log(body);
+        let images = req.files;
+        let bodyImages = []
+
+        images.forEach(image =>{
+
+            bodyImages.push(image.filename)
+        });
+    
         let product={
             id : Date.now(),
-            ...body
+            ...body,
+            images : bodyImages
+
         }
         products.push(product);
         fs.writeFileSync(productPath,JSON.stringify(products,null," "))
-        res.redirect("/products");
+        res.redirect("/");
     },
 
     /* -------- Sprint 4 11.02.2023 ------- Anto, Jose, Romi */
 
-    productEdit (req, res) {
-        res.render('products/edit.ejs', {productEdited});
-        console.log(productEdited);
+    edit (req, res) {
+        res.render('products/edit.ejs',{
+            id: req.params.id
+        });
     },
-    productEdition (req, res) {
+    edition (req, res) {
+        let id = req.params.id
         let body = req.body;
-        let id = req.params.id;
-        let product = products.forEach((product, index) => {
-            if(product.id==id){
+        let images = req.files;
+        console.log(images);
+        let bodyImages = []
+
+        images.forEach(image =>{
+
+            bodyImages.push(image.filename)
+        });
+        console.log(bodyImages);
+        products.forEach((product, index) => {
+            if(product.id == id){
                 product.name =body.name;
                 product.description=body.description;
                 product.brand = body.brand;
@@ -73,21 +87,24 @@ const productsController = {
                 product.discount = body.discount;
                 product.color = body.color;
                 product.size = body.size;
-                product.image[0] = body.image[0];
-                product.image[1] = body.image[1];
-                product.image[2] = body.image[2];
-                product.image[3] = body.image[3];
-                product.image[4] = body.image[4];
-                product[index]=product;
+                product.images[0] = bodyImages[0];
+                product.images[1] = bodyImages[1];
+                product.images[2] = bodyImages[2];
+                product.images[3] = bodyImages[3];
+                product.images[4] = bodyImages[4];
+                products[index] = product;
             }
         })
-        console.log(product)
-        productEdited.push(product);
-        fs.writeFileSync(productPath,JSON.stringify(product,null," "))
-        res.redirect("/products/detail/");
+        
+        fs.writeFileSync(productPath,JSON.stringify(products,null," "))
+        res.redirect('/products');
     },
-    productDelete (req, res) {
-        /* PENDIENTE FUNCION */
+    delete (req, res) {
+        let id = req.params.id;
+        products = products.filter(product => product.id != id )
+
+        fs.writeFileSync(productPath,JSON.stringify(products , null , " "))
+        return res.redirect('/products');
     }
 }
 // exportacion de controllers

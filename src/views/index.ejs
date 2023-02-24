@@ -1,3 +1,6 @@
+
+<!DOCTYPE html>
+<html lang="en">
 <%- include('./partials/head') %>
 
   <body>
@@ -70,9 +73,9 @@
         <div class="container-carrusel">
           <section class="CarrusselSection">
             <% products.forEach(product => { %>
-                <a href="/product/detail<%= product.id %>" class="FirstOffer">
+                <a href="/products/<%= product.id %>/detail" class="FirstOffer">
                   <div class="imagecarrussel">
-                    <img src="/images/products/<%= product.image[0] %>" alt="laptop">
+                    <img src="/images/products/<%= product.images[0] %>" alt="laptop">
                   </div>
                   <div class="Imagetext">
                     <h3 class="Photo"><%= product.name %></h3>

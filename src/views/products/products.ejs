@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
   <!-- head -->
   
   <%- include('../partials/head') %> 
@@ -33,9 +35,9 @@
     </section>
     <section class="product-list">
       <% products.forEach(product => { %>
-        <a href="/products/detail/<%= product.id %>"><article class="product">
+        <a href="/products/<%= product.id %>/detail"><article class="product">
           <div class="imageproducts">
-            <img src="/images/products/<%= product.image[0] %>" alt="laptop">
+            <img src="/images/products/<%= product.images[0] %>" alt="laptop">
           </div>
           <div class="producttext">
             <h3 class="Photo"><%= product.name %></h3>

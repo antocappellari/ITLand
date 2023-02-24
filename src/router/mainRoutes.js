@@ -5,7 +5,5 @@ const productsController = require('../controllers/productsController')
 
 //--------------- Rutas-----------------//
 router.get('/', mainController.index)
-router.get('/detail/:id?', productsController.productDetail)
-
 // exportacion de rutas
 module.exports = router

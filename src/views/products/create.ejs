@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <!-- head -->
 <%- include('../partials/head') %> 
 <body>
@@ -9,7 +11,7 @@
 
     <!-- <--------FORMULARIO--------->
 
-    <form class="form-inputs"action="/products/create" method="POST">
+    <form class="form-inputs"action="/products/create" method="POST" enctype="multipart/form-data">
       <div class="userinput">
         <input type="name"  name="name" placeholder="Product Name">
       </div>
@@ -17,7 +19,7 @@
        <textarea name="description" id="" cols="30" rows="10"></textarea>
       </div>
       <div class="file-select" id="src-file1" >
-        <input type="file" name="image" aria-label="Archivo" accept="jpg, png">
+        <input type="file" name="image"  multiple >
       </div>
         <div class="userinput">
         <input type="text" name="category" placeholder="Product Category">
