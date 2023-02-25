@@ -200,16 +200,42 @@
     top: 0;
     bottom: 0;
   }
-  
+  .file-select2 {
+    position: relative;
+    display: inline-block;
+  }
+  .file-select2::before {
+    background-color: #5678EF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    content: 'Upload profile picture'; /* testo por defecto */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
   .file-select input[type="file"] {
     opacity: 0;
     width: 200px;
-    height: 32px;
+    height: 50px;
+    display: inline-block;
+  }
+   .file-select2 input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 50px;
     display: inline-block;
   }
   
   #src-file1::before {
     content: 'Upload image';
+  }
+  #src-file2::before {
+    content: 'Upload profile picture';
   }
 
 
