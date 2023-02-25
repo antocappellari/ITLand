@@ -30,7 +30,7 @@
                     <div class="characterisrics-memory-color">
                         <div>
                             <p class="p1">Internal memory:</p>
-                            <p class="p2"><%= product.Memory %></p>
+                            <p class="p2"><%= product.memory %> GB</p>
                         </div>
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
@@ -45,7 +45,7 @@
                 <p class="previous"><%= product.price %></p>
                 <div class="oferts">
                     <p class="price">$<%= (Math.floor(( product.price - (product.price * product.discount ) / 100))) %></p>
-                    <p class="discount"><%= product.discount %> OFF</p>
+                    <p class="discount"><%= product.discount %>%OFF</p>
                 </div>
                 <a class="payment-methods" href= "#">Payment methods</a>
                 <div class="freeshipping">
@@ -70,8 +70,8 @@
                 <div class="description__specifications">
                     <p class="specifications-title">Technical specifications</p>
                     <div class="specification">
-                        <p>Screen size: <span><%= product.size %>"</span></p>
-                        <p>Internal memory: <span><%= product.Memory %></span></p>
+                        <p>Screen size: <span><%= product.height %>"x<%= product.length %>"x<%= product.width %>"</span></p>
+                        <p>Internal memory: <span><%= product.memory %> GB</span></p>
 
                     </div>
                     <div class="btn"><button type="button">See more features</button></div>
@@ -81,9 +81,7 @@
                     <p> <%= product.description %> </p>
                     <a href="/products/<%= product.id %>/edit"><button type="button" class="btn1">Edit</button></a>
                     <form action="/products/<%= product.id %>/delete?_method=DELETE" method ="post">
-
-                        <input type="submit" value="Delete">
-                    
+                        <input type="submit" class="btn1" value="Delete">                   
                     </form>
                 </div>
             </section>

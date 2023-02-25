@@ -6,16 +6,19 @@
   "category": "oferts",
   "subcategory": "oferts",
   "brand": "Samsung",
-  "color": "black",
-  "memory": "128GB",
-  "size": "155.7 mm x 74.5 mm x 7.9 mm",
-  "price": "145000",
+  "color": "white",
+  "memory": "128",
+  "height": "155",
+  "length": "74",
+  "width": "7",
+  "price": "111987",
   "discount": "23",
   "images": [
-   "image-1677204722770-.jpg",
-   "image-1677204722830-.webp",
-   "image-1677204722831-.webp",
-   "image-1677204722852-.webp"
+   "image-1677357739145-.webp",
+   "image-1677357739147-.webp",
+   "image-1677357739148-.webp",
+   "image-1677357739148-.jpg",
+   "image-1677357739149-.webp"
   ]
  },
  {
@@ -26,8 +29,10 @@
   "subcategory": "oferts",
   "brand": "Motorola",
   "color": "black",
-  "memory": "128GB",
-  "size": "155.7 mm x 74.5 mm x 7.9 mm",
+  "memory": 128,
+  "height": 155.7,
+  "length": 74.5,
+  "width": 7.9,
   "price": "14500",
   "discount": "23",
   "images": [

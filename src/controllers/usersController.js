@@ -10,6 +10,9 @@ const usersController = {
     },
     contactUs(req,res){
         res.render('./users/contactUs.ejs')
+    },
+    registerProcess(req,res){
+        res.redirect("/users/login")
     }
 }
 // exportacion de controllers

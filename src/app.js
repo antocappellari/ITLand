@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
 
 app.use('/',mainRoutes);
-app.use('/',usersRoutes);
+app.use('/users',usersRoutes);
 app.use('/products',productsRoutes);
 
 
