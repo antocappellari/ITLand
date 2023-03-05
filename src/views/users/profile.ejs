@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('../partials/head') %> 
+  <body>
+    <!-- header -->
+    <%- include('../partials/header') %> 
+
+
+    <main class="main__profile">
+        <div class="profile__card">
+            <div class="profile__card__img">
+                <img src="" alt="">
+            </div>
+
+            <div class="profile__card__data">
+                <p><%= userToLogged.name %> <span><%= userToLogged.lastname %></span></p>
+                <p> <%= userToLogged.address %></p>
+                <p><%= userToLogged.cellphone %></p>
+                <p><%= userToLogged.email %></p>
+
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+    <!-- Bootom Nav -->
+    <%- include('../partials/bottomNav') %> 
+    <!-- Footer -->
+    <%- include('../partials/footer') %> 
+  </body>
+</html>

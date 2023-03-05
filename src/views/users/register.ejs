@@ -13,7 +13,7 @@
             <h2>Welcome</h2>
             <p>Register</p>
           </div>
-          <form class="form-inputs" action="/users/register" method="POST">
+          <form class="form-inputs" action="/users/register" method="POST"  enctype="multipart/form-data">
             <div class="datauser__register">
               <div class="userinput">
                 <input type="text"
@@ -21,11 +21,21 @@
                   id=""
                    placeholder="Name">
                 <i class="uil uil-user icon1"></i>
+                <% if (locals.errors && errors.name) { %>
+                      <p class="text-danger">
+                        <%= errors.name.msg %>
+                      </p>
+                <% } %>
               </div>
               <div class="userinput">
                 <input type="text"
                  name= "lastname" 
                  placeholder="Last name">
+                 <% if (locals.errors && errors.lastname) { %>
+                  <p class="text-danger">
+                    <%= errors.lastname.msg %>
+                  </p>
+            <% } %>
                 <i class="uil uil-user icon1"></i>
               </div>
               <div class="userinput">
@@ -33,22 +43,44 @@
                  placeholder="Address"
                  name="address"
                  >
+                 <% if (locals.errors && errors.address) { %>
+                  <p class="text-danger">
+                    <%= errors.address.msg %>
+                  </p>
+            <% } %>
                 <i class="uil uil-location-point"></i>
               </div>
               <div class="userinput">
                 <input type="number"
                 name="cellphone"
                  placeholder="cel:">
+                 <% if (locals.errors && errors.cellphone) { %>
+                  <p class="text-danger">
+                    <%= errors.cellphone.msg %>
+                  </p>
+            <% } %>
                 <i class="uil uil-phone"></i>
               </div>
             </div>
             <div class="file-select2" id="src-file2" >
-              <input type="file" name="image"  multiple >
+              <input type="file"
+               name="image"
+                >
+                <% if (locals.errors && errors.image) { %>
+                  <p class="text-danger">
+                    <%= errors.image.msg %>
+                  </p>
+            <% } %>
             </div>
             <div class="userinput">
               <input type="text"
               name="email"
                placeholder="Enter your email" >
+               <% if (locals.errors && errors.email) { %>
+                <p class="text-danger">
+                  <%= errors.email.msg %>
+                </p>
+          <% } %>
               <i class="uil uil-envelope icon icon2"></i>
             </div>
             <div class="userinput">
@@ -56,12 +88,22 @@
               name="password"
                placeholder="Create password"
                 >
+                <% if (locals.errors && errors.password) { %>
+                  <p class="text-danger">
+                    <%= errors.password.msg %>
+                  </p>
+            <% } %>
               <i class="uil uil-lock icon icon3"></i>
             </div>
             <div class="userinput">
               <input type="password"
               name="confirmPassword"
               placeholder="Confirm password">
+              <% if (locals.errors && errors.confirmPassword) { %>
+                <p class="text-danger"> 
+                  <%= errors.confirmPassword.msg %>
+                </p>
+          <% } %>
               <i class="uil uil-lock icon icon4"></i>
               <i class="uil uil-eye-slash showHidePw icon5"></i>
             </div>
@@ -71,6 +113,11 @@
               >
               <p>I accept all terms and conditions</p>
             </div>
+            <% if (locals.errors && errors.conditions) { %>
+              <p class="text-danger">
+                <%= errors.conditions.msg %>
+              </p>
+        <% } %>
             <div class="userinput button-submit">
             <input class="input-button" type="Submit" value="Register Now">
             </div>

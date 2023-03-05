@@ -3,12 +3,15 @@ const path = require('path')
 
 const validator = [
     body('name')
-    .notEmpty().isLength({min: 3}).withMessage('This field must be completed with your name'),
+    .notEmpty().withMessage('This field must be completed with your name')
+    .isLength({min: 3}).withMessage('Please, your name must contain at least three characters'),
     body('lastname')
-    .notEmpty().isLength({min: 3}).withMessage('This field must be completed with your last name'),
+    .notEmpty().withMessage('This field must be completed with your last name')
+    .isLength({min: 3}).withMessage('Please, your last name must contain at least three characters'),
     body('address').notEmpty().withMessage('This field must be completed with your address'),
     body('cellphone'),
-    body('email').notEmpty().isEmail().withMessage('Please, complete it  with a valid email'),
+    body('email').notEmpty().withMessage('This field must be completed with your email')
+    .isEmail().withMessage('Please, complete it  with a valid email'),
     body('image').custom((value,{req})=>{
         let array = ['.jpg', '.png', '.jpeg']
         let file = req.file
@@ -21,14 +24,22 @@ const validator = [
                 throw new Error(`Please upload a profile picture with a valid format: ${array.join(', ')}`)
             }
         }
+        return true
     }),
-    body('password').custom((value,{req})=>{
+    body('password').isUppercase({min: 1}).withMessage("Please, your password must contain at least one upper case")
+    .isLength({min:8}).withMessage('Your password must contain at least 8 characters'),
+    body('confirmPassword').custom((value,{req})=>{
+        let pass = req.body.password
 
-        
-    })
+        if(req.body.confirmPassword === pass){
+            return true
+            
+        }else{
+            throw new Error('Passwords do not match')
+        }
 
-    
-
-
-
+    }),
+    body('conditions').notEmpty().withMessage('Please accept our terms and conditions')
 ]
+
+module.exports = validator

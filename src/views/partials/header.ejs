@@ -40,10 +40,24 @@
         </form>
       </div>
       <div class="header__account">
-        <a class="account__icon" href="/users/login">
+
+        <% if (locals.isLogged) { %>
+          <a class="account__icon" href="/users/profile">
+          <img src="/images/users/<%= userToLogged.image %>" alt=""  width="50px" style="border-radius: 50%">
+          <p>
+            <%= userToLogged.name %>
+          </p>
+          <a href="/users/logout/">Logout</a>
+        </a>
+         
+        <% } else { %>
+          <a class="account__icon" href="/users/login">
         <i class="fa-solid fa-user"></i>
         <span>My account</span>
-        </a>
+      </a>
+         
+          <% }%>
+
       </div>
       <div class="container-header__cart">
         <a href="/product/cart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>

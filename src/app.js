@@ -7,7 +7,18 @@ const usersRoutes = require('./router/usersRoutes.js');
 const productsRoutes = require('./router/productsRoutes.js');
 const mainRoutes = require('./router/mainRoutes.js');
 const methodOverride = require("method-override");
+const session = require('express-session');
+const userToLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
+const cookie = require('cookie-parser')
 
+app.use(session({
+    secret: "is secret",
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(cookie("es mi clave secreta"))
+
+app.use(userToLoggedMiddleware)
 
 app.use(express.static(publicPath));
 app.set('view ingine', 'ejs');
