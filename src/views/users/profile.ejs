@@ -9,19 +9,25 @@
 
 
     <main class="main__profile">
-        <div class="profile__card">
-            <div class="profile__card__img">
-                <img src="" alt="">
-            </div>
-
-            <div class="profile__card__data">
-                <p><%= userToLogged.name %> <span><%= userToLogged.lastname %></span></p>
-                <p> <%= userToLogged.address %></p>
-                <p><%= userToLogged.cellphone %></p>
-                <p><%= userToLogged.email %></p>
-
-            </div>
-
+        <div class="userProfile">
+          <div class="userImage">
+          <img width="100px" src="/images/users/<%= userToLogged.image %>" alt="">
+        </div>
+          <button class="userButton">Edit Profile</button>
+        </div>
+        <div class="userMainInfo">
+          <p>Full name: <%= userToLogged.name %> <%= userToLogged.lastName %></p> 
+          <hr>
+          <p>Address: <%= userToLogged.address %> </p>
+          <hr>
+          <p>Cellphone: <%= userToLogged.cellphone %> </p>
+          <hr>
+          <p>Email: <%= userToLogged.email %> </p>
+        </div>
+        <div class="userOrders">
+       <div>
+        <p>My orders</p>
+       </div>
         </div>
     </main>
 

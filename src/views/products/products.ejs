@@ -10,7 +10,9 @@
       <section class="top-products">
       <div class="titleproducts"><h1 style="color: green;">Products</h1></div>
       <div class="createproduct">
-      <a href="/products/create"><button type="button" class="btn1"> Create</button></a>
+      <% if (locals.isLogged) { %>
+        <a href="/products/create"><button type="button" class="btn1"> Create</button></a>
+      <% } %>
       </div>
       </section>
       <section class="filter-view">

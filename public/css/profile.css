@@ -1,0 +1,98 @@
+.main__profile {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "img info info"
+    "img info info"
+    "img info info"
+    "img info info"
+    "img info info"
+    "img info info"
+    "order order order"
+    "order order order"
+    "order order order"
+    "order order order"
+    "order order order"
+    "order order order"
+    "order order order"
+    
+    ;
+    gap: 20px;
+    background-color: #ebebee;
+    padding: 20px;
+}
+.userProfile {
+  grid-area: img;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 10px;
+
+}
+.userImage {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.userMainInfo {
+    grid-area: info;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5px;
+    
+}
+.userMainInfo p {
+    font-size: 0.8em;
+}
+.userOrders{
+    grid-area: order;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+
+}
+.userButton {
+    width: 100%;
+    height: 30%;
+    outline: none;
+    font-size: 0.6em;
+    font-weight: 400;
+    color: white;
+    background-color: #323b55;
+    border: 1.5px solid #c7bebe;
+    border-bottom-width: 2.5px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+@media screen and (min-width:767px){
+
+.userMainInfo p {
+    font-size: 1em;
+}
+
+.userButton {
+    width: 70%;
+    font-size:1em;
+}
+}

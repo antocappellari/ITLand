@@ -79,10 +79,12 @@
                 <div class="description">
                     <h4>Description</h4>
                     <p> <%= product.description %> </p>
-                    <a href="/products/<%= product.id %>/edit"><button type="button" class="btn1">Edit</button></a>
-                    <form action="/products/<%= product.id %>/delete?_method=DELETE" method ="post">
-                        <input type="submit" class="btn1" value="Delete">                   
-                    </form>
+                    <% if (locals.isLogged) { %>
+                        <a href="/products/<%= product.id %>/edit"><button type="button" class="btn1">Edit</button></a>
+                        <form action="/products/<%= product.id %>/delete?_method=DELETE" method ="post">
+                            <input type="submit" class="btn1" value="Delete">                   
+                        </form>
+                    <% } %>
                 </div>
             </section>
         </section>
