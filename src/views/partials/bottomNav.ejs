@@ -13,7 +13,13 @@
           <a href="/product/fav"><i class="uil uil-heart-alt"></i></a>
       </li>
       <li class="nav__mobile__caja">
-          <a href="/login"><i class="uil uil-user"></i></a>
+          <a href="/login">
+              <% if (locals.isLogged) { %>
+                <img width="50px" src="/images/users/<%= userToLogged.image %>" alt="" style="border-radius: 40%;">
+                <% } else{ %>
+                    <i class="uil uil-user"></i>
+                <% } %>
+        </a>
       </li>
     </ul>
   </section>

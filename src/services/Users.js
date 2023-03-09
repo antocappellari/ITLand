@@ -12,6 +12,7 @@ const Users = {
             id: Date.now(),
             ...user
         }
+        delete newUser.confirmPassword
         userAll.push(newUser)
         fs.writeFileSync(userPath,JSON.stringify(userAll, null, ' ' ))
         return true

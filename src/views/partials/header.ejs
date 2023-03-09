@@ -5,11 +5,21 @@
       </a>
       <div id="open" class="menu-mobile">
         <div class="user">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle user-profile" viewBox="0 0 16 16">
+            <% if (locals.isLogged) { %>
+              <div class="userImage">
+                <img width="100px" src="/images/users/<%= userToLogged.image %>" alt="">
+                </div>
+            <% } else {%>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle user-profile" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
               </svg>
-            <p>Name-user</p>
+              <% } %>
+            <% if (locals.isLogged) { %>
+             <p><%= userToLogged.name %></p>
+            <% } else{%>
+              <p></p>
+              <% } %>
             <div class="button-exit">
               <a href="#exit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -19,12 +29,13 @@
         </div>
         <nav class="navegation-mobile">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="product/create">Sell</a></li>
-                <li><a href="#">Abaut us</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/users/login/">login</a></li>
+                <li><a href="/users/register/">register</a></li>
+                <% if (locals.isLogged) { %>
+                  <li><a href="/users/logout/">Log out</a></li>
+                <% } %>
             </ul>
         </nav>
     </div>
@@ -47,7 +58,7 @@
           <p>
             <%= userToLogged.name %>
           </p>
-          <a href="/users/logout/">Logout</a>
+          <a href="/users/logout/">Log out</a>
         </a>
          
         <% } else { %>
@@ -67,7 +78,6 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/products">Products</a></li>
-        <li><a href="/products/create">Sell</a></li>
         <li><a href="/aboutUs">About us</a></li>
         <li><a href="/contactUs"> Contact us</a></li>
       </ul>

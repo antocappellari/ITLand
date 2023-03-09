@@ -66,7 +66,6 @@ const usersController = {
         return res.redirect("/users/login")
     },
     profile(req, res){
-        console.log(req.cookies.userEmail, "este es cokiies");
         return res.render('./users/profile.ejs')
     },
     logout(req, res){

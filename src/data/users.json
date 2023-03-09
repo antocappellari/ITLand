@@ -7,8 +7,18 @@
   "cellphone": "3213123131",
   "email": "rodolfo@gmail.com",
   "password": "$2b$10$FJBC85RQ1WabXhIZ1PDXvOSeGeqyf1WGDvsorzg.PlHzBW/7LVyIm",
-  "confirmPassword": "12345678",
   "conditions": "on",
   "image": "image-1678022748040-.jpg"
+ },
+ {
+  "id": 1678393120651,
+  "name": "George",
+  "lastname": "Monito123",
+  "address": "1212121",
+  "cellphone": "541134341212",
+  "email": "george@gmail.com",
+  "password": "$2b$10$ggecxz9zKRIP0WnCr8jD1uUlA6bLIgYdZx6v/efeuWR.2klR5PU3S",
+  "conditions": "on",
+  "image": "image-1678393120490-.jpg"
  }
 ]
