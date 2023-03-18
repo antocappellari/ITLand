@@ -20,5 +20,16 @@
   "password": "$2b$10$ggecxz9zKRIP0WnCr8jD1uUlA6bLIgYdZx6v/efeuWR.2klR5PU3S",
   "conditions": "on",
   "image": "image-1678393120490-.jpg"
+ },
+ {
+  "id": 1679169012685,
+  "name": "Antonella",
+  "lastname": "Cappellari",
+  "address": "lala",
+  "cellphone": "11",
+  "email": "anto_capp@hotmail.com",
+  "password": "$2b$10$Kq6Z49j1Eam8xDbfUAP2peTapQnN9tBJUGUcGupS7fCZYZzD/U1Ce",
+  "conditions": "on",
+  "image": "image-1679169012435-.png"
  }
 ]
