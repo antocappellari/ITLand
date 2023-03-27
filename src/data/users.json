@@ -20,16 +20,5 @@
   "password": "$2b$10$ggecxz9zKRIP0WnCr8jD1uUlA6bLIgYdZx6v/efeuWR.2klR5PU3S",
   "conditions": "on",
   "image": "image-1678393120490-.jpg"
- },
- {
-  "id": 1679168293249,
-  "name": "Jhonatan",
-  "lastname": "soto",
-  "address": "1212121",
-  "cellphone": "23213",
-  "email": "sotojhony48@gmail.com",
-  "password": "$2b$10$plll3J64SdPBQtHz.gEiRey5ycYYmK.7gnRwwAIQBC6M33VFO9BAK",
-  "conditions": "on",
-  "image": "image-1679168292961-.jpg"
  }
 ]
