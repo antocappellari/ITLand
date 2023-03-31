@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family:"Roboto", sans-serif;
+  font-family: proxima-nova, "Roboto", sans-serif;
 }
 .section-title{
   font-weight: bold;
@@ -101,10 +101,19 @@ display:none;
   font-size: small;
   text-align: center;
 }
+.container-title{
+  display: flex;
+  justify-content: center;
+}
 .producTittle {
   text-align: center;
-  font-size: medium;
+  font-size: 30px;
   margin-top: 15px;
+  font-weight: 200;
+  color:#ffffff;
+  letter-spacing: .1rem;
+  background-color: #315ed1;
+  padding: 1% 30%;
 }
 .line {
   width: 80%;

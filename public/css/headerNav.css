@@ -28,7 +28,7 @@
   position: relative;
   padding: 5px;
   color: #ffffff;
-  background-color: #323b55;
+  background-color: #1d4ee0;
 }
 
 .container-header .title_and_logo {
@@ -74,9 +74,23 @@
   align-items: center;
   gap: 10px;
 }
+
+.headImage{
+  display: flex;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: solid 0.5px white;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+.nameLogged, .logOut{
+  display: none;
+}
 .user p{
-  font-size:1.3em ;
-  font-weight: bold;
+  font-size:1.6em ;
+  font-weight: 400;
 }
 .user .user-profile{
   width: 90px;
@@ -119,12 +133,26 @@
   flex-direction: column;
   padding-left: 30px;
   gap: 20px;
+  padding: 10px;
+  align-items: center;
+}
+.user-image{
+  background-color: none;
+}
+.userImage{
+  border: 1px solid black;
+}
+hr{
+  opacity: 0.5;
+  background-color: black;
+  padding: 0 45%;
+
 }
 .navegation-mobile ul li {
   list-style: none;
 }
 .navegation-mobile ul li a{
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #000;
   text-decoration: none;
 }

@@ -19,6 +19,7 @@
   list-style: none;
   text-align: center;
 }
+
 .section__nav__mobile a{
   text-decoration: none;
   color: rgb(16, 14, 14);
@@ -43,8 +44,17 @@
 #search:target{
   display: block;
 }
-
-
+.imageProfile{
+  width:32px ;
+  height: 32px;
+  border-radius: 50%;
+  border: solid 1px black;
+  justify-content: center
+}
+.imageContainer{
+  display: flex;
+  align-items: center;
+}
 @media screen and (min-width:1024px){
   .section__nav__mobile{
     display: none;

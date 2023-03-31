@@ -20,5 +20,16 @@
   "password": "$2b$10$ggecxz9zKRIP0WnCr8jD1uUlA6bLIgYdZx6v/efeuWR.2klR5PU3S",
   "conditions": "on",
   "image": "image-1678393120490-.jpg"
+ },
+ {
+  "id": 1680278598930,
+  "name": "Pedro",
+  "lastname": "Aznarez",
+  "address": "Yaguaron",
+  "cellphone": "095469349",
+  "email": "pedroaznarez12@gmail.com",
+  "password": "$2b$10$Ebv2h7A58jS48K/0ZWTYEOYI5oaQ9u2PWAUUxDqMeNTfQP6hkejOe",
+  "conditions": "on",
+  "image": "image-1680278598763-.png"
  }
 ]

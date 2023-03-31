@@ -7,15 +7,15 @@
           <a href="#search"><i class="uil uil-search"></i></a>
       </li>
       <li class="nav__mobile__caja">
-          <a href="/product/cart"><i class="uil uil-shopping-cart"></i></a>
+          <a href="/products/cart"><i class="uil uil-shopping-cart"></i></a>
       </li>
       <li class="nav__mobile__caja">
           <a href="/product/fav"><i class="uil uil-heart-alt"></i></a>
       </li>
       <li class="nav__mobile__caja">
-          <a href="/login">
+          <a class="imageContainer" href="/login">
               <% if (locals.isLogged) { %>
-                <img width="50px" src="/images/users/<%= userToLogged.image %>" alt="" style="border-radius: 40%;">
+                <img class="imageProfile"src="/images/users/<%= userToLogged.image %>" alt="">
                 <% } else{ %>
                     <i class="uil uil-user"></i>
                 <% } %>
