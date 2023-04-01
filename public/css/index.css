@@ -87,13 +87,18 @@ display:none;
   height: 45px;
 }
 .CarrusselSection {
-  height: 50vh;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
+  align-items: flex-start;
+  margin-top: 2em;
 }
+
+.FirstOffer:hover{
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
 .CarrusselSection::-webkit-scrollbar{
   display: none;
 }
@@ -134,7 +139,7 @@ display:none;
   margin: 5px 5px 5px 5px;
   padding: 2px;
   height: 45vh;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.384);
+  box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(131, 131, 131, 0.404);
   text-decoration: none;
 }
 
