@@ -64,9 +64,16 @@ module.exports = (sequelize, dataTypes)=>{
              as: 'categories',
              foreignKey: 'categories_id'
          })
-         Products.belongsTo(models.Memories,{
-             as: 'memories',
-             foreignKey: 'memories_id'
+        Products.belongsTo(models.Brands,{
+            as: 'brands',
+            foreignKey: 'brands_id'
+        })
+         Products.belongsToMany(models.Memories,{
+            as: 'memories',
+            through:'products_memories',
+            foreignKey: 'products_id',
+            otherKey:'memories_id',
+            timestamps:false,
  
          })
          Products.hasMany(models.Camera,{
@@ -79,6 +86,13 @@ module.exports = (sequelize, dataTypes)=>{
             foreignKey: 'images_id'
 
         })
+        Products.belongsToMany(models.Colors,{
+            as: 'colors',
+            through:'products_colors',
+            foreignKey: 'products_id',
+            otherKey:'colors_id',
+            timestamps:false,
+            })
      }
 
     return Products

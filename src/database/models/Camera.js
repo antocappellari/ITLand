@@ -20,6 +20,12 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     const Camera = sequelize.define(alias, cols, config)
+    Camera.associate = (models)=>{
+        Camera.hasMany(models.Products,{
+            as: 'products',
+            foreignKey: 'products_id'
+        })
+    }
     return Camera
 
 }

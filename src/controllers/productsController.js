@@ -2,7 +2,7 @@ const fs = require('fs'),
     path = require('path'),
     productPath = path.join(__dirname , '../data/products.json');
 
-let products = JSON.parse(fs.readFileSync(productPath, 'utf-8'));
+// let products = JSON.parse(fs.readFileSync(productPath, 'utf-8'));
 let db = require("../database/models")
 
 //controllers
@@ -14,12 +14,14 @@ const productsController = {
     cart(req,res){
         res.render('products/cart.ejs')
     },
-    detail(req,res){
-        // let id =req.params.id;
-        // let product = products.find(product => product.id == id)     
-        db.Products.findByPk(req.params.id,include=[{association:"categories"},{association:"images"},{association:"memories"},{association:"camera"}]).then(function(product){
+    detail:async(req,res)=>{
+        try {
+        let id =req.params.id;    
+        let product = await db.Products.findByPk(id,{include:[{association:"categories"},{association:"images"},{association:"memories"},{association:"camera"}]})
             res.render('products/detail.ejs',{product:product})
-        })
+        } catch (error) {
+        console.log(error)
+        }
     },
     products(req,res){
         // res.render('products/products.ejs', {products})
@@ -40,23 +42,33 @@ const productsController = {
         res.render('products/create.ejs')
     },
     creation(req,res){
+        // let body = req.body;
+        // let images = req.files;
+        // let bodyImages = []
+
+        // images.forEach(image =>{
+
+        //     bodyImages.push(image.filename)
+        // });
+    
+        // let product={
+        //     id : Date.now(),
+        //     ...body,
+        //     images : bodyImages
+
+        // }
+        // products.push(product);
+        // fs.writeFileSync(productPath,JSON.stringify(products,null," "))
         let body = req.body;
         let images = req.files;
-        let bodyImages = []
-
-        images.forEach(image =>{
-
-            bodyImages.push(image.filename)
-        });
-    
-        let product={
-            id : Date.now(),
+        db.Products.create({
+            id : "Pr"+Date.now(),
             ...body,
-            images : bodyImages
-
-        }
-        products.push(product);
-        fs.writeFileSync(productPath,JSON.stringify(products,null," "))
+        })
+        db.Images.create({
+            id : "IM"+Date.now(),
+            // name:images.imagename como hago para que el nombre de la imagen sea del archivo que sube?
+        })
         res.redirect("/");
     },
 

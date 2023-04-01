@@ -11,14 +11,14 @@
             <div class="section__images">
                 <!-- <div class="name-product"><p>Samsung S21FE 5G</p></div> -->
                 <section class="image-container">
-                    <img src="/images/products/<%= product.images[0] %>" alt="s211">
+                    <img src="/images/products/<%= product.images[0].name %>" alt="s211">
                     <p>1/5</p>
                 </section>
                 <section class="image-others">
-                    <img src="/images/products/<%= product.images[1] %>" alt="s212">
-                    <img src="/images/products/<%= product.images[2] %>" alt="s213">
-                    <img src="/images/products/<%= product.images[3] %>" alt="s214">
-                    <img src="/images/products/<%= product.images[4] %>" alt="s215">
+                    <img src="/images/products/<%= product.images[1].name %>" alt="s212">
+                    <img src="/images/products/<%= product.images[2].name %>" alt="s213">
+                    <img src="/images/products/<%= product.images[3].name %>" alt="s214">
+                    <img src="/images/products/<%= product.images[4].name %>" alt="s215">
                 </section>
             </div>
             <section class="section__characteristics">
@@ -44,7 +44,7 @@
                 </div>
                 <p class="previous"><%= product.price %></p>
                 <div class="oferts">
-                    <p class="price">$<%= (Math.floor(( product.price - (products.price * products.discount ) / 100))) %></p>
+                    <p class="price">$<%= (Math.floor(( product.price - (product.price * product.discount ) / 100))) %></p>
                     <p class="discount"><%= product.discount %>%OFF</p>
                 </div>
                 <a class="payment-methods" href= "#">10 x $<%= Math.floor((Math.floor(( product.price - (product.price * product.discount ) / 100)))/10) %> sin interés</a>

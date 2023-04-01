@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes)=>{
 
-    const alias = 'Memories'
+    const alias = 'Colors'
     const cols = {
 
         id:{
@@ -9,26 +9,26 @@ module.exports = (sequelize, dataTypes)=>{
             autoIncrement: true,
             allowNull: false
         },
-        memory:{
+        color:{
             type: dataTypes.STRING(10),
             allowNull: false
         }
     }
     const config = {
-        tableName: 'memories',
+        tableName: 'colors',
         timestamps: false
     }
 
-    const Memories = sequelize.define(alias, cols, config)
-    Memories.associate = (models)=>{
-        Memories.belongsToMany(models.Products,{
+    const Colors = sequelize.define(alias, cols, config)
+    Colors.associate = (models)=>{
+        Colors.belongsToMany(models.Products,{
             as: 'products',
-            through:'products_memories',
-            foreignKey: 'memories_id',
+            through:'products_colors',
+            foreignKey: 'colors_id',
             otherKey:'products_id',
             timestamps:false,
         })
     }
-    return Memories
+    return Colors
 
 }
