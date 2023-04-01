@@ -3,6 +3,7 @@ const fs = require('fs'),
     productPath = path.join(__dirname , '../data/products.json');
 
 let products = JSON.parse(fs.readFileSync(productPath, 'utf-8'));
+let db = require("../database/models")
 
 //controllers
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -14,11 +15,12 @@ const productsController = {
         res.render('products/cart.ejs')
     },
     detail(req,res){
-        let id =req.params.id;
-        let product = products.find(product => product.id == id)     
-        res.render('products/detail.ejs',{
-            product,
+        // let id =req.params.id;
+        // let product = products.find(product => product.id == id)     
+        db.Products.findByPk(req.params.id,include=[{association:"categories"},{association:"images"},{association:"memories"},{association:"camera"}]).then(function(product){
+            res.render('products/detail.ejs',{product:product})
         })
+
     },
     products(req,res){
         res.render('products/products.ejs', {products})

@@ -17,6 +17,10 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.DECIMAL(10,0),
             allowNull: false,
         },
+        color: {
+            type: dataTypes.STRING(120),
+            allowNull: false,
+        },
         discount: {
             type: dataTypes.INTEGER,
             allowNull: false,

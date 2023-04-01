@@ -30,7 +30,7 @@
                     <div class="characterisrics-memory-color">
                         <div>
                             <p class="p1">Internal memory:</p>
-                            <p class="p2"><%= product.memory %> GB</p>
+                            <p class="p2"><%= product.memories.memory %> GB</p>
                         </div>
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
@@ -44,7 +44,7 @@
                 </div>
                 <p class="previous"><%= product.price %></p>
                 <div class="oferts">
-                    <p class="price">$<%= (Math.floor(( product.price - (product.price * product.discount ) / 100))) %></p>
+                    <p class="price">$<%= (Math.floor(( product.price - (products.price * products.discount ) / 100))) %></p>
                     <p class="discount"><%= product.discount %>%OFF</p>
                 </div>
                 <a class="payment-methods" href= "#">10 x $<%= Math.floor((Math.floor(( product.price - (product.price * product.discount ) / 100)))/10) %> sin interés</a>
@@ -71,7 +71,7 @@
                     <p class="specifications-title">Technical specifications</p>
                     <div class="specification">
                         <p>Screen size: <span><%= product.height %>"x<%= product.length %>"x<%= product.width %>"</span></p>
-                        <p>Internal memory: <span><%= product.memory %> GB</span></p>
+                        <p>Internal memory: <span><%= product.memories.memory %> GB</span></p>
 
                     </div>
                     <div class="btn"><button type="button">See more features</button></div>

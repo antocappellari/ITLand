@@ -4,6 +4,7 @@ const fs = require('fs'),
     productPath = path.join(__dirname , '../data/products.json');
 
 let products = JSON.parse(fs.readFileSync(productPath, 'utf-8'));
+let db = require("../database/models")
 
 const mainController = {
     index(req,res){

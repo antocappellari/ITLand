@@ -1,6 +1,7 @@
 const {validationResult} = require('express-validator')
 const Users = require('../services/Users')
 const bcrypt = require('bcrypt')
+let db = require("../database/models")
 const usersController = {
     aboutUs(req,res){
         res.render('aboutUs.ejs')
