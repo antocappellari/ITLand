@@ -20,6 +20,18 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     const Images = sequelize.define(alias, cols, config)
+    Images.associate = (models)=>{
+       Images.belongsTo(models.Users,{
+            as: 'users',
+            foreignKey: 'users_id'
+
+        })
+        Images.belongsTo(models.Products,{
+            as: 'products',
+            foreignKey: 'products_id'
+
+        })
+    }
     return Images
 
 }
