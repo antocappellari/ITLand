@@ -76,13 +76,14 @@
           <section class="CarrusselSection">
             <% products.forEach(product => { %>
                 <a href="/products/<%= product.id %>/detail" class="FirstOffer">
-                  <div class="imagecarrussel">
-                    <img src="/images/products/<%= product.images[0] %>" alt="laptop">
-                  </div>
+                  
                   <div class="Imagetext">
                     <h3 class="Photo"><%= product.name %></h3>
+                    <div class="imagecarrussel">
+                      <img src="/images/products/<%= product.images[0] %>" alt="laptop">
+                    </div>
                     <p class="Price">$ <%= product.price %></p>
-                    <p class="Delivery">Free shipping</p>
+                    <p class="Delivery">10 x $<%= Math.floor(product.price/10) %> instalments</p>
                   </div>
                 </a>
             <% }) %>

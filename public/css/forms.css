@@ -46,12 +46,13 @@
 
 .container-form .text-title h2 {
     font-size: 1.8em;
-    color: #323b55;
+    color: #000000;
+    font-weight: 400;
 }
 
 .container-form .text-title p {
     padding-bottom: 10px;
-    color: #3a3838;
+    color: #000000;
     font-size: 1.3em;
 
 }
@@ -107,11 +108,19 @@
     width: 80%;
     height: 5vh;
     color: #fff;
-    background-color: #323b55;
+    background-color: #164ffacf;
     border: none;
     border-radius: 15px;
     padding: none;
     font-size: 16px;
+}
+.button-submit:hover{
+    background-color: #0034d1cf;
+    border-radius: 15px;
+    padding: none;
+    border: none;
+    width: 80%;
+    height: 5vh;
 }
 
 .container-form .text p:not(a) {
@@ -123,7 +132,7 @@
 
 .container-form .text a {
     text-decoration: none;
-    color: #2b57dc;
+    color: #164ffacf;
     font-weight: 600;
 }
 
@@ -211,7 +220,7 @@
     display: inline-block;
   }
   .file-select2::before {
-    background-color: #5678EF;
+    background-color: #164ffacf;
     color: white;
     display: flex;
     justify-content: center;
@@ -223,6 +232,10 @@
     right: 0;
     top: 0;
     bottom: 0;
+  }
+  .file-select2:hover{
+    background-color: #0034d1cf;
+    border-radius: 15px;
   }
   .file-select input[type="file"] {
     opacity: 0;
@@ -289,7 +302,7 @@
         transition: all .3s;
     }
     .container-form .button-submit .input-button:hover{
-        background-color: #1c253f;
+        background-color: #0034d1cf;
     }
     .container__form-login{
         width: 45%;
@@ -306,7 +319,7 @@
         width: 80%;
         height: 6vh;
         color: #fff;
-        background-color: #323b55;
+        background-color: #164ffacf;
         border: none;
         border-radius: 15px;
         padding: none;

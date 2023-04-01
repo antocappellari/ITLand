@@ -76,13 +76,19 @@
     font-size: 0.6em;
     font-weight: 400;
     color: white;
-    background-color: #323b55;
+    background-color: #164ffacf;
     border: 1.5px solid #c7bebe;
     border-bottom-width: 2.5px;
     border-radius: 15px;
     transition: all 0.3s ease;
     text-align: center;
 }
+.userButton:hover {
+    background: #0e4bf1;
+    border: 1.5px solid #c7bebe;
+    border-bottom-width: 2.5px;
+    border-radius: 15px;
+  }
 
 @media screen and (min-width:767px){
 

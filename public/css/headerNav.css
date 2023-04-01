@@ -28,7 +28,7 @@
   position: relative;
   padding: 5px;
   color: #ffffff;
-  background-color: #1d4ee0;
+  background-color: #164ffacf;
 }
 
 .container-header .title_and_logo {
@@ -46,7 +46,7 @@
 }
 
 .header__burger {
-  font-size: 1.3em;
+  font-size: 1.5em;
   padding-left: 30px ;
   color: #fff;
   text-decoration: none;
@@ -62,6 +62,7 @@
 
 .account__icon {
   color: rgb(255, 255, 255);
+  font-size: 1.5rem;
 }
 .user{
   color: #000;
@@ -140,7 +141,7 @@
   background-color: none;
 }
 .userImage{
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
 }
 hr{
   opacity: 0.5;
@@ -295,13 +296,12 @@ hr{
 
   .navegation {
     display: flex;
-    background-color: #323b55;
+    background-color: #164ffacf;
     font-family: "Roboto", sans-serif;
     justify-content: flex-end;
     align-items: center;
     height: 35px;
     padding-right: 20px;
-    margin-top:-2px;
   }
 
   .navegation ul {

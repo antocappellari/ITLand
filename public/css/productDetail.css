@@ -16,8 +16,8 @@ body{
     margin: 10px 0 20px 10px;
 }
 .name-product p{
-    font-weight: 800;
-    font-size: 1.2em;
+    font-size: 1.9rem;
+    font-weight: 400;
 }
 .main-container{
     display: flex;
@@ -89,7 +89,7 @@ body{
     font-weight: bold;
 }
 .characterisrics-memory-color i{
-    color: #01518a;
+    color: #164ffacf;
 }
 .section__characteristics .previous{
     text-decoration: line-through;
@@ -104,20 +104,20 @@ body{
     gap: 10px
 }
 .section__characteristics .price{
-    color: #01518a;
+    color: #164ffacf;
     font-weight: 700;
     font-size: 2em;
 }
 .section__characteristics .discount{
     color: #fff;
-    background-color:#01518a ;
+    background-color:#00a650;
     padding: 3px 3px 3px 5px;
     border-radius: 5px;
 }
 .section__characteristics .payment-methods{
     padding-left:10px;
     text-decoration: none;
-    color: #0e9aff;
+    color: #00a650;
     font-weight: 700;
 }
 .freeshipping{
@@ -128,7 +128,7 @@ body{
 .freeshipping svg{
     width: 1.3em;
     height: 1.3em;
-    color: #01518a;
+    color: #164ffacf;
 }
 .article-button{
     margin-top: 20px;
@@ -142,7 +142,7 @@ body{
     height: 7vh;
 }
 .article-button .btn1{
-    background-color: #01518a;
+    background-color: #164ffacf;
     border-radius:5px;
     border: none;
     color: #Fff;
@@ -151,8 +151,8 @@ body{
 .article-button .btn2{
     background-color: #fff;
     border-radius:5px;
-    border: 1px solid #01518a;
-    color: #01518a;
+    border: 1px solid #164ffacf;
+    color: #164ffacf;
     cursor: pointer;
 }
 .section__description {
@@ -163,11 +163,18 @@ body{
     border: 1px rgb(163, 162, 162) solid;
     border-radius: 4px;
 }
+.description-buttons{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+}
+
 .description__specifications .specifications-title{
     padding: 5px;
     margin-bottom: 5px;
     text-align: center;
-    color: #01518a;
+    color: #164ffacf;
     font-size: 1.4em;
     font-weight: 900;
 }
@@ -194,8 +201,9 @@ body{
     width: 80%;
     height: 40px;
     background-color: #fff;
-    color: #01518a;
-    border: 1px solid  #01518a; ;
+    color: #164ffacf;
+    border: 1px solid  #164ffacf; ;
+    border-radius: 5px;
 }
 .section__description .description{
     width: 100%;
@@ -204,17 +212,38 @@ body{
 }
 .section__description .description h4{
     padding-bottom: 3px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
 
 }
+
 .description .btn1{
     margin-top:10px;
-    background-color: #01518a;
-    width:45%;
+    background-color: #164ffacf;
+    width:100%;
     height: 30px;
     border-radius:5px;
     border: none;
     color: #Fff;
     cursor: pointer;
+}
+.description-buttons .btn1{
+    width:10em;
+    height: 3em;
+}
+.description-buttons .btn1:hover{
+    background-color: #0040ffcf;
+}
+.article-button .btn1:hover{
+    color: #fff;
+    background-color: #0040ffcf;
+    border: none;
+}
+.article-button .btn2:hover{
+    color: #Fff;
+    background-color: #0040ffcf;
+    border:none
 }
 
 /*--------------------Tablet--------------------- */
@@ -245,20 +274,20 @@ body{
     }
     .article-button .btn1{
         width: 70%;
-        background-color: #01518a;
+        background-color: #164ffacf;
         border-radius:5px;
         border: none;
         color: #Fff;
-        height: 7vh;
+        height: 4vh;
         cursor: pointer;
     }
     .article-button .btn2{
         width: 70%;
         background-color: #fff;
         border-radius:5px;
-        border: 1px solid #01518a;
-        color: #01518a;
-        height: 7vh;
+        border: 1px solid #164ffacf;
+        color: #164ffacf;
+        height: 4vh;
         cursor: pointer;
     }
     .article-button i{
@@ -300,7 +329,7 @@ body{
         font-size:1.25rem;
     }
     .name-product i:hover{
-        color: #01518a;
+        color: #164ffacf;
     }
     .article-button{
         margin-top: 20px;
@@ -314,22 +343,22 @@ body{
     }
     .article-button button{
         width: 100%;
-        background-color: #01518a;
+        background-color: #164ffacf;
         border-radius:5px;
         border: none;
         color: #Fff;
-        height: 6vh;
+        height: 3vh;
         cursor: pointer;
         transition: all 1s;
     }
     .article-button .btn1:hover{
-        color: #01518a;
-        background-color: #Fff;
-        border: 1px solid #01518a;
+        color: #fff;
+        background-color: #0040ffcf;
+        border: none;
     }
     .article-button .btn2:hover{
         color: #Fff;
-        background-color: #01518a;
+        background-color: #164ffacf;
         border:none
     }
     .description__freeshipping{
@@ -343,7 +372,7 @@ body{
     .freeshipping svg{
         width: 1.3em;
         height: 1.3em;
-        color: #01518a;
+        color: #164ffacf;
     }
     .section__characteristics{
         margin: 10px;
