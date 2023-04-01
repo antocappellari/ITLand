@@ -20,17 +20,18 @@ const productsController = {
         db.Products.findByPk(req.params.id,include=[{association:"categories"},{association:"images"},{association:"memories"},{association:"camera"}]).then(function(product){
             res.render('products/detail.ejs',{product:product})
         })
-
     },
     products(req,res){
-        res.render('products/products.ejs', {products})
-        let brands = [];
-        products.forEach(product=>{
-            if(product.brand=="Samsung"){
+        // res.render('products/products.ejs', {products})
+        // let brands = [];
+        // products.forEach(product=>{
+        //     if(product.brand=="Samsung"){
 
-            }
+        //     }
+        // })
+        db.Products.findAll().then(function(products){
+            res.render('products/products.ejs', {products:products})
         })
-    
      },
     search(req,res){
         let body = req.body;
