@@ -12,6 +12,10 @@ module.exports = (sequelize, dataTypes)=>{
         memory:{
             type: dataTypes.STRING(10),
             allowNull: false
+        },
+        type:{
+            type: dataTypes.STRING(10),
+            allowNull: false
         }
     }
     const config = {

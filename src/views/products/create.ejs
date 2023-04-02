@@ -31,19 +31,29 @@
         <input type="text" name="brand" placeholder="Product Brand">
       </div>
         <select class="drop-down"name="color">
-            <option value="black">Choose color</option>
-            <option value="white">black</option>
-            <option value="white">white</option>
-            <option value="grey">grey</option>
-            <option value="midnightBlue">midnight blue</option>
-            <option value="gold">gold</option>
-            <option value="silver">silver</option>
-            <option value="pink">pink</option>
-            <option value="green">green</option>
+            <option disabled selected>Choose color</option>
+            <%for (let i=0, i < colors.length,i++){%>
+              <option value="<%=colors[i].id%>"><%=colors[i].color%>"</option>
+              <% } %>
         </select>
         <div class="userinput">
-        <input type="number" name="memory" placeholder="Product Memory">
-      </div>
+          <label>Internal Storage</label>
+          <select class="drop-down"name="internalStorage">
+            <option disabled selected>Choose a memory</option>
+            <%for (let i=0, i < memories.length,i++){%>
+              <option value="<%=memories[i].id%>"><%=memories[i].memory%>"</option>
+              <% } %>
+          </select>
+        </div>
+        <div class="userinput">
+          <label>RAM Memory</label>
+          <select class="drop-down"name="ramMemory">
+            <option disabled selected>Choose a RAM memory</option>
+            <%for (let i=0, i < memories.length,i++){%>
+              <option value="<%=memories[i].id%>"><%=memories[i].type%>"</option>
+              <% } %>
+          </select>
+        </div>
       <div class="userinput">
         <input type="number" name="height" placeholder="Product height">
       </div>
