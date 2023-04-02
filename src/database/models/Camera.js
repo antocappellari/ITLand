@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes)=>{
     Camera.associate = (models)=>{
         Camera.hasMany(models.Products,{
             as: 'products',
-            foreignKey: 'products_id'
+            foreignKey: 'camera_id'
         })
     }
     return Camera

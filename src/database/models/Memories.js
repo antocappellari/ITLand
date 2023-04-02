@@ -25,12 +25,9 @@ module.exports = (sequelize, dataTypes)=>{
 
     const Memories = sequelize.define(alias, cols, config)
     Memories.associate = (models)=>{
-        Memories.belongsToMany(models.Products,{
+        Memories.hasMany(models.Products,{
             as: 'products',
-            through:'products_memories',
-            foreignKey: 'memories_id',
-            otherKey:'products_id',
-            timestamps:false,
+            foreignKey: 'memory_id',
         })
     }
     return Memories

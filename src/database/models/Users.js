@@ -47,7 +47,7 @@ module.exports = (sequelize, dataTypes)=>{
         })
         Users.belongsTo(models.Images,{
             as: 'images',
-            foreignKey: 'images_id'
+            foreignKey: 'image_id'
 
         })
     }

@@ -17,10 +17,6 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.DECIMAL(10,0),
             allowNull: false,
         },
-        color: {
-            type: dataTypes.STRING(120),
-            allowNull: false,
-        },
         discount: {
             type: dataTypes.INTEGER,
             allowNull: false,
@@ -38,6 +34,7 @@ module.exports = (sequelize, dataTypes)=>{
             allowNull: false,
         },
         camera_id:dataTypes.INTEGER,
+        colors_id:dataTypes.INTEGER,
         memory_id:dataTypes.INTEGER,
         category_id:dataTypes.INTEGER,
         description:{
@@ -52,9 +49,9 @@ module.exports = (sequelize, dataTypes)=>{
     const config = {
         tableName: 'products',
         timestamps: true,
-        created_at: 'created_at',
-        updated_at: 'updated_at',
-        deleted_at: 'deleted_at'
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: 'deleted_at'
     }
     
 
@@ -62,29 +59,31 @@ module.exports = (sequelize, dataTypes)=>{
     Products.associate = (models)=>{
         Products.belongsTo(models.Categories,{
              as: 'categories',
-             foreignKey: 'categories_id'
+             foreignKey: 'category_id'
          })
+         Products.belongsTo(models.Sub_categories,{
+            as: 'sub_categories',
+            foreignKey: 'sub_category_id'
+        })
         Products.belongsTo(models.Brands,{
             as: 'brands',
             foreignKey: 'brands_id'
         })
-         Products.belongsToMany(models.Memories,{
+         Products.belongsTo(models.Memories,{
             as: 'memories',
-            through:'products_memories',
-            foreignKey: 'products_id',
-            otherKey:'memories_id',
-            timestamps:false,
- 
+            foreignKey: 'memory_id'
          })
-         Products.hasMany(models.Camera,{
+         Products.belongsTo(models.Camera,{
             as: 'camera',
             foreignKey: 'camera_id'
 
         })
-        Products.hasMany(models.Images,{
+        Products.belongsToMany(models.Images,{
             as: 'images',
-            foreignKey: 'images_id'
-
+            through:'products_images',
+            foreignKey: 'products_id',
+            otherKey: 'images_id',
+            timestamps:false
         })
         Products.belongsTo(models.Colors,{
             as: 'colors',

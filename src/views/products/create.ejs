@@ -32,26 +32,54 @@
       </div>
         <select class="drop-down"name="color">
             <option disabled selected>Choose color</option>
-            <%for (let i=0, i < colors.length,i++){%>
-              <option value="<%=colors[i].id%>"><%=colors[i].color%>"</option>
-              <% } %>
+            <% colors.forEach(color => { %>
+              <option value="<%= color.id %>"><%= color.color %></option>
+            <% }) %>
+           
         </select>
         <div class="userinput">
           <label>Internal Storage</label>
-          <select class="drop-down"name="internalStorage">
+          <select class="drop-down"name="memory_id">
             <option disabled selected>Choose a memory</option>
-            <%for (let i=0, i < memories.length,i++){%>
-              <option value="<%=memories[i].id%>"><%=memories[i].memory%>"</option>
-              <% } %>
+            <% memories.forEach(memory => { %>
+              <option value="<%= memory.id %>"><%= memory.memory %></option>
+            <% }) %>
           </select>
         </div>
         <div class="userinput">
           <label>RAM Memory</label>
           <select class="drop-down"name="ramMemory">
             <option disabled selected>Choose a RAM memory</option>
-            <%for (let i=0, i < memories.length,i++){%>
-              <option value="<%=memories[i].id%>"><%=memories[i].type%>"</option>
-              <% } %>
+            <% memories.forEach(memory => { %>
+              <option value="<%= memory.id %>"><%= memory.type %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="userinput">
+          <label>RAM Memory</label>
+          <select class="drop-down"name="ramMemory">
+            <option disabled selected>Choose a RAM memory</option>
+            <% memories.forEach(memory => { %>
+              <option value="<%= memories.id %>"><%= memories.type %>"</option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="userinput">
+          <label>RAM Memory</label>
+          <select class="drop-down"name="ramMemory">
+            <option disabled selected>Choose a RAM memory</option>
+            <% memories.forEach(memory => { %>
+              <option value="<%= memories.id %>"><%= memories.type %>"</option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="userinput">
+          <label>RAM Memory</label>
+          <select class="drop-down"name="ramMemory">
+            <option disabled selected>Choose a RAM memory</option>
+            <% memories.forEach(memory => { %>
+              <option value="<%= memories.id %>"><%= memories.type %>"</option>
+            <% }) %>
           </select>
         </div>
       <div class="userinput">

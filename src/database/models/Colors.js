@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes)=>{
             allowNull: false
         },
         color:{
-            type: dataTypes.STRING(10),
+            type: dataTypes.STRING(60),
             allowNull: false
         }
     }
@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes)=>{
     Colors.associate = (models)=>{
         Colors.hasMany(models.Products,{
             as: 'products',
-            foreignKey: 'products_id',
+            foreignKey: 'colors_id',
         })
     }
     return Colors
