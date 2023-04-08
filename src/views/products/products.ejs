@@ -22,34 +22,9 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </form>
       </div>
-      <select class="drop-down"name="Category">
-        <option value="black">Choose Category</option>
-        <% products.forEach(product => { %>
-          <option value="<%=product.category%>"><%=product.category%></option>
-          <% }) %>
-      </select>
-      <select class="drop-down"name="Brand">
-        <option value="black">Choose a Brand</option>
-        <% products.forEach(product => { %>
-        <option value="<%=product.brand%>"><%=product.brand%></option>
-        <% }) %>
-      </select>
+      
     </section>
-    <section class="product-list">
-      <% products.forEach(product => { %>
-        <a href="/products/<%= product.id %>/detail"><article class="product">
-          <div class="imageproducts">
-            <img src="/images/products/<%= product.images[0] %>" alt="laptop">
-          </div>
-          <div class="producttext">
-            <h3 class="Photo"><%= product.name %></h3>
-            <p class="Price">$ <%= product.price %></p>
-            <p class="Discount">% <%= product.discount %></p>
-          </div>
-          </article>
-        </a>
-    <% }) %>
-  </section>
+    
     </main>
 
   <!-- Bottom Nav -->

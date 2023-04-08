@@ -1,3 +1,5 @@
+const ProductServices = require("../services/ProductServices");
+
 const fs = require("fs"),
   path = require("path"),
   productPath = path.join(__dirname, "../data/products.json");
@@ -17,32 +19,19 @@ const productsController = {
   detail: async (req, res) => {
     try {
       let id = req.params.id;
-      let product = await db.Products.findByPk(id, {
-        include: [
-          { association: "categories" },
-          { association: "images" },
-          { association: "memories" },
-          { association: "camera" },
-          { association: "colors" },
-        ],
-      });
-      console.log(product, "---------------------------");
-      res.render("products/detail.ejs", { product: product });
+      const product = await ProductServices.getProduct(id);
+      return res.render("./products/detail.ejs", { product });
     } catch (error) {
       console.log(error);
     }
   },
-  products(req, res) {
-    // res.render('products/products.ejs', {products})
-    // let brands = [];
-    // products.forEach(product=>{
-    //     if(product.brand=="Samsung"){
-
-    //     }
-    // })
-    db.Products.findAll().then(function (products) {
-      res.render("products/products.ejs", { products: products });
-    });
+  products: async (req, res) => {
+    try {
+      const products = await ProductServices.getAllProducts();
+      return res.render("./products/products.ejs", { products });
+    } catch (error) {
+      console.log(error);
+    }
   },
   search(req, res) {
     let body = req.body;
@@ -62,19 +51,34 @@ const productsController = {
         memories,
         camera,
         colors,
-        sub_categories
+        sub_categories,
       });
     } catch (error) {}
   },
   creation: async (req, res) => {
     try {
       let body = req.body;
-      console.log(body);
-      let images = req.files;
-    //   const product = await db.Products.create({
-    //     ...body
-    //   });
-    //   console.log(product);
+      let data = {
+        name: body.name,
+        price: body.price,
+        discount: body.discount,
+        width: body.width,
+        height: body.height,
+        length: body.length,
+        camera_id: body.camera_id,
+        colors_id: body.colors_id,
+        memory_id: body.memory_id,
+        category_id: body.category_id,
+        sub_category_id: body.sub_category_id,
+        description: body.description,
+        stock: body.stock,
+      };
+      console.log(data);
+
+      //   const product = await db.Products.create({
+      //     ...body
+      //   });
+      //   console.log(product);
       // db.Images.create({
       //     id : "IM"+Date.now(),
       //     // name:images.imagename como hago para que el nombre de la imagen sea del archivo que sube?
