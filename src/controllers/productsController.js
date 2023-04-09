@@ -74,9 +74,7 @@ const productsController = {
         description: body.description,
         stock: body.stock,
       };
-      console.log(data);
         const product = await db.Products.create(data)
-        console.log(product);
         
       res.redirect("/");
     } catch (error) {
@@ -111,9 +109,7 @@ const productsController = {
   edition: async(req, res) =>{
     try {
       let id = req.params.id;
-      console.log(id);
       let body = req.body;
-      console.log(body);
       let data = {
         name: body.name,
         price: body.price,
@@ -129,11 +125,8 @@ const productsController = {
         description: body.description,
         stock: body.stock,
       };
-      console.log(data);
 
       const x = await ProductServices.productEdit(id, data);
-      console.log(x);
-
       res.redirect("/");
     } catch (error) {
       console.log(error);
@@ -141,7 +134,9 @@ const productsController = {
   },
   delete: async(req, res)=> {
     try {
-      await ProductServices.deleteProduct(req.params.id);
+      console.log('hlla');
+      let x  = await ProductServices.deleteProduct(req.params.id);
+      console.log(x);
       return res.redirect("/products");
     } catch (error) {
       console.log(error);

@@ -34,10 +34,6 @@ const ProductServices = {
   },
   productEdit:async(id,data)=>{
     try {
-      console.log(id);
-      console.log(data);
-      const d = await Products.findAll();
-      console.log(d);
       const productUpdated =  await Products.update(
         {
           ...data
@@ -47,7 +43,6 @@ const ProductServices = {
             id:id       
           }
       });
-      console.log(productUpdated,'----...lñlñ...........');
       return productUpdated;
     } catch (error) {
       console.log(error);
@@ -55,9 +50,12 @@ const ProductServices = {
   },
   deleteProduct: async (id) => {
     try {
-      const product = await Products.destroy(id);
-      console.log(product);
-      return res.send("success!!!");
+      const product = await Products.destroy({
+        where:{
+          id:id
+        }
+      });
+      return product
     } catch (error) {
       console.log(error);
     }

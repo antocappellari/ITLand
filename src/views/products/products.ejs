@@ -22,7 +22,22 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </form>
       </div>
-      
+    </section>
+    <section style=" background-color: antiquewhite;">
+     <% products.forEach(product => { %>
+      <p>
+        <%= product.name %>
+        <%= product.price %>
+        <%= product.description %>
+      </p>
+      <div style="background-color: red;">
+        <a href="/products/<%= product.id %>/edit">edit</a>
+        <form action="/products/<%= product.id %>/delete?_method=DELETE" method = "post">
+        <button type="submit"> DELETE</button>
+        </form>
+
+      </div>
+     <% }) %>
     </section>
     
     </main>
