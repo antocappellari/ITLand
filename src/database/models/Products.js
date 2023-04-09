@@ -33,7 +33,9 @@ module.exports = (sequelize, dataTypes) => {
     },
     camera_id: dataTypes.INTEGER,
     colors_id: dataTypes.INTEGER,
-    memory_id: dataTypes.INTEGER,
+    memory_id: {
+        type:dataTypes.INTEGER,
+    },
     category_id: dataTypes.INTEGER,
     sub_category_id: dataTypes.INTEGER,
     description: {
@@ -67,10 +69,7 @@ module.exports = (sequelize, dataTypes) => {
       as: "brands",
       foreignKey: "brands_id",
     });
-    Products.belongsTo(models.Memories, {
-      as: "memories",
-      foreignKey: "memory_id",
-    });
+   
     Products.belongsTo(models.Camera, {
       as: "camera",
       foreignKey: "camera_id",

@@ -48,7 +48,7 @@
           <% }) %>
         </select>
       </div>
-        <select class="drop-down"name="color">
+        <select class="drop-down"name="color_id">
             <option disabled selected>Choose color</option>
             <% colors.forEach(color => { %>
               <option value="<%= color.id %>"><%= color.color %></option>
@@ -80,32 +80,24 @@
           </select>
         </div>
         <div class="userinput">
-          <label>RAM Memory</label>
-          <select class="drop-down"name="ramMemory">
-            <option disabled selected>Choose a RAM memory</option>
-            <% memories.forEach(memory => { %>
-              <option value="<%= memories.id %>"><%= memories.type %>"</option>
+          <label>Brands</label>
+          <select class="drop-down"name="brand_id">
+            <option disabled selected>Choose a Brands</option>
+            <% brands.forEach(brand => { %>
+                <option value="<%= brand.id %>"><%= brand.name %></option>
             <% }) %>
           </select>
         </div>
         <div class="userinput">
-          <label>RAM Memory</label>
-          <select class="drop-down"name="ramMemory">
-            <option disabled selected>Choose a RAM memory</option>
-            <% memories.forEach(memory => { %>
-              <option value="<%= memories.id %>"><%= memories.type %>"</option>
+          <label>Cameras</label>
+          <select class="drop-down"name="camera_id">
+            <option disabled selected>Choose a cameras </option>
+            <% cameras.forEach(camera => { %>
+              <option value="<%= camera.id %>"><%= camera.resolution %></option>
             <% }) %>
           </select>
         </div>
-        <div class="userinput">
-          <label>RAM Memory</label>
-          <select class="drop-down"name="ramMemory">
-            <option disabled selected>Choose a RAM memory</option>
-            <% memories.forEach(memory => { %>
-              <option value="<%= memories.id %>"><%= memories.type %>"</option>
-            <% }) %>
-          </select>
-        </div>
+        
       <div class="userinput">
         <input type="number" name="height" placeholder="Product height">
       </div>
@@ -120,6 +112,9 @@
       </div>
       <div class="userinput">
         <input type="number" name="discount" placeholder="Product Discount">
+      </div>
+      <div class="userinput">
+        <input type="number" name="stock" placeholder="Stock">
       </div>
       <div class="button-create-product">
       <div class="userinput button-submit">
