@@ -14,6 +14,8 @@ router.get('/login',guestMiddleware ,usersController.login)
 router.post('/login',usersController.loginProcess)
 router.get('/register',guestMiddleware ,usersController.register)
 router.post('/register',upload.single('image'),validator,usersController.registerProcess)
+router.get('/update/:id',usersController.editProfile)
+router.put('/update/:id',upload.single('image'),usersController.updateProcess)
 router.get('/profile', authMiddleware,usersController.profile)
 router.get('/logout',usersController.logout)
 

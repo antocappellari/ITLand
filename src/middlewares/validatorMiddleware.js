@@ -2,18 +2,18 @@ const {body} = require('express-validator')
 const path = require('path')
 
 const validator = [
-    body('name')
+    body('first_name')
     .notEmpty().withMessage('This field must be completed with your name')
     .isLength({min: 3}).withMessage('Please, your name must contain at least three characters'),
-    body('lastname')
+    body('last_name')
     .notEmpty().withMessage('This field must be completed with your last name')
     .isLength({min: 3}).withMessage('Please, your last name must contain at least three characters'),
     body('address').notEmpty().withMessage('This field must be completed with your address'),
-    body('cellphone'),
+    body('cell'),
     body('email').notEmpty().withMessage('This field must be completed with your email')
     .isEmail().withMessage('Please, complete it  with a valid email'),
     body('image').custom((value,{req})=>{
-        let array = ['.jpg', '.png', '.jpeg']
+        let array = ['.jpg', '.png', '.jpeg','jfif']
         let file = req.file
 
         if(!file){

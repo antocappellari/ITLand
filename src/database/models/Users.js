@@ -25,16 +25,19 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.STRING(100),
             allowNull: false,
         },
-        image_id:dataTypes.INTEGER,
+        address:dataTypes.STRING(150),
+        cell:dataTypes.INTEGER,
+        image:dataTypes.STRING(100),
         rol_id:dataTypes.INTEGER,
         
     }
     const config = {
         tableName: 'users',
         timestamps: true,
-        created_at: 'created_at',
-        updated_at: 'updated_at',
-        deleted_at: 'deleted_at'
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: 'deleted_at',
+        
     }
     
 
@@ -42,12 +45,7 @@ module.exports = (sequelize, dataTypes)=>{
     Users.associate = (models)=>{
         Users.belongsTo(models.Users_rol,{
             as: 'users_rol',
-            foreignKey: 'users_rol_id'
-
-        })
-        Users.belongsTo(models.Images,{
-            as: 'images',
-            foreignKey: 'image_id'
+            foreignKey: 'rol_id'
 
         })
     }

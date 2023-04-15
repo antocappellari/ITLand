@@ -1,5 +1,5 @@
 const {validationResult} = require('express-validator')
-const Users = require('../services/Users')
+const userServices = require('../services/userServices')
 const bcrypt = require('bcrypt')
 let db = require("../database/models")
 const usersController = {
@@ -12,9 +12,9 @@ const usersController = {
     register(req,res){
         res.render('./users/register.ejs')
     },
-    loginProcess(req, res){
-        let body = req.body
-        let userToLogin = Users.findUser('email', body.email)
+    loginProcess:async (req, res)=>{
+        const body = req.body
+        const userToLogin = await userServices.getUserByEmail(body.email);
         if(userToLogin){
             let passCompare = bcrypt.compareSync(body.password, userToLogin.password)
             if (passCompare) {
@@ -47,24 +47,62 @@ const usersController = {
     contactUs(req,res){
         res.render('./users/contactUs.ejs')
     },
-    registerProcess(req,res){
-        let errors = validationResult(req);
-        let file = req.file.filename
-        let body = req.body;
-        let passBcrypt = bcrypt.hashSync(body.password, 10)
-        let newUser = {
-            ...body,
-            password: passBcrypt,
-            image: file
+    registerProcess: async (req,res) =>{
+        try {
+            const body = req.body;
+            let errors = validationResult(req);
+            if(!errors.isEmpty()){
+                return res.render('./users/register.ejs',{
+                    errors: errors.mapped(),
+                    oldBody: body
+                })
+            }
+            let passBcrypt = bcrypt.hashSync(body.password,10)
+            const data = {
+                first_name: body.first_name,
+                last_name: body.last_name,
+                address: body.address,
+                cell: body.cell,
+                email: body.email,
+                password: passBcrypt,
+                image: req.file ? req.file.filename : 'usuarioDefault.jpg'
+            };
+            const user = await userServices.userCreate(data);
+            return res.redirect("/users/login")
+        } catch (error) {
+            console.log(error);
         }
-        if(!errors.isEmpty()){
-            return res.render('./users/register.ejs',{
-                errors: errors.mapped(),
-                oldBody: body
-            })
+    },
+    editProfile:async(req, res)=>{
+        return res.render('./users/update.ejs');
+    },
+    updateProcess:async(req, res)=>{
+        try {
+            const body = req.body;
+            let errors = validationResult(req);
+            if(!errors.isEmpty()){
+                return res.render('./users/update.ejs',{
+                    errors: errors.mapped(),
+                    oldBody: body
+                })
+            }
+            let passBcrypt = bcrypt.hashSync(body.password,10)
+            const data = {
+                first_name: body.first_name,
+                last_name: body.last_name,
+                address: body.address,
+                cell: body.cell,
+                email: body.email,
+                password: passBcrypt,
+                image: req.file ? req.file.filename : 'usuarioDefault.jpg'
+            };
+            const user = await userServices.userUpdate(data);
+            console.log(user);
+            return res.redirect("/profile")
+
+        } catch (error) {
+            
         }
-        Users.create(newUser)
-        return res.redirect("/users/login")
     },
     profile(req, res){
         return res.render('./users/profile.ejs')

@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes)=>{
     Users_rol.associate = (models)=>{
         Users_rol.hasMany(models.Users,{
             as: 'users',
-            foreignKey: 'users_id'
+            foreignKey: 'rol_id'
 
         })
     }
