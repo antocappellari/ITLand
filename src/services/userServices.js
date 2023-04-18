@@ -28,14 +28,24 @@ const userServices = {
     },
     userUpdate:async(id,data)=>{
         try {
-            console.log(data);
             const userUpdated = await Users.update(data,{
                 where:{
                     id:id
                 }
             });
-            console.log(userUpdated);
             return userUpdated
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    userDelete:async (id)=>{
+        try {
+            const user = await Users.destroy({
+                where:{
+                    id:id
+                }
+            })
+            return user
         } catch (error) {
             console.log(error);
         }

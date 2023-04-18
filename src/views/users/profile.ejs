@@ -13,14 +13,20 @@
           <div class="userImage">
           <img width="100px" src="/images/users/<%= userToLogged.image %>" alt="">
         </div>
+        <div>
           <a href="/users/update/<%= userToLogged.id %>">Edit Profile</a>
+          <form action="/users/delete/<%= userToLogged.id %>?_method=DELETE" method="post">
+            <button type="submit">Delete</button>
+          </form>
+        </div>
         </div>
         <div class="userMainInfo">
-          <p>Full name: <%= userToLogged.name %> <%= userToLogged.lastName %></p> 
+          <p>Full name: <%= userToLogged.first_name %> <%= userToLogged.last_name %></p> 
+          <p><%= userToLogged.image %></p>
           <hr>
           <p>Address: <%= userToLogged.address %> </p>
           <hr>
-          <p>Cellphone: <%= userToLogged.cellphone %> </p>
+          <p>Cellphone: <%= userToLogged.cell %> </p>
           <hr>
           <p>Email: <%= userToLogged.email %> </p>
         </div>

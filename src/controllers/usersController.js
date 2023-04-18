@@ -22,7 +22,8 @@ const usersController = {
                 delete userToLogin.confirmPassword
                 req.session.userToLogged = userToLogin
                 if(body.remember){
-                    res.cookie('userEmail', userToLogin.email ,{maxAge: 10000 * 60})
+                    console.log('hola')
+                    res.cookie('user', userToLogin ,{maxAge: 10000 * 60});
                 }
                 return res.redirect('/users/profile')
             }
@@ -51,6 +52,16 @@ const usersController = {
         try {
             const body = req.body;
             let errors = validationResult(req);
+            const userToLogin = await userServices.getUserByEmail(body.email);
+            if (userToLogin) {
+                return res.render('./users/register.ejs',{
+                    errorEmail:{
+                       email:{
+                        msg:'The email is already registered'}
+                    },
+                    oldBody: body
+                })
+            }
             if(!errors.isEmpty()){
                 return res.render('./users/register.ejs',{
                     errors: errors.mapped(),
@@ -62,12 +73,12 @@ const usersController = {
                 first_name: body.first_name,
                 last_name: body.last_name,
                 address: body.address,
-                cell: body.cell,
+                cell: body.cell? body.cell : null,
                 email: body.email,
                 password: passBcrypt,
-                image: req.file ? req.file.filename : 'usuarioDefault.jpg'
+                image: req.file ? req.file.filename : 'usuarioDefault.png'
             };
-            const user = await userServices.userCreate(data);
+            await userServices.userCreate(data);
             return res.redirect("/users/login")
         } catch (error) {
             console.log(error);
@@ -78,39 +89,41 @@ const usersController = {
     },
     updateProcess:async(req, res)=>{
         try {
+            const {id} = req.params
             const body = req.body;
-            let errors = validationResult(req);
-            if(!errors.isEmpty()){
-                return res.render('./users/update.ejs',{
-                    errors: errors.mapped(),
-                    oldBody: body
-                })
-            }
-            let passBcrypt = bcrypt.hashSync(body.password,10)
             const data = {
                 first_name: body.first_name,
                 last_name: body.last_name,
                 address: body.address,
-                cell: body.cell,
-                email: body.email,
-                password: passBcrypt,
-                image: req.file ? req.file.filename : 'usuarioDefault.jpg'
+                cell: body.cell? body.cell: null,
+                image: req.file ? req.file.filename : 'usuarioDefault.png'
             };
-            const user = await userServices.userUpdate(data);
-            console.log(user);
-            return res.redirect("/profile")
+            console.log(data);
+            await userServices.userUpdate(id,data);
+            return res.redirect("/users/profile")
 
         } catch (error) {
-            
+            console.log(error)
         }
     },
     profile(req, res){
         return res.render('./users/profile.ejs')
     },
     logout(req, res){
-        res.clearCookie('userEmail')
+        res.clearCookie('user')
         req.session.destroy()
         return res.redirect('/')
+    },
+    deleteProcess:async(req, res)=>{
+        try {
+            res.clearCookie('user')
+            req.session.destroy()
+            const {id} = req.params;
+            const user = await userServices.userDelete(id)
+            return  res.redirect('/users/register')
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
 // exportacion de controllers

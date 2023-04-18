@@ -20,13 +20,17 @@ module.exports = (sequelize, dataTypes)=>{
         email: {
             type: dataTypes.STRING(250),
             allowNull: false,
+            unique: true
         },
         password: {
             type: dataTypes.STRING(100),
             allowNull: false,
         },
         address:dataTypes.STRING(150),
-        cell:dataTypes.INTEGER,
+        cell:{
+            type:dataTypes.INTEGER,
+            default: 0
+        },
         image:dataTypes.STRING(100),
         rol_id:dataTypes.INTEGER,
         

@@ -13,12 +13,14 @@ const ProductServices = {
       const product = await Products.findByPk(id, {
         include: [
           { association: "categories" },
+          { association: "sub_categories" },
+          { association: "brands" },
           { association: "images" },
-          { association: "memories" },
           { association: "camera" },
           { association: "colors" },
         ],
       });
+      console.log(product);
       return product;
     } catch (error) {
       console.log(error);
@@ -34,15 +36,12 @@ const ProductServices = {
   },
   productEdit:async(id,data)=>{
     try {
-      const productUpdated =  await Products.update(
-        {
-          ...data
-        }
-        ,{
+      const productUpdated =  await Products.update(data,{
           where:{
             id:id       
           }
       });
+      console.log(productUpdated);
       return productUpdated;
     } catch (error) {
       console.log(error);

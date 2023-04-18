@@ -81,24 +81,19 @@ const productsController = {
       console.log(error);
     }
   },
-
-  /* -------- Sprint 4 11.02.2023 ------- Anto, Jose, Romi */
-
   edit:async(req, res)=>{
     try {
-
+      const {id}= req.params
+      const product =  await ProductServices.getProduct(id);
       const categories = await db.Categories.findAll();
       const brands = await db.Brands.findAll();
-      const memories = await db.Memories.findAll();
       const cameras = await db.Camera.findAll();
       const colors = await db.Colors.findAll();
       const sub_categories = await db.Sub_categories.findAll();
-
       res.render("products/edit.ejs", {
-        id:req.params.id,
+        product,
         categories,
         brands,
-        memories,
         cameras,
         colors,
         sub_categories,
@@ -125,9 +120,8 @@ const productsController = {
         description: body.description,
         stock: body.stock,
       };
-
-      const x = await ProductServices.productEdit(id, data);
-      res.redirect("/");
+      await ProductServices.productEdit(id, data);
+      res.redirect("/products");
     } catch (error) {
       console.log(error);
     }

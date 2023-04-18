@@ -18,6 +18,7 @@ router.get('/update/:id',usersController.editProfile)
 router.put('/update/:id',upload.single('image'),usersController.updateProcess)
 router.get('/profile', authMiddleware,usersController.profile)
 router.get('/logout',usersController.logout)
+router.delete('/delete/:id',usersController.deleteProcess)
 
 
 

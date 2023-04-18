@@ -19,21 +19,26 @@
                 <input type="text"
                  name="first_name"
                   id=""
-                   placeholder="Name">
+                   placeholder="Name"
+                   value="<%= locals.oldBody? oldBody.first_name: null %>"
+                   >
+                   
                 <i class="uil uil-user icon1"></i>
-                <% if (locals.errors && errors.name) { %>
+                <% if (locals.errors && errors.first_name) { %>
                       <p class="text-danger">
-                        <%= errors.name.msg %>
+                        <%= errors.first_name.msg %>
                       </p>
                 <% } %>
               </div>
               <div class="userinput">
                 <input type="text"
                  name= "last_name" 
-                 placeholder="Last name">
-                 <% if (locals.errors && errors.lastname) { %>
+                 placeholder="Last name"
+                 value="<%= locals.oldBody? oldBody.last_name: null %>"
+                 >
+                 <% if (locals.errors && errors.last_name) { %>
                   <p class="text-danger">
-                    <%= errors.lastname.msg %>
+                    <%= errors.last_name.msg %>
                   </p>
             <% } %>
                 <i class="uil uil-user icon1"></i>
@@ -42,6 +47,7 @@
                 <input type="text"
                  placeholder="Address"
                  name="address"
+                 value="<%= locals.oldBody? oldBody.address: null %>"
                  >
                  <% if (locals.errors && errors.address) { %>
                   <p class="text-danger">
@@ -53,10 +59,12 @@
               <div class="userinput">
                 <input type="number"
                 name="cell"
-                 placeholder="cel:">
-                 <% if (locals.errors && errors.cellphone) { %>
+                 placeholder="cel:"
+                 value="<%= locals.oldBody? oldBody.cell: null %>"
+                 >
+                 <% if (locals.errors && errors.cell) { %>
                   <p class="text-danger">
-                    <%= errors.cellphone.msg %>
+                    <%= errors.cell.msg %>
                   </p>
             <% } %>
                 <i class="uil uil-phone"></i>
@@ -75,12 +83,17 @@
             <div class="userinput">
               <input type="text"
               name="email"
-               placeholder="Enter your email" >
+               placeholder="Enter your email" 
+               value="<%= locals.oldBody? oldBody.email: null %>"
+               >
                <% if (locals.errors && errors.email) { %>
                 <p class="text-danger">
                   <%= errors.email.msg %>
                 </p>
-          <% } %>
+                <% } %>
+                <% if (locals.errorEmail) { %>
+                  <p><%= errorEmail.email.msg %></p>
+                <% } %>
               <i class="uil uil-envelope icon icon2"></i>
             </div>
             <div class="userinput">

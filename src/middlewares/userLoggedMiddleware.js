@@ -1,12 +1,12 @@
-
-const Users = require('../services/Users')
-
-const userToLoggedMiddleware = (req, res, next)=>{
-    res.locals.isLogged = false
-    const userEmail = req.cookies.userEmail
-    const user  = Users.findUser('email', userEmail)
+const userServices = require('../services/userServices');
+const userToLoggedMiddleware = async (req, res, next)=>{
+    res.locals.isLogged = false;
+    const user = req.cookies.user
+    // console.log(user);
     if (user) {
-        req.session.userToLogged = user
+        const usuario = await userServices.getUserByEmail(user.email);
+        console.log(usuario.dataValues);
+        req.session.userToLogged = usuario.dataValues
     }
 
     if(req.session && req.session.userToLogged){ 
