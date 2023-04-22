@@ -6,6 +6,7 @@ const publicPath = path.resolve(__dirname, '../public');
 const usersRoutes = require('./router/usersRoutes.js');
 const productsRoutes = require('./router/productsRoutes.js');
 const mainRoutes = require('./router/mainRoutes.js');
+const imageRouter = require('./router/imageRouter.js');
 const methodOverride = require("method-override");
 const session = require('express-session');
 const userToLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
@@ -28,6 +29,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
 
 app.use('/',mainRoutes);
+app.use('/images',imageRouter);
 app.use('/users',usersRoutes);
 app.use('/products',productsRoutes);
 

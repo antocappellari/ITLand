@@ -2,7 +2,11 @@ const Products = require("../database/models").Products;
 const ProductServices = {
   getAllProducts: async () => {
     try {
-      const products = await Products.findAll();
+      const products = await Products.findAll({
+        include:{
+          association:'images'
+        }
+      });
       return products;
     } catch (error) {
       console.log(error);

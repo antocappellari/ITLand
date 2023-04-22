@@ -23,21 +23,41 @@
         </form>
       </div>
     </section>
-    <section style=" background-color: antiquewhite;">
-     <% products.forEach(product => { %>
-      <p>
-        <%= product.name %>
-        <%= product.price %>
-        <%= product.description %>
-      </p>
-      <div style="background-color: red;">
-        <a href="/products/<%= product.id %>/edit">edit</a>
-        <form action="/products/<%= product.id %>/delete?_method=DELETE" method = "post">
-        <button type="submit"> DELETE</button>
-        </form>
-
-      </div>
-     <% }) %>
+    <section class="product-list">
+      <% products.forEach(product => { %>
+        <article class="product">
+          <a class ="product-a" href="/products/<%= product.id %>/edit">
+          <figure class="imageproducts">
+            <img  src="/images/products/<%= product.images[0].name %>" alt="">
+          </figure>
+          <div class="producttext">
+            <h4>Details</h4>
+            <p>
+              <%= product.name %>
+            </p>
+            <p>
+              $ <%= product.price %>
+             </p>
+             <p>
+               <%= product.discount %> %OFF
+             </p>
+             <h3>Description</h3>
+             <p>
+              <%= product.description %>
+             </p>
+          </div>
+        </a>
+        <% if (locals.isLogged) { %>
+         
+          <div class="div-btn">
+          <a class="btn btn-edit" href="/products/<%= product.id %>/edit">edit</a>
+          <form action="/products/<%= product.id %>/delete?_method=DELETE" method = "post">
+            <button  class = "btn"type="submit"> DELETE</button>
+          </form>
+        </div>
+        <% } %>
+    </article>
+       <% }) %>
     </section>
     
     </main>

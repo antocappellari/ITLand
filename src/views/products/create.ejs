@@ -39,15 +39,6 @@
           <% }) %>
         </select>
       </div>
-      <div class="userinput">
-        <label>Brand</label>
-        <select class="drop-down"name="brands_id">
-          <option disabled selected>Choose a brand</option>
-          <% brands.forEach(brand => { %>
-            <option value="<%= brand.id %>"><%= brand.name %></option>
-          <% }) %>
-        </select>
-      </div>
         <select class="drop-down"name="color_id">
             <option disabled selected>Choose color</option>
             <% colors.forEach(color => { %>

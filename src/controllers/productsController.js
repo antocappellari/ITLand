@@ -1,11 +1,6 @@
 const ProductServices = require("../services/ProductServices");
-
-const fs = require("fs"),
-  path = require("path"),
-  productPath = path.join(__dirname, "../data/products.json");
-
 let db = require("../database/models");
-const Products = require("../database/models/Products");
+const Images = require("../database/models/").Images
 
 //controllers
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -28,6 +23,7 @@ const productsController = {
   products: async (req, res) => {
     try {
       const products = await ProductServices.getAllProducts();
+      // console.log(products);
       return res.render("./products/products.ejs", { products });
     } catch (error) {
       console.log(error);
@@ -45,7 +41,7 @@ const productsController = {
       const colors = await db.Colors.findAll();
       const sub_categories = await db.Sub_categories.findAll();
 
-      res.render("products/create.ejs", {
+      return res.render("products/create.ejs", {
         categories,
         brands,
         memories,
@@ -58,7 +54,6 @@ const productsController = {
   creation: async (req, res) => {
     try {
       let body = req.body;
-      console.log(body);
       let data = {
         name: body.name,
         price: body.price,
@@ -74,9 +69,31 @@ const productsController = {
         description: body.description,
         stock: body.stock,
       };
-        const product = await db.Products.create(data)
-        
-      res.redirect("/");
+    if(req.files.length == 0){
+      const categories = await db.Categories.findAll();
+      const brands = await db.Brands.findAll();
+      const memories = await db.Memories.findAll();
+      const cameras = await db.Camera.findAll();
+      const colors = await db.Colors.findAll();
+      const sub_categories = await db.Sub_categories.findAll();
+
+      return res.render("products/create.ejs", {
+        categories,
+        brands,
+        memories,
+        cameras,
+        colors,
+        sub_categories,
+      });
+      
+    }
+      const product = await db.Products.create(data);
+      const files = req.files.map(file => ({
+        name: file.filename
+      }));
+      const filesCreated = await Images.bulkCreate(files);
+        await product.addImages(filesCreated);        
+      res.redirect("/products");
     } catch (error) {
       console.log(error);
     }
@@ -128,9 +145,7 @@ const productsController = {
   },
   delete: async(req, res)=> {
     try {
-      console.log('hlla');
-      let x  = await ProductServices.deleteProduct(req.params.id);
-      console.log(x);
+      await ProductServices.deleteProduct(req.params.id);
       return res.redirect("/products");
     } catch (error) {
       console.log(error);

@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
   }
+  a{
+    text-decoration: none;
+    color: #000;
+  }
   .top-products{
     display:flex;
     justify-content:space-between;
@@ -99,29 +103,32 @@
     margin-left:5%;
     margin-right:5%;
   }
-  .product-list a{
+  .product-a{
     width:100%;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
   }
   .product {
     width:100%;
     display:flex;
-    justify-content:space-around;
     align-content:center;
     background-color: white;
     outline: none;
     margin: 5px 5px 5px 5px;
     padding: 2px;
-    height: 45vh;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.384);
     text-decoration: none;
-  }
+  };
+  
   .imageproducts {
-    width:60%;
+    width:30%;
     display:flex;
     justify-content:center;
     align-content:center;
   }
   .imageproducts img{
+    width:50%;
     object-fit: cover;
     max-width: 100%;
     max-height: 100%;
@@ -134,6 +141,24 @@
     align-content:center;
     text-align: center;
     overflow-wrap: break-word;
+  }
+  .div-btn{
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+  }
+  .btn{
+    padding: 1em 3em;
+    height: 50px;
+    background-color: rgb(255, 2, 2);
+    border:none;
+    color: #Fff;
+    cursor: pointer;
+  }
+  .btn-edit{
+    border: 1px solid;
+    text-decoration: none;
+    background-color: #01518a;
   }
   @media screen and (min-width:445px) and (max-width:767px){
     .filter-view{
@@ -171,9 +196,9 @@
         flex-wrap:wrap;
         justify-content:flex-start;
         gap:3%;}
-    .product-list a{
+    /* .product-list a{
             width:45%;
-          }
+          } */
 
     .producttext {
             font-size:small;

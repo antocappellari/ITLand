@@ -23,7 +23,7 @@ const usersController = {
                 req.session.userToLogged = userToLogin
                 if(body.remember){
                     console.log('hola')
-                    res.cookie('user', userToLogin ,{maxAge: 10000 * 60});
+                    res.cookie('user', userToLogin ,{maxAge: 10000 * 600});
                 }
                 return res.redirect('/users/profile')
             }

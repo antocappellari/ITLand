@@ -2,10 +2,8 @@ const userServices = require('../services/userServices');
 const userToLoggedMiddleware = async (req, res, next)=>{
     res.locals.isLogged = false;
     const user = req.cookies.user
-    // console.log(user);
     if (user) {
         const usuario = await userServices.getUserByEmail(user.email);
-        console.log(usuario.dataValues);
         req.session.userToLogged = usuario.dataValues
     }
 

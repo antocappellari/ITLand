@@ -1,100 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- head -->
-<%- include('../partials/head') %> 
-<body>
-  <!-- header -->
-  <%- include('../partials/header') %> 
-  <main class="main-form">
-    <div class="container-form">
-    <h2 class="form-title">Article edition:</h2>
+<%- include('../partials/head') %>
 
-    <!-- <--------FORMULARIO--------->
+  <body>
+    <!-- header -->
+    <%- include('../partials/header') %>
+      <main class="main-form">
+        <div class="container-form">
+          <h2 class="form-title">Article edition:</h2>
 
-    <form class="form-inputs"action="/products/<%= product.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
-      <div class="userinput">
-        <label for="">Name:</label>
-        <input type="name"  name="name" placeholder="Product Name" value="<%= product.name %>">
-      </div>
-      <div class="description">
-        <label for="">Description:</label>
-       <textarea name="description" id="" cols="80%" style="resize: none;" rows="10"><%= product.description%></textarea>
-      </div>
-      <div class="userinput">
-        <label>Category:</label>
-        <select class="drop-down"name="category_id">
-          <option selected value="<%= product.categories.id %>"><%= product.categories.name %></option>
-          <% categories.forEach(category => { %>
-            <option value="<%= category.id %>"><%= category.name %></option>
-          <% }) %>
-        </select>
-      </div>
-      <div class="userinput">
-        <label>Sub Category:</label>
-        <select class="drop-down"name="sub_category_id">
-          <option selected value="<%= product.sub_categories.id %>"><%= product.sub_categories.name %></option>
-          <% sub_categories.forEach(sub_category => { %>
-            <option value="<%= sub_category.id %>"><%= sub_category.name %></option>
-          <% }) %>
-        </select>
-      </div>
-      <div class="userinput">
-        <label>Brand:</label>
-        <select class="drop-down"name="brands_id">
-          <option selected value="<%= product.brands.id %>"><%= product.brands.name %></option>
-        </select>
-      </div>
-      <div class="userinput">
-        <label>Colors</label>
-        <select class="drop-down"name="color_id">
-            <option selected value="<%= product.colors.id %>"><%= product.colors.color %></option>
-            <% colors.forEach(color => { %>
-              <option value="<%= color.id %>"><%= color.color %></option>
-            <% }) %>
-        </select>
-      </div>
-        <div class="userinput">
-          <label>Cameras</label>
-          <select class="drop-down"name="camera_id">
-            <option selected value="<%= product.camera.id %>"><%= product.camera.resolution %></option>
-            <% cameras.forEach(camera => { %>
-              <option value="<%= camera.id %>"><%= camera.resolution %></option>
-            <% }) %>
-          </select>
+          <!-- <--------FORMULARIO--------->
+
+          <form class="form-inputs" action="/products/<%= product.id %>/edit?_method=PUT" method="POST"
+            enctype="multipart/form-data">
+            <div class="userinput">
+              <label for="">Name:</label>
+              <input type="name" name="name" placeholder="Product Name" value="<%= product.name %>">
+            </div>
+            <div class="description">
+              <label for="">Description:</label>
+              <textarea name="description" id="" cols="80%" style="resize: none;"
+                rows="10"><%= product.description%></textarea>
+            </div>
+            <div class="userinput">
+              <label>Category:</label>
+              <select class="drop-down" name="category_id">
+                <option selected value="<%= product.categories.id %>">
+                  <%= product.categories.name %>
+                </option>
+                <% categories.forEach(category=> { %>
+                  <option value="<%= category.id %>">
+                    <%= category.name %>
+                  </option>
+                  <% }) %>
+              </select>
+            </div>
+            <div class="userinput">
+              <label>Sub Category:</label>
+              <select class="drop-down" name="sub_category_id">
+                <option selected value="<%= product.sub_categories.id %>">
+                  <%= product.sub_categories.name %>
+                </option>
+                <% sub_categories.forEach(sub_category=> { %>
+                  <option value="<%= sub_category.id %>">
+                    <%= sub_category.name %>
+                  </option>
+                  <% }) %>
+              </select>
+            </div>
+            <div class="userinput">
+              <label>Brand:</label>
+              <select class="drop-down" name="brands_id">
+                <option selected value="<%= product.brands.id %>">
+                  <%= product.brands.name %>
+                </option>
+              </select>
+            </div>
+            <div class="userinput">
+              <label>Colors</label>
+              <select class="drop-down" name="color_id">
+                <option selected value="<%= product.colors.id %>">
+                  <%= product.colors.color %>
+                </option>
+                <% colors.forEach(color=> { %>
+                  <option value="<%= color.id %>">
+                    <%= color.color %>
+                  </option>
+                  <% }) %>
+              </select>
+            </div>
+            <div class="userinput">
+              <label>Cameras</label>
+              <select class="drop-down" name="camera_id">
+                <option selected value="<%= product.camera.id %>">
+                  <%= product.camera.resolution %>
+                </option>
+                <% cameras.forEach(camera=> { %>
+                  <option value="<%= camera.id %>">
+                    <%= camera.resolution %>
+                  </option>
+                  <% }) %>
+              </select>
+            </div>
+
+            <div class="userinput">
+              <input type="number" name="height" placeholder="Product height" value="<%= product.height %>">
+            </div>
+            <div class="userinput">
+              <input type="number" name="length" placeholder="Product length" value="<%= product.length %>">
+            </div>
+            <div class="userinput">
+              <input type="number" name="width" placeholder="Product width" value="<%= product.width %>">
+            </div>
+            <div class="userinput">
+              <input type="number" name="price" placeholder="Product Price" value="<%= product.price %>">
+            </div>
+            <div class="userinput">
+              <input type="number" name="discount" placeholder="Product Discount" value="<%= product.discount %>">
+            </div>
+            <div class="userinput">
+              <input type="number" name="stock" placeholder="Stock" value="<%= product.stock %>">
+            </div>
+            <div class="button-create-product">
+              <div class="userinput button-submit">
+                <input class="input-button" type="Submit" value="Submit">
+              </div>
+              <div class="userinput button-submit">
+                <input class="input-button" type="Submit" value="Reset">
+              </div>
+            </div>
+          </form>
+          <div>
+            <form action="/images/create/<%= product.id %>" method='post' enctype="multipart/form-data">
+              <input type="file" name="files" multiple>
+              <button class=" btn btn-edit" type="submit">create</button>
+            </form>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <% product.images.forEach(file=> { %>
+              <figure>
+                <div>
+                  <img style="width: 140px;" src="/images/products/<%= file.name %>" alt="">
+                </div>
+                  <div class="div-btn">
+                    <form action="/images/update/<%= file.id %>/<%= product.id %>?_method=PUT" method='post' enctype="multipart/form-data">
+                      <input type="file" name="file">
+                      <button class=" btn btn-edit" type="submit">update</button>
+                    </form>
+                    <form action="/images/delete/<%= file.id %>/<%= product.id %>?_method=delete" method='post'>
+                      <button class="btn" type="submit">delete</button>
+                    </form>
+                  </div>
+              </figure>
+
+              <% }) %>
+          </div>
+
         </div>
-        
-      <div class="userinput">
-        <input type="number" name="height" placeholder="Product height" value="<%= product.height %>">
-      </div>
-      <div class="userinput">
-        <input type="number" name="length" placeholder="Product length" value="<%= product.length %>">
-      </div>
-      <div class="userinput">
-        <input type="number" name="width" placeholder="Product width" value="<%= product.width %>">
-      </div>
-      <div class="userinput">
-        <input type="number" name="price" placeholder="Product Price" value="<%= product.price %>">
-      </div>
-      <div class="userinput">
-        <input type="number" name="discount" placeholder="Product Discount" value="<%= product.discount %>">
-      </div>
-      <div class="userinput">
-        <input type="number" name="stock" placeholder="Stock" value="<%= product.stock %>">
-      </div>
-      <div class="file-select" id="src-file1" >
-        <input type="file" name="image"  multiple >
-      </div>
-      <div class="button-create-product">
-        <div class="userinput button-submit">
-          <input class="input-button" type="Submit" value="Submit">
-        </div>
-        <div class="userinput button-submit">
-          <input class="input-button" type="Submit" value="Reset">
-        </div>
-      </div>
-    </form>
-    
-  </div>
-  </main>
-</body>
+      </main>
+  </body>
+
 </html>
