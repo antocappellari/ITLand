@@ -79,9 +79,6 @@ const productsController = {
         name: body.name,
         price: body.price,
         discount: body.discount,
-        width: body.width,
-        height: body.height,
-        length: body.length,
         camera_id: body.camera_id,
         colors_id: body.color_id,
         brands_id: body.brand_id,
@@ -91,24 +88,6 @@ const productsController = {
         stock: body.stock,
       };
 
-    if(req.files.length == 0){
-      const categories = await db.Categories.findAll();
-      const brands = await db.Brands.findAll();
-      const memories = await db.Memories.findAll();
-      const cameras = await db.Camera.findAll();
-      const colors = await db.Colors.findAll();
-      const sub_categories = await db.Sub_categories.findAll();
-
-      return res.render("products/create.ejs", {
-        categories,
-        brands,
-        memories,
-        cameras,
-        colors,
-        sub_categories,
-      });
-      
-    }
       const product = await db.Products.create(data);
       const files = req.files.map(file => ({
         name: file.filename
@@ -148,9 +127,6 @@ const productsController = {
         name: body.name,
         price: body.price,
         discount: body.discount,
-        width: body.width,
-        height: body.height,
-        length: body.length,
         camera_id: body.camera_id,
         colors_id: body.color_id,
         brands_id: body.brand_id,

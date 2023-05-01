@@ -11,7 +11,7 @@ router.get('/', productsController.products)
 router.get('/create',productsController.create)
 router.post('/create',  upload.any('image',5),productValidator,productsController.creation)
 router.get('/:id/edit', productsController.edit)
-router.put('/:id/edit', upload.any('image',5), productsController.edition)
+router.put('/:id/edit', upload.any('image',5),productValidator[9], productsController.edition)
 router.delete('/:id/delete',productsController.delete)
 
 // exportacion de rutas

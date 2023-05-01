@@ -34,7 +34,6 @@ const productValidator = [
     if(req.files.length === 0){
         throw new Error('Please upload at least one picture')
     }
-    console.log("hola");
     const response  = req.files.forEach(file => {
         console.log(file);
           let extname = path.extname(file.originalname);

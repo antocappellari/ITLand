@@ -221,23 +221,26 @@
                 <% } %>
             </div>
 
-            <div class="userinput">
-              <input type="number" name="height" placeholder="Product height">
-            </div>
-            <div class="userinput">
-              <input type="number" name="length" placeholder="Product length">
-            </div>
-            <div class="userinput">
-              <input type="number" name="width" placeholder="Product width">
-            </div>
+           
             <div class="userinput">
               <input type="number" name="price" placeholder="Product Price">
+              <%if(locals.errors && errors.price){ %>
+                <p class="text-danger">
+                  <%= errors.price.msg %>
+                </p>
+
+              <% } %>
             </div>
             <div class="userinput">
               <input type="number" name="discount" placeholder="Product Discount">
             </div>
             <div class="userinput">
               <input type="number" name="stock" placeholder="Stock">
+              <% if (locals.errors && errors.stock) { %>
+                <p class="text-danger">
+                  <%= errors.stock.msg %>
+                </p>
+              <% } %>
             </div>
             <div class="button-create-product">
               <div class="userinput button-submit">

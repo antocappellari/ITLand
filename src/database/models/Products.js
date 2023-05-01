@@ -19,18 +19,6 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       allowNull: false,
     },
-    width: {
-      type: dataTypes.DECIMAL(10, 0),
-      allowNull: false,
-    },
-    height: {
-      type: dataTypes.DECIMAL(10, 0),
-      allowNull: false,
-    },
-    length: {
-      type: dataTypes.DECIMAL(10, 0),
-      allowNull: false,
-    },
     camera_id: dataTypes.INTEGER,
     colors_id: dataTypes.INTEGER,
     memory_id: {
