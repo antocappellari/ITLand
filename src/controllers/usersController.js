@@ -55,6 +55,7 @@ const usersController = {
             const userToLogin = await userServices.getUserByEmail(body.email);
             if (userToLogin) {
                 return res.render('./users/register.ejs',{
+                    errors: errors.mapped(),
                     errorEmail:{
                        email:{
                         msg:'The email is already registered'}

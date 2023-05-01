@@ -1,123 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- head -->
-<%- include('../partials/head') %> 
-<body>
-  <!-- header -->
-  <%- include('../partials/header') %> 
-  <main class="main-form">
-    <div class="container-form">
-    <h2 class="form-title">Article creation:</h2>
+<%- include('../partials/head') %>
 
-    <!-- <--------FORMULARIO--------->
+  <body>
+    <!-- header -->
+    <%- include('../partials/header') %>
+      <main class="main-form">
+        <div class="container-form">
+          <h2 class="form-title">Article creation:</h2>
 
-    <form class="form-inputs"action="/products/create" method="POST" enctype="multipart/form-data">
-      <div class="userinput">
-        <input type="name"  name="name" placeholder="Product Name">
-      </div>
-      <div class="userinput">
-       <textarea name="description" id="" cols="30" rows="10"></textarea>
-      </div>
-      <div class="file-select" id="src-file1" >
-        <input type="file" name="image"  multiple >
-      </div>
-      <div class="userinput">
-        <label>Category</label>
-        <select class="drop-down"name="category_id">
-          <option disabled selected>Choose a category</option>
-          <% categories.forEach(category => { %>
-            <option value="<%= category.id %>"><%= category.name %></option>
-          <% }) %>
-        </select>
-      </div>
-      <div class="userinput">
-        <label>Sub Category</label>
-        <select class="drop-down"name="sub_category_id">
-          <option disabled selected>Choose a sub category</option>
-          <% sub_categories.forEach(sub_category => { %>
-            <option value="<%= sub_category.id %>"><%= sub_category.name %></option>
-          <% }) %>
-        </select>
-      </div>
-        <select class="drop-down"name="color_id">
-            <option disabled selected>Choose color</option>
-            <% colors.forEach(color => { %>
-              <option value="<%= color.id %>"><%= color.color %></option>
-            <% }) %>
-           
-        </select>
-        <div class="userinput">
-          <label>Internal Storage</label>
-          <select class="drop-down"name="memory_id">
-            <option disabled selected>Choose a memory</option>
-            <% memories.forEach(memory => { %>
-              <% if (memory.type == "R0M") { %>
-                <option value="<%= memory.id %>"><%= memory.memory %></option>
-               
+          <!-- <--------FORMULARIO--------->
+
+          <form class="form-inputs" action="/products/create" method="POST" enctype="multipart/form-data">
+            <div class="userinput">
+              <input type="name" name="name" placeholder="Product Name"
+                value="<%= locals.oldBody? oldBody.name: null %>">
+              <% if (locals.errors && errors.name) { %>
+                <p class="text-danger">
+                  <%= errors.name.msg %>
+                </p>
+                <% } %>
+            </div>
+            <div class="userinput">"
+              <textarea name="description" id="" cols="30" rows="10">
+                <%= locals.oldBody? oldBody.description: null %>
+            </textarea>
+              <% if (locals.errors && errors.description) { %>
+                <p class="text-danger">
+                  <%= errors.description.msg %>
+                </p>
+                <% } %>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+              <div class="file-select" id="src-file1">
+                <input type="file" name="image" multiple>
+                
+              </div>
+              <% if (locals.errors && errors.image) { %>
+                <p class="text-danger">
+                 <%= errors.image.msg %>
+                </p>
+                <% } %>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="userinput">
+              <label>Category</label>
+              <select class="drop-down" name="category_id">
+                <option disabled selected>Choose a category</option>
+                <% if (locals.oldBody && oldBody.category_id) { %>
+                  <% categories.forEach(category => { %>
+                    <% if (category.id == oldBody.category_id) { %>
+                        <option value="<%= oldBody.category_id %>" selected >
+                          <%= category.name %>
+                        </option>
+                    <%}%>
+                 <% }) %>
+                  
+                <% } else{ %>
+                <% categories.forEach(category=> { %>
+                  <option value="<%= category.id %>">
+                    <%= category.name %>
+                  </option>
+                  <% }) %>
+                <% }%>
+
+              </select>
+              <% if (locals.errors && errors.category_id) { %>
+                <p class="text-danger">
+                  <%= errors.category_id.msg %>
+                </p>
+                <% } %>
+            </div>
+            <div class="userinput">
+              <label>Sub Category</label>
+              <select class="drop-down" name="sub_category_id">
+                <option disabled selected>Choose a sub category</option>
+                <% if (locals.oldBody && oldBody.sub_category_id) { %>
+                  <% sub_categories.forEach(sub_category => { %>
+                    <% if (sub_category.id == oldBody.sub_category_id) { %>
+                        <option value="<%= oldBody.sub_category_id %>" selected >
+                          <%= sub_category.name %>
+                        </option>
+                    <%}%>
+                 <% }) %>
+                  
+                <% } else{ %>
+                <% sub_categories.forEach(sub_category=> { %>
+                  <option value="<%= sub_category.id %>">
+                    <%= sub_category.name %>
+                  </option>
+                  <% }) %>
+                <% }%>
+              </select>
+              <% if (locals.errors && errors.sub_category_id) { %>
+                <p class="text-danger">
+                  <%= errors.sub_category_id.msg %>
+                </p>
+                <% } %>
+            </div>
+            <select class="drop-down" name="color_id">
+              <option disabled selected>Choose color</option>
+              <% if (locals.oldBody && oldBody.color_id) { %>
+                <% colors.forEach(color => { %>
+                  <% if (color.id == oldBody.color_id) { %>
+                      <option value="<%= oldBody.color_id %>" selected >
+                        <%= color.color %>
+                      </option>
+                  <%}%>
+               <% }) %>
+                
+              <% } else{ %>
+              <% colors.forEach(color=> { %>
+                <option value="<%= color.id %>">
+                  <%= color.color %>
+                </option>
+                <% }) %>
+              <% }%>
+            </select>
+            <% if (locals.errors && errors.color_id) { %>
+              <p class="text-danger">
+                <%= errors.color_id.msg %>
+              </p>
               <% } %>
-            <% }) %>
-          </select>
-        </div>
-        <div class="userinput">
-          <label>RAM Memory</label>
-          <select class="drop-down"name="memory_id">
-            <option disabled selected>Choose a RAM memory</option>
-            <% memories.forEach(memory => { %>
-              <% if (memory.type == 'RAM') { %>
-                <option value="<%= memory.id %>"><%= memory.memory %></option>
-               
-              <% } %>
-            <% }) %>
-          </select>
-        </div>
-        <div class="userinput">
-          <label>Brands</label>
-          <select class="drop-down"name="brand_id">
-            <option disabled selected>Choose a Brands</option>
-            <% brands.forEach(brand => { %>
-                <option value="<%= brand.id %>"><%= brand.name %></option>
-            <% }) %>
-          </select>
-        </div>
-        <div class="userinput">
-          <label>Cameras</label>
-          <select class="drop-down"name="camera_id">
-            <option disabled selected>Choose a cameras </option>
-            <% cameras.forEach(camera => { %>
-              <option value="<%= camera.id %>"><%= camera.resolution %></option>
-            <% }) %>
-          </select>
-        </div>
-        
-      <div class="userinput">
-        <input type="number" name="height" placeholder="Product height">
-      </div>
-      <div class="userinput">
-        <input type="number" name="length" placeholder="Product length">
-      </div>
-      <div class="userinput">
-        <input type="number" name="width" placeholder="Product width">
-      </div>
-      <div class="userinput">
-        <input type="number" name="price" placeholder="Product Price">
-      </div>
-      <div class="userinput">
-        <input type="number" name="discount" placeholder="Product Discount">
-      </div>
-      <div class="userinput">
-        <input type="number" name="stock" placeholder="Stock">
-      </div>
-      <div class="button-create-product">
-      <div class="userinput button-submit">
-        <input class="input-button" type="Submit" value="Submit">
-      </div>
-      <div class="userinput button-submit">
-        <input class="input-button" type="Submit" value="Reset">
-      </div>
-    </div>
-    </form>
 
-  </div>
-  </main>
-</body>
+            </select>
+            <div class="userinput">
+              <label>Internal Storage</label>
+              <select class="drop-down" name="memory_id">
+                <option disabled selected>Choose a memory</option>
+                <% memories.forEach(memory=> { %>
+                  <% if (memory.type=="R0M" ) { %>
+                    <option value="<%= memory.id %>">
+                      <%= memory.memory %>
+                    </option>
+
+                    <% } %>
+                      <% }) %>
+              </select>
+            </div>
+            <div class="userinput">
+              <label>RAM Memory</label>
+              <select class="drop-down" name="memory_id">
+                <option disabled selected>Choose a RAM memory</option>
+                <% memories.forEach(memory=> { %>
+                  <% if (memory.type=='RAM' ) { %>
+                    <option value="<%= memory.id %>">
+                      <%= memory.memory %>
+                    </option>
+
+                    <% } %>
+                      <% }) %>
+              </select>
+            </div>
+            <div class="userinput">
+              <label>Brands</label>
+              <select class="drop-down" name="brand_id">
+                <option disabled selected>Choose a Brands</option>
+                <% if (locals.oldBody && oldBody.brand_id) { %>
+                    <% brands.forEach(brand => { %>
+                     <% if (brand.id == oldBody.brand_id) { %>
+                        <option value="<%= brand.id %>" selected>
+                          <%= brand.name %>
+                        </option>
+                     <% } %>
+                    <% }) %>
+                  <% } else{%>
+                    <% brands.forEach(brand=> { %>
+                      <option value="<%= brand.id %>">
+                        <%= brand.name %>
+                      </option>
+                      <% }) %>
+                    <% }%>
+              </select>
+              <% if (locals.errors && errors.brand_id) { %>
+                <p class="text-danger">
+                  <%= errors.brand_id.msg %>
+                </p>
+              <% } %>
+            </div>
+            <div class="userinput">
+              <label>Cameras</label>
+              <select class="drop-down" name="camera_id">
+                <option disabled selected>Choose a cameras </option>
+                <% if (locals.oldBody && oldBody.camera_id) { %>
+                 <% cameras.forEach(camera => { %>
+                  <% if (camera.id == oldBody.camera_id) { %>
+                   <option value="<%= camera.id %>" selected>
+                    <%= camera.resolution %>
+                  </option>
+                  <% } %>
+                 <% }) %>
+
+                <% } else {%>
+                  <% cameras.forEach(camera=> { %>
+                    <option value="<%= camera.id %>">
+                      <%= camera.resolution %>
+                    </option>
+                    <% }) %>
+                  <% } %>
+              </select>
+              <% if (locals.errors && errors.camera_id) { %>
+                <p class="text-danger">
+                  <%= errors.camera_id.msg %>
+                </p>
+                <% } %>
+            </div>
+
+            <div class="userinput">
+              <input type="number" name="height" placeholder="Product height">
+            </div>
+            <div class="userinput">
+              <input type="number" name="length" placeholder="Product length">
+            </div>
+            <div class="userinput">
+              <input type="number" name="width" placeholder="Product width">
+            </div>
+            <div class="userinput">
+              <input type="number" name="price" placeholder="Product Price">
+            </div>
+            <div class="userinput">
+              <input type="number" name="discount" placeholder="Product Discount">
+            </div>
+            <div class="userinput">
+              <input type="number" name="stock" placeholder="Stock">
+            </div>
+            <div class="button-create-product">
+              <div class="userinput button-submit">
+                <input class="input-button" type="Submit" value="Submit">
+              </div>
+              <div class="userinput button-submit">
+                <input class="input-button" type="Submit" value="Reset">
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </main>
+  </body>
+
 </html>

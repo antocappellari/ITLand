@@ -1,5 +1,6 @@
 const ProductServices = require("../services/ProductServices");
 let db = require("../database/models");
+const { validationResult } = require("express-validator");
 const Images = require("../database/models/").Images
 
 //controllers
@@ -41,6 +42,7 @@ const productsController = {
       const colors = await db.Colors.findAll();
       const sub_categories = await db.Sub_categories.findAll();
 
+
       return res.render("products/create.ejs", {
         categories,
         brands,
@@ -54,6 +56,25 @@ const productsController = {
   creation: async (req, res) => {
     try {
       let body = req.body;
+      const errors = validationResult(req);
+      if(!errors.isEmpty()) {
+        const categories = await db.Categories.findAll();
+        const brands = await db.Brands.findAll();
+        const memories = await db.Memories.findAll();
+        const cameras = await db.Camera.findAll();
+        const colors = await db.Colors.findAll();
+        const sub_categories = await db.Sub_categories.findAll();
+  
+        return res.render("products/create.ejs",{
+        errors:errors.mapped(),
+        oldBody: body,
+        categories,
+        brands,
+        memories,
+        cameras,
+        colors,
+        sub_categories,
+      })}
       let data = {
         name: body.name,
         price: body.price,
@@ -69,6 +90,7 @@ const productsController = {
         description: body.description,
         stock: body.stock,
       };
+
     if(req.files.length == 0){
       const categories = await db.Categories.findAll();
       const brands = await db.Brands.findAll();
