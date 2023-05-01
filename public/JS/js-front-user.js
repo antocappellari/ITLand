@@ -1,8 +1,8 @@
 window.addEventListener("load",function(){
-    let formulario = document.querySelector(".form-inputs")
-    this.alert("vinculado")
+    let formulario = document.querySelector(".form-inputs");
+    
+
     formulario.addEventListener("submit",function(e){
-        let errores = [];
-        let nameField =
+       e.preventDefault()
     })
 })

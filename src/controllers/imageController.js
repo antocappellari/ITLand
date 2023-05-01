@@ -1,4 +1,3 @@
-const { where } = require("sequelize");
 const ProductServices = require("../services/ProductServices");
 
 const Images = require("../database/models").Images;
