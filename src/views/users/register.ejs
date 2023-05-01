@@ -17,6 +17,7 @@
             <div class="datauser__register">
               <div class="userinput">
                 <input type="text"
+                 class="inputJs"
                  name="first_name"
                   id=""
                    placeholder="Name"
@@ -29,10 +30,11 @@
                         <%= errors.first_name.msg %>
                       </p>
                 <% } %>
-                <p class="text-danger error">error</p>
+                <p class="text-danger error">Please complete your Name</p>
               </div>
               <div class="userinput">
                 <input type="text"
+                 class="inputJs"
                  name= "last_name" 
                  placeholder="Last name"
                  value="<%= locals.oldBody? oldBody.last_name: null %>"
@@ -42,10 +44,12 @@
                     <%= errors.last_name.msg %>
                   </p>
             <% } %>
+                <p class="text-danger error">Please complete your Name</p>
                 <i class="uil uil-user icon1"></i>
               </div>
               <div class="userinput">
                 <input type="text"
+                 class="inputJs"
                  placeholder="Address"
                  name="address"
                  value="<%= locals.oldBody? oldBody.address: null %>"
@@ -55,10 +59,12 @@
                     <%= errors.address.msg %>
                   </p>
             <% } %>
+                <p class="text-danger error">Please complete your Name</p>
                 <i class="uil uil-location-point"></i>
               </div>
               <div class="userinput">
                 <input type="number"
+                class="inputJs"
                 name="cell"
                  placeholder="cel:"
                  value="<%= locals.oldBody? oldBody.cell: null %>"
@@ -68,11 +74,13 @@
                     <%= errors.cell.msg %>
                   </p>
             <% } %>
+              <p class="text-danger error">Please complete your Name</p>
                 <i class="uil uil-phone"></i>
               </div>
             </div>
             <div class="file-select2" id="src-file2" >
               <input type="file"
+               class="inputJs"
                name="image"
                 >
                 <% if (locals.errors && errors.image) { %>
@@ -83,6 +91,7 @@
             </div>
             <div class="userinput">
               <input type="text"
+              class="inputJs"
               name="email"
                placeholder="Enter your email" 
                value="<%= locals.oldBody? oldBody.email: null %>"
@@ -95,10 +104,12 @@
                 <% if (locals.errorEmail) { %>
                   <p><%= errorEmail.email.msg %></p>
                 <% } %>
+                <p class="text-danger error">Please complete your Name</p>
               <i class="uil uil-envelope icon icon2"></i>
             </div>
             <div class="userinput">
               <input type="password"
+              class="inputJs"
               name="password"
                placeholder="Create password"
                 >
@@ -107,10 +118,12 @@
                     <%= errors.password.msg %>
                   </p>
             <% } %>
+            <p class="text-danger error">Please complete your Name</p>
               <i class="uil uil-lock icon icon3"></i>
             </div>
             <div class="userinput">
               <input type="password"
+              class="inputJs"
               name="confirmPassword"
               placeholder="Confirm password">
               <% if (locals.errors && errors.confirmPassword) { %>
@@ -118,11 +131,13 @@
                   <%= errors.confirmPassword.msg %>
                 </p>
           <% } %>
+              <p class="text-danger error">Please complete your Name</p>
               <i class="uil uil-lock icon icon4"></i>
               <i class="uil uil-eye-slash showHidePw icon5"></i>
             </div>
             <div class="conditions">
               <input type="checkbox"
+              class="inputJs"
               name="conditions"
               >
               <p>I accept all terms and conditions</p>
@@ -132,6 +147,7 @@
                 <%= errors.conditions.msg %>
               </p>
         <% } %>
+            <p class="text-danger error">Please complete your Name</p>
             <div class="userinput button-submit">
             <input class="input-button" type="Submit" value="Register Now">
             </div>
