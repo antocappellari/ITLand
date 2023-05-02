@@ -13,16 +13,17 @@
           <!-- <--------FORMULARIO--------->
 
           <form class="form-inputs" action="/products/create" method="POST" enctype="multipart/form-data">
-            <div class="userinput">
-              <input type="name" name="name" placeholder="Product Name"
+            <div class="userinput" id="name-error">
+              <input type="name" class="inputJs" name="name" placeholder="Product Name"
                 value="<%= locals.oldBody? oldBody.name: null %>">
               <% if (locals.errors && errors.name) { %>
                 <p class="text-danger">
                   <%= errors.name.msg %>
                 </p>
                 <% } %>
+                <p class="text-danger error">Please complete with the product's name</p>
             </div>
-            <div class="userinput">"
+            <div class="userinput" id="description-error">
               <textarea name="description" id="" cols="30" rows="10">
                 <%= locals.oldBody? oldBody.description: null %>
             </textarea>
@@ -31,6 +32,7 @@
                   <%= errors.description.msg %>
                 </p>
                 <% } %>
+                <p class="text-danger error">Please complete with the product's description</p>
             </div>
             <br>
             <br>
@@ -49,6 +51,7 @@
                  <%= errors.image.msg %>
                 </p>
                 <% } %>
+                <p class="text-danger error">Please upload at least one picture</p>
             </div>
 
             <br>
@@ -58,7 +61,7 @@
             <br>
             <br>
             <br>
-            <div class="userinput">
+            <div class="userinput" id="category-error">
               <label>Category</label>
               <select class="drop-down" name="category_id">
                 <option disabled selected>Choose a category</option>
@@ -85,8 +88,9 @@
                   <%= errors.category_id.msg %>
                 </p>
                 <% } %>
+                <p class="text-danger error">Please select a category</p>
             </div>
-            <div class="userinput">
+            <div class="userinput" id="sub_category-error">
               <label>Sub Category</label>
               <select class="drop-down" name="sub_category_id">
                 <option disabled selected>Choose a sub category</option>
@@ -112,7 +116,9 @@
                   <%= errors.sub_category_id.msg %>
                 </p>
                 <% } %>
+                <p class="text-danger error">Please select a sub-category</p>
             </div>
+            <div class="userinput" id="color-error">
             <select class="drop-down" name="color_id">
               <option disabled selected>Choose color</option>
               <% if (locals.oldBody && oldBody.color_id) { %>
@@ -131,7 +137,9 @@
                 </option>
                 <% }) %>
               <% }%>
+              <p class="text-danger error">Please select a color</p>
             </select>
+          </div>
             <% if (locals.errors && errors.color_id) { %>
               <p class="text-danger">
                 <%= errors.color_id.msg %>
@@ -167,7 +175,7 @@
                       <% }) %>
               </select>
             </div>
-            <div class="userinput">
+            <div class="userinput" id="brand-error">
               <label>Brands</label>
               <select class="drop-down" name="brand_id">
                 <option disabled selected>Choose a Brands</option>
@@ -192,6 +200,7 @@
                   <%= errors.brand_id.msg %>
                 </p>
               <% } %>
+              <p class="text-danger error">Please select a brand</p>
             </div>
             <div class="userinput">
               <label>Cameras</label>
@@ -222,25 +231,27 @@
             </div>
 
            
-            <div class="userinput">
-              <input type="number" name="price" placeholder="Product Price">
+            <div class="userinput" id="price-error">
+              <input type="number" class="inputJs" name="price" placeholder="Product Price">
               <%if(locals.errors && errors.price){ %>
                 <p class="text-danger">
                   <%= errors.price.msg %>
                 </p>
 
               <% } %>
+              <p class="text-danger error">Please complete with the product's price</p>
             </div>
             <div class="userinput">
               <input type="number" name="discount" placeholder="Product Discount">
             </div>
-            <div class="userinput">
-              <input type="number" name="stock" placeholder="Stock">
+            <div class="userinput" id="stock-error">
+              <input type="number" class="inputJs"name="stock" placeholder="Stock">
               <% if (locals.errors && errors.stock) { %>
                 <p class="text-danger">
                   <%= errors.stock.msg %>
                 </p>
               <% } %>
+              <p class="text-danger error">Please complete with the product's stock</p>
             </div>
             <div class="button-create-product">
               <div class="userinput button-submit">
@@ -251,9 +262,9 @@
               </div>
             </div>
           </form>
-
         </div>
       </main>
+      <script src="/JS/js-front-product.js"></script>
   </body>
 
 </html>
