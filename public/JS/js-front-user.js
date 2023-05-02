@@ -34,6 +34,12 @@ window.addEventListener("load",function(){
         if(e.target.name == "address"){
             fieldValidation(exp.address,e.target.value,e.target.name)
         }
+        if(e.target.name == "email"){
+            fieldValidation(exp.email,e.target.value,e.target.name)
+        }
+        if(e.target.name == "cell"){
+            fieldValidation(exp.cell,e.target.value,e.target.name)
+        }
     }
     const fieldValidation = (exp,inputValue,field)=>{
         if(exp.test(inputValue)){

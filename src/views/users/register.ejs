@@ -30,7 +30,7 @@
                         <%= errors.first_name.msg %>
                       </p>
                 <% } %>
-                <p class="text-danger error">Please complete your Name</p>
+                <p class="text-danger error">Please complete with your Name</p>
               </div>
               <div class="userinput" id="last_name-error">
                 <input type="text"
@@ -44,7 +44,7 @@
                     <%= errors.last_name.msg %>
                   </p>
             <% } %>
-                <p class="text-danger error">Please complete your last Name</p>
+                <p class="text-danger error">Please complete with your last Name</p>
                 <i class="uil uil-user icon1"></i>
               </div>
               <div class="userinput" id="address-error">
@@ -59,10 +59,10 @@
                     <%= errors.address.msg %>
                   </p>
             <% } %>
-                <p class="text-danger error">Please complete address</p>
+                <p class="text-danger error">Please complete with your address</p>
                 <i class="uil uil-location-point"></i>
               </div>
-              <div class="userinput">
+              <div class="userinput" id="cell-error">
                 <input type="number"
                 class="inputJs"
                 name="cell"
@@ -74,7 +74,7 @@
                     <%= errors.cell.msg %>
                   </p>
             <% } %>
-              <p class="text-danger error">Please complete your Name</p>
+              <p class="text-danger error">Please complete with your cellphone number</p>
                 <i class="uil uil-phone"></i>
               </div>
             </div>
@@ -89,7 +89,7 @@
                   </p>
             <% } %>
             </div>
-            <div class="userinput">
+            <div class="userinput" id="email-error">
               <input type="text"
               class="inputJs"
               name="email"
@@ -104,7 +104,7 @@
                 <% if (locals.errorEmail) { %>
                   <p><%= errorEmail.email.msg %></p>
                 <% } %>
-                <p class="text-danger error">Please complete your Name</p>
+                <p class="text-danger error">Please complete with your email address</p>
               <i class="uil uil-envelope icon icon2"></i>
             </div>
             <div class="userinput">
@@ -118,7 +118,7 @@
                     <%= errors.password.msg %>
                   </p>
             <% } %>
-            <p class="text-danger error">Please complete your Name</p>
+            <p class="text-danger error">Please create a password</p>
               <i class="uil uil-lock icon icon3"></i>
             </div>
             <div class="userinput">
@@ -131,7 +131,7 @@
                   <%= errors.confirmPassword.msg %>
                 </p>
           <% } %>
-              <p class="text-danger error">Please complete your Name</p>
+              <p class="text-danger error">Please confirm with your new password</p>
               <i class="uil uil-lock icon icon4"></i>
               <i class="uil uil-eye-slash showHidePw icon5"></i>
             </div>
@@ -147,7 +147,7 @@
                 <%= errors.conditions.msg %>
               </p>
         <% } %>
-            <p class="text-danger error">Please complete your Name</p>
+            <p class="text-danger error">Please accept our terms and conditions</p>
             <div class="userinput button-submit">
             <input class="input-button" type="Submit" value="Register Now">
             </div>
