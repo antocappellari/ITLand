@@ -15,7 +15,7 @@
           </div>
           <form class="form-inputs" action="/users/register" method="POST"  enctype="multipart/form-data">
             <div class="datauser__register">
-              <div class="userinput">
+              <div class="userinput " id="first_name-error">
                 <input type="text"
                  class="inputJs"
                  name="first_name"
@@ -32,7 +32,7 @@
                 <% } %>
                 <p class="text-danger error">Please complete your Name</p>
               </div>
-              <div class="userinput">
+              <div class="userinput" id="last_name-error">
                 <input type="text"
                  class="inputJs"
                  name= "last_name" 
@@ -44,10 +44,10 @@
                     <%= errors.last_name.msg %>
                   </p>
             <% } %>
-                <p class="text-danger error">Please complete your Name</p>
+                <p class="text-danger error">Please complete your last Name</p>
                 <i class="uil uil-user icon1"></i>
               </div>
-              <div class="userinput">
+              <div class="userinput" id="address-error">
                 <input type="text"
                  class="inputJs"
                  placeholder="Address"
@@ -59,7 +59,7 @@
                     <%= errors.address.msg %>
                   </p>
             <% } %>
-                <p class="text-danger error">Please complete your Name</p>
+                <p class="text-danger error">Please complete address</p>
                 <i class="uil uil-location-point"></i>
               </div>
               <div class="userinput">
