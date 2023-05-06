@@ -24,7 +24,7 @@
                 <p class="text-danger error">Please complete with the product's name</p>
             </div>
             <div class="userinput" id="description-error">
-              <textarea name="description" id="" cols="30" rows="10">
+              <textarea name="description" id="" cols="30" rows="10" class="inputJs">
                 <%= locals.oldBody? oldBody.description: null %>
             </textarea>
               <% if (locals.errors && errors.description) { %>
@@ -42,16 +42,15 @@
             <br>
             <br>
             <div>
-              <div class="file-select" id="src-file1">
-                <input type="file" name="image" multiple>
-                
+              <div class="file-select" >
+                <input type="file" name="image" id="files" multiple>
               </div>
               <% if (locals.errors && errors.image) { %>
                 <p class="text-danger">
-                 <%= errors.image.msg %>
+                  <%= errors.image.msg %>
                 </p>
                 <% } %>
-                <p class="text-danger error">Please upload at least one picture</p>
+                <p class="text-danger error">Please upload a picture with a valid format [jpg-png-webp-jfif]</p>
             </div>
 
             <br>
@@ -63,8 +62,8 @@
             <br>
             <div class="userinput" id="category-error">
               <label>Category</label>
-              <select class="drop-down" name="category_id">
-                <option disabled selected>Choose a category</option>
+              <select class="drop-down d-1" name="category_id">
+                <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.category_id) { %>
                   <% categories.forEach(category => { %>
                     <% if (category.id == oldBody.category_id) { %>
@@ -92,8 +91,8 @@
             </div>
             <div class="userinput" id="sub_category-error">
               <label>Sub Category</label>
-              <select class="drop-down" name="sub_category_id">
-                <option disabled selected>Choose a sub category</option>
+              <select class="drop-down d-1" name="sub_category_id">
+                <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.sub_category_id) { %>
                   <% sub_categories.forEach(sub_category => { %>
                     <% if (sub_category.id == oldBody.sub_category_id) { %>
@@ -119,8 +118,9 @@
                 <p class="text-danger error">Please select a sub-category</p>
             </div>
             <div class="userinput" id="color-error">
-            <select class="drop-down" name="color_id">
-              <option disabled selected>Choose color</option>
+              <label for="">Colors</label>
+            <select class="drop-down d-1" name="color_id">
+              <option disabled selected>Choose an option</option>
               <% if (locals.oldBody && oldBody.color_id) { %>
                 <% colors.forEach(color => { %>
                   <% if (color.id == oldBody.color_id) { %>
@@ -137,8 +137,8 @@
                 </option>
                 <% }) %>
               <% }%>
-              <p class="text-danger error">Please select a color</p>
             </select>
+            <p class="text-danger error">Please select a color</p>
           </div>
             <% if (locals.errors && errors.color_id) { %>
               <p class="text-danger">
@@ -149,8 +149,8 @@
             </select>
             <div class="userinput">
               <label>Internal Storage</label>
-              <select class="drop-down" name="memory_id">
-                <option disabled selected>Choose a memory</option>
+              <select class="drop-down " name="memory_id">
+                <option disabled selected>Choose an option</option>
                 <% memories.forEach(memory=> { %>
                   <% if (memory.type=="R0M" ) { %>
                     <option value="<%= memory.id %>">
@@ -164,7 +164,7 @@
             <div class="userinput">
               <label>RAM Memory</label>
               <select class="drop-down" name="memory_id">
-                <option disabled selected>Choose a RAM memory</option>
+                <option disabled selected>Choose an option</option>
                 <% memories.forEach(memory=> { %>
                   <% if (memory.type=='RAM' ) { %>
                     <option value="<%= memory.id %>">
@@ -177,8 +177,8 @@
             </div>
             <div class="userinput" id="brand-error">
               <label>Brands</label>
-              <select class="drop-down" name="brand_id">
-                <option disabled selected>Choose a Brands</option>
+              <select class="drop-down d-1" name="brand_id">
+                <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.brand_id) { %>
                     <% brands.forEach(brand => { %>
                      <% if (brand.id == oldBody.brand_id) { %>
@@ -205,7 +205,7 @@
             <div class="userinput">
               <label>Cameras</label>
               <select class="drop-down" name="camera_id">
-                <option disabled selected>Choose a cameras </option>
+                <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.camera_id) { %>
                  <% cameras.forEach(camera => { %>
                   <% if (camera.id == oldBody.camera_id) { %>

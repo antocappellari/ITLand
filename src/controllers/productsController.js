@@ -77,8 +77,8 @@ const productsController = {
       })}
       let data = {
         name: body.name,
-        price: body.price,
-        discount: body.discount,
+        price: body.price ? body.price : 0,
+        discount: body.discount ? body.discount: 0,
         camera_id: body.camera_id,
         colors_id: body.color_id,
         brands_id: body.brand_id,

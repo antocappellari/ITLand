@@ -119,6 +119,9 @@
     padding: none;
     font-size: 16px;
 }
+.errorPassword{
+    display: none;
+}
 .button-submit:hover{
     background-color: #0034d1cf;
     border-radius: 15px;

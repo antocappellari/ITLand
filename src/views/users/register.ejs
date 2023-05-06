@@ -30,7 +30,7 @@
                         <%= errors.first_name.msg %>
                       </p>
                 <% } %>
-                <p class="text-danger error">Please complete with your Name</p>
+                <p class="text-danger error">Please complete with a valid name </p>
               </div>
               <div class="userinput" id="last_name-error">
                 <input type="text"
@@ -44,7 +44,7 @@
                     <%= errors.last_name.msg %>
                   </p>
             <% } %>
-                <p class="text-danger error">Please complete with your last Name</p>
+                <p class="text-danger error">Please complete with a valid last Name</p>
                 <i class="uil uil-user icon1"></i>
               </div>
               <div class="userinput" id="address-error">
@@ -107,37 +107,40 @@
                 <p class="text-danger error">Please complete with your email address</p>
               <i class="uil uil-envelope icon icon2"></i>
             </div>
-            <div class="userinput">
+            <div class="userinput" id="password-error">
               <input type="password"
               class="inputJs"
               name="password"
                placeholder="Create password"
-                >
+              id="pass1"
+               >
                 <% if (locals.errors && errors.password) { %>
-                  <p class="text-danger">
+                  <p class="text-danger error">
                     <%= errors.password.msg %>
                   </p>
             <% } %>
-            <p class="text-danger error">Please create a password</p>
+            <p class="text-danger error ">Please create a password of at least eight characters </p>
               <i class="uil uil-lock icon icon3"></i>
             </div>
             <div class="userinput">
               <input type="password"
               class="inputJs"
               name="confirmPassword"
-              placeholder="Confirm password">
+              placeholder="Confirm password"
+              id="pass2">
               <% if (locals.errors && errors.confirmPassword) { %>
                 <p class="text-danger"> 
                   <%= errors.confirmPassword.msg %>
                 </p>
           <% } %>
-              <p class="text-danger error">Please confirm with your new password</p>
+              <p class="text-danger errorPassword">Please confirm with your new password</p>
               <i class="uil uil-lock icon icon4"></i>
               <i class="uil uil-eye-slash showHidePw icon5"></i>
             </div>
             <div class="conditions">
               <input type="checkbox"
-              class="inputJs"
+              id="checkbox"
+              class="inputJs "
               name="conditions"
               >
               <p>I accept all terms and conditions</p>
