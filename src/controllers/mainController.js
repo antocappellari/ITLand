@@ -1,16 +1,16 @@
-
-const fs = require('fs'),
-    path = require('path'),
-    productPath = path.join(__dirname , '../data/products.json');
-
-let products = JSON.parse(fs.readFileSync(productPath, 'utf-8'));
-let db = require("../database/models")
-
+const ProductServices = require('../services/ProductServices');
 const mainController = {
-    index(req,res){
-        res.render('index.ejs' ,{
-            products : products
-        })
+    index :async (req,res) => {
+
+let c = await ProductServices.getAllProducts();
+console.log(c[0].images);
+        try {
+            res.render('index.ejs',{
+                products: await ProductServices.getAllProducts()
+            })
+        } catch (error) {
+            console.log(error);
+        }
     },
 }
 // exportacion de controllers

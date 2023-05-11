@@ -29,13 +29,12 @@ const productValidator = [
   body("stock").notEmpty().withMessage("Please set the product´s stock"),
   
   body("image").custom((value, { req }) => {
-    let array = [".jpg", ".png", ".jpeg", ".jfif"];
+    let array = [".jpg", ".png", ".jpeg", ".jfif",".webp"];
     
     if(req.files.length === 0){
         throw new Error('Please upload at least one picture')
     }
-    const response  = req.files.forEach(file => {
-        console.log(file);
+    req.files.forEach(file => {
           let extname = path.extname(file.originalname);
           if (!array.includes(extname)) {
             throw new Error(

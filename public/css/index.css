@@ -3,63 +3,96 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: proxima-nova, "Roboto", sans-serif;
 }
-.section-title{
+
+.section-title {
   font-weight: bold;
   text-align: center;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
 
 .slide,
-.slide2{
+.slide2 {
   width: 100%;
   overflow: hidden;
 
 }
+
 .slide ul,
-.slide2 ul{
+.slide2 ul {
   width: 500%;
   display: flex;
   list-style: none;
   animation: slide 20s infinite alternate ease-in-out;
 
 }
-nav ul .caja{
+
+nav ul .caja {
   width: 100%;
   text-align: center;
   font-weight: bold;
   list-style: none;
 }
+
 .slide img,
-.slide2 img{
+.slide2 img {
   width: 100%;
   height: 100%;
 }
+
 @keyframes slide {
-  0%{ margin-left: 0%;}
-  15%{margin-left: 0%;}
-  
-  20%{margin-left: -100%;}
-  35%{margin-left: -100%;}
+  0% {
+    margin-left: 0%;
+  }
 
-  40%{margin-left: -200%;}
-  55%{margin-left: -200%;}
+  15% {
+    margin-left: 0%;
+  }
 
-  60%{margin-left: -300%;}
-  75%{margin-left: -300% ;}
+  20% {
+    margin-left: -100%;
+  }
 
-  80%{margin-left: -400%;}
-  100%{margin-left: -400%;}
+  35% {
+    margin-left: -100%;
+  }
+
+  40% {
+    margin-left: -200%;
+  }
+
+  55% {
+    margin-left: -200%;
+  }
+
+  60% {
+    margin-left: -300%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+
+  80% {
+    margin-left: -400%;
+  }
+
+  100% {
+    margin-left: -400%;
+  }
 }
-.main_paymentmethods{
+
+.main_paymentmethods {
   margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.paymentmethods{
+
+.paymentmethods {
   width: 90%;
   height: 10vh;
   display: flex;
@@ -71,76 +104,93 @@ nav ul .caja{
   background-color: #fff;
   box-shadow: 1px 1px 3px rgba(162, 162, 162, 0.384);
 }
-.paymentmethods .color{
+
+.paymentmethods .color {
   color: #315ed1;
 }
-.paymentmethods .paymethod{
-display:none;
+
+.paymentmethods .paymethod {
+  display: none;
 }
-.paymentmethods .pay__icon{
+
+.paymentmethods .pay__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  border:1px solid #315ed1;
+  border: 1px solid #315ed1;
   border-radius: 25px;
   width: 45px;
   height: 45px;
 }
+
 .CarrusselSection {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: wrap;
+  gap: 20px;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: flex-start;
   margin-top: 2em;
 }
 
-.FirstOffer:hover{
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+.best_deals:hover {
+  box-shadow: 2px 2px 7px rgb(207, 208, 209);
 }
 
-.CarrusselSection::-webkit-scrollbar{
+.CarrusselSecbgtion::-webkit-scrollbar {
   display: none;
 }
-.FirstOffer h3 {
-  font-size: 1.3rem;
-  text-align: center;
-  font-weight: 400;
-}
-.Delivery{
+
+.Delivery {
   color: #00a650;
 }
 
-.container-title{
+.best_deals {
+  /* width: 100%; */
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em 1em;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(131, 131, 131, 0.404);
+  position: relative;
+}
+
+.FirstOffer {
+  /* margin: 0 auto; */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
   justify-content: center;
+  align-items: center;
 }
+
+.FirstOffer .Photo {
+  font-weight: bold
+}
+
+.FirstOffer_data {
+  margin-top: 30px;
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  gap: 20px;
+}
+
 .producTittle {
-  text-align: center;
-  font-size: 30px;
-  margin-top: 15px;
-  font-weight: 200;
-  color:#ffffff;
+  margin: 40px 0;
+  font-size: 1.3 rem;
+  font-weight: 400;
   letter-spacing: .1rem;
-  background-color: #164ffacf;
-  border-radius: 15px;
-  padding: 1% 30%;
+  padding: 1% 3%;
+
 }
+
 .line {
   width: 80%;
   margin: 10px 10% 0 10%;
-}
-.FirstOffer {
-  flex: 1 0 auto;
-  background-color: white;
-  width: 47%;
-  outline: none;
-  gap: 20px;
-  margin: 5px 5px 5px 5px;
-  padding: 2px;
-  height: 45vh;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(131, 131, 131, 0.404);
-  text-decoration: none;
 }
 
 .imagecarrussel {
@@ -151,6 +201,7 @@ display:none;
   justify-content: center;
   align-content: center;
 }
+
 .imagecarrussel img {
   object-fit: cover;
   max-width: 80%;
@@ -160,22 +211,62 @@ display:none;
   align-content: center;
 }
 
-.Imagetext {
+.FirstOffer .Price {
+  color: #52a31d;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.discount{
+  position: absolute;
+  left: 71%;
+  top:  6px;
+  display: flex; 
+  justify-content: center;
+  width: 29%;
+  background-color: red;
+  font-weight: bold;
+  border-radius:40px 0 0 40px ;
+  color: #fff;
+  padding: 5px 7px;
+}
+
+
+.FirstOffer .Delivery {
+  margin-top: 30px;
+
+  font-size: 15px;
   text-align: center;
 }
-.FirstOffer .Imagetext .Price {
-  color: #000000;
-  font-weight: 400;
-  padding-bottom: 5px;
-  font-size: 1.4rem;
+.heart_favorite{
+  /* display: none; */
+  position: absolute;
+  left: 85%;
+  top: 11%;
+  font-size: x-large;
 }
-.FirstOffer .Imagetext .Photo{
-  color: #000000;
+/* .heart_favorite:hover{
+  display: block;
+  color: red;
+} */
+
+.add-cart{
+  margin-top: 30px;
+  border-radius: 20px;
+  background-color: #315ed1;
+  cursor: pointer;
+  border: none;
+  padding: 1em 2em;
+  transition: all 1s;
+
 }
-.FirstOffer .Imagetext .Delivery{
-  font-size: 15px;
+.add-cart a{
+  color:#fff;
 }
-.section-categories{
+.add-cart:hover{
+box-shadow: 1px 1px 3px #00a650;
+  background: #00a650;
+}
+.section-categories {
   position: relative;
   display: flex;
   justify-content: center;
@@ -186,9 +277,10 @@ display:none;
   background-color: #fff;
   padding: 10px 10px 10px 10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.384);
-  border-radius:5px ;
+  border-radius: 5px;
 }
-.section-categories .categories{
+
+.section-categories .categories {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,22 +290,24 @@ display:none;
   flex-direction: column;
   color: #000000;
 }
-.categories-icon{
+
+.categories-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color :#ebebeb;
+  background-color: #ebebeb;
   width: 60px;
   height: 60px;
   border-radius: 50%;
 }
 
-.section-categories svg{
+.section-categories svg {
   width: 24px;
   height: 24px;
 
 }
-.categories-seemore button{
+
+.categories-seemore button {
   border: none;
   margin-top: 10px;
   background-color: #315ed1;
@@ -222,18 +316,21 @@ display:none;
   width: 120px;
   height: 30px;
 }
+
 /* --------------------MOBILE------------------------------ */
-@media screen and (max-width:767px){
-  .InitialPromotion2:not(nav){
+@media screen and (max-width:767px) {
+  .InitialPromotion2:not(nav) {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .InitialPromotion2:hover .btb-xs{
+
+  .InitialPromotion2:hover .btb-xs {
     display: flex;
   }
-  .btb-xs{
+
+  .btb-xs {
     display: none;
     align-items: center;
     justify-content: center;
@@ -243,85 +340,101 @@ display:none;
     height: 12vh;
     background-color: #ced8d972;
   }
-  .btb-xs i{
+
+  .btb-xs i {
     color: rgba(0, 0, 0, 0.281);
     font-size: 2em;
   }
-  .button-left{
+
+  .button-left {
     left: 0;
     border-radius: 0 5px 0 5px;
   }
-  .button-right{
+
+  .button-right {
     right: 0;
     border-radius: 5px 0 5px 0;
   }
-  .FirstOffer{
+
+  .FirstOffer {
     width: 47%;
   }
-  .slide2{
+
+  .slide2 {
     display: none;
   }
+
   .paymentmethods .color {
     color: #315ed1;
     display: flex;
     width: 113%;
-}
-.paymentmethods .article-text{
-  font-size: 47%;
-}
-  .paymentmethods{
-    justify-content:space-evenly;
+  }
+
+  .paymentmethods .article-text {
+    font-size: 47%;
+  }
+
+  .paymentmethods {
+    justify-content: space-evenly;
     width: 95%;
   }
 
-  .paymentmethods .paymethod{
-    display:block;
-    width:15%;
-    height:6vh;
-    display:flex;
+  .paymentmethods .paymethod {
+    display: block;
+    width: 15%;
+    height: 6vh;
+    display: flex;
     flex-direction: column;
-    justify-content:inherit;
+    justify-content: inherit;
   }
-  .paymethod__img{
-    width:100%;
-    display:flex;
-    justify-content:center;
+
+  .paymethod__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .paymethod__img img{
-    width:94%;
+
+  .paymethod__img img {
+    width: 94%;
   }
-  .paymethod__installment{
-    width:100%;
-    display:flex;
-    justify-content:center;
+
+  .paymethod__installment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .paymethod__installment span{
-    font-size:8px;
-    text-align:center;
-    font-weight:bold;
-    color:rgb(44, 44, 44);
+
+  .paymethod__installment span {
+    font-size: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(44, 44, 44);
   }
-  
-  .paymethod .installment{
-    width:100%;
+
+  .paymethod .installment {
+    width: 100%;
   }
 }
+
 /* ----------------------TABLETS----------------------------- */
 @media screen and (min-width:767px) and (max-width:1023px) {
-  .FirstOffer{
+  .FirstOffer {
     width: 30%;
     height: 32vh;
   }
-  .InitialPromotion2:not(nav){
+
+  .InitialPromotion2:not(nav) {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .InitialPromotion2:hover .btb-xs{
+
+  .InitialPromotion2:hover .btb-xs {
     display: flex;
   }
-  .btb-xs{
+
+  .btb-xs {
     display: none;
     align-items: center;
     justify-content: center;
@@ -331,140 +444,169 @@ display:none;
     height: 15vh;
     background-color: #ced8d972;
   }
-  .btb-xs i{
+
+  .btb-xs i {
     color: rgba(0, 0, 0, 0.281);
     font-size: 2em;
   }
-  .button-left{
+
+  .button-left {
     left: 0;
     border-radius: 0 5px 0 5px;
   }
-  .button-right{
+
+  .button-right {
     right: 0;
     border-radius: 5px 0 5px 0;
   }
-  .slide2{
+
+  .slide2 {
     display: none;
   }
-    .section-categories{
+
+  .section-categories {
     gap: 0;
   }
-  .section-categories .categories{
+
+  .section-categories .categories {
     width: 50%;
-    
+
   }
-  .section-categories .categories-seemore{
+
+  .section-categories .categories-seemore {
     width: 100%;
   }
-  .FirstOffer{
+
+  .FirstOffer {
     width: 30%;
   }
-  .paymentmethods{
-    justify-content:space-evenly;
+
+  .paymentmethods {
+    justify-content: space-evenly;
   }
-  .paymentmethods .paymethod{
-    display:block;
-    width:15%;
-    height:10vh;
-    display:flex;
+
+  .paymentmethods .paymethod {
+    display: block;
+    width: 15%;
+    height: 10vh;
+    display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
   }
-  .paymethod__img{
-    width:100%;
-    display:flex;
-    justify-content:center;
+
+  .paymethod__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .paymethod__img img{
-    width:50%;
+
+  .paymethod__img img {
+    width: 50%;
   }
-  .paymethod__installment{
-    width:100%;
-    display:flex;
-    justify-content:center;
+
+  .paymethod__installment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .paymethod__installment span{
-    font-size:10px;
-    text-align:center;
-    font-weight:bold;
-    color:rgb(44, 44, 44);
+
+  .paymethod__installment span {
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(44, 44, 44);
   }
-  
-  .paymethod .installment{
-    width:100%;
+
+  .paymethod .installment {
+    width: 100%;
   }
-  
+
 
 }
+
 /* -------------------------DESKTOP------------------------------ */
 @media screen and (min-width:1024px) {
-  .slide{
+  .slide {
     display: none;
   }
-  .FirstOffer{
+
+  .FirstOffer {
     width: 30%;
     height: 38vh;
   }
-  .slide2{
+
+  .slide2 {
     display: block;
   }
-  .FirstOffer{
+
+  .FirstOffer {
     width: 20%;
   }
-  .section-categories .categories{
+
+  .section-categories .categories {
     width: 20%;
-    
+
   }
-  .section-categories .categories-seemore{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    
+
+  .section-categories .categories-seemore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
-  .paymentmethods{
-    justify-content:space-evenly;
+
+  .paymentmethods {
+    justify-content: space-evenly;
   }
-  .paymentmethods .paymethod{
-    display:block;
-    width:15%;
-    height:10vh;
-    display:flex;
+
+  .paymentmethods .paymethod {
+    display: block;
+    width: 15%;
+    height: 10vh;
+    display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
   }
-  .paymethod__img{
-    width:100%;
-    display:flex;
-    justify-content:center;
+
+  .paymethod__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .paymethod__img img{
-    width:50%;
+
+  .paymethod__img img {
+    width: 50%;
   }
-  .paymethod__installment{
-    width:100%;
-    display:flex;
-    justify-content:center;
+
+  .paymethod__installment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .paymethod__installment span{
-    font-size:10px;
-    text-align:center;
-    font-weight:bold;
-    color:rgb(44, 44, 44);
+
+  .paymethod__installment span {
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(44, 44, 44);
   }
-  
-  .paymethod .installment{
-    width:100%;
+
+  .paymethod .installment {
+    width: 100%;
   }
-  .InitialPromotion2:not(nav){
+
+  .InitialPromotion2:not(nav) {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .InitialPromotion2:hover .btb-xs{
+
+  .InitialPromotion2:hover .btb-xs {
     display: flex;
   }
-  .btb-xs{
+
+  .btb-xs {
     display: none;
     align-items: center;
     justify-content: center;
@@ -474,17 +616,19 @@ display:none;
     height: 14vh;
     background-color: #ced8d972;
   }
-  .btb-xs i{
+
+  .btb-xs i {
     color: rgba(0, 0, 0, 0.281);
     font-size: 2em;
   }
-  .button-left{
+
+  .button-left {
     left: 0;
     border-radius: 0 5px 0 5px;
   }
-  .button-right{
+
+  .button-right {
     right: 0;
     border-radius: 5px 0 5px 0;
   }
 }
-

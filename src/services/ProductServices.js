@@ -3,9 +3,9 @@ const ProductServices = {
   getAllProducts: async () => {
     try {
       const products = await Products.findAll({
-        include:{
+        include:[{
           association:'images'
-        }
+        }]
       });
       return products;
     } catch (error) {

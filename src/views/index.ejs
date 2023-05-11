@@ -32,62 +32,84 @@
 
         </div>
         <section class="main_paymentmethods">
-          <a class="paymentmethods">
-            <div class="pay__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                class="bi bi-credit-card color" viewBox="0 0 16 16">
-                <path
-                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
-                <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z" />
-              </svg>
-            </div>
-            <div class="article-text">
-              <p>Pay in installments</p>
-              <span class="color">See banks promotions</span>
-            </div>
-            <div class="paymethod">
-              <div class="paymethod__img"><img src="/images/mercadopago.png" alt="mercadopago"></div>
-              <div class="paymethod__installment"><span class="installment">6 cuotas sin interes</span></div>
-            </div>
-            <div class="paymethod">
-              <div class="paymethod__img"><img src="/images/santander.png" alt="santander"></div>
-              <div class="paymethod__installment"><span class="installment">3 cuotas sin interes</span></div>
-            </div>
-            <div class="paymethod">
-              <div class="paymethod__img">
-                <img src="/images/bbva.png" alt="bbva">
-              </div>
-              <div class="paymethod__installment">
-                <span class="installment">12 cuotas sin interes</span>
-              </div>
-            </div>
-            <div class="paymethod">
-              <div class="paymethod__img"><img src="/images/hsbc.png" alt="hsbc"></div>
-              <div class="paymethod__installment"><span class="installment">6 cuotas sin interes</span></div>
-            </div>
-
-          </a>
+          aca iran los metodos de pago
         </section>
-        <!-- <hr class="line"></hr> -->
-        <div class="container-title">
-        <h2 class="producTittle">Best Deals</h2>
-        </div>
+        <h2 class="producTittle">Best deals</h2>
+        <section class="CarrusselSection">
+            <% products.forEach(product => { %>
+              <article class="best_deals">
+                <div class="heart_favorite">
+
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <a href="/products/<%= product.id %>/detail" class="FirstOffer">
+                  <p class="discount"><%= product.discount %>% OFF</p>
+                  <div class="Imagetext">
+                    <img src="images/products/<%= product.images[1].name %>" alt="" width="150">
+                  </div>
+                  <div class="FirstOffer_data">
+                    <p class="Photo"><%= product.name %></p>
+                    <p class="Price">$ <%= product.price %></p>
+                  </div>
+                  <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments</p>
+                </a>
+                <button class="add-cart">
+                  <a href="/products/cart">Add cart</a>
+                </button>
+              </article>
+            <% }) %>
+            <% products.forEach(product => { %>
+              <article class="best_deals">
+                <div class="heart_favorite">
+
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <a href="/products/<%= product.id %>/detail" class="FirstOffer">
+                  <p class="discount"><%= product.discount %>% OFF</p>
+                  <div class="Imagetext">
+                    <img src="images/products/<%= product.images[1].name %>" alt="" width="150">
+                  </div>
+                  <div class="FirstOffer_data">
+                    <p class="Photo"><%= product.name %></p>
+                    <p class="Price">$ <%= product.price %></p>
+                  </div>
+                  <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments</p>
+                </a>
+                <button class="add-cart">
+                  <a href="/products/cart">Add cart</a>
+                </button>
+              </article>
+            <% }) %>
+          </section>
+          
+        <h2 class="producTittle">ofertas</h2>
+        <h1>este sera un slide</h1>
         <div class="container-carrusel">
           <section class="CarrusselSection">
             <% products.forEach(product => { %>
+              <article class="best_deals">
+                <div class="heart_favorite">
+
+                  <i class="fa-regular fa-heart"></i>
+                </div>
                 <a href="/products/<%= product.id %>/detail" class="FirstOffer">
-                  
+                  <p class="discount"><%= product.discount %>% OFF</p>
                   <div class="Imagetext">
-                    <h3 class="Photo"><%= product.name %></h3>
-                    <div class="imagecarrussel">
-                      <img src="/images/products/<%= product.images[0] %>" alt="laptop">
-                    </div>
-                    <p class="Price">$ <%= product.price %></p>
-                    <p class="Delivery">10 x $<%= Math.floor(product.price/10) %> instalments</p>
+                    <img src="images/products/<%= product.images[1].name %>" alt="" width="150">
                   </div>
+                  <div class="FirstOffer_data">
+                    <p class="Photo"><%= product.name %></p>
+                    <p class="Price">$ <%= product.price %></p>
+                  </div>
+                  <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments</p>
                 </a>
+                <button class="add-cart">
+                  <a href="/products/cart">Add cart</a>
+                </button>
+              </article>
             <% }) %>
           </section>
+          
         </div>
         <section class="section-categories">
           <div class="categories">

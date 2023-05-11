@@ -5,7 +5,6 @@ const validator = require('../middlewares/validatorMiddleware');
 const upload = require('../middlewares/userMulter');
 const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
-console.log(validator);
 
 
 //--------------- Rutas-----------------//
