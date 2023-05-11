@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head') %>
@@ -36,81 +35,109 @@
         </section>
         <h2 class="producTittle">Best deals</h2>
         <section class="CarrusselSection">
-            <% products.forEach(product => { %>
-              <article class="best_deals">
-                <div class="heart_favorite">
+          <% products.forEach(product=> { %>
+            <article class="best_deals">
+              <div class="heart_favorite">
 
-                  <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <a href="/products/<%= product.id %>/detail" class="FirstOffer">
+                <p class="discount">
+                  <%= product.discount %>% OFF
+                </p>
+                <div class="Imagetext">
+                  <img src="images/products/<%= product.images[1].name %>" alt="" class="product-image">
                 </div>
-                <a href="/products/<%= product.id %>/detail" class="FirstOffer">
-                  <p class="discount"><%= product.discount %>% OFF</p>
-                  <div class="Imagetext">
-                    <img src="images/products/<%= product.images[1].name %>" alt="" width="150">
-                  </div>
-                  <div class="FirstOffer_data">
-                    <p class="Photo"><%= product.name %></p>
-                    <p class="Price">$ <%= product.price %></p>
-                  </div>
-                  <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments</p>
-                </a>
+                <div class="FirstOffer_data">
+                  <p class="Photo">
+                    <%= product.name %>
+                  </p>
+                  <p class="Price">$ <%= product.price %>
+                  </p>
+                </div>
+                <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments</p>
+              </a>
+              <div class="best_deals_btn">
                 <button class="add-cart">
                   <a href="/products/cart">Add cart</a>
                 </button>
-              </article>
+              </div>
+            </article>
             <% }) %>
-            <% products.forEach(product => { %>
-              <article class="best_deals">
-                <div class="heart_favorite">
+              <% products.forEach(product=> { %>
+                <article class="best_deals">
+                  <div class="heart_favorite">
 
-                  <i class="fa-regular fa-heart"></i>
-                </div>
-                <a href="/products/<%= product.id %>/detail" class="FirstOffer">
-                  <p class="discount"><%= product.discount %>% OFF</p>
-                  <div class="Imagetext">
-                    <img src="images/products/<%= product.images[1].name %>" alt="" width="150">
+                    <i class="fa-regular fa-heart"></i>
                   </div>
-                  <div class="FirstOffer_data">
-                    <p class="Photo"><%= product.name %></p>
-                    <p class="Price">$ <%= product.price %></p>
+                  <a href="/products/<%= product.id %>/detail" class="FirstOffer">
+                    <p class="discount">
+                      <%= product.discount %>% OFF
+                    </p>
+                    <div class="Imagetext">
+                      <img src="images/products/<%= product.images[1].name %>" alt="" class="product-image">
+                    </div>
+                    <div class="FirstOffer_data">
+                      <p class="Photo">
+                        <%= product.name %>
+                      </p>
+                      <p class="Price">$ <%= product.price %>
+                      </p>
+                    </div>
+                    <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments
+                    </p>
+                  </a>
+                  <div class="best_deals_btn">
+                    <button class="add-cart">
+                      <a href="/products/cart">Add cart</a>
+                    </button>
                   </div>
-                  <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments</p>
-                </a>
-                <button class="add-cart">
-                  <a href="/products/cart">Add cart</a>
-                </button>
-              </article>
-            <% }) %>
-          </section>
-          
+                </article>
+                <% }) %>
+        </section>
+
         <h2 class="producTittle">ofertas</h2>
         <h1>este sera un slide</h1>
-        <div class="container-carrusel">
-          <section class="CarrusselSection">
-            <% products.forEach(product => { %>
-              <article class="best_deals">
-                <div class="heart_favorite">
-
-                  <i class="fa-regular fa-heart"></i>
-                </div>
-                <a href="/products/<%= product.id %>/detail" class="FirstOffer">
-                  <p class="discount"><%= product.discount %>% OFF</p>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper ">
+            <!-- Slides -->
+            <% products.forEach(product=> { %>
+              <article class="carrussel-art swiper-slide">
+                <a href="/products/<%= product.id %>/detail" class="carrussel_product">
+                  <div class="heart_favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                  <p class="discount">
+                    <%= product.discount %>% OFF
+                  </p>
                   <div class="Imagetext">
-                    <img src="images/products/<%= product.images[1].name %>" alt="" width="150">
+                    <img src="images/products/<%= product.images[1].name %>" alt="" class="product-image">
                   </div>
                   <div class="FirstOffer_data">
-                    <p class="Photo"><%= product.name %></p>
-                    <p class="Price">$ <%= product.price %></p>
+                    <p class="Photo">
+                      <%= product.name %>
+                    </p>
+                    <p class="Price">$ <%= product.price %>
+                    </p>
                   </div>
-                  <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments</p>
+                  <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments
+                  </p>
                 </a>
-                <button class="add-cart">
-                  <a href="/products/cart">Add cart</a>
-                </button>
               </article>
-            <% }) %>
-          </section>
-          
+              <% }) %>
+                ...
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
         </div>
+
+        </div>
+
         <section class="section-categories">
           <div class="categories">
             <div class="categories-icon">
@@ -162,6 +189,45 @@
       <%- include('./partials/bottomNav') %>
         <!-- footer -->
         <%- include('./partials/footer') %>
+          <script src="/JS/swiper.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+          <script type="module">
+
+
+            const swiper = new Swiper('.swiper', {
+              // Optional parameters
+              direction: 'horizontal',
+              loop: false,
+
+              // If we need pagination
+              pagination: {
+                el: '.swiper-pagination',
+              },
+              breakpoints: {
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 20
+                },
+                480: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                670: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                }
+              },
+
+              // Navigation arrows
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+
+              // And if we need scrollbar
+            });
+          </script>
   </body>
 
-  </html>
+</html>
