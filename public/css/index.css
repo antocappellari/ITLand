@@ -8,12 +8,16 @@ body {
   font-family: proxima-nova, "Roboto", sans-serif;
 }
 
+.swiper3 {
+  display: none;
+}
+
 .section-title {
   font-weight: bold;
   text-align: center;
   margin-bottom: 15px;
 }
-
+/* 
 .slide,
 .slide2 {
   width: 100%;
@@ -28,7 +32,7 @@ body {
   list-style: none;
   animation: slide 20s infinite alternate ease-in-out;
 
-}
+} */
 
 nav ul .caja {
   width: 100%;
@@ -37,10 +41,9 @@ nav ul .caja {
   list-style: none;
 }
 
-.slide img,
-.slide2 img {
+.swiper-slide img,
+.swiper-slide img {
   width: 100%;
-  height: 100%;
 }
 
 @keyframes slide {
@@ -141,9 +144,6 @@ nav ul .caja {
   box-shadow: 2px 2px 7px rgb(207, 208, 209);
 }
 
-.CarrusselSecbgtion::-webkit-scrollbar {
-  display: none;
-}
 
 .Delivery {
   color: #00a650;
@@ -153,21 +153,21 @@ nav ul .caja {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3em 1em 0 1em;
+  /* padding: 3em 1em 0 1em; */
   border-radius: 3px;
   box-shadow: 1px 1px 4px rgba(131, 131, 131, 0.404);
   position: relative;
 }
+
 .carrussel_product{
-  margin-left:48px;
   display: flex;
-  width: 80%;
+  width: 100%;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
   align-items: center;
   padding: 3em;
-  box-shadow: 1px 1px 4px rgba(131, 131, 131, 0.404);
+  
 
 }
 .FirstOffer {
@@ -203,13 +203,18 @@ nav ul .caja {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 110%;
+  width: 100%;
   background-color: #f1f0f080;
   padding: 1.3em;
 
 }
+
+
+
 .carrussel-art{
+  width: 80%;
   position: relative;
+  box-shadow: 1px 1px 4px rgba(131, 131, 131, 0.404);
 }
 .carrussel_box{
   border-radius: 3px;
@@ -218,7 +223,6 @@ nav ul .caja {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background: #000; */
  
 
 }
@@ -246,13 +250,14 @@ nav ul .caja {
 }
 
 .swiper-wrapper {
+  /* padding: 20px; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
 .swiper-slide {
-  width: 25%; /* Asegura que se muestren 4 productos por fila */
+  width: 25%;
   flex-shrink: 0;
 }
 
@@ -310,7 +315,7 @@ box-shadow: 1px 1px 3px #00a650;
 
 
 .FirstOffer .Delivery {
-  margin-top: 30px;
+  margin: 30px 0;
 
   font-size: 15px;
   text-align: center;
@@ -376,7 +381,8 @@ box-shadow: 1px 1px 3px #00a650;
 
 /* --------------------MOBILE------------------------------ */
 @media screen and (max-width:767px) {
-  .InitialPromotion2:not(nav) {
+  
+  /* .InitialPromotion2:not(nav) {
     position: relative;
     display: flex;
     align-items: center;
@@ -412,14 +418,9 @@ box-shadow: 1px 1px 3px #00a650;
     right: 0;
     border-radius: 5px 0 5px 0;
   }
+ */
 
-  .FirstOffer {
-    /* width: 47%; */
-  }
 
-  .slide2 {
-    display: none;
-  }
 
   .paymentmethods .color {
     color: #315ed1;
@@ -475,12 +476,9 @@ box-shadow: 1px 1px 3px #00a650;
 
 /* ----------------------TABLETS----------------------------- */
 @media screen and (min-width:767px) and (max-width:1023px) {
-  .FirstOffer {
-    /* width: 30%; */
-    /* height: 32vh; */
-  }
 
-  .InitialPromotion2:not(nav) {
+
+  /* .InitialPromotion2:not(nav) {
     position: relative;
     display: flex;
     align-items: center;
@@ -515,11 +513,11 @@ box-shadow: 1px 1px 3px #00a650;
   .button-right {
     right: 0;
     border-radius: 5px 0 5px 0;
-  }
-
-  .slide2 {
+  } */
+/* 
+  .swiper3 {
     display: none;
-  }
+  } */
 
   .section-categories {
     gap: 0;
@@ -583,11 +581,11 @@ box-shadow: 1px 1px 3px #00a650;
 
 /* -------------------------DESKTOP------------------------------ */
 @media screen and (min-width:1024px) {
-  .slide {
+  .swiper2 {
     display: none;
   }
 
-  .slide2 {
+  .swiper3 {
     display: block;
   }
 
@@ -651,7 +649,7 @@ box-shadow: 1px 1px 3px #00a650;
     width: 100%;
   }
 
-  .InitialPromotion2:not(nav) {
+  /* .InitialPromotion2:not(nav) {
     position: relative;
     display: flex;
     align-items: center;
@@ -686,5 +684,5 @@ box-shadow: 1px 1px 3px #00a650;
   .button-right {
     right: 0;
     border-radius: 5px 0 5px 0;
-  }
+  } */
 }

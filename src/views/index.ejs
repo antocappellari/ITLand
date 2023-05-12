@@ -6,32 +6,50 @@
     <!-- header -->
     <%- include('./partials/header') %>
       <main>
-        <div class="InitialPromotion2">
-          <div class="btb-xs button-left"><i class="fa-solid fa-angle-left"></i></div>
-          <div class="btb-xs button-right"><i class="fa-solid fa-angle-right"></i></div>
-          <nav class="slide">
+        
 
-            <ul>
-              <li class="caja"><img src="/images/carrussel/1.webp" alt=""></li>
-              <li class="caja"><img src="/images/carrussel/2.webp" alt=""></li>
-              <li class="caja"><img src="/images/carrussel/3.webp" alt=""></li>
-              <li class="caja"><img src="/images/carrussel/4.webp" alt=""></li>
-              <li class="caja"><img src="/images/carrussel/5.webp" alt=""></li>
-            </ul>
-          </nav>
-          <nav class="slide2">
-            <ul>
-              <li class="caja"><img src="/images/carrussel/img1.webp" alt=""></li>
-              <li class="caja"><img src="/images/carrussel/img2.webp" alt=""></li>
-              <li class="caja"><img src="/images/carrussel/img3.webp" alt=""></li>
-              <li class="caja"><img src="/images/carrussel/img4.webp" alt=""></li>
-              <li class="caja"><img src="/images/carrussel/img5.webp" alt=""></li>
-            </ul>
-          </nav>
+          <div class="swiper2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="/images/carrussel/1.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/carrussel/2.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/carrussel/3.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/carrussel/4.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/carrussel/5.webp" alt="">
+              </div>
+            </div>
+       
+          </div>
 
-        </div>
+
+          <div class="swiper3">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="/images/carrussel/img1.webp" alt=""></div>
+              <div class="swiper-slide"><img src="/images/carrussel/img2.webp" alt=""></div>
+              <div class="swiper-slide"><img src="/images/carrussel/img3.webp" alt=""></div>
+              <div class="swiper-slide"><img src="/images/carrussel/img4.webp" alt=""></div>
+              <div class="swiper-slide"><img src="/images/carrussel/img5.webp" alt=""></div>
+            </div>
+          </div>
+
+
         <section class="main_paymentmethods">
-          aca iran los metodos de pago
+          <h2>
+          
+            aca iran los metodos de pago
+          </h2>
         </section>
         <h2 class="producTittle">Best deals</h2>
         <section class="CarrusselSection">
@@ -55,49 +73,19 @@
                   <p class="Price">$ <%= product.price %>
                   </p>
                 </div>
-                <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments</p>
+                <p class="Delivery"><span class="Price">$<%= Math.floor(product.price/10) %></span> x 10 installments</p>
               </a>
               <div class="best_deals_btn">
                 <button class="add-cart">
-                  <a href="/products/cart">Add cart</a>
+                  <a href="/products/cart">Add  to cart</a>
                 </button>
               </div>
             </article>
             <% }) %>
-              <% products.forEach(product=> { %>
-                <article class="best_deals">
-                  <div class="heart_favorite">
-
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                  <a href="/products/<%= product.id %>/detail" class="FirstOffer">
-                    <p class="discount">
-                      <%= product.discount %>% OFF
-                    </p>
-                    <div class="Imagetext">
-                      <img src="images/products/<%= product.images[1].name %>" alt="" class="product-image">
-                    </div>
-                    <div class="FirstOffer_data">
-                      <p class="Photo">
-                        <%= product.name %>
-                      </p>
-                      <p class="Price">$ <%= product.price %>
-                      </p>
-                    </div>
-                    <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments
-                    </p>
-                  </a>
-                  <div class="best_deals_btn">
-                    <button class="add-cart">
-                      <a href="/products/cart">Add cart</a>
-                    </button>
-                  </div>
-                </article>
-                <% }) %>
+            
         </section>
 
-        <h2 class="producTittle">ofertas</h2>
-        <h1>este sera un slide</h1>
+        <h2 class="producTittle">offers</h2>
         <!-- Slider main container -->
         <div class="swiper">
           <!-- Additional required wrapper -->
@@ -106,12 +94,12 @@
             <% products.forEach(product=> { %>
               <article class="carrussel-art swiper-slide">
                 <a href="/products/<%= product.id %>/detail" class="carrussel_product">
-                  <div class="heart_favorite">
+                  <!-- <div class="heart_favorite">
                     <i class="fa-regular fa-heart"></i>
-                  </div>
-                  <p class="discount">
+                  </div> -->
+                  <!-- <p class="discount">
                     <%= product.discount %>% OFF
-                  </p>
+                  </p> -->
                   <div class="Imagetext">
                     <img src="images/products/<%= product.images[1].name %>" alt="" class="product-image">
                   </div>
@@ -122,12 +110,16 @@
                     <p class="Price">$ <%= product.price %>
                     </p>
                   </div>
-                  <p class="Delivery">10 x <span class="Price">$<%= Math.floor(product.price/10) %></span> instalments
+                  <p class="Delivery"> <span class="Price">$<%= Math.floor(product.price/10) %></span> x 10 installments
                   </p>
                 </a>
+                <div class="best_deals_btn">
+                  <button class="add-cart">
+                    <a href="/products/cart">Add to cart</a>
+                  </button>
+                </div>
               </article>
               <% }) %>
-                ...
           </div>
 
           <!-- If we need navigation buttons -->
@@ -136,9 +128,8 @@
 
         </div>
 
-        </div>
 
-        <section class="section-categories">
+        <!-- <section class="section-categories">
           <div class="categories">
             <div class="categories-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone"
@@ -183,51 +174,13 @@
           <div class="categories-seemore">
             <button type="button">See more</button>
           </div>
-        </section>
+        </section> -->
       </main>
       <!-- bottom nav -->
       <%- include('./partials/bottomNav') %>
         <!-- footer -->
         <%- include('./partials/footer') %>
-          <script src="/JS/swiper.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-          <script type="module">
-
-
-            const swiper = new Swiper('.swiper', {
-              // Optional parameters
-              direction: 'horizontal',
-              loop: false,
-
-              // If we need pagination
-              pagination: {
-                el: '.swiper-pagination',
-              },
-              breakpoints: {
-                320: {
-                  slidesPerView: 1,
-                  spaceBetween: 20
-                },
-                480: {
-                  slidesPerView: 2,
-                  spaceBetween: 20
-                },
-                670: {
-                  slidesPerView: 3,
-                  spaceBetween: 20
-                }
-              },
-
-              // Navigation arrows
-              navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-
-              // And if we need scrollbar
-            });
-          </script>
+          <script src="/JS/swiper.js" type="module"></script>
   </body>
 
 </html>
