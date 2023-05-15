@@ -28,7 +28,7 @@
   position: relative;
   padding: 5px;
   color: #ffffff;
-  background-color: #164ffacf;
+  background-color: #0D1321;
 }
 
 .container-header .title_and_logo {
@@ -296,7 +296,7 @@ hr{
 
   .navegation {
     display: flex;
-    background-color: #164ffacf;
+    background-color: #1d2d44;
     font-family: "Roboto", sans-serif;
     justify-content: flex-end;
     align-items: center;
