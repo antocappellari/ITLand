@@ -148,6 +148,30 @@ body{
     color: #Fff;
     cursor: pointer;
 }
+.swiper-detail{
+    overflow: hidden;
+    margin-bottom: 40px;
+    position: relative;
+}
+.slide-image{
+    display: flex !important;
+    justify-content: center;
+    padding: 40px;
+    align-items: center;
+}
+.slide-image img{
+    width: 100%;
+}
+/* .swiper-button-prev:hover,
+.swiper-button-next:hover{
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddf0ffab;
+    width: 30px !important;
+    border-radius: 9999px;
+} */
 .article-button .btn2{
     background-color: #fff;
     border-radius:5px;

@@ -7,33 +7,22 @@
 body {
   font-family: proxima-nova, "Roboto", sans-serif;
 }
+a {
+  text-decoration: none !important;
+}
 
 .swiper3 {
   display: none;
+  overflow: hidden;
 }
-
+.swiper2{
+  overflow: hidden;
+}
 .section-title {
   font-weight: bold;
   text-align: center;
   margin-bottom: 15px;
 }
-/* 
-.slide,
-.slide2 {
-  width: 100%;
-  overflow: hidden;
-
-}
-
-.slide ul,
-.slide2 ul {
-  width: 500%;
-  display: flex;
-  list-style: none;
-  animation: slide 20s infinite alternate ease-in-out;
-
-} */
-
 nav ul .caja {
   width: 100%;
   text-align: center;
@@ -44,48 +33,6 @@ nav ul .caja {
 .swiper-slide img,
 .swiper-slide img {
   width: 100%;
-}
-
-@keyframes slide {
-  0% {
-    margin-left: 0%;
-  }
-
-  15% {
-    margin-left: 0%;
-  }
-
-  20% {
-    margin-left: -100%;
-  }
-
-  35% {
-    margin-left: -100%;
-  }
-
-  40% {
-    margin-left: -200%;
-  }
-
-  55% {
-    margin-left: -200%;
-  }
-
-  60% {
-    margin-left: -300%;
-  }
-
-  75% {
-    margin-left: -300%;
-  }
-
-  80% {
-    margin-left: -400%;
-  }
-
-  100% {
-    margin-left: -400%;
-  }
 }
 
 .main_paymentmethods {
@@ -234,6 +181,7 @@ nav ul .caja {
   border: none;
   padding: 1em 2em;
   transition: all .6s;
+  color: #fff;
 
 }
 .add-cart a{
@@ -241,7 +189,9 @@ nav ul .caja {
 
 }
 
-
+.swiper{
+  padding: 40px !important;
+}
 
 
 .swiper-container {
@@ -268,13 +218,14 @@ nav ul .caja {
 box-shadow: 1px 1px 3px #00a650;
   background: #00a650;
   text-shadow: 1px 1px 4px white;
+  color: #fff;
 
 }
-
 .line {
   width: 80%;
   margin: 10px 10% 0 10%;
 }
+
 
 .imagecarrussel {
   width: 80%;
@@ -381,47 +332,6 @@ box-shadow: 1px 1px 3px #00a650;
 
 /* --------------------MOBILE------------------------------ */
 @media screen and (max-width:767px) {
-  
-  /* .InitialPromotion2:not(nav) {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .InitialPromotion2:hover .btb-xs {
-    display: flex;
-  }
-
-  .btb-xs {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 2;
-    width: 50px;
-    height: 12vh;
-    background-color: #ced8d972;
-  }
-
-  .btb-xs i {
-    color: rgba(0, 0, 0, 0.281);
-    font-size: 2em;
-  }
-
-  .button-left {
-    left: 0;
-    border-radius: 0 5px 0 5px;
-  }
-
-  .button-right {
-    right: 0;
-    border-radius: 5px 0 5px 0;
-  }
- */
-
-
-
   .paymentmethods .color {
     color: #315ed1;
     display: flex;
@@ -476,49 +386,6 @@ box-shadow: 1px 1px 3px #00a650;
 
 /* ----------------------TABLETS----------------------------- */
 @media screen and (min-width:767px) and (max-width:1023px) {
-
-
-  /* .InitialPromotion2:not(nav) {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .InitialPromotion2:hover .btb-xs {
-    display: flex;
-  }
-
-  .btb-xs {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 2;
-    width: 50px;
-    height: 15vh;
-    background-color: #ced8d972;
-  }
-
-  .btb-xs i {
-    color: rgba(0, 0, 0, 0.281);
-    font-size: 2em;
-  }
-
-  .button-left {
-    left: 0;
-    border-radius: 0 5px 0 5px;
-  }
-
-  .button-right {
-    right: 0;
-    border-radius: 5px 0 5px 0;
-  } */
-/* 
-  .swiper3 {
-    display: none;
-  } */
-
   .section-categories {
     gap: 0;
   }

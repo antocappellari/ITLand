@@ -12,6 +12,9 @@ const productsController = {
   cart(req, res) {
     res.render("products/cart.ejs");
   },
+  about(req, res) {
+    res.render("aboutUS.ejs");
+  },
   detail: async (req, res) => {
     try {
       let id = req.params.id;

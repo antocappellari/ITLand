@@ -47,11 +47,10 @@ module.exports = (sequelize, dataTypes)=>{
 
     const Users = sequelize.define(alias, cols, config)
     Users.associate = (models)=>{
-        Users.belongsTo(models.Users_rol,{
-            as: 'users_rol',
-            foreignKey: 'rol_id'
-
-        })
+        Users.belongsTo(models.Users_rol, {
+            as: "users_rol",
+            foreignKey: "rol_id",
+          });
     }
     return Users
 }

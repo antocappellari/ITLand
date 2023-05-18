@@ -6,8 +6,10 @@ const userServices = {
             const userFound = await Users.findOne({
                 where:{
                     email: email
-                }
-            });
+                },
+                include:[{association:"users_rol"}]
+            },
+           );
             return userFound;
         } catch (error) {
             return {

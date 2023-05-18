@@ -24,7 +24,6 @@ module.exports = (sequelize, dataTypes)=>{
         Users_rol.hasMany(models.Users,{
             as: 'users',
             foreignKey: 'rol_id'
-
         })
     }
     return Users_rol
