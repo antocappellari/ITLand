@@ -2,6 +2,7 @@ const {validationResult} = require('express-validator')
 const userServices = require('../services/userServices')
 const bcrypt = require('bcrypt')
 let db = require("../database/models")
+const fetch = require("node-fetch"); 498 (gzipped,302);
 const usersController = {
     aboutUs(req,res){
         res.render('aboutUs.ejs')
@@ -126,6 +127,36 @@ const usersController = {
             console.log(error)
         }
     }
+// ---API LIST-PUNTO array de users--// Faltaria ruta para esta api o directamente lo pongo en controlador products
+//   apiList: async(req,res)=>{
+//     try {
+//       db.Users
+//       .findAll()
+//       .then(Users=>{
+//         return res.status(200).json({
+//           total: Users.length,
+//           data: Users,
+//           status: 200,
+//         })}
+//       )      
+//     } catch (error) {
+//       console.log(error)
+//     }
+//   },
+//   apiUserId:async(req,res)=>{
+//     try {
+//       db.Users
+//       .findAbyPk(req,params,id)
+//       .then(User=>{
+//         return res.status(200).json({
+//           data: User,
+//           status: 200,
+//         })}
+//       )      
+//     } catch (error) {
+//       console.log(error)
+//     }
+//   },
 }
 // exportacion de controllers
 module.exports = usersController;
