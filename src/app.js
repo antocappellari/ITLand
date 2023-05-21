@@ -7,6 +7,7 @@ const usersRoutes = require('./router/usersRoutes.js');
 const productsRoutes = require('./router/productsRoutes.js');
 const mainRoutes = require('./router/mainRoutes.js');
 const imageRouter = require('./router/imageRouter.js');
+const apiProductRouter = require('./router/api/apiProductRouter.js')
 const methodOverride = require("method-override");
 const session = require('express-session');
 const userToLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
@@ -32,6 +33,9 @@ app.use('/',mainRoutes);
 app.use('/images',imageRouter);
 app.use('/users',usersRoutes);
 app.use('/products',productsRoutes);
+
+
+app.use('/api/products/',apiProductRouter);
 
 
 app.listen(PORT,()=>{console.log(`Servidor corriendo en el puerto ${PORT}`)});

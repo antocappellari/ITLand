@@ -1,4 +1,7 @@
+const { Sequelize } = require("../database/models");
+
 const Products = require("../database/models").Products;
+const Op = Sequelize.Op
 const ProductServices = {
   getAllProducts: async () => {
     try {
@@ -24,7 +27,6 @@ const ProductServices = {
           { association: "colors" },
         ],
       });
-      console.log(product);
       return product;
     } catch (error) {
       console.log(error);
@@ -62,6 +64,34 @@ const ProductServices = {
     } catch (error) {
       console.log(error);
     }
+  }
+  ,
+  productlist: async(page,countProducts)=>{
+    try {
+      console.log(countProducts);
+     const products =  await Products.findAll({limit:parseInt(countProducts),offset:parseInt(page)})
+     return products
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  productSerch:async(title)=>{
+    try {
+      const products = await Products.findAll(
+        {
+          where:{
+            name:{
+              [Op.like]: '%' + title + '%'
+            }
+          }
+        }
+
+      );
+      return  products 
+    } catch (error) {
+      console.log(error);
+    }
+
   }
 };
 module.exports = ProductServices;

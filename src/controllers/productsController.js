@@ -27,7 +27,6 @@ const productsController = {
   products: async (req, res) => {
     try {
       const products = await ProductServices.getAllProducts();
-      // console.log(products);
       return res.render("./products/products.ejs", { products });
     } catch (error) {
       console.log(error);
