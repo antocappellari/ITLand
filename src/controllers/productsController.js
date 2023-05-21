@@ -24,6 +24,22 @@ const productsController = {
       console.log(error);
     }
   },
+  // ---API LIST-PUNTO array de products--//
+  // apiList: async(req,res)=>{
+  //   try {
+  //     db.Products
+  //     .findAll()
+  //     .then(Products=>{
+  //       return res.json({
+  //         total: Products.length,
+  //         data: Products,
+  //         status: 200,
+  //       })}
+  //     )      
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // },
   products: async (req, res) => {
     try {
       const products = await ProductServices.getAllProducts();
@@ -32,12 +48,8 @@ const productsController = {
     } catch (error) {
       console.log(error);
     }
-//---API LIST---//
-    // db.Products
-    // .findAll()
-    // .then(Products=>{
-    //   return res.json(Products)
-    // })
+
+
 
 
   },
