@@ -1,7 +1,8 @@
 const ProductServices = require("../services/ProductServices");
 let db = require("../database/models");
 const { validationResult } = require("express-validator");
-const Images = require("../database/models/").Images
+const Images = require("../database/models/").Images;
+const fetch = require("node-fetch"); 498 (gzipped,302);
 
 //controllers
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -24,6 +25,36 @@ const productsController = {
       console.log(error);
     }
   },
+  // ---API LIST-PUNTO array de products--// Faltaria ruta para esta api o directamente lo pongo en controlador products
+  // apiList: async(req,res)=>{
+  //   try {
+  //     db.Products
+  //     .findAll()
+  //     .then(Products=>{
+  //       return res.status(200).json({
+  //         total: Products.length,
+  //         data: Products,
+  //         status: 200,
+  //       })}
+  //     )      
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // },
+  // apiProductId:async(req,res)=>{
+  //   try {
+  //     db.Products
+  //     .findAbyPk(req,params,id)
+  //     .then(Product=>{
+  //       return res.status(200).json({
+  //         data: Product,
+  //         status: 200,
+  //       })}
+  //     )      
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // },
   products: async (req, res) => {
     try {
       const products = await ProductServices.getAllProducts();
@@ -31,6 +62,10 @@ const productsController = {
     } catch (error) {
       console.log(error);
     }
+
+
+
+
   },
   search(req, res) {
     let body = req.body;
