@@ -1,6 +1,18 @@
 
 const Users  =  require('../database/models').Users
 const userServices = {
+    getAllUsers: async () => {
+        try {
+          const users = await Users.findAll({
+            include:[{
+              association:'users_rol'
+            }]
+          });
+          return users;
+        } catch (error) {
+          console.log(error);
+        }
+      },
     getUserByEmail: async(email)=>{
         try {
             const userFound = await Users.findOne({

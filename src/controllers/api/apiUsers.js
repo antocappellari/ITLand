@@ -31,9 +31,10 @@ const apiUsers = {
     } ,
     getUser : async (req, res)=>{
         try {
-            const {userId} = req.params
-            console.log(userId);      
-            const user = await userServices.getUser(userId)
+            // esto esta ok? email en vez de id
+            const {email} = req.params 
+            console.log(email);      
+            const user = await userServices.getUserByEmail(email)
             if(user == null){
                 return res.status(404).json(
                     {
@@ -72,6 +73,7 @@ const apiUsers = {
     createUser: async (req, res)=>{
         try {
             const body = req.body;
+            // esto de abajo lo agregue por la pass pero no se si hace falta
             let passBcrypt = bcrypt.hashSync(body.password,10)
             const data = {
                 first_name: body.first_name,
@@ -104,23 +106,21 @@ const apiUsers = {
             })
         }
     },
-    update: async(req, res) =>{
+    updateUser: async(req, res) =>{
         try {
-          const {productId} = req.params
+          const {userId} = req.params
           let body = req.body;
+          let passBcrypt = bcrypt.hashSync(body.password,10)
           let data = {
-            name: body.name,
-            price: body.price,
-            discount: body.discount,
-            camera_id: body.camera_id,
-            colors_id: body.color_id,
-            brands_id: body.brand_id,
-            category_id: body.category_id,
-            sub_category_id: body.sub_category_id,
-            description: body.description,
-            stock: body.stock,
+            first_name: body.first_name,
+            last_name: body.last_name,
+            address: body.address,
+            cell: body.cell? body.cell : null,
+            email: body.email,
+            password: passBcrypt,
+            image: req.file ? req.file.filename : 'usuarioDefault.png'
           };
-          await ProductServices.productEdit(productId, data);
+          await userServices.userUpdate(userId, data);
           return res.status(200).json(
             {
                 meta:{
@@ -128,7 +128,7 @@ const apiUsers = {
                     success: true,
                     url: req.originalUrl,
                 },
-                message:'Product updated succesfully'
+                message:'User updated succesfully'
             }
         )
         } catch (error) {
@@ -142,9 +142,9 @@ const apiUsers = {
             })
         }
       },
-      delete: async(req, res)=> {
+      deleteUser: async(req, res)=> {
         try {
-          await userServices.deleteUser(req.params.id);
+          await userServices.userDelete(req.params.id);
           return res.status(200).json(
             {
                 meta:{
@@ -165,27 +165,6 @@ const apiUsers = {
             })
         }
     
-      },
-      userList: async (req, res)=>{
-        try {
-            console.log(req.query);
-            const {page, countUsers} = req.query    
-            console.log(page,countUsers);
-            const users = await userServices.userList(page,countUsers);
-            return res.status(200).json(
-                {
-                    meta:{
-                        status:200,
-                        success: true,
-                        url: req.originalUrl,
-                        length: users.length
-
-                    },
-                    data:users
-                })
-        } catch (error) {
-            console.log(error);
-        }
       },
       };
 
