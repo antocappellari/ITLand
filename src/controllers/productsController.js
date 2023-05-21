@@ -32,6 +32,14 @@ const productsController = {
     } catch (error) {
       console.log(error);
     }
+//---API LIST---//
+    // db.Products
+    // .findAll()
+    // .then(Products=>{
+    //   return res.json(Products)
+    // })
+
+
   },
   search(req, res) {
     let body = req.body;
