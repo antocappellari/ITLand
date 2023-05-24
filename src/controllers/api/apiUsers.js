@@ -1,6 +1,6 @@
 const userServices = require('../../services/userServices');
 const bcrypt = require('bcrypt')
-let db = require("../database/models")
+
 
 const apiUsers = {
     getAllUsers : async (req, res)=>{
