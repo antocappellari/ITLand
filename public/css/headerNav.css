@@ -329,7 +329,7 @@ hr{
     background-color: #1d2d44;
     font-family: "Roboto", sans-serif;
     justify-content: flex-end;
-    align-items: center;
+    align-content: center;
     height: 35px;
     padding-right: 20px;
   }
