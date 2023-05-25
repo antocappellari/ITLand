@@ -23,7 +23,7 @@ textarea.inputJs{
     padding:10px;
 }
 .contactform .userInputCF .inputJs{
-    width:80%;
+    width:100%;
     padding:10px;
     box-sizing: border-box;
     border-radius: 15px;
@@ -33,4 +33,8 @@ textarea.inputJs{
 color:#3e5c76;
 font-size: 1.6em;
 text-align: center;
+}
+@media screen and (min-width:767px){
+    .contactform .userInputCF .inputJs{
+        width:80%;}
 }
