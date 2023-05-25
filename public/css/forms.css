@@ -114,7 +114,7 @@
     width: 80%;
     height: 5vh;
     color: #fff;
-    background-color: #164ffacf;
+    background-color: #3e5c76;
     border: none;
     border-radius: 15px;
     padding: none;
@@ -124,7 +124,7 @@
     display: none;
 }
 .button-submit:hover{
-    background-color: #0034d1cf;
+    background-color: #748CAB;
     border-radius: 15px;
     padding: none;
     border: none;
@@ -311,7 +311,7 @@
         transition: all .3s;
     }
     .container-form .button-submit .input-button:hover{
-        background-color: #0034d1cf;
+        background-color: #748CAB;
     }
     .container__form-login{
         width: 45%;
@@ -328,7 +328,7 @@
         width: 80%;
         height: 6vh;
         color: #fff;
-        background-color: #164ffacf;
+        background-color: #3e5c76;
         border: none;
         border-radius: 15px;
         padding: none;

@@ -5,31 +5,30 @@
   <%- include('../partials/head') %> 
   <body>
     <%- include('../partials/header') %> 
-
-    <main>
+    <main class="main-form">
       <div class="container-form">
-        <div class="text-title">
+        <div class="text-titleCF">
           <h2>Contact us</h2>
         </div>
         <form class="form-inputs" action="/users/contactUs" method="POST"  enctype="multipart/form-data">
           <div class="contactform">
-            <div class="userinput ">
+            <div class="userInputCF">
               <input type="text" class="inputJs" name="first_name" placeholder="Enter your name">
             </div>
-            <div class="userinput">
+            <div class="userInputCF">
             <input type="text" class="inputJs" name="email" placeholder="Enter your email">
             </div>
-            <div class="userinput">
+            <div class="userInputCF">
               <textarea name="description" id="" cols="30" rows="10" class="inputJs" placeholder="What would you like to ask us?"></textarea>
             </div>
-            <div class="userinput button-submit">
+            <div class="userInputCF button-submit">
             <input class="input-button" type="Submit" value="Send">
             </div>
           </div>
         </form>
       </div>
     </main>
-  <!-- Bottom Nav -->
+    <!-- Bottom Nav -->
     <%- include('../partials/bottomNav') %> 
   <!-- Footer -->
     <%- include('../partials/footer') %> 
