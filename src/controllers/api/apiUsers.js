@@ -32,8 +32,7 @@ const apiUsers = {
     getUser : async (req, res)=>{
         try {
             // esto esta ok? email en vez de id
-            const {userId} = req.params 
-            console.log(email);      
+            const {userId} = req.params       
             const user = await userServices.getUserById(userId)
             if(user == null){
                 return res.status(404).json(

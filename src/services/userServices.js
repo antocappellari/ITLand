@@ -73,7 +73,16 @@ const userServices = {
         } catch (error) {
             console.log(error);
         }
-    }
+    },
+    userList: async(page,countUsers)=>{
+        try {
+          console.log(countUsers);
+         const users =  await Users.findAll({limit:parseInt(countUsers),offset:parseInt(page)})
+         return users
+        } catch (error) {
+          console.log(error);
+        }
+      },
 
 };
 
