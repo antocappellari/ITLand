@@ -32,9 +32,9 @@ const apiUsers = {
     getUser : async (req, res)=>{
         try {
             // esto esta ok? email en vez de id
-            const {email} = req.params 
+            const {userId} = req.params 
             console.log(email);      
-            const user = await userServices.getUserByEmail(email)
+            const user = await userServices.getUserById(userId)
             if(user == null){
                 return res.status(404).json(
                     {
@@ -165,6 +165,27 @@ const apiUsers = {
             })
         }
     
+      },
+      userList: async (req, res)=>{
+        try {
+            console.log(req.query);
+            const {page, countUsers} = req.query    
+            console.log(page,countUsers);
+            const users = await userServices.userList(page,countUsers);
+            return res.status(200).json(
+                {
+                    meta:{
+                        status:200,
+                        success: true,
+                        url: req.originalUrl,
+                        length: users.length
+
+                    },
+                    data:users
+                })
+        } catch (error) {
+            console.log(error);
+        }
       },
       };
 

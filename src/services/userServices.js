@@ -31,6 +31,16 @@ const userServices = {
             }
         };
     },
+    getUserById: async (id) => {
+        try {
+          const user = await Users.findByPk(id, {
+            include:[{association:"users_rol"}]
+          });
+          return user;
+        } catch (error) {
+          console.log(error);
+        }
+      },
     userCreate: async(data)=>{
         try{
             console.log(data)
