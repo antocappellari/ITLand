@@ -1,30 +1,15 @@
 .main__profile {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "img info info"
-    "img info info"
-    "img info info"
-    "img info info"
-    "img info info"
-    "img info info"
-    "order order order"
-    "order order order"
-    "order order order"
-    "order order order"
-    "order order order"
-    "order order order"
-    "order order order"
-    
-    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
     gap: 20px;
     background-color: #ebebee;
     padding: 20px;
 }
 .userProfile {
-  grid-area: img;
   background-color: white;
+  width:100%;
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -39,14 +24,28 @@
     border-radius: 50%;
     overflow: hidden;
     width: 100px;
-    height: 100px;
+    height:100px;
     display: flex;
     justify-content: center;
     align-content: center;
+    object-fit: contain;
+}
+.userButtons{
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    width:100%;
+}
+.userButtons a{
+    width:50%;
+
+}
+.userButtons form{
+    width:50%;
+
 }
 
 .userMainInfo {
-    grid-area: info;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -61,7 +60,6 @@
     font-size: 0.8em;
 }
 .userOrders{
-    grid-area: order;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -70,34 +68,40 @@
 
 }
 .userButton {
-    width: 100%;
-    height: 30%;
-    outline: none;
-    font-size: 0.6em;
-    font-weight: 400;
-    color: white;
-    background-color: #164ffacf;
-    border: 1.5px solid #c7bebe;
-    border-bottom-width: 2.5px;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    text-align: center;
+    background-color: #1d2d44;;
+    color:white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding:10px 20px 10px 20px;
+    font-size: 17px;
+    transition-duration: 0.4s;
+    width:100%;
+    height:100%;
+    font-size: 0.7em;
 }
 .userButton:hover {
-    background: #0e4bf1;
-    border: 1.5px solid #c7bebe;
-    border-bottom-width: 2.5px;
-    border-radius: 15px;
-  }
+    background-color:#3e5c76;  }
 
 @media screen and (min-width:767px){
 
 .userMainInfo p {
     font-size: 1em;
 }
-
-.userButton {
-    width: 70%;
-    font-size:1em;
+.main__profile {
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.userProfile {
+    width:100%;  
+  }
+.userMainInfo {
+    width:100%;
+}
+.userOrders{
+    width:100%;
+}
+.userImage img{
+    width: 100%;
 }
 }
