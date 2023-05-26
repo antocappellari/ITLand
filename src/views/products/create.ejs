@@ -34,13 +34,7 @@
                 <% } %>
                 <p class="text-danger error">Please complete with the product's description</p>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <br><br><br><br><br><br><br>
             <div>
               <div class="file-select" >
                 <input type="file" name="image" id="files" multiple>
@@ -52,14 +46,6 @@
                 <% } %>
                 <p class="text-danger error">Please upload a picture with a valid format [jpg-png-webp-jfif]</p>
             </div>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <div class="userinput" id="category-error">
               <label>Category</label>
               <select class="drop-down d-1" name="category_id">
@@ -152,26 +138,20 @@
               <select class="drop-down " name="memory_id">
                 <option disabled selected>Choose an option</option>
                 <% memories.forEach(memory=> { %>
-                  <% if (memory.type=="R0M" ) { %>
                     <option value="<%= memory.id %>">
                       <%= memory.memory %>
                     </option>
-
-                    <% } %>
                       <% }) %>
               </select>
             </div>
             <div class="userinput">
-              <label>RAM Memory</label>
-              <select class="drop-down" name="memory_id">
+              <label>RAM memory</label>
+              <select class="drop-down" name="ram_id">
                 <option disabled selected>Choose an option</option>
-                <% memories.forEach(memory=> { %>
-                  <% if (memory.type=='RAM' ) { %>
-                    <option value="<%= memory.id %>">
-                      <%= memory.memory %>
-                    </option>
-
-                    <% } %>
+                <% rams.forEach(ram=> { %>
+                    <option value="<%= ram.id %>">
+                      <%= ram.ram %>
+                    </option> 
                       <% }) %>
               </select>
             </div>

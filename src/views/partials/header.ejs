@@ -10,15 +10,24 @@
             <img width="100px" src="/images/users/<%= userToLogged.image %>" alt="">
           </div>
           <% } else {%>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="btn-icon"
-            class="bi bi-person-circle user-profile" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-            <path fill-rule="evenodd"
-            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-            </svg>
+          <div class="userImage">
+            <img width="100px" src="/images\users\usuarioDefault.png" alt="">
+          </div>
+          <div>
+            <br>
+            <a href="/users/login" class="btn btn-login">Log in</a>
+            <a href="/users/register" class="btn btn-register">Register</a>
+          </div>
             <% } %>
             <% if (locals.isLogged) { %>
               <p>Hello! <span class="user_name"><%= userToLogged.first_name %></span></p>
+              <% if (locals.isLogged) { %>
+                <div style="margin-top: 20px;">
+                  <a href="/users/profile/" class="btn" style="background-color: blueviolet;">Profile</a>
+                  <a href="/users/logout/" class="btn" style="background-color: #102860;">Log out</a>
+                </div>
+                <% } %>
+                  
                 <% } else{%>
                   <p></p>
                   <% } %>
@@ -34,7 +43,11 @@
       <nav class="navegation-mobile">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/products">Products</a></li>
+<!-- is admin -->
+          <% if (locals.isAdmin) { %>
+            <li><a href="/users">Users</a></li>
+            <% } %>
+            <li><a href="/products">Products</a></li>
           <li class="mobile_categories">
             <p>Categories</p>
             <ul>
@@ -43,13 +56,7 @@
               <li>Othres</li>
             </ul>
           </li>
-          <% if (locals.isLogged) { %>
-            <li><a href="/users/profile/">Profile</a></li>
-            <li><a href="/users/logout/">Log out</a></li>
-            <% }else{ %>
-              <li><a href="/users/login/">Login</a></li>
-              <li><a href="/users/register/">Register</a></li>
-              <% } %>
+          
         </ul>
       </nav>
     </div>
@@ -67,6 +74,11 @@
       <% if (locals.isLogged) { %>
         <div class="user_logged">
           <div class="user_logged_user account__icon">
+            <% if (locals.isAdmin) { %>
+              <div class="crown">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+            <% } %>
             <img class="headImage" src="/images/users/<%= userToLogged.image %>" alt="">
             <p class="nameHeader">
               <%= userToLogged.first_name %>
@@ -94,6 +106,10 @@
   <nav class="navegation">
     <ul>
       <li><a href="/">Home</a></li>
+      <% if (locals.isAdmin) { %>
+       
+        <li><a href="/users">Users</a></li>
+      <% } %>
       <li><a href="/products">Products</a></li>
       <li><a href="/products/about">About us</a></li>
       <li><a href="/users/contactUs"> Contact us</a></li>

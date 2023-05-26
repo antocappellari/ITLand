@@ -12,7 +12,8 @@ module.exports = (sequelize, dataTypes)=>{
         name:{
             type: dataTypes.STRING(100),
             allowNull: false
-        }
+        },
+        image:dataTypes.STRING(100)
     }
     const config = {
         tableName: 'brands',

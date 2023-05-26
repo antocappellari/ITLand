@@ -16,13 +16,16 @@ const usersController = {
         const body = req.body
         const userToLogin = await userServices.getUserByEmail(body.email);
         if(userToLogin){
+            if(userToLogin.rol_id == 2){
+                req.session.isAdmin = userToLogin;
+                res.cookie('admin', userToLogin ,{maxAge: 10000 * 600});
+            }
             let passCompare = bcrypt.compareSync(body.password, userToLogin.password)
             if (passCompare) {
                 delete userToLogin.password
                 delete userToLogin.confirmPassword
                 req.session.userToLogged = userToLogin
                 if(body.remember){
-                    console.log('hola')
                     res.cookie('user', userToLogin ,{maxAge: 10000 * 600});
                 }
                 return res.redirect('/users/profile')
@@ -112,6 +115,7 @@ const usersController = {
     },
     logout(req, res){
         res.clearCookie('user')
+        res.clearCookie('admin')
         req.session.destroy()
         return res.redirect('/')
     },

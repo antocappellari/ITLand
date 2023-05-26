@@ -10,7 +10,7 @@
       <section class="top-products">
       <div class="titleproducts"><h1 style="color: green;">Products</h1></div>
       <div class="createproduct">
-      <% if (locals.isLogged) { %>
+      <% if (locals.isAdmin) { %>
         <a href="/products/create"><button type="button" class="btn1"> Create</button></a>
       <% } %>
       </div>
@@ -47,7 +47,7 @@
              </p>
           </div>
         </a>
-        <% if (locals.isLogged) { %>
+        <% if (locals.isAdmin) { %>
          
           <div class="div-btn">
           <a class="btn btn-edit" href="/products/<%= product.id %>/edit">edit</a>

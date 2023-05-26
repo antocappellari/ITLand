@@ -3,7 +3,7 @@ window.addEventListener("load",function(){
     let formulario = document.querySelector(".form-inputs");
     const exp = {
         name: /^^[A-Za-z0-9 ]+$/,
-        description:/^[a-zA-Z0-9\s.,#-$%&/()]+$/, //*agregar minimo 20 caracteres*//
+        description:/^[a-zA-Z0-9\s.,#-$%&/()áéíóúüñÁÉÍÓÚÜÑ]+$/u, //*agregar minimo 20 caracteres*//
         price:/^[0-9]+([.])?([0-9]+)?$/,//*agregar que se puedan decimales*//
         stock:/^\d+$/ 
         //*falta imagen y dropdowns*//
@@ -24,11 +24,15 @@ window.addEventListener("load",function(){
     const formValidation = (e)=> {
         const input  = e.target;
         input.style.boxShadow = 'none'
-
+        
         if(e.target.name == "name"){
+            console.log(e.target.value);
+
             fieldValidation(exp.name,e.target.value,e.target.name)
         }
         if(e.target.name == "description"){
+            console.log(e.target.value);
+
             fieldValidation(exp.description,e.target.value,e.target.name)
         }
         if(e.target.name == "price"){
@@ -39,6 +43,8 @@ window.addEventListener("load",function(){
         }
     }
     const fieldValidation = (exp,inputValue,field)=>{
+        console.log(field);
+        console.log(inputValue);
         if(exp.test(inputValue)){
             const error = document.querySelector(`#${field}-error .error`);
             error.style.display='none';
@@ -120,7 +126,16 @@ window.addEventListener("load",function(){
             formulario.submit()
             console.log('Se envio el formulario');
         }else{
-            alert('completa tods los campos')
+            console.log('hola');
+            const errores = document.querySelectorAll('.error')
+            errores.forEach((error,i) =>{
+               const fields = Object.values(campo);
+               console.log(fields[i]);
+               if (fields[i]) {
+                error.style.display = "none"
+               }
+            })
+            
         }
         
     })

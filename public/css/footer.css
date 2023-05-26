@@ -1,14 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-  }
-
 
 footer {
   background-color: #1d2d44;
   padding: 10px;
+  margin-bottom: 40px;
   }
 
 .footer_section1{
@@ -38,4 +32,9 @@ footer p{
 @media (min-width:461px){
   .footer_title{
     font-size:12px;}
+}
+@media  (min-width:1024px) {
+  footer{
+    margin-bottom: 0;
+  }
 }

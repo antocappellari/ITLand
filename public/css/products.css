@@ -150,10 +150,10 @@
   .btn{
     padding: 1em 3em;
     height: 50px;
-    background-color: rgb(255, 2, 2);
     border:none;
     color: #Fff;
     cursor: pointer;
+    font-weight: 600;
   }
   .btn-edit{
     border: 1px solid;

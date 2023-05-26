@@ -79,13 +79,19 @@
   color: #000;
   text-align: center;
   position: relative;
-  height: 25%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap:5px;
   background-color: #0D1321;
+}
+.btn-login{
+  background-color: #102860;
+}
+.btn-register{
+  background-color: #1d2d44;
 }
 .user_name{
   color: #fff;
@@ -104,9 +110,10 @@
 .nameLogged, .logOut{
   display: none;
 }
-.user p{
-  font-size:1.6em ;
-  font-weight: 400;
+.user p {
+  color: steelblue;
+  font-size: 1.6em;
+  font-weight: bold;
 }
 .user .user-profile{
   width: 90px;
@@ -136,8 +143,8 @@
 }
 .menu-mobile_active{
   transform: translateX(0);
-  /* transform: translateX(0px); */
   position: fixed;
+  overflow: scroll;
 }
 
 .navegation-mobile {
@@ -157,6 +164,10 @@
 }
 .userImage{
   border: 1px solid rgb(255, 255, 255);
+  object-fit: cover;
+}
+.userImage img{
+  object-fit: cover;
 }
 
 .navegation-mobile ul li {
@@ -238,6 +249,14 @@
     justify-content: center;
     gap: 10px;
     padding:10px;
+    position: relative;
+  }
+  .crown{
+    position: absolute;
+    left: 7%;
+    top: 5%;
+    transform: rotate(307deg);
+    color:gold
   }
   .header__account .user_logged a{
     border-radius: 4px;
@@ -406,6 +425,7 @@
   .header__account span {
     font-size: 20px;
     display: block;
+    margin-left: 10px;
   }
 
   .account__icon {

@@ -1,4 +1,3 @@
-
 .register h4{
   position:relative;
   text-align: center;
@@ -16,20 +15,20 @@
 }
 form .userinput input {
   height: 100%;
-  width: 100%;
+  width: 100%;  
   outline: none;
   padding: 0 37px;
   font-size: 17px;
   font-weight: 400;
   color: #333;
-  border: 1.5px solid #c7bebe;
+  border: 1.5px solid #F0EBD8;
   border-bottom-width: 2.5px;
   border-radius: 17px;
   transition: all 0.3s ease;
 }
 .userinput input:focus,
 .userinput input:valid {
-  border-color: #4070f4;
+  border-color:#0D1321;
 }
 
 form h3 {
@@ -42,19 +41,17 @@ form h3 {
   color: #fff;
   letter-spacing: 1px;
   border: none;
-  background: #164ffacf;
+  background: #1D2D44;
   cursor: pointer;
 }
-.userinput.button input:hover {
-  background: #0e4bf1;
-}
+  
 form .text h3 {
   color: #333;
   width: 100%;
   text-align: center;
 }
 form .text h3 a {
-  color: #4070f4;
+  color: #1D2D44;
   text-decoration: none;
 }
 form .text h3 a:hover {

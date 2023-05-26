@@ -22,11 +22,13 @@ const ProductServices = {
           { association: "categories" },
           { association: "sub_categories" },
           { association: "brands" },
+          { association: "rams" },
           { association: "images" },
           { association: "camera" },
           { association: "colors" },
         ],
       });
+      console.log(product);
       return product;
     } catch (error) {
       console.log(error);

@@ -6,34 +6,40 @@
     <body>
         <!-- header -->
         <%- include('../partials/header') %>
-            <main>
-                <section class="main-container">
+        <main>
+                <figure>
+                    <img src="/images/brands/<%= product.brands.image %>" alt="" width="160px">
+                </figure>
+                    
+                <section class="main-container" style="margin-top: 40px;">
                     <!-- <div class="section__images">
                         <div class="name-product">
                             <p>
                                 <%= product.name %>
                             </p>
                         </div> -->
-                        <div class="swiper-detail">
-                            <div class="swiper-wrapper">
-                                <% product.images.forEach(image=> { %>
-                                    <div class="slide-image swiper-slide">
-                                        <img src="/images/products/<%= image.name %>" alt="" class="">
-                                    </div>
-                                    <% }) %>
-                                        
+                            <div class="swiper-detail">
+                                 
+                                <div class="swiper-wrapper">
+                                    <% product.images.forEach(image=> { %>
+                                        <div class="slide-image swiper-slide">
+                                            <img src="/images/products/<%= image.name %>" alt="" class="">
+                                        </div>
+                                        <% }) %>
+                                            
+                                </div>
+                                <div class="swiper-pagination">
+                                    ...
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
-                            <div class="swiper-pagination">
-                                ...
-                            </div>
-
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-
-
-                        </div>
                     <section class="section__characteristics">
                         <div class="container-charac">
+                           
+                            <div>
+                                <p style="font-weight: 600;"><%= product.name %></p>
+                            </div>
                             <div class="characterisrics-memory-color">
                                 <div>
                                     <p class="p1">Colors:</p>
@@ -44,16 +50,24 @@
                                 <i class="fa-solid fa-angle-right"></i>
                             </div>
                         </div>
-                        <p class="previous">
-                            <%= product.price %>
-                        </p>
+                        <% if (product.discount == 0) { %>
+                            <p></p>
+                           <% }else{ %>
+                            <p class="previous">
+                                <%= product.price %>
+                            </p>
+                           <% } %>
                         <div class="oferts">
                             <p class="price">$<%= (Math.floor(( product.price - (product.price * product.discount ) /
                                     100))) %>
                             </p>
-                            <p>
-                                <%= product.discount %>%OFF
-                            </p>
+                            <% if (product.discount == 0) { %>
+                             <p></p>
+                            <% }else{ %>
+                                <p>
+                                    <%= product.discount %>%OFF
+                                </p>
+                            <% } %>
                         </div>
                         <a class="payment-methods" href="#">10 x $<%= Math.floor((Math.floor(( product.price -
                                 (product.price * product.discount ) / 100)))/10) %> sin interés</a>
@@ -92,7 +106,7 @@
                                 <%= product.description %>
                             </p>
                             <div class="description-buttons">
-                                <% if (locals.isLogged) { %>
+                                <% if (locals.isAdmin) { %>
                                     <a href="/products/<%= product.id %>/edit"><button type="button"
                                             class="btn1">Edit</button></a>
                                     <form action="/products/<%= product.id %>/delete?_method=DELETE" method="post">
