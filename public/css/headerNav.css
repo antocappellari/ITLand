@@ -1,10 +1,12 @@
-
-
 .header__account .account {
   display: none;
 }
 
 .header__account span {
+  display: none;
+}
+
+.user_option{
   display: none;
 }
 
@@ -15,20 +17,20 @@
   text-decoration: none;
   padding: 10px;
 }
+.container-header__cart a i {
+  font-size: 1.8em;
+}
 
 .navegation {
   display: none;
-  padding-top: 15px;
+  padding: 15px;
 }
-
-
-
-
-
-
-
-
-
+.icon_down{
+  display: none;
+}
+.nameHeader{
+  display: none;
+}
 .container-header {
   display: grid;
   grid-template-columns: 20% 60% 20%;
@@ -82,9 +84,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap:5px;
+  background-color: #0D1321;
 }
-
+.user_name{
+  color: #fff;
+}
 .headImage{
   display: flex;
   height: 35px;
@@ -93,6 +98,7 @@
   border: solid 0.5px white;
   background-color: white;
   justify-content: center;
+  object-fit: cover;
   align-items: center;
 }
 .nameLogged, .logOut{
@@ -112,7 +118,7 @@
   left: 87%;
 }
 .button-exit svg{
-  color: #000;
+  color: #fff;
   width: 30px;
   height: 30px;
 }
@@ -124,27 +130,27 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  transform: translateX(-1720px);
-  transition: all 1s;
-  z-index: 10;
-
+  transition: all 600ms;
+  z-index: 1212120;
+  transform: translateX(-1820px);  
 }
-#open:target{
-  display: block;
-  transform: translateX(0px);
-  overflow: scroll;
+.menu-mobile_active{
+  transform: translateX(0);
+  /* transform: translateX(0px); */
   position: fixed;
 }
+
 .navegation-mobile {
   margin-top: 20px;
 }
 .navegation-mobile ul{
   display: flex;
   flex-direction: column;
-  padding-left: 30px;
   gap: 20px;
-  padding: 10px;
-  align-items: center;
+  padding: 20px;
+}
+.mobile_categories{
+  color: #000;
 }
 .user-image{
   background-color: none;
@@ -152,25 +158,14 @@
 .userImage{
   border: 1px solid rgb(255, 255, 255);
 }
-hr{
-  opacity: 0.5;
-  background-color: black;
-  padding: 0 45%;
 
-}
 .navegation-mobile ul li {
   list-style: none;
-}
-.navegation-mobile ul li a{
-  font-size: 1.4em;
-  color: #000;
-  text-decoration: none;
 }
 .main__input {
   display: none;
   grid-column: 1/4;
   order: 9;
-  padding: 10px;
 
 }
 .main__input form{
@@ -197,13 +192,20 @@ hr{
 @media screen and (min-width:767px) and (max-width:1023px) {} */
 /* --------------------------------------DESKTOP----------------------------- */
 @media screen and (min-width:1024px) {
+  .user_option{
+    display: block;
+  }
   .menu-mobile{
     display: none;
+  }
+  .nameHeader{
+    display: block;
   }
   .container-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 3em;
   }
 
 
@@ -224,33 +226,78 @@ hr{
 
   .header__burger {
     display: none;
+    position: relative;
   }
-
+  
+  .user_logged{
+    background: #3a445a55;
+  }
+  .user_logged_user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding:10px;
+  }
+  .header__account .user_logged a{
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
   .header__account {
     order: 3;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     width: 20%;
   }
-
-  .header__account a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    text-decoration: none;
+  .user_option {
+    background-color: white;
+    position: absolute;
+    top: 92%;
+    width: 14.7%;
+    z-index: 324;
+  }
+  .user_option a{
+    color: #0D1321
+  }
+  .user_option a:hover{
+    background: #0D1321;
+    border-radius: 0;
+    color: white;
+    font-weight: bold;
 
   }
+  .user_option_active{
+    display: none ;
+  }
 
-  .header__account span {
+  .icon-rotate{
+    transform:rotate(180deg);
+    transition: all 300ms ease-out ;
+  }
+  
+  .icon-rotate2{
+    transform:rotate(-0deg);
+    transition: all 300ms ease-out ;
+  }
+
+  .header__account .user_logged{
+    width: 100%;
+  }
+
+
+  /* .header__account span {
     display: block;
     font-size: 15px;
-  }
+  } */
 
   .account__icon {
     font-size: 15px;
-    margin-right: 15px;
     display: flex;
     justify-content: center;
   }
@@ -274,7 +321,7 @@ hr{
   }
   
   .results li{
-    border-bottom: 1px solid rgb(112, 112, 112);
+    /* border-bottom: 1px solid rgb(112, 112, 112); */
     padding: 1em;
   }
   .listResult a{
@@ -307,21 +354,15 @@ hr{
     display: block;
   }
   .container-header__cart {
-    order: 4;
-    display: block;
-    margin-right: 40px;
+    display: flex;
   }
 
   .container-header__cart i {
     color: #fff;
     font-size: 15px;
-    margin-right: 15px;
   }
-
-  .container-header__cart span {
-    color: #fff;
-    font-size: 15px;
-    text-decoration: none;
+  .icon_down{
+    display: block;
   }
 
   .navegation {
@@ -339,7 +380,6 @@ hr{
     gap: 20px;
     align-items: center;
     list-style: none;
-    height: 6vh;
     padding-left: 10px;
     justify-content: flex-end;
   }

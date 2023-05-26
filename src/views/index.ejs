@@ -13,19 +13,19 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide">
-                <img src="/images/carrussel/1.webp" alt="">
+                <img class="carrussel-img" src="/images/carrussel/1.webp" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="/images/carrussel/2.webp" alt="">
+                <img class="carrussel-img" src="/images/carrussel/2.webp" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="/images/carrussel/3.webp" alt="">
+                <img class="carrussel-img" src="/images/carrussel/3.webp" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="/images/carrussel/4.webp" alt="">
+                <img class="carrussel-img" src="/images/carrussel/4.webp" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="/images/carrussel/5.webp" alt="">
+                <img class="carrussel-img" src="/images/carrussel/5.webp" alt="">
               </div>
             </div>
        
@@ -36,11 +36,11 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide"><img src="/images/carrussel/img1.webp" alt=""></div>
-              <div class="swiper-slide"><img src="/images/carrussel/img2.webp" alt=""></div>
-              <div class="swiper-slide"><img src="/images/carrussel/img3.webp" alt=""></div>
-              <div class="swiper-slide"><img src="/images/carrussel/img4.webp" alt=""></div>
-              <div class="swiper-slide"><img src="/images/carrussel/img5.webp" alt=""></div>
+              <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img1.webp" alt=""></div>
+              <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img2.webp" alt=""></div>
+              <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img3.webp" alt=""></div>
+              <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img4.webp" alt=""></div>
+              <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img5.webp" alt=""></div>
             </div>
           </div>
 
@@ -55,10 +55,6 @@
         <section class="CarrusselSection">
           <% products.forEach(product=> { %>
             <article class="best_deals">
-              <div class="heart_favorite">
-
-                <i class="fa-regular fa-heart"></i>
-              </div>
               <a href="/products/<%= product.id %>/detail" class="FirstOffer">
                 <p class="discount">
                   <%= product.discount %>% OFF

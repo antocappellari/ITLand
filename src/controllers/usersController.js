@@ -2,7 +2,6 @@ const {validationResult} = require('express-validator')
 const userServices = require('../services/userServices')
 const bcrypt = require('bcrypt')
 let db = require("../database/models")
-const fetch = require("node-fetch"); 498 (gzipped,302);
 const usersController = {
     aboutUs(req,res){
         res.render('aboutUs.ejs')

@@ -7,8 +7,8 @@
 
 
 footer {
+  background-color: #1d2d44;
   padding: 10px;
-  margin-bottom: 50px;
   }
 
 .footer_section1{
@@ -18,7 +18,7 @@ footer {
 .footer_title{
   margin:15px;
   font-size:9px;
-  color: #164ffacf;
+  color: #ffffffcf;
 }
 footer p{
   font-size:12px;

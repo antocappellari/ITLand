@@ -2,7 +2,6 @@ const ProductServices = require("../services/ProductServices");
 let db = require("../database/models");
 const { validationResult } = require("express-validator");
 const Images = require("../database/models/").Images;
-const fetch = require("node-fetch"); 498 (gzipped,302);
 
 //controllers
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
