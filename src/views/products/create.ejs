@@ -2,13 +2,13 @@
 <html lang="en">
 <!-- head -->
 <%- include('../partials/head') %>
-
+<link rel="stylesheet" href="/css/formProduct.css" />
   <body>
     <!-- header -->
     <%- include('../partials/header') %>
       <main class="main-form">
         <div class="container-form">
-          <h2 class="form-title">Article creation:</h2>
+          <h2 class="form-title">Create Product</h2>
 
           <!-- <--------FORMULARIO--------->
 
@@ -32,7 +32,6 @@
                 <% } %>
                 <p class="text-danger error">Please complete with the product's description</p>
             </div>
-            <br><br><br><br><br><br><br>
             <div>
               <div class="file-select" >
                 <input type="file" name="image" id="files" multiple>
@@ -74,7 +73,7 @@
                 <p class="text-danger error">Please select a category</p>
             </div>
             <div class="userinput" id="sub_category-error">
-              <label>Sub Category</label>
+              <label class="labelProducts">Sub Category</label>
               <select class="drop-down d-1" name="sub_category_id">
                 <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.sub_category_id) { %>
@@ -102,7 +101,7 @@
                 <p class="text-danger error">Please select a sub-category</p>
             </div>
             <div class="userinput" id="color-error">
-              <label for="">Colors</label>
+              <label class="labelProducts" for="">Colors</label>
             <select class="drop-down d-1" name="color_id">
               <option disabled selected>Choose an option</option>
               <% if (locals.oldBody && oldBody.color_id) { %>
@@ -154,7 +153,7 @@
               </select>
             </div>
             <div class="userinput" id="brand-error">
-              <label>Brands</label>
+              <label class="labelProducts">Brands</label>
               <select class="drop-down d-1" name="brand_id">
                 <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.brand_id) { %>
@@ -212,6 +211,7 @@
 
            
             <div class="userinput" id="price-error">
+              <label class="labelProducts">Price</label>
               <input type="number" class="inputJs" name="price" placeholder="Product Price">
               <%if(locals.errors && errors.price){ %>
                 <p class="text-danger">
@@ -222,9 +222,11 @@
               <p class="text-danger error">Please complete with the product's price</p>
             </div>
             <div class="userinput">
+              <label class="labelProducts">Discount</label>
               <input type="number" name="discount" placeholder="Product Discount">
             </div>
             <div class="userinput" id="stock-error">
+              <label class="labelProducts">Stock</label>
               <input type="number" class="inputJs"name="stock" placeholder="Stock">
               <% if (locals.errors && errors.stock) { %>
                 <p class="text-danger">

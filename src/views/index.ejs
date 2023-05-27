@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head') %>
+  <%- include('./partials/head') %>
 
   <body>
     <!-- header -->
@@ -43,16 +43,81 @@
               <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img5.webp" alt=""></div>
             </div>
           </div>
+          <div class="swiper-slide">
+            <img src="/images/carrussel/3.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/carrussel/4.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/carrussel/5.webp" alt="" />
+          </div>
+        </div>
+      </div>
 
+      <div class="swiper3">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="/images/carrussel/img1.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/carrussel/img2.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/carrussel/img3.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/carrussel/img4.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/carrussel/img5.webp" alt="" />
+          </div>
+        </div>
+      </div>
 
-        <section class="main_paymentmethods">
-          <h2>
-          
-            aca iran los metodos de pago
-          </h2>
-        </section>
-        <h2 class="producTittle">Best deals</h2>
-        <section class="CarrusselSection">
+      <section class="main_paymentmethods">
+        <h2>aca iran los metodos de pago</h2>
+      </section>
+      <h2 class="producTittle">Best deals</h2>
+      <section class="CarrusselSection">
+        <% products.forEach(product=> { %>
+        <article class="best_deals">
+          <div class="heart_favorite">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <a href="/products/<%= product.id %>/detail" class="FirstOffer">
+            <p class="discount"><%= product.discount %>% OFF</p>
+            <div class="Imagetext">
+              <img
+                src="images/products/<%= product.images[0].name %>"
+                alt=""
+                class="product-image"
+              />
+            </div>
+            <div class="FirstOffer_data">
+              <p class="Photo"><%= product.name %></p>
+              <p class="Price">$ <%= product.price %></p>
+            </div>
+            <p class="Delivery">
+              <span class="Price">$<%= Math.floor(product.price/10) %></span> x
+              10 installments
+            </p>
+          </a>
+          <div class="best_deals_btn">
+            <a class="add-cart" href="/products/cart">Add to cart</a>
+          </div>
+        </article>
+        <% }) %>
+      </section>
+
+      <h2 class="producTittle">offers</h2>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
           <% products.forEach(product=> { %>
             <article class="best_deals">
               <a href="/products/<%= product.id %>/detail" class="FirstOffer">
@@ -95,37 +160,38 @@
                   <!-- <div class="heart_favorite">
                     <i class="fa-regular fa-heart"></i>
                   </div> -->
-                  <!-- <p class="discount">
+              <!-- <p class="discount">
                     <%= product.discount %>% OFF
                   </p> -->
-                  <div class="Imagetext">
-                    <img src="images/products/<%= product.images[1].name %>" alt="" class="product-image">
-                  </div>
-                  <div class="FirstOffer_data">
-                    <p class="Photo">
-                      <%= product.name %>
-                    </p>
-                    <p class="Price">$ <%= product.price %>
-                    </p>
-                  </div>
-                  <p class="Delivery"> <span class="Price">$<%= Math.floor(product.price/10) %></span> x 10 installments
-                  </p>
-                </a>
-                <div class="best_deals_btn">
-                    <a class="add-cart" href="/products/cart">Add to cart</a>
-                </div>
-              </article>
-              <% }) %>
-          </div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
+              <div class="Imagetext">
+                <img
+                  src="images/products/<%= product.images[0].name %>"
+                  alt=""
+                  class="product-image"
+                />
+              </div>
+              <div class="FirstOffer_data">
+                <p class="Photo"><%= product.name %></p>
+                <p class="Price">$ <%= product.price %></p>
+              </div>
+              <p class="Delivery">
+                <span class="Price">$<%= Math.floor(product.price/10) %></span>
+                x 10 installments
+              </p>
+            </a>
+            <div class="best_deals_btn">
+              <a class="add-cart" href="/products/cart">Add to cart</a>
+            </div>
+          </article>
+          <% }) %>
         </div>
 
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
 
-        <!-- <section class="section-categories">
+      <!-- <section class="section-categories">
           <div class="categories">
             <div class="categories-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone"
@@ -171,12 +237,11 @@
             <button type="button">See more</button>
           </div>
         </section> -->
-      </main>
-      <!-- bottom nav -->
-      <%- include('./partials/bottomNav') %>
-        <!-- footer -->
-        <%- include('./partials/footer') %>
-          <script src="/JS/swiper.js" type="module"></script>
+    </main>
+    <!-- bottom nav -->
+    <%- include('./partials/bottomNav') %>
+    <!-- footer -->
+    <%- include('./partials/footer') %>
+    <script src="/JS/swiper.js" type="module"></script>
   </body>
-
 </html>

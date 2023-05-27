@@ -1,7 +1,7 @@
 const { Sequelize } = require("../database/models");
 
 const Products = require("../database/models").Products;
-const Op = Sequelize.Op
+const Op = Sequelize.Op;
 const ProductServices = {
   getAllProducts: async () => {
     try {
@@ -16,6 +16,7 @@ const ProductServices = {
           { association: "colors" },
         ],
       });
+      console.log(products);
       return products;
     } catch (error) {
       console.log(error);
@@ -48,12 +49,12 @@ const ProductServices = {
       console.log(error);
     }
   },
-  productEdit:async(id,data)=>{
+  productEdit: async (id, data) => {
     try {
-      const productUpdated =  await Products.update(data,{
-          where:{
-            id:id       
-          }
+      const productUpdated = await Products.update(data, {
+        where: {
+          id: id,
+        },
       });
       console.log(productUpdated);
       return productUpdated;
@@ -64,42 +65,40 @@ const ProductServices = {
   deleteProduct: async (id) => {
     try {
       const product = await Products.destroy({
-        where:{
-          id:id
-        }
+        where: {
+          id: id,
+        },
       });
-      return product
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  ,
-  productlist: async(page,countProducts)=>{
-    try {
-      console.log(countProducts);
-     const products =  await Products.findAll({limit:parseInt(countProducts),offset:parseInt(page)})
-     return products
+      return product;
     } catch (error) {
       console.log(error);
     }
   },
-  productSerch:async(title)=>{
+  productlist: async (page, countProducts) => {
     try {
-      const products = await Products.findAll(
-        {
-          where:{
-            name:{
-              [Op.like]: '%' + title + '%'
-            }
-          }
-        }
-
-      );
-      return  products 
+      console.log(countProducts);
+      const products = await Products.findAll({
+        limit: parseInt(countProducts),
+        offset: parseInt(page),
+      });
+      return products;
     } catch (error) {
       console.log(error);
     }
-
-  }
+  },
+  productSerch: async (title) => {
+    try {
+      const products = await Products.findAll({
+        where: {
+          name: {
+            [Op.like]: "%" + title + "%",
+          },
+        },
+      });
+      return products;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 module.exports = ProductServices;
