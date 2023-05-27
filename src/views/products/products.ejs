@@ -7,14 +7,15 @@
     <%- include('../partials/header') %> 
 
     <main>
-      <section class="top-products">
-      <div class="titleproducts"><h1 style="color: green;">Products</h1></div>
+      <section class="top-list">
+      <div class="title"><h1>Products</h1></div>
       <div class="createproduct">
       <% if (locals.isAdmin) { %>
         <a href="/products/create"><button type="button" class="btn1"> Create</button></a>
       <% } %>
       </div>
       </section>
+      <hr/>
       <section class="filter-view">
       <div class="product-search" id="search">
         <form class="searchbar">
@@ -23,6 +24,7 @@
         </form>
       </div>
     </section>
+    <hr/>
     <section class="product-list">
       <% products.forEach(product => { %>
         <article class="product">
