@@ -10,6 +10,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 //--------------- Rutas-----------------//
 router.get('/contactUs', usersController.contactUs)
 router.get('/aboutUs', usersController.aboutUs)
+router.get('/users', usersController.users)
 router.get('/login',guestMiddleware ,usersController.login)
 router.post('/login',usersController.loginProcess)
 router.get('/register',guestMiddleware ,usersController.register)

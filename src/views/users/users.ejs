@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  
+  <%- include('../partials/head') %> 
+  <body>
+    <%- include('../partials/header') %> 
+
+    <main>
+      <section class="top-products">
+      <div class="titleproducts"><h1 style="color: green;">Users</h1></div>
+      </section>
+      <section class="filter-view">
+      <div class="product-search" id="search">
+        <form class="searchbar">
+          <input type="text" placeholder="Search" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+      </div>
+    </section>
+    <section class="product-list">
+      <% users.forEach(user => { %>
+        <article class="product">
+          <a class ="product-a" href="/users/<%= user.id %>/edit">
+          <figure class="imageproducts">
+            <img  src="/images/users/<%= user.image %>" alt="">
+          </figure>
+          <div class="producttext">
+            <h4>Details</h4>
+            <p>
+              <%= user.first_name %>
+            </p>
+            <p>
+              <%= user.last_name %>
+             </p>
+             <p>
+               <%= user.email %> 
+             </p>
+          </div>
+        </a>
+        <% if (locals.isAdmin) { %>
+          <div class="div-btn">
+          <a class="btn btn-edit" href="/users/<%= user.id %>/update">edit</a>
+          <form action="/users/<%= user.id %>/delete?_method=DELETE" method = "post">
+            <button  class = "btn"type="submit"> DELETE</button>
+          </form>
+        </div>
+        <% } %>
+    </article>
+       <% }) %>
+    </section>
+    
+    </main>
+
+  <!-- Bottom Nav -->
+
+    <%- include('../partials/bottomNav') %> 
+
+  <!-- Footer -->
+
+    <%- include('../partials/footer') %> 
+  </body>
+</html>

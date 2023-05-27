@@ -129,7 +129,18 @@ const usersController = {
         } catch (error) {
             console.log(error)
         }
-    }
+    },
+    users: async (req, res) => {
+        try {
+          const users = await userServices.getAllUsers();
+          return res.render("./users/users.ejs", { users });
+        } catch (error) {
+          console.log(error);
+        }
+      
+    
+    
+      },
 // ---API LIST-PUNTO array de users--// Faltaria ruta para esta api o directamente lo pongo en controlador products
 //   apiList: async(req,res)=>{
 //     try {
