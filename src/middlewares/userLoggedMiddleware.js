@@ -5,8 +5,6 @@ const userToLoggedMiddleware = async (req, res, next) => {
   const user = req.cookies.user;
   const admin = req.cookies.admin;
   if (admin) {
-      console.log(admin);
-      console.log('soy admin----------------');
       const superAdmin = await userServices.getUserByEmail(admin.email);
       req.session.isAdmin = superAdmin;
       res.locals.isAdmin = true;
@@ -18,7 +16,6 @@ const userToLoggedMiddleware = async (req, res, next) => {
 
   if (user) {
     const usuario = await userServices.getUserByEmail(user.email);
-    // console.log(usuario);
     req.session.userToLogged = usuario.dataValues;
   }
 

@@ -10,7 +10,7 @@ const productValidator = [
       "Please, the product´s name must contain at least five characters"
     ),
   body("description")
-    .isLength({ min: 20 })
+    .isLength({ min: 6 })
     .withMessage("Please, the description must contain at least 20 characters"),
   body("category_id").notEmpty().withMessage("Please select a category"),
   body("sub_category_id")
@@ -21,9 +21,7 @@ const productValidator = [
 //   body("memory_id").notEmpty().withMessage("Please select a memory"),
 //   ,
   body("brand_id").notEmpty().withMessage("Please select a brand"),
-  
-  body("camera_id").notEmpty().withMessage("Please select a camera"),
-  
+
   body("price").notEmpty().withMessage("Please set the product´s price"),
   
   body("stock").notEmpty().withMessage("Please set the product´s stock"),

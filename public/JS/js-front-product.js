@@ -3,7 +3,7 @@ window.addEventListener("load",function(){
     let formulario = document.querySelector(".form-inputs");
     const exp = {
         name: /^^[A-Za-z0-9 ]+$/,
-        description:/^[a-zA-Z0-9\s.,#-$%&/()áéíóúüñÁÉÍÓÚÜÑ]+$/u, //*agregar minimo 20 caracteres*//
+        description:/^[a-zA-Z0-9\s.,-:#$%&/*()áéíóúüñÁÉÍÓÚÜÑ"]+$/u, //*agregar minimo 20 caracteres*//
         price:/^[0-9]+([.])?([0-9]+)?$/,//*agregar que se puedan decimales*//
         stock:/^\d+$/ 
         //*falta imagen y dropdowns*//
@@ -26,13 +26,10 @@ window.addEventListener("load",function(){
         input.style.boxShadow = 'none'
         
         if(e.target.name == "name"){
-            console.log(e.target.value);
 
             fieldValidation(exp.name,e.target.value,e.target.name)
         }
         if(e.target.name == "description"){
-            console.log(e.target.value);
-
             fieldValidation(exp.description,e.target.value,e.target.name)
         }
         if(e.target.name == "price"){
@@ -43,8 +40,9 @@ window.addEventListener("load",function(){
         }
     }
     const fieldValidation = (exp,inputValue,field)=>{
-        console.log(field);
-        console.log(inputValue);
+        // console.log(field);
+        // console.log(inputValue);
+        // console.log(exp.test(inputValue));
         if(exp.test(inputValue)){
             const error = document.querySelector(`#${field}-error .error`);
             error.style.display='none';
@@ -98,9 +96,11 @@ window.addEventListener("load",function(){
         dropdowns.forEach(drop =>{
             let childrenDropError = drop.parentNode.querySelector('.error');
             if (drop.value == 'Choose an option') {
+                // console.log('es true')
                 childrenDropError.style.display = 'block'
                 campo[drop.name] = false
             }else{
+                // console.log('es true')
                 childrenDropError.style.display = 'none'
                 campo[drop.name] = true
             }
@@ -108,10 +108,27 @@ window.addEventListener("load",function(){
         })
     }
 
+        const category = document.querySelector('.category')
+            category.addEventListener('change',()=>{
+                if (category.value == 3) {
+                    this.document.querySelector('#camera').style.display = 'none'
+                    this.document.querySelector('#memory').style.display = 'none'
+                    this.document.querySelector('#ram').style.display = 'none'
+                }else if(category.value == 4 ){
+                    this.document.querySelector('#camera').style.display = 'none'
+                    this.document.querySelector('#ram').style.display = 'block'
+                    this.document.querySelector('#memory').style.display = 'block'
+                } else{
+                    this.document.querySelector('#camera').style.display = 'block'
+                    this.document.querySelector('#ram').style.display = 'block'
+                    this.document.querySelector('#memory').style.display = 'block'
+
+                }
+            })        
+       
     formulario.addEventListener("submit",function(e){
         e.preventDefault()
         validDrop()
-       console.log(campo);
        if(
         campo.name == true &&
         campo.description == true && 
@@ -124,15 +141,16 @@ window.addEventListener("load",function(){
         campo.sub_category_id == true  
         ){
             formulario.submit()
-            console.log('Se envio el formulario');
         }else{
-            console.log('hola');
-            const errores = document.querySelectorAll('.error')
+            const errores = document.querySelectorAll('.error');
             errores.forEach((error,i) =>{
-               const fields = Object.values(campo);
-               console.log(fields[i]);
-               if (fields[i]) {
+                const fields = Object.values(campo);
+                if (fields[i]) {
+                   console.log(Object.keys(campo)[i] + ':  '+ fields[i], 'is true')
                 error.style.display = "none"
+               } else{
+                console.log(Object.keys(campo)[i] + ' :  '  + fields[i],'is false')
+                error.style.display = "block"
                }
             })
             

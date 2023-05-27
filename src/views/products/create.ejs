@@ -24,9 +24,7 @@
                 <p class="text-danger error">Please complete with the product's name</p>
             </div>
             <div class="userinput" id="description-error">
-              <textarea name="description" id="" cols="30" rows="10" class="inputJs">
-                <%= locals.oldBody? oldBody.description: null %>
-            </textarea>
+              <textarea name="description" id="" cols="30" rows="10" class="inputJs"><%= locals.oldBody? oldBody.description: null %></textarea>
               <% if (locals.errors && errors.description) { %>
                 <p class="text-danger">
                   <%= errors.description.msg %>
@@ -46,9 +44,9 @@
                 <% } %>
                 <p class="text-danger error">Please upload a picture with a valid format [jpg-png-webp-jfif]</p>
             </div>
-            <div class="userinput" id="category-error">
+            <div class="userinput " id="category-error">
               <label>Category</label>
-              <select class="drop-down d-1" name="category_id">
+              <select class="drop-down d-1 category" name="category_id">
                 <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.category_id) { %>
                   <% categories.forEach(category => { %>
@@ -133,7 +131,7 @@
               <% } %>
 
             </select>
-            <div class="userinput">
+            <div class="userinput " id="memory">
               <label>Internal Storage</label>
               <select class="drop-down " name="memory_id">
                 <option disabled selected>Choose an option</option>
@@ -144,7 +142,7 @@
                       <% }) %>
               </select>
             </div>
-            <div class="userinput">
+            <div class="userinput " id="ram">
               <label>RAM memory</label>
               <select class="drop-down" name="ram_id">
                 <option disabled selected>Choose an option</option>
@@ -182,9 +180,9 @@
               <% } %>
               <p class="text-danger error">Please select a brand</p>
             </div>
-            <div class="userinput">
+            <div class="userinput " id="camera">
               <label>Cameras</label>
-              <select class="drop-down" name="camera_id">
+              <select class="drop-down d-1" name="camera_id">
                 <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.camera_id) { %>
                  <% cameras.forEach(camera => { %>
@@ -208,6 +206,8 @@
                   <%= errors.camera_id.msg %>
                 </p>
                 <% } %>
+              <p class="text-danger error">Please select a camera</p>
+
             </div>
 
            

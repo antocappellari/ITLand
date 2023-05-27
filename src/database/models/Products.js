@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
     category_id: dataTypes.INTEGER,
     sub_category_id: dataTypes.INTEGER,
     description: {
-      type: dataTypes.STRING(500),
+      type: dataTypes.STRING(1000),
       allowNull: false,
     },
     stock: {

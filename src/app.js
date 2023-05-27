@@ -8,10 +8,14 @@ const productsRoutes = require('./router/productsRoutes.js');
 const mainRoutes = require('./router/mainRoutes.js');
 const imageRouter = require('./router/imageRouter.js');
 const apiProductRouter = require('./router/api/apiProductRouter.js')
+const apiUserRouter = require('./router/api/apiUserRouter.js')
 const methodOverride = require("method-override");
 const session = require('express-session');
 const userToLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
 const cookie = require('cookie-parser')
+const cors = require('cors')
+
+app.use(cors({origin:'*'}))
 
 app.use(session({
     secret: "is secret",
@@ -36,6 +40,7 @@ app.use('/products',productsRoutes);
 
 
 app.use('/api/products/',apiProductRouter);
+app.use('/api/users/',apiUserRouter);
 
 
 app.listen(PORT,()=>{console.log(`Servidor corriendo en el puerto ${PORT}`)});

@@ -24,36 +24,6 @@ const productsController = {
       console.log(error);
     }
   },
-  // ---API LIST-PUNTO array de products--// Faltaria ruta para esta api o directamente lo pongo en controlador products
-  // apiList: async(req,res)=>{
-  //   try {
-  //     db.Products
-  //     .findAll()
-  //     .then(Products=>{
-  //       return res.status(200).json({
-  //         total: Products.length,
-  //         data: Products,
-  //         status: 200,
-  //       })}
-  //     )      
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // },
-  // apiProductId:async(req,res)=>{
-  //   try {
-  //     db.Products
-  //     .findAbyPk(req,params,id)
-  //     .then(Product=>{
-  //       return res.status(200).json({
-  //         data: Product,
-  //         status: 200,
-  //       })}
-  //     )      
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // },
   products: async (req, res) => {
     try {
       const products = await ProductServices.getAllProducts();
@@ -90,7 +60,20 @@ const productsController = {
   },
   creation: async (req, res) => {
     try {
-      let body = req.body;
+      let {
+        name,
+        price,
+        discount,
+        description,
+        camera_id,
+        color_id,
+        brand_id,
+        memory_id,
+        ram_id,
+        category_id,
+        sub_category_id,
+        stock
+      } = req.body;
       const errors = validationResult(req);
       if(!errors.isEmpty()) {
         const categories = await db.Categories.findAll();
@@ -113,18 +96,18 @@ const productsController = {
         sub_categories,
       })}
       let data = {
-        name: body.name,
-        price: body.price ? body.price : 0,
-        discount: body.discount ? body.discount: 0,
-        camera_id: body.camera_id,
-        colors_id: body.color_id,
-        brands_id: body.brand_id,
-        memory_id: body.memory_id,
-        rams_id: body.ram_id,
-        category_id: body.category_id,
-        sub_category_id: body.sub_category_id,
-        description: body.description,
-        stock: body.stock,
+        name: name,
+        price: price ? price : 0,
+        discount: discount ? discount: 0,
+        camera_id:camera_id,
+        colors_id: color_id,
+        brands_id: brand_id,
+        memory_id: memory_id,
+        rams_id: ram_id,
+        category_id: category_id,
+        sub_category_id: sub_category_id,
+        description: description,
+        stock: stock,
       };
 
       const product = await db.Products.create(data);

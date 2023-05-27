@@ -6,9 +6,15 @@ const ProductServices = {
   getAllProducts: async () => {
     try {
       const products = await Products.findAll({
-        include:[{
-          association:'images'
-        }]
+        include: [
+          { association: "categories" },
+          { association: "sub_categories" },
+          { association: "brands" },
+          { association: "rams" },
+          { association: "images" },
+          { association: "camera" },
+          { association: "colors" },
+        ],
       });
       return products;
     } catch (error) {
