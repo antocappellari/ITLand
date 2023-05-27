@@ -13,7 +13,7 @@
 }
 .error {
   display: none;
-  margin: 40px 0;
+  margin: -4px 0;
 }
 .main-form {
   display: flex;
@@ -64,14 +64,15 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
 }
 
 .container-form .userinput {
-  margin: 40px;
+  margin: 30px;
   position: relative;
   width: 100%;
   height: 5vh;
+  font-size: 1.1rem;
+  color: #494848;
 }
 
 .container-form .userinput input:not(.input-button) {
@@ -82,15 +83,23 @@
   font-weight: 400;
   color: #333;
   border: 1.5px solid #c7bebe;
-  border-bottom-width: 2.5px;
-  border-radius: 15px;
+  border-radius: 51px;
   transition: all 0.3s ease;
   padding-left: 35px;
+  border: 2.5px solid #d5c9c9;
+  margin-top: 10px;
+}
+#price-error {
+  margin-top: 33px;
 }
 .container-form .userinput i {
   position: absolute;
 }
-
+.labelProducts {
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
 .container-form .conditions {
   width: 100%;
   display: flex;
@@ -118,14 +127,9 @@
 .errorPassword {
   display: none;
 }
-.button-submit:hover {
-  background-color: #164ffacf;
-  border-radius: 15px;
-  padding: none;
-  border: none;
-  width: 80%;
-  height: 5vh;
-}
+/* .button-submit:hover {
+  background-color: #0034d1cf;
+} */
 
 .container-form .text p:not(a) {
   font-size: 1em;
@@ -167,7 +171,8 @@
 .form-title {
   width: 100%;
   text-align: center;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  margin-bottom: 21px;
 }
 
 .img-input {
@@ -180,13 +185,14 @@
 
 .drop-down {
   width: 100%;
-  height: 7vh;
-  border-radius: 15px;
-  border: 1.5px solid #c7bebe;
+  height: 5.5vh;
+  border-radius: 51px;
+  border: 2.5px solid #d5c9c9;
   padding-left: 35px;
   outline: none;
-  font-size: 17px;
+  font-size: 1rem;
   color: #6b6969;
+  margin-top: 10px;
 }
 
 .button-create-product {
@@ -199,6 +205,7 @@
 .file-select {
   position: relative;
   display: inline-block;
+  margin-top: 8.5rem;
 }
 
 .file-select::before {
@@ -277,7 +284,13 @@
     color: #3f3e3e;
   }
 }
-
+#inputDescription {
+  height: 5vh;
+}
+#area {
+  width: 100%;
+  margin-top: 10px;
+}
 /* ------------DESKTOP---------- */
 @media screen and (min-width: 1024px) {
   .container-form {

@@ -3,10 +3,13 @@ const ProductServices = {
   getAllProducts: async () => {
     try {
       const products = await Products.findAll({
-        include:[{
-          association:'images'
-        }]
+        include: [
+          {
+            association: "images",
+          },
+        ],
       });
+      console.log(products);
       return products;
     } catch (error) {
       console.log(error);
@@ -38,12 +41,12 @@ const ProductServices = {
       console.log(error);
     }
   },
-  productEdit:async(id,data)=>{
+  productEdit: async (id, data) => {
     try {
-      const productUpdated =  await Products.update(data,{
-          where:{
-            id:id       
-          }
+      const productUpdated = await Products.update(data, {
+        where: {
+          id: id,
+        },
       });
       console.log(productUpdated);
       return productUpdated;
@@ -54,14 +57,14 @@ const ProductServices = {
   deleteProduct: async (id) => {
     try {
       const product = await Products.destroy({
-        where:{
-          id:id
-        }
+        where: {
+          id: id,
+        },
       });
-      return product
+      return product;
     } catch (error) {
       console.log(error);
     }
-  }
+  },
 };
 module.exports = ProductServices;

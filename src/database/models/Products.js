@@ -21,9 +21,6 @@ module.exports = (sequelize, dataTypes) => {
     },
     camera_id: dataTypes.INTEGER,
     colors_id: dataTypes.INTEGER,
-    memory_id: {
-        type:dataTypes.INTEGER,
-    },
     category_id: dataTypes.INTEGER,
     sub_category_id: dataTypes.INTEGER,
     description: {
@@ -41,7 +38,7 @@ module.exports = (sequelize, dataTypes) => {
     createdAt: "created_at",
     updatedAt: "updated_at",
     deletedAt: "deleted_at",
-    paranoid: true
+    paranoid: true,
   };
 
   const Products = sequelize.define(alias, cols, config);
@@ -58,7 +55,7 @@ module.exports = (sequelize, dataTypes) => {
       as: "brands",
       foreignKey: "brands_id",
     });
-   
+
     Products.belongsTo(models.Camera, {
       as: "camera",
       foreignKey: "camera_id",

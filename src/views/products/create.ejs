@@ -2,13 +2,13 @@
 <html lang="en">
 <!-- head -->
 <%- include('../partials/head') %>
-
+<link rel="stylesheet" href="/css/formProduct.css" />
   <body>
     <!-- header -->
     <%- include('../partials/header') %>
       <main class="main-form">
         <div class="container-form">
-          <h2 class="form-title">Article creation:</h2>
+          <h2 class="form-title">Create Product</h2>
 
           <!-- <--------FORMULARIO--------->
 
@@ -24,7 +24,8 @@
                 <p class="text-danger error">Please complete with the product's name</p>
             </div>
             <div class="userinput" id="description-error">
-              <textarea name="description" id="" cols="30" rows="10" class="inputJs">
+              <label class="labelProducts" for="description">Insert Description</label>
+              <textarea placeholder="" name="description" id="area" cols="40" rows="6" class="inputJs">
                 <%= locals.oldBody? oldBody.description: null %>
             </textarea>
               <% if (locals.errors && errors.description) { %>
@@ -34,13 +35,6 @@
                 <% } %>
                 <p class="text-danger error">Please complete with the product's description</p>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <div>
               <div class="file-select" >
                 <input type="file" name="image" id="files" multiple>
@@ -52,16 +46,8 @@
                 <% } %>
                 <p class="text-danger error">Please upload a picture with a valid format [jpg-png-webp-jfif]</p>
             </div>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <div class="userinput" id="category-error">
-              <label>Category</label>
+              <label class="labelProducts">Category</label>
               <select class="drop-down d-1" name="category_id">
                 <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.category_id) { %>
@@ -90,7 +76,7 @@
                 <p class="text-danger error">Please select a category</p>
             </div>
             <div class="userinput" id="sub_category-error">
-              <label>Sub Category</label>
+              <label class="labelProducts">Sub Category</label>
               <select class="drop-down d-1" name="sub_category_id">
                 <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.sub_category_id) { %>
@@ -118,7 +104,7 @@
                 <p class="text-danger error">Please select a sub-category</p>
             </div>
             <div class="userinput" id="color-error">
-              <label for="">Colors</label>
+              <label class="labelProducts" for="">Colors</label>
             <select class="drop-down d-1" name="color_id">
               <option disabled selected>Choose an option</option>
               <% if (locals.oldBody && oldBody.color_id) { %>
@@ -148,7 +134,7 @@
 
             </select>
             <div class="userinput">
-              <label>Internal Storage</label>
+              <label class="labelProducts">Internal Storage</label>
               <select class="drop-down " name="memory_id">
                 <option disabled selected>Choose an option</option>
                 <% memories.forEach(memory=> { %>
@@ -162,7 +148,7 @@
               </select>
             </div>
             <div class="userinput">
-              <label>RAM Memory</label>
+              <label class="labelProducts">RAM Memory</label>
               <select class="drop-down" name="memory_id">
                 <option disabled selected>Choose an option</option>
                 <% memories.forEach(memory=> { %>
@@ -176,7 +162,7 @@
               </select>
             </div>
             <div class="userinput" id="brand-error">
-              <label>Brands</label>
+              <label class="labelProducts">Brands</label>
               <select class="drop-down d-1" name="brand_id">
                 <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.brand_id) { %>
@@ -203,7 +189,7 @@
               <p class="text-danger error">Please select a brand</p>
             </div>
             <div class="userinput">
-              <label>Cameras</label>
+              <label class="labelProducts">Cameras</label>
               <select class="drop-down" name="camera_id">
                 <option disabled selected>Choose an option</option>
                 <% if (locals.oldBody && oldBody.camera_id) { %>
@@ -232,6 +218,7 @@
 
            
             <div class="userinput" id="price-error">
+              <label class="labelProducts">Price</label>
               <input type="number" class="inputJs" name="price" placeholder="Product Price">
               <%if(locals.errors && errors.price){ %>
                 <p class="text-danger">
@@ -242,9 +229,11 @@
               <p class="text-danger error">Please complete with the product's price</p>
             </div>
             <div class="userinput">
+              <label class="labelProducts">Discount</label>
               <input type="number" name="discount" placeholder="Product Discount">
             </div>
             <div class="userinput" id="stock-error">
+              <label class="labelProducts">Stock</label>
               <input type="number" class="inputJs"name="stock" placeholder="Stock">
               <% if (locals.errors && errors.stock) { %>
                 <p class="text-danger">
