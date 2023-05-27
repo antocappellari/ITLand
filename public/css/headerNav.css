@@ -1,10 +1,12 @@
-
-
 .header__account .account {
   display: none;
 }
 
 .header__account span {
+  display: none;
+}
+
+.user_option{
   display: none;
 }
 
@@ -15,12 +17,20 @@
   text-decoration: none;
   padding: 10px;
 }
+.container-header__cart a i {
+  font-size: 1.8em;
+}
 
 .navegation {
   display: none;
-  padding-top: 15px;
+  padding: 15px;
 }
-
+.icon_down{
+  display: none;
+}
+.nameHeader{
+  display: none;
+}
 .container-header {
   display: grid;
   grid-template-columns: 20% 60% 20%;
@@ -69,14 +79,23 @@
   color: #000;
   text-align: center;
   position: relative;
-  height: 25%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap:5px;
+  background-color: #0D1321;
 }
-
+.btn-login{
+  background-color: #102860;
+}
+.btn-register{
+  background-color: #1d2d44;
+}
+.user_name{
+  color: #fff;
+}
 .headImage{
   display: flex;
   height: 35px;
@@ -85,14 +104,16 @@
   border: solid 0.5px white;
   background-color: white;
   justify-content: center;
+  object-fit: cover;
   align-items: center;
 }
 .nameLogged, .logOut{
   display: none;
 }
-.user p{
-  font-size:1.6em ;
-  font-weight: 400;
+.user p {
+  color: steelblue;
+  font-size: 1.6em;
+  font-weight: bold;
 }
 .user .user-profile{
   width: 90px;
@@ -104,7 +125,7 @@
   left: 87%;
 }
 .button-exit svg{
-  color: #000;
+  color: #fff;
   width: 30px;
   height: 30px;
 }
@@ -116,53 +137,46 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  transform: translateX(-1720px);
-  transition: all 1s;
-  z-index: 10;
-
+  transition: all 600ms;
+  z-index: 1212120;
+  transform: translateX(-1820px);  
 }
-#open:target{
-  display: block;
-  transform: translateX(0px);
-  overflow: scroll;
+.menu-mobile_active{
+  transform: translateX(0);
   position: fixed;
+  overflow: scroll;
 }
+
 .navegation-mobile {
   margin-top: 20px;
 }
 .navegation-mobile ul{
   display: flex;
   flex-direction: column;
-  padding-left: 30px;
   gap: 20px;
-  padding: 10px;
-  align-items: center;
+  padding: 20px;
+}
+.mobile_categories{
+  color: #000;
 }
 .user-image{
   background-color: none;
 }
 .userImage{
   border: 1px solid rgb(255, 255, 255);
+  object-fit: cover;
 }
-hr{
-  opacity: 0.5;
-  background-color: black;
-  padding: 0 45%;
+.userImage img{
+  object-fit: cover;
+}
 
-}
 .navegation-mobile ul li {
   list-style: none;
-}
-.navegation-mobile ul li a{
-  font-size: 1.4em;
-  color: #000;
-  text-decoration: none;
 }
 .main__input {
   display: none;
   grid-column: 1/4;
   order: 9;
-  padding: 10px;
 
 }
 .main__input form{
@@ -189,13 +203,20 @@ hr{
 @media screen and (min-width:767px) and (max-width:1023px) {} */
 /* --------------------------------------DESKTOP----------------------------- */
 @media screen and (min-width:1024px) {
+  .user_option{
+    display: block;
+  }
   .menu-mobile{
     display: none;
+  }
+  .nameHeader{
+    display: block;
   }
   .container-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 3em;
   }
 
 
@@ -216,33 +237,86 @@ hr{
 
   .header__burger {
     display: none;
+    position: relative;
   }
-
+  
+  .user_logged{
+    background: #3a445a55;
+  }
+  .user_logged_user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding:10px;
+    position: relative;
+  }
+  .crown{
+    position: absolute;
+    left: 7%;
+    top: 5%;
+    transform: rotate(307deg);
+    color:gold
+  }
+  .header__account .user_logged a{
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
   .header__account {
     order: 3;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     width: 20%;
   }
-
-  .header__account a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    text-decoration: none;
+  .user_option {
+    background-color: white;
+    position: absolute;
+    top: 92%;
+    width: 14.7%;
+    z-index: 324;
+  }
+  .user_option a{
+    color: #0D1321
+  }
+  .user_option a:hover{
+    background: #0D1321;
+    border-radius: 0;
+    color: white;
+    font-weight: bold;
 
   }
+  .user_option_active{
+    display: none ;
+  }
 
-  .header__account span {
+  .icon-rotate{
+    transform:rotate(180deg);
+    transition: all 300ms ease-out ;
+  }
+  
+  .icon-rotate2{
+    transform:rotate(-0deg);
+    transition: all 300ms ease-out ;
+  }
+
+  .header__account .user_logged{
+    width: 100%;
+  }
+
+
+  /* .header__account span {
     display: block;
     font-size: 15px;
-  }
+  } */
 
   .account__icon {
     font-size: 15px;
-    margin-right: 15px;
     display: flex;
     justify-content: center;
   }
@@ -255,6 +329,27 @@ hr{
     border-radius: 30px;
   }
 
+  .results{
+    position: absolute;
+    list-style: none;
+    background:white;
+    width: 95%;
+    height: auto;
+    z-index: 03003;
+    color: #0D1321;
+  }
+  
+  .results li{
+    /* border-bottom: 1px solid rgb(112, 112, 112); */
+    padding: 1em;
+  }
+  .listResult a{
+    width: 100%;
+    height: 1em;
+  }
+  
+  
+  
   .main__input i {
     display: block;
     position: absolute;
@@ -265,9 +360,9 @@ hr{
 
   .main__input input {
     border: none;
-    height: 35px;
+    height: 3em;
+    padding-left: 1em;
     width: 100%;
-    border-radius: 10px
   }
 
   .main__input input::placeholder {
@@ -278,21 +373,15 @@ hr{
     display: block;
   }
   .container-header__cart {
-    order: 4;
-    display: block;
-    margin-right: 40px;
+    display: flex;
   }
 
   .container-header__cart i {
     color: #fff;
     font-size: 15px;
-    margin-right: 15px;
   }
-
-  .container-header__cart span {
-    color: #fff;
-    font-size: 15px;
-    text-decoration: none;
+  .icon_down{
+    display: block;
   }
 
   .navegation {
@@ -300,7 +389,7 @@ hr{
     background-color: #1d2d44;
     font-family: "Roboto", sans-serif;
     justify-content: flex-end;
-    align-items: center;
+    align-content: center;
     height: 35px;
     padding-right: 20px;
   }
@@ -310,7 +399,6 @@ hr{
     gap: 20px;
     align-items: center;
     list-style: none;
-    height: 6vh;
     padding-left: 10px;
     justify-content: flex-end;
   }
@@ -337,6 +425,7 @@ hr{
   .header__account span {
     font-size: 20px;
     display: block;
+    margin-left: 10px;
   }
 
   .account__icon {

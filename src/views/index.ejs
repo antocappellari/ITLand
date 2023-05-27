@@ -5,16 +5,43 @@
   <body>
     <!-- header -->
     <%- include('./partials/header') %>
-    <main>
-      <div class="swiper2">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <img src="/images/carrussel/1.webp" alt="" />
+      <main>
+        
+
+          <div class="swiper2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img class="carrussel-img" src="/images/carrussel/1.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="carrussel-img" src="/images/carrussel/2.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="carrussel-img" src="/images/carrussel/3.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="carrussel-img" src="/images/carrussel/4.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="carrussel-img" src="/images/carrussel/5.webp" alt="">
+              </div>
+            </div>
+       
           </div>
-          <div class="swiper-slide">
-            <img src="/images/carrussel/2.webp" alt="" />
+
+
+          <div class="swiper3">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img1.webp" alt=""></div>
+              <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img2.webp" alt=""></div>
+              <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img3.webp" alt=""></div>
+              <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img4.webp" alt=""></div>
+              <div class="swiper-slide"><img class="carrussel-img" src="/images/carrussel/img5.webp" alt=""></div>
+            </div>
           </div>
           <div class="swiper-slide">
             <img src="/images/carrussel/3.webp" alt="" />
@@ -92,12 +119,45 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <% products.forEach(product=> { %>
-          <article class="carrussel-art swiper-slide">
-            <a
-              href="/products/<%= product.id %>/detail"
-              class="carrussel_product"
-            >
-              <!-- <div class="heart_favorite">
+            <article class="best_deals">
+              <a href="/products/<%= product.id %>/detail" class="FirstOffer">
+                <% if (product.discount == 0) { %>
+                  <p></p>
+                <% } else{ %>
+                  <p class="discount">
+                    <%= product.discount %>% OFF
+                  </p>
+                  <% }  %>
+                <div class="Imagetext">
+                  <img src="images/products/<%= product.images[1].name %>" alt="" class="product-image">
+                </div>
+                <div class="FirstOffer_data">
+                  <p class="Photo">
+                    <%= product.name %>
+                  </p>
+                  <p class="Price">$ <%= product.price %>
+                  </p>
+                </div>
+                <p class="Delivery"><span class="Price">$<%= Math.floor(product.price/10) %></span> x 10 installments</p>
+              </a>
+              <div class="best_deals_btn">
+                <a class="add-cart" href="/products/cart">Add to cart</a>
+            </div>
+            </article>
+            <% }) %>
+            
+        </section>
+
+        <h2 class="producTittle">offers</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper ">
+            <!-- Slides -->
+            <% products.forEach(product=> { %>
+              <article class="carrussel-art swiper-slide">
+                <a href="/products/<%= product.id %>/detail" class="carrussel_product">
+                  <!-- <div class="heart_favorite">
                     <i class="fa-regular fa-heart"></i>
                   </div> -->
               <!-- <p class="discount">

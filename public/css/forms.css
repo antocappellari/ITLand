@@ -20,6 +20,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #dbdada;
 }
 
 .container-form {
@@ -316,7 +321,138 @@
     width: 80%;
     height: 6vh;
     color: #fff;
-    background-color: #164ffacf;
+    background-color: #3e5c76;
+    border: none;
+    border-radius: 15px;
+    padding: none;
+    font-size: 16px;
+  }
+  .errorPassword {
+    display: none;
+  }
+  .button-submit:hover {
+    background-color: #748cab;
+    border-radius: 15px;
+    padding: none;
+    border: none;
+    width: 80%;
+    height: 5vh;
+  }
+
+  .container-form .text p:not(a) {
+    font-size: 1em;
+    font-weight: 400;
+    color: #333;
+  }
+
+  .container-form .text a {
+    text-decoration: none;
+    color: #164ffacf;
+    font-weight: 600;
+  }
+
+  .conditions-register {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 20px;
+  }
+
+  .userinput i:not(.icon5) {
+    top: 20%;
+    left: 3%;
+    font-size: 20px;
+    color: #3a3a3a;
+  }
+  .userinput .icon5 {
+    top: 20%;
+    right: 5%;
+    font-size: 20px;
+    color: #3f3e3e;
+  }
+
+  /* //form-admin-user { */
+  /* display: flex;
+    flex-direction: column;
+    width: 370px;
+    gap: 12px; */
+
+  .form-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .img-input {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .drop-down {
+    width: 100%;
+    height: 7vh;
+    border-radius: 15px;
+    border: 1.5px solid #c7bebe;
+    padding-left: 35px;
+    outline: none;
+    font-size: 17px;
+    color: #6b6969;
+  }
+
+  .button-create-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .file-select {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+/* ------------DESKTOP---------- */
+@media screen and (min-width: 1024px) {
+  .container-form {
+    width: 60%;
+    margin-top: 4%;
+    padding: 60px;
+  }
+  .userinput i:not(.icon5) {
+    top: 15%;
+    left: 3%;
+    font-size: 24px;
+  }
+  .userinput .icon5 {
+    top: 15%;
+    font-size: 24px;
+  }
+  .container-form .button-submit .input-button {
+    width: 45%;
+    transition: all 0.3s;
+  }
+  .container-form .button-submit .input-button:hover {
+    background-color: #748cab;
+  }
+  .container__form-login {
+    width: 45%;
+  }
+  .container-form .text-title h2 {
+    font-size: 2.3em;
+  }
+  .container-form .userinput {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+  }
+  .container-form .button-submit .input-button {
+    width: 80%;
+    height: 6vh;
+    color: #fff;
+    background-color: #3e5c76;
     border: none;
     border-radius: 15px;
     padding: none;

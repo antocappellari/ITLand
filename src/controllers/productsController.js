@@ -1,7 +1,7 @@
 const ProductServices = require("../services/ProductServices");
 let db = require("../database/models");
 const { validationResult } = require("express-validator");
-const Images = require("../database/models/").Images
+const Images = require("../database/models/").Images;
 
 //controllers
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -24,18 +24,49 @@ const productsController = {
       console.log(error);
     }
   },
+  // ---API LIST-PUNTO array de products--// Faltaria ruta para esta api o directamente lo pongo en controlador products
+  // apiList: async(req,res)=>{
+  //   try {
+  //     db.Products
+  //     .findAll()
+  //     .then(Products=>{
+  //       return res.status(200).json({
+  //         total: Products.length,
+  //         data: Products,
+  //         status: 200,
+  //       })}
+  //     )      
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // },
+  // apiProductId:async(req,res)=>{
+  //   try {
+  //     db.Products
+  //     .findAbyPk(req,params,id)
+  //     .then(Product=>{
+  //       return res.status(200).json({
+  //         data: Product,
+  //         status: 200,
+  //       })}
+  //     )      
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // },
   products: async (req, res) => {
     try {
       const products = await ProductServices.getAllProducts();
-      // console.log(products);
       return res.render("./products/products.ejs", { products });
     } catch (error) {
       console.log(error);
     }
+
+
+
+
   },
-  search(req, res) {
-    let body = req.body;
-  },
+
   create: async (req, res) => {
     try {
       const categories = await db.Categories.findAll();
@@ -44,13 +75,14 @@ const productsController = {
       const cameras = await db.Camera.findAll();
       const colors = await db.Colors.findAll();
       const sub_categories = await db.Sub_categories.findAll();
-
+      const rams = await db.Rams.findAll();
 
       return res.render("products/create.ejs", {
         categories,
         brands,
         memories,
         cameras,
+        rams,
         colors,
         sub_categories,
       });
@@ -64,6 +96,7 @@ const productsController = {
         const categories = await db.Categories.findAll();
         const brands = await db.Brands.findAll();
         const memories = await db.Memories.findAll();
+        const rams = await db.Rams.findAll();
         const cameras = await db.Camera.findAll();
         const colors = await db.Colors.findAll();
         const sub_categories = await db.Sub_categories.findAll();
@@ -75,6 +108,7 @@ const productsController = {
         brands,
         memories,
         cameras,
+        rams,
         colors,
         sub_categories,
       })}
@@ -85,6 +119,8 @@ const productsController = {
         camera_id: body.camera_id,
         colors_id: body.color_id,
         brands_id: body.brand_id,
+        memory_id: body.memory_id,
+        rams_id: body.ram_id,
         category_id: body.category_id,
         sub_category_id: body.sub_category_id,
         description: body.description,

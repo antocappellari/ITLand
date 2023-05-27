@@ -1,0 +1,40 @@
+textarea.inputJs{
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1.5px solid #c7bebe;
+    resize: none;
+}
+.contactform{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-content:center;
+    padding:10px;
+    width:100%;
+}
+.contactform .userInputCF{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+    padding:10px;
+}
+.contactform .userInputCF .inputJs{
+    width:100%;
+    padding:10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1.5px solid #c7bebe;
+}
+.text-titleCF h2{
+color:#3e5c76;
+font-size: 1.6em;
+text-align: center;
+}
+@media screen and (min-width:767px){
+    .contactform .userInputCF .inputJs{
+        width:80%;}
+}

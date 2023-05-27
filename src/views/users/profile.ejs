@@ -13,10 +13,11 @@
           <div class="userImage">
           <img width="100px" src="/images/users/<%= userToLogged.image %>" alt="">
         </div>
-        <div>
-          <a href="/users/update/<%= userToLogged.id %>">Edit Profile</a>
+        <div class="userButtons">
+          <a href="/users/update/<%= userToLogged.id %>"><button type="button"
+            class="userButton">Edit profile</button></a>
           <form action="/users/delete/<%= userToLogged.id %>?_method=DELETE" method="post">
-            <button type="submit">Delete</button>
+            <button class="userButton" type="submit">Delete</button>
           </form>
         </div>
         </div>

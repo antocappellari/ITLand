@@ -24,7 +24,7 @@ const validator = [
     .isEmail()
     .withMessage("Please, complete it  with a valid email"),
   body("image").custom((value, { req }) => {
-    let array = [".jpg", ".png", ".jpeg", "jfif"];
+    let array = [".jpg", ".png", ".jpeg", ".jfif"];
     let file = req.file;
 
     if (!file) {

@@ -138,26 +138,20 @@
               <select class="drop-down " name="memory_id">
                 <option disabled selected>Choose an option</option>
                 <% memories.forEach(memory=> { %>
-                  <% if (memory.type=="R0M" ) { %>
                     <option value="<%= memory.id %>">
                       <%= memory.memory %>
                     </option>
-
-                    <% } %>
                       <% }) %>
               </select>
             </div>
             <div class="userinput">
-              <label class="labelProducts">RAM Memory</label>
-              <select class="drop-down" name="memory_id">
+              <label>RAM memory</label>
+              <select class="drop-down" name="ram_id">
                 <option disabled selected>Choose an option</option>
-                <% memories.forEach(memory=> { %>
-                  <% if (memory.type=='RAM' ) { %>
-                    <option value="<%= memory.id %>">
-                      <%= memory.memory %>
-                    </option>
-
-                    <% } %>
+                <% rams.forEach(ram=> { %>
+                    <option value="<%= ram.id %>">
+                      <%= ram.ram %>
+                    </option> 
                       <% }) %>
               </select>
             </div>

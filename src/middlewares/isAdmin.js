@@ -1,11 +1,12 @@
 
 const isAdmin = async (req, res, next) =>{
-    const user = req.session.userToLogged
-    if(user.users_rol.name == "admin"){
+    const admin = req.session.isAdmin;
+    
+    if(admin === undefined){
         next()
-        return;
+        return res.redirect('/')
     }
     next()
-    return res.redirect('/')
+    return;
 }
 module.exports = isAdmin
