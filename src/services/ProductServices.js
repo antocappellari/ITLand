@@ -16,7 +16,7 @@ const ProductServices = {
           { association: "colors" },
         ],
       });
-      console.log(products);
+      console.log(products[0].categories);
       return products;
     } catch (error) {
       console.log(error);

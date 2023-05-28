@@ -82,9 +82,18 @@ nav ul .caja {
   align-items: flex-start;
   margin-top: 2em;
 }
+.Imagetext{
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
+.product_image{
+  width: 80%;
+}
 .product-image {
+  width: 100%;
   height: 200px;
-  object-fit: cover; 
+  object-fit: contain; 
 }
 .best_deals:hover {
   box-shadow: 2px 2px 7px rgb(207, 208, 209);
@@ -93,16 +102,19 @@ nav ul .caja {
 
 .Delivery {
   color: #00a650;
+  margin-bottom: 20px;
 }
 .best_deals {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 3em 1em 0 1em; */
   border-radius: 3px;
   box-shadow: 1px 1px 4px rgba(131, 131, 131, 0.404);
   position: relative;
+}
+.article_product{
+  width: 80%;
 }
 
 .carrussel_product{
@@ -112,7 +124,7 @@ nav ul .caja {
   gap: 10px;
   justify-content: center;
   align-items: center;
-  padding: 3em;
+  padding: 17px;
   
 
 }
@@ -123,17 +135,16 @@ nav ul .caja {
   justify-content: center;
   align-items: center;
 }
-
-.FirstOffer .Photo {
-  font-weight: bold
+ .product_name {
+  font-weight: 600;
+  color:#0D1321;
+  height: 30px;
+  padding:0 5px;
+  text-align: center;
 }
-
-.FirstOffer_data {
-  margin-top: 30px;
-  display: flex;
-  width: 300px;
-  justify-content: center;
-  gap: 20px;
+.product_price{
+  color: #0e7b42;
+  font-weight: 600;
 }
 
 .producTittle {
@@ -154,8 +165,6 @@ nav ul .caja {
   padding: 1.3em;
 
 }
-
-
 
 .carrussel-art{
   width: 80%;
@@ -199,7 +208,6 @@ nav ul .caja {
 }
 
 .swiper-wrapper {
-  /* padding: 20px; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -214,8 +222,7 @@ nav ul .caja {
 
 
 .add-cart:hover{
-box-shadow: 1px 1px 3px #00a650;
-  background: #00a650;
+  background: #0D1321;
   text-shadow: 1px 1px 4px white;
   color: #fff;
 
@@ -244,11 +251,6 @@ box-shadow: 1px 1px 3px #00a650;
   align-content: center;
 }
 
-.FirstOffer .Price {
-  color: #52a31d;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
 .discount{
   position: absolute;
   left: 63%;
@@ -261,20 +263,6 @@ box-shadow: 1px 1px 3px #00a650;
   border-radius: 40px 0 0 40px;
   color: #fff;
   padding: 4px 0px;
-}
-
-
-.FirstOffer .Delivery {
-  margin: 30px 0;
-
-  font-size: 15px;
-  text-align: center;
-}
-.heart_favorite{
-    position: absolute;
-    left: 79%;
-    top: 14%;
-    font-size: x-large;
 }
 
 
@@ -393,14 +381,14 @@ box-shadow: 1px 1px 3px #00a650;
     width: 50%;
 
   }
+  .article_product{
+    width: 30%;
+  }
 
   .section-categories .categories-seemore {
     width: 100%;
   }
 
-  .FirstOffer {
-    width: 30%;
-  }
 
   .paymentmethods {
     justify-content: space-evenly;
@@ -456,8 +444,7 @@ box-shadow: 1px 1px 3px #00a650;
   }
 
   .FirstOffer {
-    width: 110%;
-    height: 52vh;
+    width: 100%;
   }
   .best_deals{
     width: 21%;
@@ -515,40 +502,5 @@ box-shadow: 1px 1px 3px #00a650;
     width: 100%;
   }
 
-  /* .InitialPromotion2:not(nav) {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .InitialPromotion2:hover .btb-xs {
-    display: flex;
-  }
-
-  .btb-xs {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 2;
-    width: 70px;
-    height: 14vh;
-    background-color: #ced8d972;
-  }
-
-  .btb-xs i {
-    color: rgba(0, 0, 0, 0.281);
-    font-size: 2em;
-  }
-
-  .button-left {
-    left: 0;
-    border-radius: 0 5px 0 5px;
-  }
-
-  .button-right {
-    right: 0;
-    border-radius: 5px 0 5px 0;
-  } */
+ 
 }

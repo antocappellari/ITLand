@@ -3,7 +3,7 @@ window.addEventListener("load",function(){
     let formulario = document.querySelector(".form-inputs");
     const exp = {
         name: /^^[A-Za-z0-9 ]+$/,
-        description:/^[a-zA-Z0-9\s.,-:#$%&/*()áéíóúüñÁÉÍÓÚÜÑ"]+$/u, //*agregar minimo 20 caracteres*//
+        description:/^[a-zA-Z0-9\s.,-:#$%&/*()áéíóúüñÁÉÍÓÚÜÑ'+"]+$/u, //*agregar minimo 20 caracteres*//
         price:/^[0-9]+([.])?([0-9]+)?$/,//*agregar que se puedan decimales*//
         stock:/^\d+$/ 
         //*falta imagen y dropdowns*//
