@@ -24,13 +24,17 @@ module.exports = (sequelize, dataTypes) => {
     category_id: dataTypes.INTEGER,
     sub_category_id: dataTypes.INTEGER,
     description: {
-      type: dataTypes.STRING(1000),
+      type: dataTypes.STRING(5000),
       allowNull: false,
     },
     stock: {
       type: dataTypes.INTEGER,
       allowNull: false,
     },
+    active:{
+      type: dataTypes.TINYINT(1),
+      default:true
+    }
   };
   const config = {
     tableName: "products",

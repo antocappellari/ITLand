@@ -70,19 +70,22 @@
                   <% }) %>
               </select>
             </div>
-            <div class="userinput">
-              <label>Cameras</label>
-              <select class="drop-down" name="camera_id">
-                <option selected value="<%= product.camera.id %>">
-                  <%= product.camera.resolution %>
-                </option>
-                <% cameras.forEach(camera=> { %>
-                  <option value="<%= camera.id %>">
-                    <%= camera.resolution %>
+            <% if (product.camera) { %>
+             
+              <div class="userinput">
+                <label>Cameras</label>
+                <select class="drop-down" name="camera_id">
+                  <option selected value="<%= product.camera.id %>">
+                    <%= product.camera.resolution %>
                   </option>
-                  <% }) %>
-              </select>
-            </div>
+                  <% cameras.forEach(camera=> { %>
+                    <option value="<%= camera.id %>">
+                      <%= camera.resolution %>
+                    </option>
+                    <% }) %>
+                </select>
+              </div>
+            <% } %>
 
             
             <div class="userinput">

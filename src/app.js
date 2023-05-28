@@ -13,7 +13,8 @@ const methodOverride = require("method-override");
 const session = require('express-session');
 const userToLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
 const cookie = require('cookie-parser')
-const cors = require('cors')
+const cors = require('cors');
+const { error } = require('console');
 
 app.use(cors({origin:'*'}))
 
@@ -41,6 +42,11 @@ app.use('/products',productsRoutes);
 
 app.use('/api/products/',apiProductRouter);
 app.use('/api/users/',apiUserRouter);
+// app.use((req, res, next)=>{
+//     next()
+//     return res.status(404)
+
+// })
 
 
 app.listen(PORT,()=>{console.log(`Servidor corriendo en el puerto ${PORT}`)});

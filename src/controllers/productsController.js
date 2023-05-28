@@ -109,7 +109,6 @@ const productsController = {
         description: description,
         stock: stock,
       };
-
       const product = await db.Products.create(data);
       const files = req.files.map(file => ({
         name: file.filename

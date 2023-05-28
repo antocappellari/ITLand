@@ -12,12 +12,6 @@
                 </figure>
                     
                 <section class="main-container" style="margin-top: 40px;">
-                    <!-- <div class="section__images">
-                        <div class="name-product">
-                            <p>
-                                <%= product.name %>
-                            </p>
-                        </div> -->
                             <div class="swiper-detail">
                                  
                                 <div class="swiper-wrapper">
@@ -98,12 +92,11 @@
                             <p class="specifications-title">Technical specifications</p>
                             <div class="specification">
                             </div>
-                            <div class="btn"><button type="button">See more features</button></div>
                         </div>
                         <div class="description">
                             <h4>Description</h4>
                             <p>
-                                <%= product.description %>
+                                <%- product.description.replace(/\n/g, `<br>`) %>
                             </p>
                             <div class="description-buttons">
                                 <% if (locals.isAdmin) { %>

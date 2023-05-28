@@ -20,6 +20,9 @@ const imagesController = {
     try {
       const { id, productId } = req.params;
       const file = req.file;
+      if(!file){
+      return res.redirect(`/products/${productId}/edit`);
+      }
       const fileCreated = await Images.update(
         { name: file.filename },
         {
