@@ -7,30 +7,30 @@
     <%- include('../partials/header') %> 
 
     <main>
-      <section class="top-list">
-      <div class="title-list"><h1 style="color:#1d2d44;">Users</h1></div>
+      <section class="top-list-users">
+      <div class="title-list-users"><h1 style="color:#1d2d44;">Users</h1></div>
       </section>
       <hr class="listhr"/>
-      <section class="filter-view">
-      <div class="item-search" id="search">
-        <form class="searchbar">
+      <section class="filter-view-users">
+      <div class="item-search-users" id="search">
+        <form class="searchbar-users">
           <input type="text" placeholder="Search" />
           <i class="fa-solid fa-magnifying-glass"></i>
         </form>
       </div>
     </section>
     <hr class="listhr"/>
-    <section class="item-list">
+    <section class="item-list-users">
       <% users.forEach(user => { %>
-        <article class="item">
-          <a class ="item-a" href="/users/<%= user.id %>/edit">
-          <div class="itemtext-1">
+        <article class="item-users">
+          <a class ="item-a-users" href="/users/<%= user.id %>/edit">
+          <div class="itemtext-1-users">
             <p><%=user.first_name+" "+user.last_name%></p>
-          <figure class="imageitem">
+          <figure class="imageitem-users">
             <img  src="/images/users/<%= user.image%>" alt="">
           </figure>
           </div>
-          <div class="itemtext-2">
+          <div class="itemtext-2-users">
             <p class="p4">
                <%= user.email %>
              </p>
@@ -38,10 +38,10 @@
         </a>
         <% if (locals.isAdmin) { %>
          
-          <div class="div-btn-item">
-          <a href="/users/<%= user.id %>/edit"><button  class = "btn-edit-item"> Edit</button></a>
+          <div class="div-btn-item-users">
+          <a href="/users/<%= user.id %>/edit"><button  class = "btn-edit-item-users"> Edit</button></a>
           <form action="/users/<%= user.id %>/delete?_method=DELETE" method = "post">
-            <button  class = "btn-delete-item" type="submit"> Delete</button>
+            <button  class = "btn-delete-item-users" type="submit"> Delete</button>
           </form>
         </div>
         <% } %>
