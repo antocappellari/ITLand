@@ -7,42 +7,41 @@
     <%- include('../partials/header') %> 
 
     <main>
-      <section class="top-products">
-      <div class="titleproducts"><h1 style="color: green;">Users</h1></div>
+      <section class="top-list">
+      <div class="title-list"><h1 style="color:#1d2d44;">Users</h1></div>
       </section>
+      <hr class="listhr"/>
       <section class="filter-view">
-      <div class="product-search" id="search">
+      <div class="item-search" id="search">
         <form class="searchbar">
           <input type="text" placeholder="Search" />
           <i class="fa-solid fa-magnifying-glass"></i>
         </form>
       </div>
     </section>
-    <section class="product-list">
+    <hr class="listhr"/>
+    <section class="item-list">
       <% users.forEach(user => { %>
-        <article class="product">
-          <a class ="product-a" href="/users/<%= user.id %>/edit">
-          <figure class="imageproducts">
-            <img  src="/images/users/<%= user.image %>" alt="">
+        <article class="item">
+          <a class ="item-a" href="/users/<%= user.id %>/edit">
+          <div class="itemtext-1">
+            <p><%=user.first_name+" "+user.last_name%></p>
+          <figure class="imageitem">
+            <img  src="/images/users/<%= user.image%>" alt="">
           </figure>
-          <div class="producttext">
-            <h4>Details</h4>
-            <p>
-              <%= user.first_name %>
-            </p>
-            <p>
-              <%= user.last_name %>
-             </p>
-             <p>
-               <%= user.email %> 
+          </div>
+          <div class="itemtext-2">
+            <p class="p4">
+               <%= user.email %>
              </p>
           </div>
         </a>
         <% if (locals.isAdmin) { %>
-          <div class="div-btn">
-          <a class="btn btn-edit" href="/users/<%= user.id %>/update">edit</a>
+         
+          <div class="div-btn-item">
+          <a href="/users/<%= user.id %>/edit"><button  class = "btn-edit-item"> Edit</button></a>
           <form action="/users/<%= user.id %>/delete?_method=DELETE" method = "post">
-            <button  class = "btn"type="submit"> DELETE</button>
+            <button  class = "btn-delete-item" type="submit"> Delete</button>
           </form>
         </div>
         <% } %>
