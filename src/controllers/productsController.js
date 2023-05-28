@@ -18,8 +18,12 @@ const productsController = {
   detail: async (req, res) => {
     try {
       let id = req.params.id;
+      const prods = await ProductServices.getAllProducts()
+      console.log(prods.length);
+      const products = prods.filter(product => product.id != id)
+      console.log(products.length);
       const product = await ProductServices.getProduct(id);
-      return res.render("./products/detail.ejs", { product });
+      return res.render("./products/detail.ejs", { product, products });
     } catch (error) {
       console.log(error);
     }

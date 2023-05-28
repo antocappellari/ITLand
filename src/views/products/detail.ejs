@@ -22,7 +22,7 @@
                                         <% }) %>
                                             
                                 </div>
-                                <div class="swiper-pagination">
+                                <div class="swiper-pagination ">
                                     ...
                                 </div>
                                 <div class="swiper-button-prev"></div>
@@ -87,18 +87,18 @@
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </section>
-                    <section class="section__description">
-                        <div class="description__specifications">
-                            <p class="specifications-title">Technical specifications</p>
-                            <div class="specification">
-                            </div>
-                        </div>
+                    <section class="section__description" id="section__description">
                         <div class="description">
                             <h4>Description</h4>
-                            <p>
+                            <p class="pDes" id="pDes">
                                 <%- product.description.replace(/\n/g, `<br>`) %>
                             </p>
-                            <div class="description-buttons">
+                            <div class="btn-description">
+                                <button class="btn-seemore" id="btnDes">See more</button>
+                            </div>
+                        </div>
+                        <!-- <div class="description" id="description"> -->
+                            <!-- <div class="description-buttons">
                                 <% if (locals.isAdmin) { %>
                                     <a href="/products/<%= product.id %>/edit"><button type="button"
                                             class="btn1">Edit</button></a>
@@ -106,16 +106,66 @@
                                         <input type="submit" class="btn1" value="Delete">
                                     </form>
                                     <% } %>
-                            </div>
-                        </div>
+                            </div> -->
+                        <!-- </div> -->
                     </section>
+                    
                 </section>
             </main>
+
+            <h2 class="producTittle">offers</h2>
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper ">
+                <!-- Slides -->
+                <% products.forEach(product=> { %>
+                  <% if (product.sub_categories.name == 'Offers') { %>
+                   
+                    <article class="carrussel-art swiper-slide">
+                      <a href="/products/<%= product.id %>/detail" class="carrussel_product">
+                        <!-- <div class="heart_favorite">
+                          <i class="fa-regular fa-heart"></i>
+                        </div> -->
+                        <p class="discount">
+                          <%= product.discount %>% OFF
+                        </p>
+                        <div class="Imagetext">
+                          <img src="/images/products/<%= product.images[0].name %>" alt="" class="product-image" />
+                        </div>
+                          <p class="product_name">
+                            <%= product.name %>
+                          </p>
+                          <p class="product_price">$ <%= product.price %>
+                          </p>
+                        <p class="Delivery">
+                          <span class="Price">$<%= Math.floor(product.price/10) %></span>
+                          x 10 installments
+                        </p>
+                      </a>
+                      <div class="best_deals_btn">
+                        <a class="add-cart" href="/products/cart">Add to cart</a>
+                      </div>
+                     
+                    </article>
+                  <% } %> 
+                  <% }) %>
+              </div>
+    
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+
+
+
+            <br><br><br><br><br><br>
             <!-- Bottom Nav -->
             <%- include('../partials/bottomNav') %>
                 <!-- Footer -->
                 <%- include('../partials/footer') %>
                     <script src="/JS/swiper.js" type="module"></script>
+                    <script src="/JS/detail.js"></script>
     </body>
 
 </html>
