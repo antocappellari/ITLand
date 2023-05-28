@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,46 +11,50 @@ a{
 .top-list{
   display:flex;
   justify-content:space-between;
-  margin-top:5px;
-  margin-bottom:5px;
+  padding-top:5px;
+  padding-bottom:5px;
   align-content:center;
 }  
-.top-list .title h1{
-  padding:5px;
-  font-size: 1.6em;
+.top-list .title-list{
+  display:flex;
+  justify-content: center;
+  align-content: center;
   margin-left:10px;
 }
+.top-list .title-list h1{
+  padding:5px;
+  font-size: 1.6em;
+  text-align:center;
+  align-self: center;
+  margin:0;
+}
+.listhr{
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-.top-list .createproduct {
-  display: flex;
-  align-content:center;
-  justify-content:center;
+.top-list .createproduct-button {
   margin-right:10px;
   padding:5px;
-  width:15%;
+  width:30%;
+  display:flex;
+  justify-content:center;
+  align-content:center;
 }
-.createproduct a{
+.createproduct-button a{
   width:100%;
 }
-.createproduct a .btn1{
-  background-color: #3e5c76;
-  width:100%;
-  height: 30px;
-  border-radius:5px;
-  border: none;
-  color: #Fff;
-  cursor: pointer;
-}
-.createproduct a .btn1{
+
+.createproduct-button a .btn1{
 background-color: #3e5c76;
 width:100%;
-height: 30px;
+height: 40px;
 border-radius:5px;
 border: none;
 color: #Fff;
 cursor: pointer;
 }
-.createproduct a .btn1:hover{
+.createproduct-button a .btn1:hover{
 background-color:rgba(140, 140, 190);
 }
 
@@ -59,8 +63,10 @@ background-color:rgba(140, 140, 190);
   flex-direction:column;
   justify-content: center;
   align-content:center;
+  padding-top:5px;
+  padding-bottom:5px;
   width:100%;
-  margin-bottom:15px;
+  background-color: rgba(51, 51, 70, 0.85);
 }
 
 .drop-down{
@@ -69,148 +75,195 @@ background-color:rgba(140, 140, 190);
   margin: 5px 5px 5px 5px;
   padding-left:none;
 }
-.product-search {
+.item-search {
   display:flex;
   padding: 10px;
   border:solid rgb(207, 207, 207) 1px;
-  height:45px;
-  border-radius:16px;
+  height:35px;
+  border-radius:5px;
   align-content:center;
   justify-content: space-between;
   margin: 5px 5px 5px 5px;
   font-size:small;
-
+  background-color: white;
 
 }
-.product-search form{
+.item-search form{
   position: relative;
   display:flex;
   align-content:center;
   width:100%;
 }
-.product-search form input{
+.item-search form input{
   width: 100%;
   height: 100%;
   border-radius: 10px;
   padding-left: 10px;
   border:none;
 }
-.product-search form input:focus{
+.item-search form input:focus{
   outline: none;
 }
-.product-search form i{
+.item-search form i{
   position: absolute;
   top:5px;
   right: 15px;
   color: #000;
 }
-.product-list{
+.item-list{
   display:flex;
   flex-wrap:wrap;
   flex-direction:column;
   justify-content:space-around;
   align-content:center;
-  margin-left:5%;
-  margin-right:5%;
+  padding-left:5%;
+  padding-right:5%;
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  background-color:#eceaea
 }
-.product-a{
+.item-list article{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:column;
+  justify-content:space-around;
+  align-content:center;
+  padding:5px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.384);
+  background-color: white;
+  border-radius:5px;
+}
+.item-a{
   width:100%;
   display: flex ;
+  flex-direction:column;
   align-items: center;
   justify-content: center;
-}
-.product {
-  width:100%;
-  display:flex;
-  align-content:center;
-  background-color: white;
-  outline: none;
-  margin: 5px 5px 5px 5px;
-  padding: 2px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.384);
   text-decoration: none;
-};
+  padding: 2px;
+  outline: none;
+} 
+.itemtext-1{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-content:center;
+  text-align: center;
+}
+.itemtext-1 p{
+  margin:0%;
+  padding:5px;
+  font-size: 1.3rem;
+  color:rgb(65, 64, 64);
+}
 
-.imageproducts {
-  width:30%;
+.imageitem {
+  width:100%;
   display:flex;
   justify-content:center;
   align-content:center;
+  margin-bottom:0;
 }
-.imageproducts img{
+.imageitem img{
   width:50%;
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
 }
-.producttext {
-  width:40%;
+.itemtext-2{
+  width:100%;
   display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-content:center;
-  text-align: center;
-  overflow-wrap: break-word;
+  justify-content:space-around;
+  align-content: center;
 }
-.div-btn{
+.itemtext-2 .p1{
+  width:45%;
+  text-align: right;
+  padding:5px;
+  margin:0;
+}
+.itemtext-2 .p2{
+  width:10%;
+  text-align: center;
+  padding:5px;
+  margin:0;
+}
+.itemtext-2 .p3{
+  color:green;
+  width:45%;
+  text-align: left;
+  padding:5px;
+  margin:0;
+}
+.itemtext-3{
+  display:none
+}
+.div-btn-item{
   display: flex;
   justify-content: center;
-  gap: 4px;
+  gap: 10px;
+  width:100%;
 }
-.btn{
-  padding: 1em 3em;
-  height: 50px;
-  background-color: rgb(255, 2, 2);
+.btn-delete-item{
+  height: 40px;
+  background-color: #0d1321;
+  border-radius:5px;
   border:none;
   color: #Fff;
   cursor: pointer;
+  width:100%;
 }
-.btn-edit{
-  border: 1px solid;
+.btn-delete-item:hover{
+background-color: #3e5c76;}
+
+.div-btn-item a{
+  width:40%;
+  display:flex;
+  align-content:center;
+}
+.div-btn-item form{
+  width:40%;
+  display:flex;
+  align-content:center;
+}
+.btn-edit-item{
+  height: 40px;
   text-decoration: none;
-  background-color: #01518a;
+  background-color: #3e5c76;
+  border:none;
+  color: #Fff;
+  cursor: pointer;
+  width:100%;
+  border-radius:5px;
 }
+.btn-edit-item:hover{
+  background-color: #748cab;}
 @media screen and (min-width:445px) and (max-width:767px){
-  .filter-view{
-      display: flex;
+  .top-list .createproduct-button {
+    width:20%;
+  }
+    .item-search{
+      width:60%;
+    }
+    .item-list{
       flex-direction:row;
-      justify-content: space-between;
-    } 
-    .drop-down{
-      width:50%;
-      height:40px;
-      margin: 5px 5px 5px 5px;
     }
-    .product-search{
-      width:100%;
+    .item-list article{
+      width:45%;
     }
+
   }
   @media screen and (min-width:767px) {
-      .filter-view{
-          display: flex;
-          flex-direction:row;
-          justify-content: space-between;
-        }    
-        .drop-down{
-          width:32%;
-          height:40px;
-          margin: 5px 5px 5px 5px;
-
-  }
-  .product-search{
+    .top-list .createproduct-button {
+      width:15%;
+    }
+  .item-search{
       width:32%;
     }
-  .product-list{
-      display:flex;
+    .item-list{
       flex-direction:row;
-      flex-wrap:wrap;
-      justify-content:flex-start;
-      gap:3%;}
-  /* .product-list a{
-          width:45%;
-        } */
-
-  .producttext {
-          font-size:small;
-      }
+    }
+    .item-list article{
+      width:28%;
+    }
   }
