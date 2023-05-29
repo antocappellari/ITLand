@@ -6,14 +6,15 @@
 
 /* Styles form */
 .text-danger{
-    padding-bottom: 20px;
-    margin-bottom: 50px;
+    text-align:center;
+    margin-bottom: 1px;
     color: red;
     font-weight: 400;
+    font-size: 0.8rem;
 } 
 .error{
-    display: none ;
-    margin: 40px 0;
+    font-size: 0.8rem;
+    margin:1px;
 }
 .main-form {
   display: flex;
@@ -38,10 +39,150 @@
 }
 .datauser__register {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 10px;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-content: center;
+}
+.datauser__register .userinput1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+  height: 5vh;
+}
+.container-form .userinput1 input:not(.input-button) {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #c7bebe;
+  border-bottom-width: 2.5px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  padding-left: 35px;
+}
+.datauser__register .userinput1 p{
+  width:100%;
+  font-size: 0.8rem;
+  margin:1px;
+
+}
+.container-form .userinput1 i {
+  position: absolute;
+}
+.userinput1 i:not(.icon5) {
+  top: 2%;
+  left: 2%;
+  font-size: 20px;
+  color: #3a3a3a;
+}
+.datauser__register .userinput2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+  height: 5vh;
+}
+.datauser__register .userinput2 p{
+  width:100%;
+  font-size: 0.8rem;
+  margin:1px;
+
+}
+.container-form .userinput2 input:not(.input-button) {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #c7bebe;
+  border-bottom-width: 2.5px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  padding-left: 35px;
+}
+.container-form .userinput2 i {
+  position: absolute;
+}
+.userinput2 i:not(.icon5) {
+  top: 2%;
+  left: 2%;
+  font-size: 20px;
+  color: #3a3a3a;
+}
+.datauser__register .userinput3{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+  height: 5vh;
+}
+.datauser__register .userinput3 p{
+  width:100%;
+  font-size: 0.8rem;
+  margin:1px;
+
+}
+.container-form .userinput3 input:not(.input-button) {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #c7bebe;
+  border-bottom-width: 2.5px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  padding-left: 35px;
+}
+.container-form .userinput3 i {
+  position: absolute;
+}
+.userinput3 i:not(.icon5) {
+  top: 2%;
+  left: 2%;
+  font-size: 20px;
+  color: #3a3a3a;
+}
+.datauser__register .userinput4{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+  height: 5vh;
+}
+.datauser__register .userinput4 p{
+  width:100%;
+  font-size: 0.8rem;
+  margin:1px;
+
+}
+.container-form .userinput4 input:not(.input-button) {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #c7bebe;
+  border-bottom-width: 2.5px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  padding-left: 35px;
+}
+.container-form .userinput4 i {
+  position: absolute;
+}
+.userinput4 i:not(.icon5) {
+  top: 2%;
+  left: 2%;
+  font-size: 20px;
+  color: #3a3a3a;
 }
 .container-form .text-title {
   display: flex;
@@ -73,7 +214,10 @@
 }
 
 .container-form .userinput {
-  margin: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   position: relative;
   width: 100%;
   height: 5vh;
@@ -102,6 +246,9 @@
   gap: 10px;
   color: #333;
 }
+.container-form .conditions p{
+  margin-bottom:0%;
+}
 
 .button-submit {
   width: 100%;
@@ -114,7 +261,7 @@
   width: 80%;
   height: 5vh;
   color: #fff;
-  background-color: #164ffacf;
+  background-color: #3e5c76;
   border: none;
   border-radius: 15px;
   padding: none;
@@ -123,13 +270,8 @@
 .errorPassword {
   display: none;
 }
-.button-submit:hover {
-  background-color: #164ffacf;
-  border-radius: 15px;
-  padding: none;
-  border: none;
-  width: 80%;
-  height: 5vh;
+.container-form .button-submit .input-button:hover{
+  background-color: #748cab;
 }
 
 .container-form .text p:not(a) {
@@ -151,14 +293,14 @@
 }
 
 .userinput i:not(.icon5) {
-  top: 20%;
-  left: 3%;
+  top: 2%;
+  left: 2%;
   font-size: 20px;
   color: #3a3a3a;
 }
 .userinput .icon5 {
-  top: 20%;
-  right: 5%;
+  top: 2%;
+  right: 2%;
   font-size: 20px;
   color: #3f3e3e;
 }
@@ -270,16 +412,47 @@
     padding: 50px;
   }
   .userinput i:not(.icon5) {
-    top: 30%;
-    left: 3%;
+    top: 1%;
+    left: 2%;
     font-size: 20px;
     color: #3a3a3a;
   }
   .userinput .icon5 {
-    top: 36%;
-    right: 4%;
+    top: 1%;
+    right: 2%;
     font-size: 20px;
     color: #3f3e3e;
+  }
+  .datauser__register {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+  .datauser__register .userinput1{
+    grid-column-start: 1;
+    grid-column-end:2;
+    grid-row-start: 1;
+    grid-row-end:2;
+  }
+  .datauser__register .userinput2{
+    grid-column-start: 2;
+    grid-column-end:3;
+    grid-row-start: 1;
+    grid-row-end:2;
+  }
+  .datauser__register .userinput3{
+    grid-column-start: 1;
+    grid-column-end:2;
+    grid-row-start: 2;
+    grid-row-end:3;
+  }
+  .datauser__register .userinput4{
+    grid-column-start: 2;
+    grid-column-end:3;
+    grid-row-start: 2;
+    grid-row-end:3;
   }
 }
 
@@ -299,13 +472,6 @@
     top: 15%;
     font-size: 24px;
   }
-  .container-form .button-submit .input-button {
-    width: 45%;
-    transition: all 0.3s;
-  }
-  .container-form .button-submit .input-button:hover {
-    background-color: #164ffacf;
-  }
   .container__form-login {
     width: 45%;
   }
@@ -317,26 +483,9 @@
     width: 100%;
     height: 6vh;
   }
-  .container-form .button-submit .input-button {
-    width: 80%;
-    height: 6vh;
-    color: #fff;
-    background-color: #3e5c76;
-    border: none;
-    border-radius: 15px;
-    padding: none;
-    font-size: 16px;
-  }
+
   .errorPassword {
     display: none;
-  }
-  .button-submit:hover {
-    background-color: #748cab;
-    border-radius: 15px;
-    padding: none;
-    border: none;
-    width: 80%;
-    height: 5vh;
   }
 
   .container-form .text p:not(a) {
@@ -356,25 +505,6 @@
     font-size: 0.9em;
     padding: 20px;
   }
-
-  .userinput i:not(.icon5) {
-    top: 20%;
-    left: 3%;
-    font-size: 20px;
-    color: #3a3a3a;
-  }
-  .userinput .icon5 {
-    top: 20%;
-    right: 5%;
-    font-size: 20px;
-    color: #3f3e3e;
-  }
-
-  /* //form-admin-user { */
-  /* display: flex;
-    flex-direction: column;
-    width: 370px;
-    gap: 12px; */
 
   .form-title {
     width: 100%;
@@ -422,21 +552,16 @@
     padding: 60px;
   }
   .userinput i:not(.icon5) {
-    top: 15%;
-    left: 3%;
+    top: 1%;
+    left:2%;
     font-size: 24px;
   }
   .userinput .icon5 {
-    top: 15%;
+    top: 1%;
+    right:4%;
     font-size: 24px;
   }
-  .container-form .button-submit .input-button {
-    width: 45%;
-    transition: all 0.3s;
-  }
-  .container-form .button-submit .input-button:hover {
-    background-color: #748cab;
-  }
+
   .container__form-login {
     width: 45%;
   }
@@ -457,5 +582,39 @@
     border-radius: 15px;
     padding: none;
     font-size: 16px;
+  }
+  .container-form .button-submit .input-button:hover {
+    background-color: #748cab;
+  }
+  .datauser__register {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+  .datauser__register .userinput1{
+    grid-column-start: 1;
+    grid-column-end:2;
+    grid-row-start: 1;
+    grid-row-end:2;
+  }
+  .datauser__register .userinput2{
+    grid-column-start: 2;
+    grid-column-end:3;
+    grid-row-start: 1;
+    grid-row-end:2;
+  }
+  .datauser__register .userinput3{
+    grid-column-start: 1;
+    grid-column-end:2;
+    grid-row-start: 2;
+    grid-row-end:3;
+  }
+  .datauser__register .userinput4{
+    grid-column-start: 2;
+    grid-column-end:3;
+    grid-row-start: 1;
+    grid-row-end:2;
   }
 }

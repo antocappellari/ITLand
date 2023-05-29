@@ -15,7 +15,7 @@
           </div>
           <form class="form-inputs" action="/users/register" method="POST"  enctype="multipart/form-data">
             <div class="datauser__register">
-              <div class="userinput " id="first_name-error">
+              <div class="userinput1 " id="first_name-error">
                 <input type="text"
                  class="inputJs"
                  name="first_name"
@@ -32,7 +32,7 @@
                 <% } %>
                 <p class="text-danger error">Please complete with a valid name </p>
               </div>
-              <div class="userinput" id="last_name-error">
+              <div class="userinput2" id="last_name-error">
                 <input type="text"
                  class="inputJs"
                  name= "last_name" 
@@ -44,10 +44,10 @@
                     <%= errors.last_name.msg %>
                   </p>
             <% } %>
-                <p class="text-danger error">Please complete with a valid last Name</p>
+                <p class="text-danger error">Please complete your last Name</p>
                 <i class="uil uil-user icon1"></i>
               </div>
-              <div class="userinput" id="address-error">
+              <div class="userinput3" id="address-error">
                 <input type="text"
                  class="inputJs"
                  placeholder="Address"
@@ -62,7 +62,7 @@
                 <p class="text-danger error">Please complete with your address</p>
                 <i class="uil uil-location-point"></i>
               </div>
-              <div class="userinput" id="cell-error">
+              <div class="userinput4" id="cell-error">
                 <input type="number"
                 class="inputJs"
                 name="cell"
@@ -74,7 +74,7 @@
                     <%= errors.cell.msg %>
                   </p>
             <% } %>
-              <p class="text-danger error">Please complete with your cellphone number</p>
+              <p class="text-danger error">Please complete your cellphone N°</p>
                 <i class="uil uil-phone"></i>
               </div>
             </div>
