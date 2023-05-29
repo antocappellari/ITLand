@@ -54,13 +54,14 @@
           <div class="input-checkbox">
             <% brands.forEach(brand => { %>
             <input type="checkbox" id="checkbox" name="<%= brand.name %>" value="<%= brand.name %>">
-            <label for="<%= brand.name %>"><%= brand.name %></label><br><br>
+            <label for="<%= brand.name %>"><%= brand.name %></label>
             <% }) %>
           </div>
           </div>
           <button  class = "checkbox-view-form-button" type="submit"> Filter</button>
         </form>
       </section>
+      <section class="item-list-products">
         <% products.forEach(product => { %>
         <article class="list-best_deals list-article_product">
           <a href="/products/<%= product.id %>/detail" class="list-FirstOffer">             
@@ -86,6 +87,7 @@
           </div>
         </article>
         <% }) %>
+      </section>
       </section>
     </main>
   <!-- Bottom Nav -->
