@@ -88,9 +88,10 @@ a{
   padding-right:5%;
   padding-top:0.5rem;
   padding-bottom:0.5rem;
-  background-color:#eceaea
+  background-color:#eceaea;
+  gap:10px;
 }
-.item-list-users .item-users{
+.item-list-users article{
   display:flex;
   flex-wrap:wrap;
   flex-direction:column;
@@ -101,6 +102,9 @@ a{
   background-color: white;
   border-radius:5px;
   height:250px;
+  width:90%;
+  margin-top:10px;
+  margin-bottom:10px;
 }
 .item-a-users{
   width:100%;
@@ -128,7 +132,6 @@ a{
 
 .imageitem-users {
   width:100%;
-  height:113px;
   display:flex;
   justify-content:center;
   align-content:center;
@@ -136,7 +139,7 @@ a{
 }
 .imageitem-users img{
   max-width:200px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .itemtext-2-users{
   width:100%;
@@ -190,7 +193,7 @@ background-color: #3e5c76;}
 }
 .btn-edit-item-users:hover{
   background-color: #748cab;}
-@media screen and (min-width:445px) and (max-width:767px){
+  @media screen and (min-width:515px) and (max-width:767px){
     .item-search-users{
       width:60%;
     }
@@ -202,7 +205,19 @@ background-color: #3e5c76;}
     }
 
   }
-  @media screen and (min-width:767px) {
+@media screen and (min-width:767px) and (max-width:1024px){
+    .item-search-users{
+      width:60%;
+    }
+    .item-list-users{
+      flex-direction:row;
+    }
+    .item-list-users article{
+      width:30%;
+    }
+
+  }
+  @media screen and (min-width:1024px) {
 
   .item-search-users{
       width:32%;
@@ -211,6 +226,6 @@ background-color: #3e5c76;}
       flex-direction:row;
     }
     .item-list-users article{
-      width:28%;
+      width:22%;
     }
   }
