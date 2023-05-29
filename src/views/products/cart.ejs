@@ -7,78 +7,6 @@
   <%- include('../partials/header') %> 
   <main class="main-pc">
     <section class="section__container">
-      <article class="section__product">
-        <img src="/images/img-samsung-galaxy-s10.jpg">
-        <div class="product__detail">
-          <div class="detail1">
-            <p>Samsung Galaxy S10 120GB Blue</p>
-            <p class="price__detail">$90.000</p>
-            <p class="free__shop">Free shipping</p>
-          </div>
-          <div class="quantity">
-            <button type="button" class="btn1"><i class="fas fa-solid fa-plus"></i></button>
-            <p>1</p>
-            <button type="button" class="btn2"><i class="fas fa-solid fa-minus"></i></button>
-          </div>
-        </div>
-        <div class="trash">
-          <i class="fas fa-solid fa-trash-can"></i>
-        </div>
-      </article>
-      <article class="section__product">
-        <img src="/images/img-tv-samsung-smart.jpg">
-        <div class="product__detail">
-          <div class="detail1">
-            <p>Samsung TV Smart 32 pulgadas</p>
-            <p class="price__detail">$180.000</p>
-            <p class="free__shop">Free shipping</p>
-          </div>
-          <div class="quantity">
-            <button type="button" class="btn1"><i class="fas fa-solid fa-plus"></i></button>
-            <p>1</p>
-            <button type="button" class="btn2"><i class="fas fa-solid fa-minus"></i></button>
-          </div>
-        </div>
-        <div class="trash">
-          <i class="fas fa-solid fa-trash-can"></i>
-        </div>
-      </article>
-      <article class="section__product">
-        <img src="/images/PhotoSamsungIndex.jpg">
-        <div class="product__detail">
-          <div class="detail1">
-            <p>Samsung Node 10 256GB Grey</p>
-            <p class="price__detail">$ 120.000</p>
-            <p class="free__shop">Free shipping</p>
-          </div>
-          <div class="quantity">
-            <button type="button" class="btn1"><i class="fas fa-solid fa-plus"></i></button>
-            <p>1</p>
-            <button type="button" class="btn2"><i class="fas fa-solid fa-minus"></i></button>
-          </div>
-        </div>
-        <div class="trash">
-          <i class="fas fa-solid fa-trash-can"></i>
-        </div>
-      </article>
-      <article class="section__product">
-        <img src="/images/S22ultra4.jpeg">
-        <div class="product__detail">
-          <div class="detail1">
-            <p>Samsung S22 Ultra 500GB Grey</p>
-            <p class="price__detail">$ 256.000</p>
-            <p class="free__shop">Free shipping</p>
-          </div>
-          <div class="quantity">
-            <button type="button" class="btn1"><i class="fas fa-solid fa-plus"></i></button>
-            <p>1</p>
-            <button type="button" class="btn2"><i class="fas fa-solid fa-minus"></i></button>
-          </div>
-        </div>
-        <div class="trash">
-          <i class="fas fa-solid fa-trash-can"></i>
-        </div>
-      </article>
     </section>
     <section class="checkout">
       <div class="checkout_cupon">
@@ -106,6 +34,8 @@
   <%- include('../partials/bottomNav') %> 
   <!-- footer -->
   <%- include('../partials/footer') %> 
+  <script src="/JS/cart/renderCart.js"></script>
+  <script src="/JS/cart/handlerLocalStorage.js"></script>
 </body>
 
 </html>

@@ -30,14 +30,19 @@ const productsController = {
   },
   products: async (req, res) => {
     try {
+      const categories = await db.Categories.findAll();
+      const brands = await db.Brands.findAll();
+      const sub_categories = await db.Sub_categories.findAll();
       const products = await ProductServices.getAllProducts();
-      return res.render("./products/products.ejs", { products });
+      return res.render("./products/products.ejs", {
+        categories,
+        brands,
+       products,
+       sub_categories,
+      });
     } catch (error) {
       console.log(error);
     }
-
-
-
 
   },
 
