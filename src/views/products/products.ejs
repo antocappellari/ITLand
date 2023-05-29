@@ -5,66 +5,89 @@
   <%- include('../partials/head') %> 
   <body>
     <%- include('../partials/header') %> 
-
     <main>
       <section class="top-list">
-      <div class="title-list"><h1 style="color:#1d2d44;">Products</h1></div>
-      <div class="createproduct-button">
-      <% if (locals.isAdmin) { %>
-        <a href="/products/create"><button type="button" class="btn1">Create</button></a>
-      <% } %>
-      </div>
-      </section>
-      <hr class="listhr"/>
-      <section class="filter-view">
-      <div class="item-search" id="search">
-        <form class="searchbar">
-          <input type="text" placeholder="Search" />
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </form>
-      </div>
-    </section>
-    <hr class="listhr"/>
-    <section class="item-list">
-      <% products.forEach(product => { %>
-        <article class="item">
-          <a class ="item-a" href="/products/<%= product.id %>/edit">
-          <div class="itemtext-1">
-            <p><%= product.name %></p>
-            <% if (!!product.images[0]) { %>
-          <figure class="imageitem">
-            <img  src="/images/products/<%= product.images[0].name %>" alt="">
-          </figure>
+        <div class="title-list"><h1 style="color:#1d2d44;">Products</h1></div>
+        <div class="createproduct-button">
+          <% if (locals.isAdmin) { %>
+          <a href="/products/create"><button type="button" class="btn1">Create</button></a>
           <% } %>
-
-          </div>
-          <div class="itemtext-2">
-            <p class="p1">
-              $ <%= product.price %>
-             </p>
-             <p class="p2">
-              -
-            </p>
-             <p class="p3">
-               <%= product.discount %> %OFF
-             </p>
-          </div>
-        </a>
-        <% if (locals.isAdmin) { %>
-         
-          <div class="div-btn-item">
-          <a href="/products/<%= product.id %>/edit"><button  class = "btn-edit-item"> Edit</button></a>
-          <form action="/products/<%= product.id %>/delete?_method=DELETE" method = "post">
-            <button  class = "btn-delete-item" type="submit"> Delete</button>
-          </form>
         </div>
-        <% } %>
-    </article>
-       <% }) %>
-    </section>
-    
+        </section>
+        <hr class="listhr"/>
+      <section class="item-list">
+      <section class="checkbox-view">
+        <h2>Filter by</h2>
+        <hr class="listcb1"/>
+        <section class="filter-view">
+          <div class="item-search" id="search">
+            <form class="searchbar">
+              <input type="text" placeholder="Search" />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+          </div>
+        </section>
+        <hr class="listcb1"/>
+        <form action="" class="checkbox-view-form">
+          <h3 class="checkbox-view-title">Product category</h3>
+          <div class="input-container">
+          <div class="input-checkbox">
+            <% sub_categories.forEach(sub_category => { %>
+            <input type="checkbox" id="checkbox" name="<%= sub_category.name %>" value="<%= sub_category.name %>">
+            <label for="<%= sub_category.name %>"><%= sub_category.name %></label><br>
+            <% }) %>
+          </div>
+          </div>
+          <hr class="listcb"/>
+          <h3 class="checkbox-view-title">Product type</h3>
+          <div class="input-container">
+          <div class="input-checkbox">
+          <% categories.forEach(category => { %>
+            <input type="checkbox" id="checkbox" name="<%= category.name %>" value="<%= category.name %>">
+            <label for="<%= category.name %>"><%= category.name %></label><br>
+          <% }) %>
+          </div>
+          </div>
+          <hr class="listcb"/>
+          <h3 class="checkbox-view-title">Brand</h3>
+          <div class="input-container">
+          <div class="input-checkbox">
+            <% brands.forEach(brand => { %>
+            <input type="checkbox" id="checkbox" name="<%= brand.name %>" value="<%= brand.name %>">
+            <label for="<%= brand.name %>"><%= brand.name %></label><br><br>
+            <% }) %>
+          </div>
+          </div>
+          <button  class = "checkbox-view-form-button" type="submit"> Filter</button>
+        </form>
+      </section>
+        <% products.forEach(product => { %>
+        <article class="list-best_deals list-article_product">
+          <a href="/products/<%= product.id %>/detail" class="list-FirstOffer">             
+            <% if (product.discount == 0) { %>
+              <p></p>
+              <% } else{%>     
+            <p class="list-discount"><%= product.discount %></p>   
+              <% } %>            
+                <div class="Imagetext list-product_image">
+                  <img src="images/products/<%= product.images[0].name %>" alt="" class="list-product-image" />
+                </div>
+                <div class="list-product-text">
+                  <p class="list-product_name"> <%= product.name %></p>
+                  <p class="list-product_price">$<%= product.price %></p>
+                  <p class="list-Delivery"><span class="list-product_price">$<%= Math.floor(product.price/10)</span> x 10 installments</p>
+                </div>
+          </a>
+          <div class="div-btn-item">
+            <a  href="/products/<%= product.id %>/edit"><button  class = "btn-edit-item"> Edit</button></a>
+            <form action="/products/<%= product.id %>/delete?_method=DELETE" method = "post">
+              <button  class = "btn-delete-item" type="submit"> Delete</button>
+            </form>
+          </div>
+        </article>
+        <% }) %>
+      </section>
     </main>
-
   <!-- Bottom Nav -->
 
     <%- include('../partials/bottomNav') %> 

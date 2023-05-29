@@ -63,10 +63,9 @@ background-color:rgba(140, 140, 190);
   flex-direction:column;
   justify-content: center;
   align-content:center;
-  padding-top:5px;
-  padding-bottom:5px;
+  padding:5px;
   width:100%;
-  background-color: rgba(51, 51, 70, 0.85);
+  background-color: #3e5c76;
 }
 
 .drop-down{
@@ -83,7 +82,6 @@ background-color:rgba(140, 140, 190);
   border-radius:5px;
   align-content:center;
   justify-content: space-between;
-  margin: 5px 5px 5px 5px;
   font-size:small;
   background-color: white;
 
@@ -106,10 +104,11 @@ background-color:rgba(140, 140, 190);
 }
 .item-search form i{
   position: absolute;
-  top:5px;
-  right: 15px;
+  top:1.5px;
+  right: 5px;
   color: #000;
 }
+
 .item-list{
   display:flex;
   flex-wrap:wrap;
@@ -122,90 +121,114 @@ background-color:rgba(140, 140, 190);
   padding-bottom:0.5rem;
   background-color:#eceaea
 }
+.checkbox-view-form{
+  display:none
+}
+.checkbox-view h2{
+  display:none
+}
+.checkbox-view .listcb1{
+  display:none
+}
+/*--articulo--*/
 .item-list article{
   display:flex;
   flex-wrap:wrap;
   flex-direction:column;
   justify-content:space-around;
   align-content:center;
-  padding:5px;
+  padding-top:5px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.384);
   background-color: white;
   border-radius:5px;
+  margin-top:10px;
 }
-.item-a{
-  width:100%;
-  display: flex ;
-  flex-direction:column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding: 2px;
-  outline: none;
-} 
-.itemtext-1{
-  display:flex;
-  flex-direction: column;
-  justify-content:center;
-  align-content:center;
-  text-align: center;
+.list-product-image {
+  height: 200px;
+  object-fit: cover; 
 }
-.itemtext-1 p{
-  margin:0%;
-  padding:5px;
-  font-size: 1.3rem;
-  color:rgb(65, 64, 64);
+.list-best_deals:hover {
+  box-shadow: 2px 2px 7px rgb(207, 208, 209);
 }
 
-.imageitem {
-  width:100%;
-  display:flex;
-  justify-content:center;
-  align-content:center;
-  margin-bottom:0;
+.list-product_name{
+  font-weight: bold;
 }
-.imageitem img{
-  width:50%;
-  object-fit: cover;
-  max-width: 100%;
-  max-height: 100%;
+.list-Delivery {
+  color: #00a650;
 }
-.itemtext-2{
+.list-best_deals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 3em 1em 0 1em; */
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(131, 131, 131, 0.404);
+  position: relative;
   width:100%;
-  display:flex;
+}
+
+.list-FirstOffer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin-bottom:10px;
+}
+.list-product-text{
+  display: flex;
+  flex-direction:column;
   justify-content:space-around;
   align-content: center;
 }
-.itemtext-2 .p1{
-  width:45%;
-  text-align: right;
-  padding:5px;
+.list-product-text p{
   margin:0;
-}
-.itemtext-2 .p2{
-  width:10%;
+  padding:5px;
   text-align: center;
+}
+
+.list-best_deals_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f1f0f080;
+  padding: 1.3em;
+
+}
+
+.list-discount{
+  position: absolute;
+  left: 63%;
+  top: 11px;
+  display: flex;
+  justify-content: center;
+  width: 38%;
+  background-color: red;
+  font-weight: bold;
+  border-radius: 40px 0 0 40px;
+  color: #fff;
+  padding: 4px 0px;
+}
+
+
+.list-FirstOffer .list-Delivery {
   padding:5px;
-  margin:0;
+  font-size: 15px;
+  text-align: center;
 }
-.itemtext-2 .p3{
-  color:green;
-  width:45%;
-  text-align: left;
-  padding:5px;
-  margin:0;
-}
-.itemtext-2 .p4{
-  width:100%;
-}
-.itemtext-3{
-  display:none
-}
+
 .div-btn-item{
   display: flex;
   justify-content: center;
   gap: 10px;
   width:100%;
+  padding:5px;
+  margin-bottom:5px;
+  background-color: #f1f0f080;
 }
 .btn-delete-item{
   height: 40px;
@@ -243,30 +266,188 @@ background-color: #3e5c76;}
   background-color: #748cab;}
 @media screen and (min-width:445px) and (max-width:767px){
   .top-list .createproduct-button {
-    width:20%;
+    width:25%;
   }
-    .item-search{
-      width:60%;
-    }
     .item-list{
       flex-direction:row;
+      justify-content:space-between;
+      align-content:center;
+      padding-left:0;
+      padding-top:0;
     }
-    .item-list article{
-      width:45%;
+    .filter-view{
+      padding-left:0px;
+      padding-right:0px;
+    }
+    .listcb1{
+      margin-top:0.3rem;
+      margin-bottom:0.3rem;
+      color:#eceaea;
+      display:block !important;
+    }
+    .listcb{
+      color:#eceaea;
+    }
+    .checkbox-view{
+      width:35%;
+      display:flex;
+      flex-direction:column;
+      justify-content:start;
+      align-content:start;
+      background-color: #3e5c76;;
+      padding-top:10px;
+      padding-left:10px;
+      padding-right:10px;
+    }
+    .checkbox-view h2{
+      color:white;
+      font-size:1.2rem;
+      text-align: center;
+      display:block;
+    }
+    .checkbox-view-form{
+      display:flex;
+      flex-direction:column;
+      justify-content:start;
+      align-content:start;
+    }
+    .checkbox-view-form h3{
+      color:white;
+      font-size:1rem;
+    }
+    .input-container{
+      display:flex;
+      justify-content:flex-start;
+      align-content: center;
+    }
+    .input-checkbox label{
+      font-size: 0.8rem;
+      color:white
     }
 
+    .item-list article{
+      width:55%;
+    }
+    .checkbox-view-form-button{
+      height: 30px;
+      text-decoration: none;
+      background-color:rgba(51, 51, 70, 0.85);
+      border:none;
+      color: #Fff;
+      cursor: pointer;
+      width:100%;
+      border-radius:5px;
+      margin-bottom:10px;}
+    .checkbox-view-form-button:hover{
+        background-color: rgba(65, 65, 88, 0.85);
+        border: 1px solid rgba(51, 51, 70, 0.85)}
   }
-  @media screen and (min-width:767px) {
+  @media screen and (min-width:841px) {
     .top-list .createproduct-button {
       width:15%;
     }
-  .item-search{
-      width:32%;
+    .listcb1{
+      margin-top:0.3rem;
+      margin-bottom:0.3rem;
+      color:#eceaea;
+      display:block !important;
+    }
+    .listcb{
+      color:#eceaea;
+    }
+    .filter-view{
+      padding-left:0px;
+      padding-right:0px;
     }
     .item-list{
       flex-direction:row;
+      justify-content:space-between;
+      align-content:center;
+      padding-left:0;
+      padding-top:0;
+    }
+    .checkbox-view{
+      width:25%;
+      display:flex;
+      flex-direction:column;
+      justify-content:start;
+      align-content:start;
+      background-color: #3e5c76;;
+      padding-top:10px;
+      padding-left:10px;
+      padding-right:10px;
+    }
+    .checkbox-view h2{
+      color:white;
+      font-size:1.2rem;
+      text-align: center;
+      display:block;
+    }
+    .checkbox-view-form{
+      display:flex;
+      flex-direction:column;
+      justify-content:start;
+      align-content:start;
+    }
+    .checkbox-view-form h3{
+      color:white;
+      font-size:1rem;
+    }
+    .input-container{
+      display:flex;
+      justify-content:flex-start;
+      align-content: center;
+    }
+    .input-checkbox label{
+      font-size: 0.8rem;
+      color:white
+    }
+    .list-product-image {
+      height: 150px;
     }
     .item-list article{
-      width:28%;
+      flex-direction:row;
+      flex-wrap: wrap;
+      justify-content:space-around;
+      align-content:center;
+      width:70%;
+      height:190px;
+      padding:15px;
     }
+    .div-btn-item{
+      flex-direction: column;
+      justify-content: space-around;
+      width:30%;
+      background-color: #fff;
+    }
+    .div-btn-item a{
+      width:100%!important;
+    }
+    .div-btn-item form{
+      width:100%;
+    }
+
+    .list-article_product a{
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        gap:15%;
+        align-content:center;
+        width:70%;
+      }
+    .checkbox-view-form-button{
+      height: 30px;
+      text-decoration: none;
+      background-color:rgba(51, 51, 70, 0.85);
+      border:none;
+      color: #Fff;
+      cursor: pointer;
+      width:100%;
+      border-radius:5px;
+      margin-bottom:10px;
+    }
+    .checkbox-view-form-button:hover{
+        background-color: rgba(65, 65, 88, 0.85);
+        border: 1px solid rgba(51, 51, 70, 0.85)}
   }
+  
