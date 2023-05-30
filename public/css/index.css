@@ -36,6 +36,7 @@ nav ul .caja {
 
 .main_paymentmethods {
   margin-top: 10px;
+  width:100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,32 +45,48 @@ nav ul .caja {
 .paymentmethods {
   width: 90%;
   height: 10vh;
+  margin-left:5%;;
   display: flex;
   justify-content: center;
   gap: 10px;
   align-items: center;
   border-radius: 5px;
-  border: 1px solid #315ed1;
+  border: 1px solid #1d2d44;
   background-color: #fff;
   box-shadow: 1px 1px 3px rgba(162, 162, 162, 0.384);
 }
-
-.paymentmethods .color {
-  color: #315ed1;
+.payment_title{
+  display:flex;
+  align-content: center;
+  justify-content: flex-start;
 }
-
-.paymentmethods .paymethod {
-  display: none;
+ .payment_title .pay{
+  color: #1d2d44;
+  font-size:large;
+  padding:5px;
+  margin:0;
+  align-self: center;
 }
 
 .paymentmethods .pay__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #315ed1;
+  color: #1d2d44;
+  border: 1px solid #1d2d44;
   border-radius: 25px;
   width: 45px;
   height: 45px;
+}
+.paymentmethods1 {
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  width:100%;
+  gap:10px;
+}
+.paymentmethods2{
+  display:none;
 }
 
 .CarrusselSection {
@@ -316,60 +333,6 @@ nav ul .caja {
   height: 30px;
 }
 
-/* --------------------MOBILE------------------------------ */
-@media screen and (max-width:767px) {
-  .paymentmethods .color {
-    color: #315ed1;
-    display: flex;
-    width: 113%;
-  }
-
-  .paymentmethods .article-text {
-    font-size: 47%;
-  }
-
-  .paymentmethods {
-    justify-content: space-evenly;
-    width: 95%;
-  }
-
-  .paymentmethods .paymethod {
-    display: block;
-    width: 15%;
-    height: 6vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: inherit;
-  }
-
-  .paymethod__img {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .paymethod__img img {
-    width: 94%;
-  }
-
-  .paymethod__installment {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .paymethod__installment span {
-    font-size: 8px;
-    text-align: center;
-    font-weight: bold;
-    color: rgb(44, 44, 44);
-  }
-
-  .paymethod .installment {
-    width: 100%;
-  }
-}
-
 /* ----------------------TABLETS----------------------------- */
 @media screen and (min-width:767px) and (max-width:1023px) {
   .section-categories {
@@ -388,48 +351,27 @@ nav ul .caja {
     width: 100%;
   }
 
-
-  .paymentmethods {
-    justify-content: space-evenly;
+  .paymentmethods1 {
+    width:30%;
   }
-
-  .paymentmethods .paymethod {
-    display: block;
-    width: 15%;
-    height: 10vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  .paymentmethods2{
+  display:block;
+  width:70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  gap:10px;
   }
-
-  .paymethod__img {
-    width: 100%;
-    display: flex;
+  .paymentmethods2 .paymethod_bank{
+    display:flex;
     justify-content: center;
+    align-content: center;
   }
-
-  .paymethod__img img {
-    width: 50%;
+  .paymethod_bank img{
+  object-fit: contain;
+  width:100px;
   }
-
-  .paymethod__installment {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .paymethod__installment span {
-    font-size: 10px;
-    text-align: center;
-    font-weight: bold;
-    color: rgb(44, 44, 44);
-  }
-
-  .paymethod .installment {
-    width: 100%;
-  }
-
-
+    
 }
 
 /* -------------------------DESKTOP------------------------------ */
@@ -460,46 +402,25 @@ nav ul .caja {
     align-items: center;
 
   }
-
-  .paymentmethods {
-    justify-content: space-evenly;
+  .paymentmethods1 {
+    width:30%;
   }
-
-  .paymentmethods .paymethod {
-    display: block;
-    width: 15%;
-    height: 10vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  .paymentmethods2{
+  display:block;
+  width:70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  gap:10px;
   }
-
-  .paymethod__img {
-    width: 100%;
-    display: flex;
+  .paymentmethods2 .paymethod_bank{
+    display:flex;
     justify-content: center;
+    align-content: center;
   }
-
-  .paymethod__img img {
-    width: 50%;
+  .paymethod_bank img{
+  object-fit: contain;
+  width:100px;
   }
-
-  .paymethod__installment {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .paymethod__installment span {
-    font-size: 10px;
-    text-align: center;
-    font-weight: bold;
-    color: rgb(44, 44, 44);
-  }
-
-  .paymethod .installment {
-    width: 100%;
-  }
-
  
 }
