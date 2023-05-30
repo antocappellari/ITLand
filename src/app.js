@@ -44,9 +44,19 @@ app.use('/products',productsRoutes);
 app.use('/api/products/',apiProductRouter);
 app.use('/api/users/',apiUserRouter);
 app.use('/api/categories',apiCategoriesRouter);
+<<<<<<< HEAD
 // app.use((req, res, next)=>{
 //     res.status(404).render("not-found")
 //         })
+=======
+app.use((req, res, next)=>{
+        return res.status(404).json({
+            error:'este es un error'
+        })
+        
+
+})
+>>>>>>> parent of cb2a657 (error 404)
 
 
 app.listen(PORT,()=>{console.log(`Servidor corriendo en el puerto ${PORT}`)});
