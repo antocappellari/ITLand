@@ -18,7 +18,17 @@
     justify-content:center;
 
 }
-
+.limpiar-carrito{
+    display: flex;
+    justify-content: center;
+}
+.limpiar-carrito button{
+    cursor: pointer;
+    padding: 1em 3em;
+    color:white;
+    border: none;
+    background: #01518a;
+}
 .quantity {
     display: flex;
     justify-content: space-between;
@@ -54,6 +64,7 @@
 
 
 .section__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -264,6 +275,7 @@
     }
 
     .section__container {
+        position: relative;
         width: 60%;
         gap: 0;
         margin-top: 10px;
@@ -294,10 +306,13 @@
     }
 
     .trash {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 13%;
+        border: none;
+        background: red;
+        height: 3em;
+        color: #fff;
     }
+    
 
     .quantity {
         width: 15%;

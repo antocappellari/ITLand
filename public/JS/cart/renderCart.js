@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         const $containerCart = document.querySelector('.section__container')
         console.log(carrito);
         if ( carrito == null) {
+          document.querySelector('.limpiar-carrito').style.display = 'none'
             return $containerCart.innerHTML = `<div style = "
             background:#bebebe;
             height:100%;
@@ -21,10 +22,9 @@ window.addEventListener('DOMContentLoaded',()=>{
             >No hay productos<p>
             <div>`  
         }
+        document.querySelector('.limpiar-carrito').style.display = 'flex'
         let cantidad = 0
-        let productIndex = 0
         carrito.forEach((product,index) => {
-          console.log(typeof product.cantidad);
         cantidad = product.cantidad || 1
 
           console.log(cantidad);
@@ -38,25 +38,38 @@ window.addEventListener('DOMContentLoaded',()=>{
                     <p class="free__shop">Free shipping</p>
                   </div>
                   <div class="quantity">
-                    <button type="button" id="btn_plus" onclick="btnSumar(${index},${cantidad})"   class="btn1"><i class="fas fa-solid fa-plus"></i></button>
+                    <button type="button" id="btn_plus" onclick="btnSumar(${index},${cantidad})"   class="btn1">+</button>
                     <p class= "cantidad" id= "cantidad-${index}">${product.cantidad}</p>
-                    <button type="button" class="btn2"><i class="fas fa-solid fa-minus"></i></button>
+                    <button onclick="btnRestar(${index},${cantidad})" type="button" class="btn2">-</button>
                   </div>
                 </div>
-                <div class="trash " onclick="deleteProduct(${product.product.id})">
-                  <i class="fas fa-solid fa-trash-can"></i>
-                </div>
+                <button class="trash " onclick="deleteProduct(${product.product.id})">Delete</button>
               </article>
             `
         });
        
     }
     renderCart()
+    let $limpiar_carrito  = document.querySelector('.limpiar-carrito');
+    $limpiar_carrito.addEventListener('click',()=>{
+      localStorage.removeItem('cart');
+      location.reload()
+    })
+    let cant = 0
     let total = carrito?.reduce((acc, cur) => {
+      cant = cur.cantidad
       let price = parseInt(cur.product.price);
       return acc + price;
     }, 0);
-  document.querySelector('.total_price').innerText = `$${total}`
+    // if (total === undefined) {
+    //   document.querySelector('.total_price').innerText = `0`
+    // }else{
+        console.log(cant);
+      document.querySelector('.total_price').innerText = `$${total * cant}`
+    // }
+
+    
+  
 })
 
 // {/*  */}
