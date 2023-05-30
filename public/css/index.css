@@ -202,8 +202,8 @@ nav ul .caja {
 }
 
 .add-cart{
-  border-radius: 20px;
-  background-color: #315ed1;
+  border-radius: 5px;
+  background-color: #3e5c76;
   cursor: pointer;
   border: none;
   padding: 1em 2em;
