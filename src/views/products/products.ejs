@@ -80,10 +80,14 @@
                 </div>
           </a>
           <div class="div-btn-item">
+            <% if (locals.isAdmin) { %>
             <a  href="/products/<%= product.id %>/edit"><button  class = "btn-edit-item"> Edit</button></a>
             <form action="/products/<%= product.id %>/delete?_method=DELETE" method = "post">
               <button  class = "btn-delete-item" type="submit"> Delete</button>
             </form>
+            <% } else { %> 
+              <button class="btn-addcart-item"  data-id="<%= product.id %>">Add to cart</button>
+            <% } %>
           </div>
         </article>
         <% }) %>

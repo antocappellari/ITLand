@@ -149,9 +149,7 @@ background-color:rgba(140, 140, 190);
   margin-top:10px;
 }
 .item-list-image{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width:50%;
 }
 
 .item-list-image img{
@@ -181,24 +179,14 @@ background-color:rgba(140, 140, 190);
   width:100%;
 }
 
-.messageError{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 2em;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-}
 .list-FirstOffer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  /* justify-content: center; */
+  gap: 5px;
+  justify-content: center;
   align-items: center;
   width:100%;
-  /* margin-bottom:10px; */
+  margin-bottom:10px;
 }
 .list-product-text{
   display: flex;
@@ -246,6 +234,7 @@ background-color:rgba(140, 140, 190);
 .div-btn-item{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   gap: 10px;
   width:100%;
   padding:5px;
@@ -265,12 +254,12 @@ background-color:rgba(140, 140, 190);
 background-color: #3e5c76;}
 
 .div-btn-item a{
-  width:40%;
+  width:100%;
   display:flex;
   align-content:center;
 }
 .div-btn-item form{
-  width:40%;
+  width:100%;
   display:flex;
   align-content:center;
 }
@@ -284,8 +273,20 @@ background-color: #3e5c76;}
   width:100%;
   border-radius:5px;
 }
+.btn-addcart-item{
+  height: 40px;
+  text-decoration: none;
+  background-color: #3e5c76;
+  border:none;
+  color: #Fff;
+  cursor: pointer;
+  width:100%;
+  border-radius:5px;
+}
 .btn-edit-item:hover{
   background-color: #748cab;}
+.btn-addcart-item:hover{
+    background-color: #748cab;}
 @media screen and (min-width:445px) and (max-width:767px){
   .top-list .createproduct-button {
     width:25%;
@@ -438,6 +439,9 @@ background-color: #3e5c76;}
     }
     .list-article_product a{
         flex-direction:row;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        gap:15%;
         align-content:center;
         width:70%;
       }
@@ -461,7 +465,9 @@ background-color: #3e5c76;}
       .div-btn-item form{
         width:100%;
       }
-  
+      .btn-addcart-item{
+        width:100%;
+      }
     .checkbox-view-form-button{
       height: 30px;
       text-decoration: none;
