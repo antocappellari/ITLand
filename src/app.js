@@ -44,9 +44,9 @@ app.use('/products',productsRoutes);
 app.use('/api/products/',apiProductRouter);
 app.use('/api/users/',apiUserRouter);
 app.use('/api/categories',apiCategoriesRouter);
-app.use((req, res, next)=>{
-    res.status(404).render("not-found")
-        })
+// app.use((req, res, next)=>{
+//     res.status(404).render("not-found")
+//         })
 
 
 app.listen(PORT,()=>{console.log(`Servidor corriendo en el puerto ${PORT}`)});

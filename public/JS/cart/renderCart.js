@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded',()=>{
         const $containerCart = document.querySelector('.section__container')
         console.log(carrito);
         if ( carrito == null) {
-          document.querySelector('.limpiar-carrito').style.display = 'none'
             return $containerCart.innerHTML = `<div style = "
             background:#bebebe;
             height:100%;
@@ -22,7 +21,6 @@ window.addEventListener('DOMContentLoaded',()=>{
             >No hay productos<p>
             <div>`  
         }
-        document.querySelector('.limpiar-carrito').style.display = 'flex'
         let cantidad = 0
         carrito.forEach((product,index) => {
         cantidad = product.cantidad || 1
@@ -61,6 +59,7 @@ window.addEventListener('DOMContentLoaded',()=>{
       let price = parseInt(cur.product.price);
       return acc + price * cant;
     }, 0);
+    console.log(total);
     if (total === undefined) {
       document.querySelector('.total_price').innerText = `0`
     }else{
