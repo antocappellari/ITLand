@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded',()=>{
     const $icon = document.querySelector('.fa-angle-down');
 
     if ($btn != null) {
-        
         $btn.addEventListener("click",_=>{
             if($icon.classList.contains('icon-rotate')){
                 $icon.classList.toggle('icon-rotate2')

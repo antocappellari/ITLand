@@ -2,7 +2,7 @@ window.addEventListener("load",function(){
     let inputJs = document.querySelectorAll(".inputJs") //*falta colocar clase a image y dropdowns*//
     let formulario = document.querySelector(".form-inputs");
     const exp = {
-        name: /^^[A-Za-z0-9 ]+$/,
+        name: /^^[A-Za-z0-9\s.,-:#$%&/*()áéíóúüñÁÉÍÓÚÜÑ'+"]+$/,
         description:/^[a-zA-Z0-9\s.,-:#$%&/*()áéíóúüñÁÉÍÓÚÜÑ'+"]+$/u, //*agregar minimo 20 caracteres*//
         price:/^[0-9]+([.])?([0-9]+)?$/,//*agregar que se puedan decimales*//
         stock:/^\d+$/ 

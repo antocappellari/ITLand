@@ -31,9 +31,9 @@
         <form action="" class="checkbox-view-form">
           <h3 class="checkbox-view-title">Product category</h3>
           <div class="input-container">
-          <div class="input-checkbox">
+          <div class="input-checkbox ">
             <% sub_categories.forEach(sub_category => { %>
-            <input type="checkbox" id="checkbox" name="<%= sub_category.name %>" value="<%= sub_category.name %>">
+            <input type="checkbox" id="checkbox" class="checkbox-category" name="<%= sub_category.name %>" value="<%= sub_category.name %>">
             <label for="<%= sub_category.name %>"><%= sub_category.name %></label><br>
             <% }) %>
           </div>
@@ -43,7 +43,7 @@
           <div class="input-container">
           <div class="input-checkbox">
           <% categories.forEach(category => { %>
-            <input type="checkbox" id="checkbox" name="<%= category.name %>" value="<%= category.name %>">
+            <input type="checkbox" class="checkbox-type" id="checkbox" name="<%= category.name %>" value="<%= category.name %>">
             <label for="<%= category.name %>"><%= category.name %></label><br>
           <% }) %>
           </div>
@@ -53,7 +53,7 @@
           <div class="input-container">
           <div class="input-checkbox">
             <% brands.forEach(brand => { %>
-            <input type="checkbox" id="checkbox" name="<%= brand.name %>" value="<%= brand.name %>">
+            <input type="checkbox" id="checkbox" class="checkbox-brand" name="<%= brand.name %>" value="<%= brand.name %>">
             <label for="<%= brand.name %>"><%= brand.name %></label>
             <% }) %>
           </div>
@@ -97,5 +97,6 @@
   <!-- Footer -->
 
     <%- include('../partials/footer') %> 
+    <script src="/JS/filtered.js"></script>
   </body>
 </html>

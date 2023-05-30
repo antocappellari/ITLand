@@ -9,6 +9,7 @@ router.put('/update/:productId',apiProduct.update);
 router.delete('/delete/:productId',apiProduct.delete);
 router.get('/list',apiProduct.productlist);
 router.get('/search',apiProduct.search);
+router.get('/filtered',apiProduct.filtered);
 
 
 module.exports = router

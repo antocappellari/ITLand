@@ -2,6 +2,11 @@ window.addEventListener("DOMContentLoaded", () => {
     const result = document.querySelector(".results");
     const $search = document.querySelector("#search");
     $search.addEventListener("input", ({ target }) => {
+      $search.addEventListener('keypress',(e)=>{
+        if (e.key == 'Enter') {
+          location.replace(`http://localhost:3001/products?title=${target.value}`)    
+        }
+      })
         if ((target.value == "")) {
         result.innerHTML = "";
         return
@@ -11,15 +16,14 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 $search.addEventListener('blur',({target})=>{
     const list  = document.querySelectorAll('.listResult')
+
     if(list.length > 0 ){
-        console.log('hola');
         searchProduct(target.value);
         return
     }
     result.innerHTML = "";
     return
   })
-
   const searchProduct = (value) => {
     fetch("http://localhost:3001/api/products/search?title=" + value)
       .then((response) => response.json())
@@ -34,6 +38,7 @@ $search.addEventListener('blur',({target})=>{
           list.append(link)
           result.append(list);
         }
+
       });
   };
 });

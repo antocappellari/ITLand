@@ -89,12 +89,160 @@ const ProductServices = {
   productSerch: async (title) => {
     try {
       const products = await Products.findAll({
+        include: {
+          association: "images",
+        },
         where: {
           name: {
             [Op.like]: "%" + title + "%",
           },
         },
       });
+      return products;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  productFiltered: async (brand, type, category) => {
+    try {
+      console.log(brand, type);
+      let products = await ProductServices.getAllProducts();
+      if (brand) {
+        products = await Products.findAll({
+          include: [
+            {
+              association: "brands",
+              where: {
+                name: brand,
+              },
+            },
+            {
+              association: "images",
+            },
+          ],
+        });
+      }
+      if (type) {
+        products = await Products.findAll({
+          include: [
+            {
+              association: "categories",
+              where: {
+                name: type,
+              },
+            },
+            {
+              association: "images",
+            },
+          ],
+        });
+      }
+      if (category) {
+        products = await Products.findAll({
+          include: [
+            {
+              association: "sub_categories",
+              where: {
+                name: category,
+              },
+            },
+            {
+              association: "images",
+            },
+          ],
+        });
+      }
+      if (brand && type) {
+        products = await Products.findAll({
+          include: [
+            {
+              association: "categories",
+              where: {
+                name: type,
+              },
+            },
+            {
+              association: "images",
+            },
+            {
+              association: "brands",
+              where: {
+                name: brand,
+              },
+            },
+          ],
+        });
+      }
+      if (brand && category) {
+        products = await Products.findAll({
+          include: [
+            {
+              association: "sub_categories",
+              where: {
+                name: category,
+              },
+            },
+            {
+              association: "images",
+            },
+            {
+              association: "brands",
+              where: {
+                name: brand,
+              },
+            },
+          ],
+        });
+      }
+      if (type && category) {
+        products = await Products.findAll({
+          include: [
+            {
+              association: "sub_categories",
+              where: {
+                name: category,
+              },
+            },
+            {
+              association: "images",
+            },
+            {
+              association: "categories",
+              where: {
+                name: type,
+              },
+            },
+          ],
+        });
+      }
+      if (brand && type && category) {
+        products = await Products.findAll({
+          include: [
+            {
+              association: "categories",
+              where: {
+                name: type,
+              },
+            },
+            {
+              association: "images",
+            },
+            {
+              association: "brands",
+              where: {
+                name: brand,
+              },
+            },
+            {
+              association: "sub_categories",
+              where: {
+                name: category,
+              },
+            },
+          ],
+        });
+      }
+
       return products;
     } catch (error) {
       console.log(error);

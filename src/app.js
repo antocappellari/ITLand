@@ -9,6 +9,7 @@ const mainRoutes = require('./router/mainRoutes.js');
 const imageRouter = require('./router/imageRouter.js');
 const apiProductRouter = require('./router/api/apiProductRouter.js')
 const apiUserRouter = require('./router/api/apiUserRouter.js')
+const apiCategoriesRouter = require('./router/api/apiCategories.js')
 const methodOverride = require("method-override");
 const session = require('express-session');
 const userToLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
@@ -42,6 +43,7 @@ app.use('/products',productsRoutes);
 
 app.use('/api/products/',apiProductRouter);
 app.use('/api/users/',apiUserRouter);
+app.use('/api/categories',apiCategoriesRouter);
 // app.use((req, res, next)=>{
 //     next()
 //     return res.status(404)

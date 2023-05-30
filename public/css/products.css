@@ -149,7 +149,9 @@ background-color:rgba(140, 140, 190);
   margin-top:10px;
 }
 .item-list-image{
-  width:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-list-image img{
@@ -179,14 +181,24 @@ background-color:rgba(140, 140, 190);
   width:100%;
 }
 
+.messageError{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
 .list-FirstOffer {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  justify-content: center;
+  gap: 10px;
+  /* justify-content: center; */
   align-items: center;
   width:100%;
-  margin-bottom:10px;
+  /* margin-bottom:10px; */
 }
 .list-product-text{
   display: flex;
@@ -426,9 +438,6 @@ background-color: #3e5c76;}
     }
     .list-article_product a{
         flex-direction:row;
-        flex-wrap: wrap;
-        justify-content:flex-start;
-        gap:15%;
         align-content:center;
         width:70%;
       }
