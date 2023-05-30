@@ -37,10 +37,9 @@
           </div>
         </a>
         <% if (locals.isAdmin) { %>
-         
           <div class="div-btn-item-users">
-          <a href="/users/<%= user.id %>/edit"><button  class = "btn-edit-item-users"> Edit</button></a>
-          <form action="/users/<%= user.id %>/delete?_method=DELETE" method = "post">
+          <a href="/users/update/<%= user.id %>"><button  class = "btn-edit-item-users"> Edit</button></a>
+          <form action="/users/update/<%= user.id %>?_method=DELETE" method = "post">
             <button  class = "btn-delete-item-users" type="submit"> Delete</button>
           </form>
         </div>
