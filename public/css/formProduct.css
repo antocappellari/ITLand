@@ -118,9 +118,9 @@
   width: 80%;
   height: 5vh;
   color: #fff;
-  background-color: #164ffacf;
+  background-color: #3e5c76;
   border: none;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: none;
   font-size: 16px;
 }
@@ -291,6 +291,29 @@
   width: 100%;
   margin-top: 10px;
 }
+#area2 {
+  width: 100%;
+  border: 2.5px solid #c7bebe;
+  border-radius: 15px;
+}
+
+.btn-edit {
+  padding: 0px 10px;
+  height: 5vh;
+  color: #fff;
+  background-color: #3e5c76;
+  border: none;
+  border-radius: 5px;
+}
+.btn-submit {
+  padding: 0px 10px;
+  height: 5vh;
+  color: #fff;
+  background-color: #3e5c76;
+  border: none;
+  border-radius: 5px;
+}
+
 /* ------------DESKTOP---------- */
 @media screen and (min-width: 1024px) {
   .container-form {
@@ -327,12 +350,15 @@
   }
   .container-form .button-submit .input-button {
     width: 80%;
-    height: 6vh;
+
     color: #fff;
-    background-color: #164ffacf;
-    border: none;
-    border-radius: 15px;
+    background-color: #3e5c76;
     padding: none;
     font-size: 16px;
+    height: 5vh;
+    color: #fff;
+    background-color: #3e5c76;
+    border: none;
+    border-radius: 5px;
   }
 }
