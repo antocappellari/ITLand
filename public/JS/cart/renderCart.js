@@ -59,14 +59,14 @@ window.addEventListener('DOMContentLoaded',()=>{
     let total = carrito?.reduce((acc, cur) => {
       cant = cur.cantidad
       let price = parseInt(cur.product.price);
-      return acc + price;
+      return acc + price * cant;
     }, 0);
-    // if (total === undefined) {
-    //   document.querySelector('.total_price').innerText = `0`
-    // }else{
-        console.log(cant);
-      document.querySelector('.total_price').innerText = `$${total * cant}`
-    // }
+    if (total === undefined) {
+      document.querySelector('.total_price').innerText = `0`
+    }else{
+
+      document.querySelector('.total_price').innerText = `$${total}`
+    }
 
     
   

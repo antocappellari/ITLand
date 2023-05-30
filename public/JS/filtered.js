@@ -123,7 +123,7 @@ window.addEventListener("DOMContentLoaded", () => {
               ? ""
               : `
           <p class="list-discount">
-              ${product.discount}
+              ${product.discount}%OFF
           </p>  
           `
           }          
@@ -140,7 +140,7 @@ window.addEventListener("DOMContentLoaded", () => {
                   )}</span> x 10 installments</p>
                 </div>
           </a>
-       
+          <button class="add-cart btn_card" data-id= "${product.id}">Add to cart</button>
         </article>
                 `);
             });
@@ -199,7 +199,7 @@ window.addEventListener("DOMContentLoaded", () => {
       ? ""
       : `
   <p class="list-discount">
-      ${product.discount} %off
+      ${product.discount} %Off
   </p>  
   `
   }          
@@ -217,11 +217,8 @@ window.addEventListener("DOMContentLoaded", () => {
         </div>
   </a>
   <div class="div-btn-item">
-  <a  href="/products/${product.id }/edit"><button  class = "btn-edit-item"> Edit</button></a>
-    <form action="/products/<%= product.id %>/delete?_method=DELETE" method = "post">
-    <button  class = "btn-delete-item" type="submit"> Delete</button>
-    </form>
-  </div>
+  <button class="add-cart btn_card" data-id= "${product.id}">Add to cart</button>
+  
 </article>
         `);
     });

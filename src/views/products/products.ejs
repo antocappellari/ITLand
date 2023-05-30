@@ -86,7 +86,7 @@
               <button  class = "btn-delete-item" type="submit"> Delete</button>
             </form>
             <% } else { %> 
-              <button class="btn-addcart-item"  data-id="<%= product.id %>">Add to cart</button>
+              <button class="add-cart btn_card" data-id= "<%= product.id%>">Add to cart</button>
             <% } %>
           </div>
         </article>
@@ -101,6 +101,8 @@
   <!-- Footer -->
 
     <%- include('../partials/footer') %> 
+    <script src="/JS/cart/cart.js"></script>
+    <script src="/JS/cart/handlerLocalStorage.js" ></script>
     <script src="/JS/filtered.js"></script>
   </body>
 </html>

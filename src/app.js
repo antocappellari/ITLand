@@ -44,11 +44,13 @@ app.use('/products',productsRoutes);
 app.use('/api/products/',apiProductRouter);
 app.use('/api/users/',apiUserRouter);
 app.use('/api/categories',apiCategoriesRouter);
-// app.use((req, res, next)=>{
-//     next()
-//     return res.status(404)
+app.use((req, res, next)=>{
+        return res.status(404).json({
+            error:'este es un error'
+        })
+        
 
-// })
+})
 
 
 app.listen(PORT,()=>{console.log(`Servidor corriendo en el puerto ${PORT}`)});

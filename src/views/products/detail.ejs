@@ -83,7 +83,7 @@
                         </div>
                         <div class="article-button">
                             <button type="button" class="btn1"> Buy</button>
-                            <button type="button" class="btn2"> Add to Cart</button>
+                            <button class="add-cart btn_card" data-id= "<%= product.id%>">Add to cart</button>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </section>
@@ -157,15 +157,14 @@
               <div class="swiper-button-next"></div>
             </div>
 
-
-
-            <br><br><br><br><br><br>
             <!-- Bottom Nav -->
             <%- include('../partials/bottomNav') %>
                 <!-- Footer -->
                 <%- include('../partials/footer') %>
                     <script src="/JS/swiper.js" type="module"></script>
                     <script src="/JS/detail.js"></script>
+                    <script src="/JS/cart/cart.js"></script>
+                    <script src="/JS/cart/handlerLocalStorage.js" ></script>
     </body>
 
 </html>
