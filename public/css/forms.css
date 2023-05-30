@@ -349,7 +349,7 @@
 }
 
 .file-select::before {
-  background-color: #5678ef;
+  background-color: #3e5c76;
   color: white;
   display: flex;
   justify-content: center;
@@ -367,7 +367,7 @@
   display: inline-block;
 }
 .file-select2::before {
-  background-color: #164ffacf;
+  background-color: #3e5c76;
   color: white;
   display: flex;
   justify-content: center;
@@ -381,7 +381,7 @@
   bottom: 0;
 }
 .file-select2:hover {
-  background-color: #164ffacf;
+  background-color: #748cab;
   border-radius: 15px;
 }
 .file-select input[type="file"] {
@@ -614,7 +614,7 @@
   .datauser__register .userinput4{
     grid-column-start: 2;
     grid-column-end:3;
-    grid-row-start: 1;
-    grid-row-end:2;
+    grid-row-start:2;
+    grid-row-end:3;
   }
 }
