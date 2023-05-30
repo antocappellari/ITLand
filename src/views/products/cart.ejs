@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- head -->
-  <%- include('../partials/head') %> 
-<body>
-  <!-- header -->
-  <%- include('../partials/header') %> 
-  <main class="main-pc">
-    <section class="section__container">
-    </section>
-    <section class="checkout">
-      <div class="checkout_cupon">
-        <h2 class="cupon_message">Do you have a cupon or a discount code?</h2>
-        <div class="cupon_form">
-          <input class="placeholder" type="number" placeholder="Enter the code" />
-          <input class="apply" type="submit" value="Apply" />
-        </div>
-      </div>
-      <div class="checkout_box">
-        <div class="total">
-          <h2 class="total_title">Total:</h2>
-          <h2 class="total_price">$646</h2>
-        </div>
-        <input class="checkout_box_co" type="submit" value="Check out" />
-        <input class="checkout_box_kb" type="submit" value="Keep on buying" />
-        <input class="checkout_box_ec" type="submit" value="Empty cart" />
-      </div>
-      <div class="checkout_logo">
-        <i class="fas fa-solid fa-user-shield"></i>
-      </div>
-    </section>
-  </main>
-  <!-- Bottom Nav -->
-  <%- include('../partials/bottomNav') %> 
-  <!-- footer -->
-  <%- include('../partials/footer') %> 
-  <script src="/JS/cart/renderCart.js"></script>
-  <script src="/JS/cart/handlerLocalStorage.js"></script>
-</body>
+<%- include('../partials/head') %>
+
+  <body>
+    <!-- header -->
+    <%- include('../partials/header') %>
+      <main class="main-pc">
+        <section class="section__container">
+        </section>
+        <section class="checkout">
+          <div class="checkout_cupon">
+            <h2 class="cupon_message">Do you have a cupon or a discount code?</h2>
+            <div class="cupon_form">
+              <input class="placeholder" type="number" placeholder="Enter the code" />
+              <input class="apply" type="submit" value="Apply" />
+            </div>
+          </div>
+          <div class="checkout_box">
+            <div class="total">
+              <h2 class="total_title">Total:</h2>
+              <h2 class="total_price">$646</h2>
+            </div>
+            <input class="checkout_box_co" type="submit" value="Check out" />
+            <input class="checkout_box_kb" type="submit" value="Keep on buying" />
+          </div>
+          <div class="checkout_logo">
+            <i class="fas fa-solid fa-user-shield"></i>
+          </div>
+        </section>
+      </main>
+      <!-- Bottom Nav -->
+      <%- include('../partials/bottomNav') %>
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+          <script src="/JS/cart/renderCart.js"></script>
+          <script src="/JS/cart/handlerLocalStorage.js"></script>
+          <script>
+            let carrito = JSON.parse(localStorage.getItem('cart'))
+            function deleteProduct(id) {
+              console.log(id);
+              carrito = carrito.filter(product => product.product.id != id)
+              location.reload()
+              setLocalStorage('cart', carrito)
+            }
+            function btnSumar(index,cantidad) {
+              cantidad++
+              document.querySelector(`#cantidad-${index}`).innerText = cantidad
+              carrito[index].cantidad = cantidad
+              setLocalStorage('cart', carrito)
+              location.reload()
+            }
+          </script>
+  </body>
 
 </html>

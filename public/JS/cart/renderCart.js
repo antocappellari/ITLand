@@ -1,12 +1,11 @@
 window.addEventListener('DOMContentLoaded',()=>{
     const BASE_URL = 'http://localhost:3001'
+    // localStorage.removeItem('cart')
     let carrito = getLocalStorage('cart')
-    
-    
-    console.log(carrito);
     const renderCart = ()=>{
         const $containerCart = document.querySelector('.section__container')
-        if (carrito.length == 0) {
+        console.log(carrito);
+        if ( carrito == null) {
             return $containerCart.innerHTML = `<div style = "
             background:#bebebe;
             height:100%;
@@ -22,7 +21,13 @@ window.addEventListener('DOMContentLoaded',()=>{
             >No hay productos<p>
             <div>`  
         }
-        carrito.forEach(product => {
+        let cantidad = 0
+        let productIndex = 0
+        carrito.forEach((product,index) => {
+          console.log(typeof product.cantidad);
+        cantidad = product.cantidad || 1
+
+          console.log(cantidad);
             return $containerCart.innerHTML += `
             <article class="section__product">
                 <img src="${BASE_URL}/images/products/${product.product.images[0].name}">
@@ -33,29 +38,25 @@ window.addEventListener('DOMContentLoaded',()=>{
                     <p class="free__shop">Free shipping</p>
                   </div>
                   <div class="quantity">
-                    <button type="button" class="btn1"><i class="fas fa-solid fa-plus"></i></button>
-                    <p>1</p>
+                    <button type="button" id="btn_plus" onclick="btnSumar(${index},${cantidad})"   class="btn1"><i class="fas fa-solid fa-plus"></i></button>
+                    <p class= "cantidad" id= "cantidad-${index}">${product.cantidad}</p>
                     <button type="button" class="btn2"><i class="fas fa-solid fa-minus"></i></button>
                   </div>
                 </div>
-                <div class="trash">
-                  <i class="fas fa-solid fa-trash-can" data-productId = "${product.product.id}"></i>
+                <div class="trash " onclick="deleteProduct(${product.product.id})">
+                  <i class="fas fa-solid fa-trash-can"></i>
                 </div>
               </article>
             `
         });
-
+       
     }
     renderCart()
-
-    const $btnDelete = document.querySelector('.fa-trash-can');
-    $btnDelete.addEventListener('click',()=>{
-        const {productid}= $btnDelete.dataset
-        carrito = carrito.filter(product => product.product.id != productid )
-        console.log(carrito);
-        location.reload()
-        setLocalStorage('cart',carrito)
-    })
+    let total = carrito?.reduce((acc, cur) => {
+      let price = parseInt(cur.product.price);
+      return acc + price;
+    }, 0);
+  document.querySelector('.total_price').innerText = `$${total}`
 })
 
-{/*  */}
+// {/*  */}

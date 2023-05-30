@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
         };
     });
     if (productIndex !== -1) {
-        cart[productIndex].cantidad == cantidad
+        cart[productIndex]
     }else{
         cart.push({product,cantidad})
     };

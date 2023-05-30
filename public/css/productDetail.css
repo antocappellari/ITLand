@@ -174,8 +174,11 @@ body{
     cursor: pointer;
 }
 .section__description {
+    margin-top: 20px;
     display: flex;
     gap: 2em;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     /* box-shadow: 1px 1px 5px #2c2e33; */
     border-radius: 4px;
@@ -184,7 +187,7 @@ body{
     z-index: 34;
 }
 .description{
-    position:absolute;
+    /* position:absolute; */
     border: 1px rgb(163, 162, 162) solid;
     padding: 10px 10px 0 10px;
     background: #f7f7f7;
@@ -224,7 +227,7 @@ body{
 
 
 .section__description .description{
-    width: 100%;
+    width: 80%;
     padding: 10px;
 }
 .section__description .description h4{
