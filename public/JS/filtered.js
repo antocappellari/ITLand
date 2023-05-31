@@ -199,7 +199,7 @@ window.addEventListener("DOMContentLoaded", () => {
       ? ""
       : `
   <p class="list-discount">
-      ${product.discount} %Off
+      ${product.discount} %OFF
   </p>  
   `
   }          
